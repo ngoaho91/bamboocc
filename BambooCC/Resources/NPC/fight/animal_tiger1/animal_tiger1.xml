@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation>
+  <sequences count="12">
+    <sequence id="1" group="1">
+      <direction id="0" texture="animal_tiger1_attack.png">
+        <frame rect_x="1" rect_y="1" rect_w="27" rect_h="72" offset_x="147" offset_y="134" />
+        <frame rect_x="1" rect_y="76" rect_w="27" rect_h="72" offset_x="147" offset_y="134" />
+        <frame rect_x="31" rect_y="1" rect_w="28" rect_h="73" offset_x="146" offset_y="133" />
+        <frame rect_x="62" rect_y="1" rect_w="28" rect_h="72" offset_x="146" offset_y="134" />
+        <frame rect_x="31" rect_y="77" rect_w="28" rect_h="75" offset_x="147" offset_y="136" />
+        <frame rect_x="62" rect_y="76" rect_w="27" rect_h="71" offset_x="147" offset_y="133" />
+        <frame rect_x="93" rect_y="1" rect_w="27" rect_h="67" offset_x="147" offset_y="126" />
+        <frame rect_x="123" rect_y="1" rect_w="28" rect_h="78" offset_x="146" offset_y="131" />
+        <frame rect_x="93" rect_y="71" rect_w="27" rect_h="78" offset_x="147" offset_y="135" />
+        <frame rect_x="1" rect_y="151" rect_w="27" rect_h="75" offset_x="147" offset_y="140" />
+        <frame rect_x="31" rect_y="155" rect_w="28" rect_h="68" offset_x="146" offset_y="146" />
+        <frame rect_x="62" rect_y="150" rect_w="28" rect_h="72" offset_x="146" offset_y="140" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_attack.png">
+        <frame rect_x="154" rect_y="1" rect_w="93" rect_h="67" offset_x="113" offset_y="139" />
+        <frame rect_x="123" rect_y="82" rect_w="94" rect_h="62" offset_x="114" offset_y="140" />
+        <frame rect_x="93" rect_y="152" rect_w="93" rect_h="62" offset_x="118" offset_y="140" />
+        <frame rect_x="250" rect_y="1" rect_w="94" rect_h="62" offset_x="120" offset_y="140" />
+        <frame rect_x="220" rect_y="82" rect_w="97" rect_h="60" offset_x="119" offset_y="143" />
+        <frame rect_x="189" rect_y="152" rect_w="118" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="347" rect_y="1" rect_w="117" rect_h="55" offset_x="85" offset_y="134" />
+        <frame rect_x="320" rect_y="82" rect_w="115" rect_h="56" offset_x="84" offset_y="138" />
+        <frame rect_x="310" rect_y="152" rect_w="112" rect_h="55" offset_x="88" offset_y="143" />
+        <frame rect_x="467" rect_y="1" rect_w="109" rect_h="52" offset_x="94" offset_y="149" />
+        <frame rect_x="438" rect_y="82" rect_w="106" rect_h="54" offset_x="99" offset_y="149" />
+        <frame rect_x="425" rect_y="152" rect_w="101" rect_h="62" offset_x="105" offset_y="144" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_attack.png">
+        <frame rect_x="1" rect_y="229" rect_w="124" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="189" rect_y="210" rect_w="124" rect_h="48" offset_x="103" offset_y="150" />
+        <frame rect_x="425" rect_y="217" rect_w="122" rect_h="44" offset_x="109" offset_y="154" />
+        <frame rect_x="1" rect_y="287" rect_w="122" rect_h="42" offset_x="113" offset_y="156" />
+        <frame rect_x="189" rect_y="261" rect_w="127" rect_h="41" offset_x="111" offset_y="157" />
+        <frame rect_x="579" rect_y="1" rect_w="154" rect_h="58" offset_x="85" offset_y="141" />
+        <frame rect_x="547" rect_y="82" rect_w="154" rect_h="75" offset_x="65" offset_y="123" />
+        <frame rect_x="550" rect_y="217" rect_w="151" rect_h="75" offset_x="62" offset_y="122" />
+        <frame rect_x="736" rect_y="1" rect_w="158" rect_h="73" offset_x="58" offset_y="124" />
+        <frame rect_x="704" rect_y="82" rect_w="151" rect_h="70" offset_x="69" offset_y="127" />
+        <frame rect_x="704" rect_y="217" rect_w="141" rect_h="65" offset_x="82" offset_y="133" />
+        <frame rect_x="704" rect_y="155" rect_w="134" rect_h="59" offset_x="90" offset_y="139" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_attack.png">
+        <frame rect_x="1" rect_y="332" rect_w="94" rect_h="78" offset_x="111" offset_y="130" />
+        <frame rect_x="425" rect_y="264" rect_w="95" rect_h="72" offset_x="113" offset_y="138" />
+        <frame rect_x="319" rect_y="261" rect_w="93" rect_h="65" offset_x="118" offset_y="147" />
+        <frame rect_x="189" rect_y="305" rect_w="93" rect_h="60" offset_x="120" offset_y="154" />
+        <frame rect_x="550" rect_y="295" rect_w="97" rect_h="62" offset_x="119" offset_y="153" />
+        <frame rect_x="704" rect_y="285" rect_w="111" rect_h="87" offset_x="106" offset_y="119" />
+        <frame rect_x="1" rect_y="413" rect_w="113" rect_h="107" offset_x="89" offset_y="98" />
+        <frame rect_x="425" rect_y="339" rect_w="117" rect_h="107" offset_x="81" offset_y="96" />
+        <frame rect_x="189" rect_y="368" rect_w="121" rect_h="104" offset_x="79" offset_y="99" />
+        <frame rect_x="550" rect_y="360" rect_w="117" rect_h="100" offset_x="86" offset_y="105" />
+        <frame rect_x="704" rect_y="375" rect_w="107" rect_h="93" offset_x="98" offset_y="114" />
+        <frame rect_x="319" rect_y="329" rect_w="102" rect_h="86" offset_x="104" offset_y="122" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_attack.png">
+        <frame rect_x="128" rect_y="229" rect_w="27" rect_h="90" offset_x="146" offset_y="126" />
+        <frame rect_x="858" rect_y="82" rect_w="28" rect_h="85" offset_x="145" offset_y="134" />
+        <frame rect_x="848" rect_y="217" rect_w="27" rect_h="79" offset_x="146" offset_y="143" />
+        <frame rect_x="98" rect_y="332" rect_w="27" rect_h="76" offset_x="146" offset_y="149" />
+        <frame rect_x="117" rect_y="413" rect_w="28" rect_h="79" offset_x="145" offset_y="147" />
+        <frame rect_x="818" rect_y="285" rect_w="27" rect_h="100" offset_x="146" offset_y="112" />
+        <frame rect_x="670" rect_y="360" rect_w="28" rect_h="120" offset_x="145" offset_y="87" />
+        <frame rect_x="158" rect_y="229" rect_w="28" rect_h="121" offset_x="146" offset_y="83" />
+        <frame rect_x="848" rect_y="299" rect_w="26" rect_h="117" offset_x="147" offset_y="87" />
+        <frame rect_x="158" rect_y="353" rect_w="28" rect_h="112" offset_x="145" offset_y="94" />
+        <frame rect_x="1" rect_y="523" rect_w="28" rect_h="104" offset_x="145" offset_y="105" />
+        <frame rect_x="425" rect_y="449" rect_w="27" rect_h="99" offset_x="146" offset_y="116" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_attack.png">
+        <frame rect_x="189" rect_y="475" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="550" rect_y="463" rect_w="94" rect_h="72" offset_x="112" offset_y="138" />
+        <frame rect_x="704" rect_y="471" rect_w="94" rect_h="65" offset_x="109" offset_y="147" />
+        <frame rect_x="319" rect_y="418" rect_w="94" rect_h="60" offset_x="106" offset_y="154" />
+        <frame rect_x="32" rect_y="523" rect_w="97" rect_h="62" offset_x="104" offset_y="153" />
+        <frame rect_x="550" rect_y="538" rect_w="118" rect_h="85" offset_x="103" offset_y="121" />
+        <frame rect_x="1" rect_y="630" rect_w="118" rect_h="109" offset_x="118" offset_y="97" />
+        <frame rect_x="425" rect_y="551" rect_w="115" rect_h="111" offset_x="121" offset_y="93" />
+        <frame rect_x="189" rect_y="556" rect_w="112" rect_h="105" offset_x="120" offset_y="98" />
+        <frame rect_x="704" rect_y="539" rect_w="110" rect_h="101" offset_x="116" offset_y="104" />
+        <frame rect_x="550" rect_y="626" rect_w="106" rect_h="93" offset_x="114" offset_y="114" />
+        <frame rect_x="319" rect_y="481" rect_w="101" rect_h="86" offset_x="114" offset_y="122" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_attack.png">
+        <frame rect_x="547" rect_y="160" rect_w="124" rect_h="54" offset_x="97" offset_y="144" />
+        <frame rect_x="189" rect_y="664" rect_w="124" rect_h="49" offset_x="93" offset_y="150" />
+        <frame rect_x="425" rect_y="665" rect_w="122" rect_h="46" offset_x="89" offset_y="153" />
+        <frame rect_x="704" rect_y="643" rect_w="122" rect_h="44" offset_x="85" offset_y="155" />
+        <frame rect_x="704" rect_y="690" rect_w="127" rect_h="44" offset_x="82" offset_y="157" />
+        <frame rect_x="897" rect_y="1" rect_w="153" rect_h="58" offset_x="81" offset_y="141" />
+        <frame rect_x="889" rect_y="82" rect_w="154" rect_h="79" offset_x="101" offset_y="120" />
+        <frame rect_x="878" rect_y="217" rect_w="151" rect_h="77" offset_x="107" offset_y="121" />
+        <frame rect_x="877" rect_y="299" rect_w="158" rect_h="75" offset_x="104" offset_y="123" />
+        <frame rect_x="848" rect_y="419" rect_w="151" rect_h="70" offset_x="100" offset_y="127" />
+        <frame rect_x="817" rect_y="539" rect_w="141" rect_h="66" offset_x="97" offset_y="133" />
+        <frame rect_x="1053" rect_y="1" rect_w="134" rect_h="59" offset_x="96" offset_y="139" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_attack.png">
+        <frame rect_x="319" rect_y="570" rect_w="93" rect_h="66" offset_x="115" offset_y="139" />
+        <frame rect_x="316" rect_y="664" rect_w="94" rect_h="65" offset_x="112" offset_y="140" />
+        <frame rect_x="1046" rect_y="82" rect_w="93" rect_h="65" offset_x="109" offset_y="140" />
+        <frame rect_x="1032" rect_y="217" rect_w="93" rect_h="65" offset_x="107" offset_y="140" />
+        <frame rect_x="1038" rect_y="299" rect_w="97" rect_h="66" offset_x="104" offset_y="143" />
+        <frame rect_x="889" rect_y="164" rect_w="110" rect_h="50" offset_x="104" offset_y="144" />
+        <frame rect_x="1002" rect_y="419" rect_w="112" rect_h="55" offset_x="118" offset_y="134" />
+        <frame rect_x="961" rect_y="539" rect_w="116" rect_h="62" offset_x="122" offset_y="138" />
+        <frame rect_x="1046" rect_y="150" rect_w="121" rect_h="62" offset_x="120" offset_y="143" />
+        <frame rect_x="961" rect_y="604" rect_w="117" rect_h="60" offset_x="117" offset_y="148" />
+        <frame rect_x="1080" rect_y="539" rect_w="107" rect_h="60" offset_x="115" offset_y="149" />
+        <frame rect_x="1081" rect_y="604" rect_w="102" rect_h="65" offset_x="114" offset_y="144" />
+      </direction>
+    </sequence>
+    <sequence id="2" group="5">
+      <direction id="0" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="45" rect_h="56" offset_x="147" offset_y="162" />
+        <frame rect_x="1" rect_y="60" rect_w="41" rect_h="75" offset_x="147" offset_y="141" />
+        <frame rect_x="49" rect_y="1" rect_w="35" rect_h="80" offset_x="150" offset_y="134" />
+        <frame rect_x="1" rect_y="138" rect_w="36" rect_h="80" offset_x="148" offset_y="134" />
+        <frame rect_x="49" rect_y="84" rect_w="35" rect_h="56" offset_x="148" offset_y="159" />
+        <frame rect_x="87" rect_y="1" rect_w="46" rect_h="76" offset_x="147" offset_y="148" />
+        <frame rect_x="136" rect_y="1" rect_w="59" rect_h="83" offset_x="147" offset_y="151" />
+        <frame rect_x="136" rect_y="87" rect_w="57" rect_h="84" offset_x="149" offset_y="153" />
+        <frame rect_x="1" rect_y="221" rect_w="52" rect_h="83" offset_x="152" offset_y="155" />
+        <frame rect_x="136" rect_y="174" rect_w="48" rect_h="94" offset_x="152" offset_y="140" />
+        <frame rect_x="49" rect_y="143" rect_w="47" rect_h="57" offset_x="150" offset_y="168" />
+        <frame rect_x="56" rect_y="221" rect_w="48" rect_h="56" offset_x="146" offset_y="166" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="198" rect_y="1" rect_w="95" rect_h="57" offset_x="116" offset_y="155" />
+        <frame rect_x="196" rect_y="87" rect_w="94" rect_h="45" offset_x="119" offset_y="167" />
+        <frame rect_x="187" rect_y="174" rect_w="92" rect_h="44" offset_x="123" offset_y="166" />
+        <frame rect_x="187" rect_y="221" rect_w="90" rect_h="52" offset_x="127" offset_y="157" />
+        <frame rect_x="296" rect_y="1" rect_w="99" rect_h="50" offset_x="121" offset_y="161" />
+        <frame rect_x="398" rect_y="1" rect_w="129" rect_h="66" offset_x="100" offset_y="149" />
+        <frame rect_x="293" rect_y="87" rect_w="137" rect_h="79" offset_x="87" offset_y="141" />
+        <frame rect_x="282" rect_y="174" rect_w="131" rect_h="75" offset_x="86" offset_y="149" />
+        <frame rect_x="530" rect_y="1" rect_w="124" rect_h="80" offset_x="93" offset_y="147" />
+        <frame rect_x="433" rect_y="87" rect_w="116" rect_h="73" offset_x="99" offset_y="152" />
+        <frame rect_x="416" rect_y="174" rect_w="106" rect_h="60" offset_x="108" offset_y="157" />
+        <frame rect_x="525" rect_y="174" rect_w="105" rect_h="67" offset_x="106" offset_y="147" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="282" rect_y="252" rect_w="126" rect_h="50" offset_x="102" offset_y="149" />
+        <frame rect_x="525" rect_y="244" rect_w="126" rect_h="43" offset_x="106" offset_y="155" />
+        <frame rect_x="1" rect_y="307" rect_w="125" rect_h="26" offset_x="110" offset_y="172" />
+        <frame rect_x="525" rect_y="290" rect_w="124" rect_h="42" offset_x="115" offset_y="156" />
+        <frame rect_x="1" rect_y="336" rect_w="130" rect_h="41" offset_x="113" offset_y="157" />
+        <frame rect_x="282" rect_y="305" rect_w="167" rect_h="56" offset_x="85" offset_y="143" />
+        <frame rect_x="657" rect_y="1" rect_w="170" rect_h="75" offset_x="71" offset_y="123" />
+        <frame rect_x="552" rect_y="87" rect_w="172" rect_h="60" offset_x="62" offset_y="138" />
+        <frame rect_x="654" rect_y="244" rect_w="172" rect_h="68" offset_x="61" offset_y="130" />
+        <frame rect_x="633" rect_y="174" rect_w="165" rect_h="52" offset_x="69" offset_y="146" />
+        <frame rect_x="654" rect_y="315" rect_w="140" rect_h="62" offset_x="93" offset_y="136" />
+        <frame rect_x="1" rect_y="380" rect_w="140" rect_h="54" offset_x="90" offset_y="144" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="187" rect_y="276" rect_w="89" rect_h="71" offset_x="121" offset_y="143" />
+        <frame rect_x="525" rect_y="335" rect_w="95" rect_h="70" offset_x="117" offset_y="146" />
+        <frame rect_x="416" rect_y="237" rect_w="90" rect_h="63" offset_x="125" offset_y="155" />
+        <frame rect_x="282" rect_y="364" rect_w="90" rect_h="46" offset_x="126" offset_y="172" />
+        <frame rect_x="727" rect_y="87" rect_w="96" rect_h="50" offset_x="124" offset_y="169" />
+        <frame rect_x="1" rect_y="437" rect_w="117" rect_h="95" offset_x="111" offset_y="123" />
+        <frame rect_x="654" rect_y="380" rect_w="131" rect_h="96" offset_x="92" offset_y="112" />
+        <frame rect_x="144" rect_y="380" rect_w="135" rect_h="107" offset_x="83" offset_y="99" />
+        <frame rect_x="375" rect_y="364" rect_w="134" rect_h="101" offset_x="82" offset_y="107" />
+        <frame rect_x="830" rect_y="1" rect_w="130" rect_h="96" offset_x="86" offset_y="115" />
+        <frame rect_x="829" rect_y="244" rect_w="115" rect_h="87" offset_x="99" offset_y="126" />
+        <frame rect_x="525" rect_y="408" rect_w="96" rect_h="86" offset_x="116" offset_y="128" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="136" rect_y="271" rect_w="41" rect_h="95" offset_x="150" offset_y="127" />
+        <frame rect_x="282" rect_y="413" rect_w="41" rect_h="84" offset_x="147" offset_y="141" />
+        <frame rect_x="788" rect_y="380" rect_w="37" rect_h="84" offset_x="147" offset_y="143" />
+        <frame rect_x="830" rect_y="100" rect_w="37" rect_h="79" offset_x="147" offset_y="149" />
+        <frame rect_x="829" rect_y="334" rect_w="36" rect_h="81" offset_x="147" offset_y="149" />
+        <frame rect_x="326" rect_y="413" rect_w="46" rect_h="87" offset_x="148" offset_y="142" />
+        <frame rect_x="870" rect_y="100" rect_w="56" rect_h="121" offset_x="147" offset_y="95" />
+        <frame rect_x="868" rect_y="334" rect_w="56" rect_h="131" offset_x="147" offset_y="83" />
+        <frame rect_x="1" rect_y="535" rect_w="56" rect_h="128" offset_x="148" offset_y="88" />
+        <frame rect_x="654" rect_y="479" rect_w="53" rect_h="119" offset_x="147" offset_y="100" />
+        <frame rect_x="144" rect_y="490" rect_w="52" rect_h="114" offset_x="145" offset_y="108" />
+        <frame rect_x="375" rect_y="468" rect_w="47" rect_h="77" offset_x="147" offset_y="146" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="525" rect_y="497" rect_w="109" rect_h="54" offset_x="116" offset_y="160" />
+        <frame rect_x="710" rect_y="479" rect_w="107" rect_h="62" offset_x="113" offset_y="153" />
+        <frame rect_x="375" rect_y="548" rect_w="103" rect_h="69" offset_x="110" offset_y="148" />
+        <frame rect_x="654" rect_y="601" rect_w="101" rect_h="50" offset_x="107" offset_y="168" />
+        <frame rect_x="144" rect_y="607" rect_w="105" rect_h="51" offset_x="104" offset_y="168" />
+        <frame rect_x="820" rect_y="479" rect_w="140" rect_h="92" offset_x="108" offset_y="126" />
+        <frame rect_x="963" rect_y="1" rect_w="145" rect_h="96" offset_x="123" offset_y="112" />
+        <frame rect_x="947" rect_y="244" rect_w="148" rect_h="112" offset_x="121" offset_y="94" />
+        <frame rect_x="929" rect_y="100" rect_w="147" rect_h="107" offset_x="121" offset_y="101" />
+        <frame rect_x="963" rect_y="479" rect_w="136" rect_h="106" offset_x="123" offset_y="105" />
+        <frame rect_x="820" rect_y="574" rect_w="130" rect_h="87" offset_x="118" offset_y="125" />
+        <frame rect_x="525" rect_y="554" rect_w="120" rect_h="58" offset_x="116" offset_y="155" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="947" rect_y="359" rect_w="142" rect_h="49" offset_x="99" offset_y="149" />
+        <frame rect_x="375" rect_y="620" rect_w="140" rect_h="43" offset_x="94" offset_y="155" />
+        <frame rect_x="963" rect_y="588" rect_w="134" rect_h="38" offset_x="90" offset_y="161" />
+        <frame rect_x="947" rect_y="411" rect_w="132" rect_h="32" offset_x="86" offset_y="167" />
+        <frame rect_x="963" rect_y="629" rect_w="139" rect_h="34" offset_x="82" offset_y="165" />
+        <frame rect_x="1111" rect_y="1" rect_w="181" rect_h="51" offset_x="82" offset_y="147" />
+        <frame rect_x="1098" rect_y="244" rect_w="185" rect_h="75" offset_x="106" offset_y="124" />
+        <frame rect_x="1079" rect_y="100" rect_w="194" rect_h="74" offset_x="109" offset_y="123" />
+        <frame rect_x="1092" rect_y="359" rect_w="197" rect_h="68" offset_x="104" offset_y="129" />
+        <frame rect_x="1102" rect_y="479" rect_w="181" rect_h="64" offset_x="103" offset_y="133" />
+        <frame rect_x="1079" rect_y="177" rect_w="171" rect_h="63" offset_x="100" offset_y="136" />
+        <frame rect_x="1102" rect_y="546" rect_w="158" rect_h="58" offset_x="98" offset_y="140" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_attack_shadow.png">
+        <frame rect_x="1" rect_y="666" rect_w="111" rect_h="70" offset_x="116" offset_y="142" />
+        <frame rect_x="654" rect_y="654" rect_w="108" rect_h="60" offset_x="113" offset_y="152" />
+        <frame rect_x="252" rect_y="607" rect_w="102" rect_h="62" offset_x="110" offset_y="149" />
+        <frame rect_x="710" rect_y="544" rect_w="101" rect_h="54" offset_x="107" offset_y="156" />
+        <frame rect_x="820" rect_y="664" rect_w="106" rect_h="55" offset_x="104" offset_y="156" />
+        <frame rect_x="518" rect_y="620" rect_w="129" rect_h="71" offset_x="108" offset_y="146" />
+        <frame rect_x="1105" rect_y="629" rect_w="145" rect_h="88" offset_x="122" offset_y="135" />
+        <frame rect_x="1295" rect_y="1" rect_w="151" rect_h="82" offset_x="129" offset_y="144" />
+        <frame rect_x="1286" rect_y="244" rect_w="151" rect_h="77" offset_x="125" offset_y="148" />
+        <frame rect_x="375" rect_y="666" rect_w="138" rect_h="67" offset_x="123" offset_y="155" />
+        <frame rect_x="963" rect_y="666" rect_w="134" rect_h="68" offset_x="116" offset_y="151" />
+        <frame rect_x="1276" rect_y="100" rect_w="119" rect_h="65" offset_x="117" offset_y="149" />
+      </direction>
+    </sequence>
+    <sequence id="3" group="1">
+      <direction id="0" texture="animal_tiger1_magic.png">
+        <frame rect_x="1" rect_y="1" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="1" rect_y="80" rect_w="28" rect_h="79" offset_x="146" offset_y="131" />
+        <frame rect_x="32" rect_y="1" rect_w="28" rect_h="79" offset_x="146" offset_y="131" />
+        <frame rect_x="63" rect_y="1" rect_w="28" rect_h="79" offset_x="146" offset_y="131" />
+        <frame rect_x="94" rect_y="1" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="94" rect_y="81" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="32" rect_y="83" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="125" rect_y="1" rect_w="29" rect_h="76" offset_x="146" offset_y="134" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_magic.png">
+        <frame rect_x="157" rect_y="1" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="125" rect_y="81" rect_w="91" rect_h="71" offset_x="117" offset_y="138" />
+        <frame rect_x="253" rect_y="1" rect_w="90" rect_h="71" offset_x="120" offset_y="138" />
+        <frame rect_x="219" rect_y="81" rect_w="90" rect_h="71" offset_x="119" offset_y="138" />
+        <frame rect_x="346" rect_y="1" rect_w="88" rect_h="70" offset_x="119" offset_y="139" />
+        <frame rect_x="312" rect_y="81" rect_w="90" rect_h="70" offset_x="116" offset_y="139" />
+        <frame rect_x="32" rect_y="163" rect_w="91" rect_h="70" offset_x="115" offset_y="139" />
+        <frame rect_x="219" rect_y="155" rect_w="92" rect_h="70" offset_x="114" offset_y="139" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_magic.png">
+        <frame rect_x="437" rect_y="1" rect_w="124" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="405" rect_y="81" rect_w="120" rect_h="51" offset_x="107" offset_y="148" />
+        <frame rect_x="314" rect_y="155" rect_w="118" rect_h="51" offset_x="112" offset_y="149" />
+        <frame rect_x="435" rect_y="155" rect_w="117" rect_h="57" offset_x="111" offset_y="143" />
+        <frame rect_x="564" rect_y="1" rect_w="116" rect_h="63" offset_x="109" offset_y="137" />
+        <frame rect_x="528" rect_y="81" rect_w="118" rect_h="63" offset_x="107" offset_y="137" />
+        <frame rect_x="555" rect_y="155" rect_w="120" rect_h="60" offset_x="104" offset_y="139" />
+        <frame rect_x="683" rect_y="1" rect_w="122" rect_h="57" offset_x="102" offset_y="142" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_magic.png">
+        <frame rect_x="678" rect_y="155" rect_w="94" rect_h="78" offset_x="111" offset_y="130" />
+        <frame rect_x="683" rect_y="61" rect_w="91" rect_h="75" offset_x="117" offset_y="136" />
+        <frame rect_x="32" rect_y="236" rect_w="91" rect_h="73" offset_x="119" offset_y="140" />
+        <frame rect_x="126" rect_y="163" rect_w="90" rect_h="79" offset_x="119" offset_y="133" />
+        <frame rect_x="314" rect_y="209" rect_w="89" rect_h="84" offset_x="117" offset_y="127" />
+        <frame rect_x="435" rect_y="215" rect_w="90" rect_h="83" offset_x="116" offset_y="127" />
+        <frame rect_x="555" rect_y="218" rect_w="91" rect_h="82" offset_x="115" offset_y="127" />
+        <frame rect_x="32" rect_y="312" rect_w="94" rect_h="80" offset_x="112" offset_y="129" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_magic.png">
+        <frame rect_x="1" rect_y="162" rect_w="27" rect_h="90" offset_x="146" offset_y="126" />
+        <frame rect_x="219" rect_y="228" rect_w="27" rect_h="86" offset_x="146" offset_y="134" />
+        <frame rect_x="775" rect_y="155" rect_w="27" rect_h="85" offset_x="146" offset_y="138" />
+        <frame rect_x="678" rect_y="236" rect_w="28" rect_h="92" offset_x="145" offset_y="130" />
+        <frame rect_x="314" rect_y="296" rect_w="27" rect_h="96" offset_x="146" offset_y="124" />
+        <frame rect_x="1" rect_y="255" rect_w="27" rect_h="96" offset_x="146" offset_y="123" />
+        <frame rect_x="249" rect_y="228" rect_w="28" rect_h="95" offset_x="145" offset_y="123" />
+        <frame rect_x="775" rect_y="243" rect_w="28" rect_h="92" offset_x="145" offset_y="125" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_magic.png">
+        <frame rect_x="435" rect_y="301" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="555" rect_y="303" rect_w="92" rect_h="75" offset_x="111" offset_y="136" />
+        <frame rect_x="32" rect_y="395" rect_w="89" rect_h="74" offset_x="110" offset_y="139" />
+        <frame rect_x="678" rect_y="331" rect_w="90" rect_h="80" offset_x="111" offset_y="132" />
+        <frame rect_x="435" rect_y="382" rect_w="89" rect_h="84" offset_x="113" offset_y="127" />
+        <frame rect_x="555" rect_y="381" rect_w="89" rect_h="84" offset_x="113" offset_y="126" />
+        <frame rect_x="808" rect_y="1" rect_w="92" rect_h="82" offset_x="113" offset_y="127" />
+        <frame rect_x="805" rect_y="155" rect_w="92" rect_h="79" offset_x="114" offset_y="129" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_magic.png">
+        <frame rect_x="775" rect_y="338" rect_w="124" rect_h="55" offset_x="97" offset_y="144" />
+        <frame rect_x="124" rect_y="395" rect_w="120" rect_h="51" offset_x="93" offset_y="148" />
+        <frame rect_x="314" rect_y="395" rect_w="118" rect_h="50" offset_x="90" offset_y="149" />
+        <frame rect_x="775" rect_y="396" rect_w="117" rect_h="57" offset_x="92" offset_y="142" />
+        <frame rect_x="903" rect_y="1" rect_w="116" rect_h="62" offset_x="95" offset_y="137" />
+        <frame rect_x="806" rect_y="243" rect_w="118" rect_h="62" offset_x="95" offset_y="137" />
+        <frame rect_x="808" rect_y="86" rect_w="120" rect_h="60" offset_x="96" offset_y="139" />
+        <frame rect_x="895" rect_y="396" rect_w="122" rect_h="58" offset_x="96" offset_y="141" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_magic.png">
+        <frame rect_x="900" rect_y="155" rect_w="93" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="927" rect_y="243" rect_w="92" rect_h="70" offset_x="112" offset_y="138" />
+        <frame rect_x="927" rect_y="316" rect_w="91" rect_h="71" offset_x="110" offset_y="137" />
+        <frame rect_x="32" rect_y="472" rect_w="89" rect_h="70" offset_x="112" offset_y="138" />
+        <frame rect_x="678" rect_y="414" rect_w="89" rect_h="69" offset_x="114" offset_y="139" />
+        <frame rect_x="435" rect_y="469" rect_w="90" rect_h="69" offset_x="114" offset_y="139" />
+        <frame rect_x="555" rect_y="468" rect_w="92" rect_h="69" offset_x="114" offset_y="139" />
+        <frame rect_x="124" rect_y="449" rect_w="93" rect_h="69" offset_x="114" offset_y="139" />
+      </direction>
+    </sequence>
+    <sequence id="4" group="5">
+      <direction id="0" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="45" rect_h="56" offset_x="146" offset_y="162" />
+        <frame rect_x="1" rect_y="60" rect_w="42" rect_h="78" offset_x="148" offset_y="136" />
+        <frame rect_x="49" rect_y="1" rect_w="42" rect_h="73" offset_x="147" offset_y="139" />
+        <frame rect_x="1" rect_y="141" rect_w="45" rect_h="71" offset_x="147" offset_y="141" />
+        <frame rect_x="94" rect_y="1" rect_w="49" rect_h="53" offset_x="146" offset_y="159" />
+        <frame rect_x="49" rect_y="77" rect_w="49" rect_h="67" offset_x="146" offset_y="146" />
+        <frame rect_x="49" rect_y="147" rect_w="47" rect_h="54" offset_x="147" offset_y="161" />
+        <frame rect_x="146" rect_y="1" rect_w="46" rect_h="55" offset_x="146" offset_y="161" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="195" rect_y="1" rect_w="95" rect_h="61" offset_x="116" offset_y="151" />
+        <frame rect_x="101" rect_y="77" rect_w="89" rect_h="55" offset_x="126" offset_y="154" />
+        <frame rect_x="99" rect_y="147" rect_w="96" rect_h="44" offset_x="122" offset_y="165" />
+        <frame rect_x="195" rect_y="65" rect_w="90" rect_h="43" offset_x="126" offset_y="166" />
+        <frame rect_x="198" rect_y="147" rect_w="90" rect_h="57" offset_x="124" offset_y="151" />
+        <frame rect_x="293" rect_y="1" rect_w="95" rect_h="53" offset_x="118" offset_y="154" />
+        <frame rect_x="288" rect_y="65" rect_w="89" rect_h="52" offset_x="123" offset_y="157" />
+        <frame rect_x="291" rect_y="147" rect_w="93" rect_h="43" offset_x="118" offset_y="168" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="391" rect_y="1" rect_w="126" rect_h="47" offset_x="102" offset_y="151" />
+        <frame rect_x="380" rect_y="65" rect_w="117" rect_h="49" offset_x="115" offset_y="150" />
+        <frame rect_x="387" rect_y="147" rect_w="121" rect_h="44" offset_x="113" offset_y="153" />
+        <frame rect_x="1" rect_y="215" rect_w="119" rect_h="38" offset_x="113" offset_y="161" />
+        <frame rect_x="1" rect_y="256" rect_w="109" rect_h="60" offset_x="120" offset_y="138" />
+        <frame rect_x="198" rect_y="207" rect_w="111" rect_h="47" offset_x="118" offset_y="151" />
+        <frame rect_x="387" rect_y="194" rect_w="117" rect_h="46" offset_x="112" offset_y="152" />
+        <frame rect_x="198" rect_y="257" rect_w="127" rect_h="50" offset_x="102" offset_y="148" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="1" rect_y="319" rect_w="88" rect_h="77" offset_x="122" offset_y="137" />
+        <frame rect_x="387" rect_y="243" rect_w="87" rect_h="71" offset_x="127" offset_y="145" />
+        <frame rect_x="198" rect_y="310" rect_w="90" rect_h="71" offset_x="127" offset_y="146" />
+        <frame rect_x="92" rect_y="319" rect_w="88" rect_h="62" offset_x="127" offset_y="154" />
+        <frame rect_x="387" rect_y="317" rect_w="86" rect_h="65" offset_x="127" offset_y="150" />
+        <frame rect_x="291" rect_y="310" rect_w="85" rect_h="59" offset_x="127" offset_y="156" />
+        <frame rect_x="1" rect_y="399" rect_w="87" rect_h="69" offset_x="124" offset_y="146" />
+        <frame rect_x="198" rect_y="384" rect_w="88" rect_h="72" offset_x="122" offset_y="142" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="123" rect_y="215" rect_w="40" rect_h="87" offset_x="151" offset_y="135" />
+        <frame rect_x="92" rect_y="384" rect_w="41" rect_h="66" offset_x="148" offset_y="159" />
+        <frame rect_x="291" rect_y="372" rect_w="42" rect_h="84" offset_x="147" offset_y="142" />
+        <frame rect_x="476" rect_y="317" rect_w="41" rect_h="82" offset_x="151" offset_y="143" />
+        <frame rect_x="336" rect_y="372" rect_w="47" rect_h="92" offset_x="147" offset_y="132" />
+        <frame rect_x="1" rect_y="471" rect_w="46" rect_h="92" offset_x="148" offset_y="131" />
+        <frame rect_x="387" rect_y="385" rect_w="46" rect_h="69" offset_x="148" offset_y="155" />
+        <frame rect_x="198" rect_y="459" rect_w="45" rect_h="89" offset_x="147" offset_y="134" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="336" rect_y="467" rect_w="109" rect_h="55" offset_x="116" offset_y="159" />
+        <frame rect_x="50" rect_y="471" rect_w="105" rect_h="53" offset_x="113" offset_y="163" />
+        <frame rect_x="520" rect_y="1" rect_w="103" rect_h="74" offset_x="110" offset_y="142" />
+        <frame rect_x="511" rect_y="147" rect_w="107" rect_h="63" offset_x="111" offset_y="153" />
+        <frame rect_x="477" rect_y="243" rect_w="109" rect_h="53" offset_x="114" offset_y="162" />
+        <frame rect_x="476" rect_y="402" rect_w="110" rect_h="53" offset_x="114" offset_y="161" />
+        <frame rect_x="448" rect_y="467" rect_w="109" rect_h="66" offset_x="115" offset_y="148" />
+        <frame rect_x="626" rect_y="1" rect_w="111" rect_h="65" offset_x="115" offset_y="149" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="520" rect_y="317" rect_w="142" rect_h="48" offset_x="99" offset_y="151" />
+        <frame rect_x="520" rect_y="78" rect_w="137" rect_h="49" offset_x="93" offset_y="150" />
+        <frame rect_x="589" rect_y="243" rect_w="134" rect_h="49" offset_x="90" offset_y="150" />
+        <frame rect_x="589" rect_y="402" rect_w="136" rect_h="48" offset_x="93" offset_y="151" />
+        <frame rect_x="560" rect_y="467" rect_w="138" rect_h="55" offset_x="96" offset_y="143" />
+        <frame rect_x="740" rect_y="1" rect_w="140" rect_h="54" offset_x="96" offset_y="145" />
+        <frame rect_x="621" rect_y="147" rect_w="143" rect_h="48" offset_x="96" offset_y="151" />
+        <frame rect_x="665" rect_y="317" rect_w="144" rect_h="44" offset_x="96" offset_y="154" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_magic_shadow.png">
+        <frame rect_x="726" rect_y="243" rect_w="112" rect_h="70" offset_x="116" offset_y="142" />
+        <frame rect_x="660" rect_y="78" rect_w="105" rect_h="62" offset_x="113" offset_y="148" />
+        <frame rect_x="728" rect_y="402" rect_w="103" rect_h="70" offset_x="111" offset_y="137" />
+        <frame rect_x="767" rect_y="147" rect_w="108" rect_h="61" offset_x="112" offset_y="147" />
+        <frame rect_x="768" rect_y="78" rect_w="108" rect_h="58" offset_x="114" offset_y="149" />
+        <frame rect_x="728" rect_y="475" rect_w="109" rect_h="58" offset_x="115" offset_y="150" />
+        <frame rect_x="1" rect_y="566" rect_w="113" rect_h="55" offset_x="115" offset_y="155" />
+        <frame rect_x="448" rect_y="536" rect_w="111" rect_h="71" offset_x="115" offset_y="139" />
+      </direction>
+    </sequence>
+    <sequence id="5" group="3">
+      <direction id="0" texture="animal_tiger1_fall.png">
+        <frame rect_x="1" rect_y="1" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="1" rect_y="80" rect_w="28" rect_h="80" offset_x="146" offset_y="130" />
+        <frame rect_x="32" rect_y="1" rect_w="28" rect_h="80" offset_x="146" offset_y="130" />
+        <frame rect_x="32" rect_y="84" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="63" rect_y="1" rect_w="28" rect_h="71" offset_x="146" offset_y="139" />
+        <frame rect_x="63" rect_y="84" rect_w="28" rect_h="69" offset_x="146" offset_y="141" />
+        <frame rect_x="94" rect_y="1" rect_w="28" rect_h="69" offset_x="146" offset_y="141" />
+        <frame rect_x="94" rect_y="84" rect_w="28" rect_h="70" offset_x="146" offset_y="140" />
+        <frame rect_x="125" rect_y="1" rect_w="28" rect_h="66" offset_x="146" offset_y="147" />
+        <frame rect_x="125" rect_y="84" rect_w="28" rect_h="66" offset_x="146" offset_y="147" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_fall.png">
+        <frame rect_x="156" rect_y="1" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="1" rect_y="163" rect_w="94" rect_h="72" offset_x="117" offset_y="137" />
+        <frame rect_x="125" rect_y="153" rect_w="95" rect_h="72" offset_x="120" offset_y="137" />
+        <frame rect_x="252" rect_y="1" rect_w="95" rect_h="68" offset_x="119" offset_y="141" />
+        <frame rect_x="156" rect_y="84" rect_w="92" rect_h="64" offset_x="119" offset_y="145" />
+        <frame rect_x="223" rect_y="153" rect_w="95" rect_h="61" offset_x="117" offset_y="148" />
+        <frame rect_x="251" rect_y="84" rect_w="96" rect_h="58" offset_x="117" offset_y="151" />
+        <frame rect_x="350" rect_y="1" rect_w="100" rect_h="58" offset_x="118" offset_y="151" />
+        <frame rect_x="321" rect_y="153" rect_w="104" rect_h="52" offset_x="120" offset_y="157" />
+        <frame rect_x="453" rect_y="1" rect_w="104" rect_h="52" offset_x="120" offset_y="157" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_fall.png">
+        <frame rect_x="350" rect_y="84" rect_w="124" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="428" rect_y="153" rect_w="125" rect_h="53" offset_x="107" offset_y="147" />
+        <frame rect_x="1" rect_y="238" rect_w="125" rect_h="50" offset_x="112" offset_y="150" />
+        <frame rect_x="223" rect_y="217" rect_w="125" rect_h="54" offset_x="110" offset_y="146" />
+        <frame rect_x="428" rect_y="209" rect_w="122" rect_h="56" offset_x="109" offset_y="143" />
+        <frame rect_x="1" rect_y="291" rect_w="126" rect_h="43" offset_x="106" offset_y="156" />
+        <frame rect_x="223" rect_y="274" rect_w="127" rect_h="38" offset_x="107" offset_y="161" />
+        <frame rect_x="353" rect_y="274" rect_w="133" rect_h="35" offset_x="108" offset_y="164" />
+        <frame rect_x="560" rect_y="1" rect_w="139" rect_h="31" offset_x="110" offset_y="168" />
+        <frame rect_x="477" rect_y="84" rect_w="139" rect_h="31" offset_x="110" offset_y="168" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_fall.png">
+        <frame rect_x="556" rect_y="153" rect_w="94" rect_h="78" offset_x="111" offset_y="130" />
+        <frame rect_x="556" rect_y="234" rect_w="94" rect_h="72" offset_x="117" offset_y="136" />
+        <frame rect_x="1" rect_y="337" rect_w="95" rect_h="70" offset_x="120" offset_y="140" />
+        <frame rect_x="223" rect_y="315" rect_w="95" rect_h="76" offset_x="119" offset_y="135" />
+        <frame rect_x="353" rect_y="312" rect_w="94" rect_h="78" offset_x="117" offset_y="133" />
+        <frame rect_x="556" rect_y="309" rect_w="97" rect_h="69" offset_x="115" offset_y="144" />
+        <frame rect_x="99" rect_y="337" rect_w="97" rect_h="65" offset_x="116" offset_y="149" />
+        <frame rect_x="450" rect_y="312" rect_w="101" rect_h="63" offset_x="117" offset_y="153" />
+        <frame rect_x="1" rect_y="410" rect_w="104" rect_h="67" offset_x="119" offset_y="156" />
+        <frame rect_x="223" rect_y="394" rect_w="105" rect_h="67" offset_x="118" offset_y="156" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_fall.png">
+        <frame rect_x="653" rect_y="153" rect_w="27" rect_h="90" offset_x="146" offset_y="126" />
+        <frame rect_x="353" rect_y="393" rect_w="28" rect_h="84" offset_x="145" offset_y="133" />
+        <frame rect_x="656" rect_y="309" rect_w="27" rect_h="82" offset_x="146" offset_y="138" />
+        <frame rect_x="556" rect_y="381" rect_w="27" rect_h="87" offset_x="146" offset_y="133" />
+        <frame rect_x="450" rect_y="378" rect_w="27" rect_h="91" offset_x="146" offset_y="130" />
+        <frame rect_x="384" rect_y="393" rect_w="27" rect_h="81" offset_x="146" offset_y="141" />
+        <frame rect_x="656" rect_y="394" rect_w="27" rect_h="77" offset_x="146" offset_y="147" />
+        <frame rect_x="321" rect_y="315" rect_w="27" rect_h="76" offset_x="146" offset_y="150" />
+        <frame rect_x="586" rect_y="381" rect_w="27" rect_h="81" offset_x="146" offset_y="154" />
+        <frame rect_x="480" rect_y="378" rect_w="27" rect_h="81" offset_x="146" offset_y="154" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_fall.png">
+        <frame rect_x="1" rect_y="480" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="108" rect_y="410" rect_w="96" rect_h="72" offset_x="108" offset_y="136" />
+        <frame rect_x="223" rect_y="464" rect_w="95" rect_h="70" offset_x="105" offset_y="140" />
+        <frame rect_x="353" rect_y="480" rect_w="94" rect_h="76" offset_x="106" offset_y="135" />
+        <frame rect_x="556" rect_y="471" rect_w="94" rect_h="78" offset_x="108" offset_y="133" />
+        <frame rect_x="450" rect_y="472" rect_w="95" rect_h="68" offset_x="108" offset_y="144" />
+        <frame rect_x="108" rect_y="485" rect_w="96" rect_h="65" offset_x="107" offset_y="149" />
+        <frame rect_x="1" rect_y="561" rect_w="100" rect_h="63" offset_x="102" offset_y="153" />
+        <frame rect_x="223" rect_y="537" rect_w="104" rect_h="67" offset_x="96" offset_y="156" />
+        <frame rect_x="556" rect_y="552" rect_w="104" rect_h="67" offset_x="96" offset_y="156" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_fall.png">
+        <frame rect_x="353" rect_y="559" rect_w="124" rect_h="55" offset_x="97" offset_y="144" />
+        <frame rect_x="702" rect_y="1" rect_w="124" rect_h="52" offset_x="89" offset_y="147" />
+        <frame rect_x="619" rect_y="84" rect_w="125" rect_h="50" offset_x="83" offset_y="149" />
+        <frame rect_x="683" rect_y="153" rect_w="125" rect_h="54" offset_x="85" offset_y="145" />
+        <frame rect_x="653" rect_y="246" rect_w="123" rect_h="56" offset_x="88" offset_y="143" />
+        <frame rect_x="560" rect_y="35" rect_w="126" rect_h="44" offset_x="88" offset_y="155" />
+        <frame rect_x="686" rect_y="309" rect_w="127" rect_h="39" offset_x="86" offset_y="160" />
+        <frame rect_x="686" rect_y="394" rect_w="132" rect_h="35" offset_x="79" offset_y="164" />
+        <frame rect_x="477" rect_y="118" rect_w="139" rect_h="31" offset_x="71" offset_y="168" />
+        <frame rect_x="656" rect_y="474" rect_w="139" rect_h="31" offset_x="71" offset_y="168" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_fall.png">
+        <frame rect_x="108" rect_y="553" rect_w="93" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="663" rect_y="552" rect_w="95" rect_h="71" offset_x="109" offset_y="137" />
+        <frame rect_x="1" rect_y="627" rect_w="95" rect_h="71" offset_x="105" offset_y="137" />
+        <frame rect_x="223" rect_y="607" rect_w="95" rect_h="67" offset_x="107" offset_y="141" />
+        <frame rect_x="556" rect_y="622" rect_w="92" rect_h="63" offset_x="109" offset_y="145" />
+        <frame rect_x="353" rect_y="617" rect_w="96" rect_h="60" offset_x="108" offset_y="148" />
+        <frame rect_x="108" rect_y="625" rect_w="97" rect_h="57" offset_x="107" offset_y="151" />
+        <frame rect_x="663" rect_y="626" rect_w="100" rect_h="57" offset_x="102" offset_y="151" />
+        <frame rect_x="1" rect_y="701" rect_w="104" rect_h="51" offset_x="97" offset_y="157" />
+        <frame rect_x="223" rect_y="677" rect_w="104" rect_h="51" offset_x="97" offset_y="157" />
+      </direction>
+    </sequence>
+    <sequence id="6" group="7">
+      <direction id="0" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="43" rect_h="56" offset_x="148" offset_y="162" />
+        <frame rect_x="1" rect_y="60" rect_w="43" rect_h="83" offset_x="147" offset_y="131" />
+        <frame rect_x="47" rect_y="1" rect_w="42" rect_h="73" offset_x="147" offset_y="139" />
+        <frame rect_x="92" rect_y="1" rect_w="45" rect_h="67" offset_x="146" offset_y="145" />
+        <frame rect_x="47" rect_y="77" rect_w="45" rect_h="52" offset_x="147" offset_y="161" />
+        <frame rect_x="95" rect_y="77" rect_w="40" rect_h="54" offset_x="146" offset_y="162" />
+        <frame rect_x="140" rect_y="1" rect_w="36" rect_h="64" offset_x="147" offset_y="152" />
+        <frame rect_x="140" rect_y="68" rect_w="33" rect_h="70" offset_x="148" offset_y="146" />
+        <frame rect_x="1" rect_y="146" rect_w="32" rect_h="66" offset_x="148" offset_y="150" />
+        <frame rect_x="47" rect_y="132" rect_w="34" rect_h="66" offset_x="146" offset_y="150" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="179" rect_y="1" rect_w="95" rect_h="66" offset_x="116" offset_y="146" />
+        <frame rect_x="140" rect_y="141" rect_w="100" rect_h="55" offset_x="118" offset_y="154" />
+        <frame rect_x="277" rect_y="1" rect_w="98" rect_h="56" offset_x="125" offset_y="153" />
+        <frame rect_x="179" rect_y="70" rect_w="99" rect_h="54" offset_x="124" offset_y="153" />
+        <frame rect_x="243" rect_y="141" rect_w="96" rect_h="51" offset_x="125" offset_y="158" />
+        <frame rect_x="378" rect_y="1" rect_w="99" rect_h="59" offset_x="122" offset_y="153" />
+        <frame rect_x="281" rect_y="70" rect_w="104" rect_h="58" offset_x="117" offset_y="154" />
+        <frame rect_x="342" rect_y="141" rect_w="105" rect_h="58" offset_x="121" offset_y="155" />
+        <frame rect_x="1" rect_y="215" rect_w="104" rect_h="53" offset_x="121" offset_y="160" />
+        <frame rect_x="140" rect_y="199" rect_w="103" rect_h="53" offset_x="122" offset_y="160" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="342" rect_y="202" rect_w="126" rect_h="39" offset_x="102" offset_y="159" />
+        <frame rect_x="480" rect_y="1" rect_w="124" rect_h="45" offset_x="115" offset_y="152" />
+        <frame rect_x="388" rect_y="70" rect_w="132" rect_h="47" offset_x="113" offset_y="151" />
+        <frame rect_x="450" rect_y="141" rect_w="128" rect_h="46" offset_x="117" offset_y="152" />
+        <frame rect_x="471" rect_y="202" rect_w="125" rect_h="55" offset_x="117" offset_y="144" />
+        <frame rect_x="1" rect_y="271" rect_w="136" rect_h="37" offset_x="106" offset_y="161" />
+        <frame rect_x="140" rect_y="255" rect_w="132" rect_h="34" offset_x="111" offset_y="165" />
+        <frame rect_x="275" rect_y="255" rect_w="142" rect_h="23" offset_x="108" offset_y="175" />
+        <frame rect_x="1" rect_y="311" rect_w="138" rect_h="28" offset_x="111" offset_y="171" />
+        <frame rect_x="275" rect_y="281" rect_w="138" rect_h="30" offset_x="111" offset_y="169" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="471" rect_y="260" rect_w="88" rect_h="77" offset_x="122" offset_y="137" />
+        <frame rect_x="1" rect_y="342" rect_w="91" rect_h="60" offset_x="126" offset_y="156" />
+        <frame rect_x="142" rect_y="311" rect_w="96" rect_h="57" offset_x="127" offset_y="161" />
+        <frame rect_x="275" rect_y="314" rect_w="101" rect_h="65" offset_x="122" offset_y="152" />
+        <frame rect_x="1" rect_y="405" rect_w="95" rect_h="78" offset_x="126" offset_y="138" />
+        <frame rect_x="471" rect_y="340" rect_w="97" rect_h="59" offset_x="123" offset_y="158" />
+        <frame rect_x="142" rect_y="371" rect_w="104" rect_h="56" offset_x="117" offset_y="162" />
+        <frame rect_x="275" rect_y="382" rect_w="105" rect_h="56" offset_x="121" offset_y="164" />
+        <frame rect_x="471" rect_y="402" rect_w="105" rect_h="60" offset_x="120" offset_y="164" />
+        <frame rect_x="607" rect_y="1" rect_w="105" rect_h="60" offset_x="120" offset_y="164" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="599" rect_y="202" rect_w="44" rect_h="87" offset_x="147" offset_y="135" />
+        <frame rect_x="95" rect_y="134" rect_w="42" rect_h="68" offset_x="147" offset_y="159" />
+        <frame rect_x="420" rect_y="255" rect_w="42" rect_h="84" offset_x="146" offset_y="145" />
+        <frame rect_x="523" rect_y="70" rect_w="43" rect_h="68" offset_x="147" offset_y="160" />
+        <frame rect_x="383" rect_y="382" rect_w="44" rect_h="88" offset_x="147" offset_y="138" />
+        <frame rect_x="99" rect_y="405" rect_w="38" rect_h="78" offset_x="147" offset_y="149" />
+        <frame rect_x="379" rect_y="314" rect_w="36" rect_h="64" offset_x="147" offset_y="164" />
+        <frame rect_x="562" rect_y="260" rect_w="34" rect_h="77" offset_x="147" offset_y="155" />
+        <frame rect_x="581" rect_y="141" rect_w="32" rect_h="54" offset_x="147" offset_y="168" />
+        <frame rect_x="95" rect_y="342" rect_w="32" rect_h="54" offset_x="147" offset_y="168" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="571" rect_y="340" rect_w="109" rect_h="55" offset_x="116" offset_y="159" />
+        <frame rect_x="579" rect_y="402" rect_w="107" rect_h="77" offset_x="111" offset_y="139" />
+        <frame rect_x="607" rect_y="64" rect_w="104" rect_h="70" offset_x="106" offset_y="148" />
+        <frame rect_x="715" rect_y="1" rect_w="110" rect_h="67" offset_x="106" offset_y="150" />
+        <frame rect_x="646" rect_y="202" rect_w="108" rect_h="64" offset_x="109" offset_y="152" />
+        <frame rect_x="142" rect_y="430" rect_w="103" rect_h="53" offset_x="110" offset_y="165" />
+        <frame rect_x="689" rect_y="402" rect_w="101" rect_h="62" offset_x="108" offset_y="155" />
+        <frame rect_x="616" rect_y="141" rect_w="105" rect_h="48" offset_x="102" offset_y="171" />
+        <frame rect_x="715" rect_y="71" rect_w="107" rect_h="65" offset_x="98" offset_y="158" />
+        <frame rect_x="646" rect_y="269" rect_w="107" rect_h="65" offset_x="98" offset_y="158" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="683" rect_y="340" rect_w="142" rect_h="53" offset_x="99" offset_y="145" />
+        <frame rect_x="828" rect_y="1" rect_w="140" rect_h="43" offset_x="90" offset_y="156" />
+        <frame rect_x="757" rect_y="202" rect_w="138" rect_h="30" offset_x="86" offset_y="168" />
+        <frame rect_x="793" rect_y="402" rect_w="139" rect_h="44" offset_x="88" offset_y="154" />
+        <frame rect_x="724" rect_y="141" rect_w="140" rect_h="37" offset_x="91" offset_y="162" />
+        <frame rect_x="825" rect_y="71" rect_w="137" rect_h="40" offset_x="89" offset_y="157" />
+        <frame rect_x="756" rect_y="269" rect_w="135" rect_h="25" offset_x="87" offset_y="174" />
+        <frame rect_x="828" rect_y="340" rect_w="137" rect_h="31" offset_x="81" offset_y="168" />
+        <frame rect_x="757" rect_y="235" rect_w="143" rect_h="29" offset_x="71" offset_y="170" />
+        <frame rect_x="793" rect_y="449" rect_w="142" rect_h="20" offset_x="72" offset_y="179" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_fall_shadow.png">
+        <frame rect_x="1" rect_y="486" rect_w="112" rect_h="44" offset_x="116" offset_y="168" />
+        <frame rect_x="1" rect_y="533" rect_w="108" rect_h="60" offset_x="109" offset_y="148" />
+        <frame rect_x="383" rect_y="473" rect_w="106" rect_h="52" offset_x="108" offset_y="155" />
+        <frame rect_x="579" rect_y="482" rect_w="111" rect_h="60" offset_x="107" offset_y="149" />
+        <frame rect_x="142" rect_y="486" rect_w="108" rect_h="53" offset_x="111" offset_y="155" />
+        <frame rect_x="793" rect_y="472" rect_w="108" rect_h="53" offset_x="108" offset_y="158" />
+        <frame rect_x="275" rect_y="441" rect_w="101" rect_h="49" offset_x="109" offset_y="163" />
+        <frame rect_x="383" rect_y="528" rect_w="103" rect_h="51" offset_x="104" offset_y="160" />
+        <frame rect_x="793" rect_y="528" rect_w="106" rect_h="56" offset_x="99" offset_y="157" />
+        <frame rect_x="867" rect_y="141" rect_w="97" rect_h="49" offset_x="108" offset_y="163" />
+      </direction>
+    </sequence>
+    <sequence id="7" group="1">
+      <direction id="0" texture="animal_tiger1_hurt.png">
+        <frame rect_x="1" rect_y="1" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="1" rect_y="80" rect_w="29" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="32" rect_y="1" rect_w="28" rect_h="76" offset_x="146" offset_y="133" />
+        <frame rect_x="63" rect_y="1" rect_w="29" rect_h="77" offset_x="145" offset_y="132" />
+        <frame rect_x="95" rect_y="1" rect_w="29" rect_h="78" offset_x="145" offset_y="132" />
+        <frame rect_x="1" rect_y="160" rect_w="30" rect_h="78" offset_x="144" offset_y="132" />
+        <frame rect_x="63" rect_y="81" rect_w="29" rect_h="77" offset_x="145" offset_y="133" />
+        <frame rect_x="95" rect_y="82" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="127" rect_y="1" rect_w="30" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="126" rect_y="82" rect_w="30" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="95" rect_y="162" rect_w="30" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="160" rect_y="1" rect_w="30" rect_h="76" offset_x="146" offset_y="134" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_hurt.png">
+        <frame rect_x="193" rect_y="1" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="159" rect_y="82" rect_w="90" rect_h="69" offset_x="114" offset_y="139" />
+        <frame rect_x="128" rect_y="162" rect_w="89" rect_h="70" offset_x="114" offset_y="138" />
+        <frame rect_x="289" rect_y="1" rect_w="88" rect_h="69" offset_x="114" offset_y="138" />
+        <frame rect_x="252" rect_y="82" rect_w="89" rect_h="70" offset_x="112" offset_y="138" />
+        <frame rect_x="220" rect_y="162" rect_w="89" rect_h="71" offset_x="113" offset_y="138" />
+        <frame rect_x="1" rect_y="241" rect_w="90" rect_h="71" offset_x="114" offset_y="138" />
+        <frame rect_x="95" rect_y="241" rect_w="92" rect_h="71" offset_x="113" offset_y="138" />
+        <frame rect_x="220" rect_y="236" rect_w="91" rect_h="70" offset_x="114" offset_y="139" />
+        <frame rect_x="380" rect_y="1" rect_w="91" rect_h="70" offset_x="115" offset_y="139" />
+        <frame rect_x="344" rect_y="82" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="312" rect_y="162" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_hurt.png">
+        <frame rect_x="314" rect_y="236" rect_w="124" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="474" rect_y="1" rect_w="120" rect_h="53" offset_x="101" offset_y="145" />
+        <frame rect_x="440" rect_y="82" rect_w="116" rect_h="53" offset_x="103" offset_y="145" />
+        <frame rect_x="408" rect_y="162" rect_w="114" rect_h="53" offset_x="104" offset_y="145" />
+        <frame rect_x="441" rect_y="236" rect_w="113" rect_h="53" offset_x="104" offset_y="145" />
+        <frame rect_x="1" rect_y="315" rect_w="114" rect_h="55" offset_x="104" offset_y="145" />
+        <frame rect_x="220" rect_y="309" rect_w="118" rect_h="55" offset_x="103" offset_y="145" />
+        <frame rect_x="441" rect_y="292" rect_w="120" rect_h="55" offset_x="102" offset_y="145" />
+        <frame rect_x="597" rect_y="1" rect_w="121" rect_h="54" offset_x="102" offset_y="146" />
+        <frame rect_x="559" rect_y="82" rect_w="122" rect_h="53" offset_x="101" offset_y="146" />
+        <frame rect_x="525" rect_y="162" rect_w="123" rect_h="54" offset_x="100" offset_y="145" />
+        <frame rect_x="564" rect_y="292" rect_w="123" rect_h="54" offset_x="100" offset_y="145" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_hurt.png">
+        <frame rect_x="1" rect_y="373" rect_w="94" rect_h="78" offset_x="111" offset_y="130" />
+        <frame rect_x="118" rect_y="315" rect_w="92" rect_h="76" offset_x="112" offset_y="132" />
+        <frame rect_x="341" rect_y="309" rect_w="89" rect_h="76" offset_x="113" offset_y="133" />
+        <frame rect_x="220" rect_y="367" rect_w="86" rect_h="76" offset_x="115" offset_y="133" />
+        <frame rect_x="441" rect_y="350" rect_w="85" rect_h="77" offset_x="116" offset_y="133" />
+        <frame rect_x="564" rect_y="349" rect_w="87" rect_h="76" offset_x="115" offset_y="133" />
+        <frame rect_x="1" rect_y="454" rect_w="89" rect_h="75" offset_x="115" offset_y="133" />
+        <frame rect_x="118" rect_y="394" rect_w="91" rect_h="76" offset_x="114" offset_y="132" />
+        <frame rect_x="341" rect_y="388" rect_w="93" rect_h="76" offset_x="112" offset_y="132" />
+        <frame rect_x="220" rect_y="446" rect_w="95" rect_h="76" offset_x="110" offset_y="132" />
+        <frame rect_x="441" rect_y="430" rect_w="95" rect_h="77" offset_x="110" offset_y="131" />
+        <frame rect_x="564" rect_y="428" rect_w="95" rect_h="77" offset_x="110" offset_y="131" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_hurt.png">
+        <frame rect_x="684" rect_y="82" rect_w="27" rect_h="90" offset_x="146" offset_y="126" />
+        <frame rect_x="651" rect_y="162" rect_w="27" rect_h="88" offset_x="146" offset_y="128" />
+        <frame rect_x="690" rect_y="292" rect_w="27" rect_h="87" offset_x="146" offset_y="130" />
+        <frame rect_x="662" rect_y="428" rect_w="27" rect_h="87" offset_x="146" offset_y="130" />
+        <frame rect_x="684" rect_y="175" rect_w="28" rect_h="86" offset_x="147" offset_y="131" />
+        <frame rect_x="1" rect_y="532" rect_w="28" rect_h="87" offset_x="147" offset_y="130" />
+        <frame rect_x="118" rect_y="473" rect_w="29" rect_h="86" offset_x="147" offset_y="130" />
+        <frame rect_x="341" rect_y="467" rect_w="26" rect_h="87" offset_x="147" offset_y="129" />
+        <frame rect_x="220" rect_y="525" rect_w="28" rect_h="88" offset_x="145" offset_y="128" />
+        <frame rect_x="441" rect_y="510" rect_w="30" rect_h="87" offset_x="143" offset_y="128" />
+        <frame rect_x="564" rect_y="508" rect_w="29" rect_h="89" offset_x="144" offset_y="127" />
+        <frame rect_x="662" rect_y="518" rect_w="29" rect_h="90" offset_x="144" offset_y="126" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_hurt.png">
+        <frame rect_x="1" rect_y="622" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="118" rect_y="562" rect_w="91" rect_h="76" offset_x="116" offset_y="132" />
+        <frame rect_x="341" rect_y="557" rect_w="90" rect_h="76" offset_x="117" offset_y="133" />
+        <frame rect_x="220" rect_y="616" rect_w="89" rect_h="75" offset_x="118" offset_y="134" />
+        <frame rect_x="441" rect_y="600" rect_w="88" rect_h="75" offset_x="119" offset_y="134" />
+        <frame rect_x="564" rect_y="600" rect_w="89" rect_h="75" offset_x="118" offset_y="134" />
+        <frame rect_x="1" rect_y="703" rect_w="91" rect_h="74" offset_x="116" offset_y="134" />
+        <frame rect_x="118" rect_y="641" rect_w="91" rect_h="75" offset_x="115" offset_y="133" />
+        <frame rect_x="341" rect_y="636" rect_w="91" rect_h="76" offset_x="115" offset_y="132" />
+        <frame rect_x="220" rect_y="694" rect_w="92" rect_h="77" offset_x="114" offset_y="131" />
+        <frame rect_x="441" rect_y="678" rect_w="93" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="564" rect_y="678" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_hurt.png">
+        <frame rect_x="721" rect_y="1" rect_w="124" rect_h="55" offset_x="97" offset_y="144" />
+        <frame rect_x="714" rect_y="82" rect_w="120" rect_h="54" offset_x="99" offset_y="145" />
+        <frame rect_x="720" rect_y="292" rect_w="116" rect_h="53" offset_x="101" offset_y="146" />
+        <frame rect_x="692" rect_y="428" rect_w="114" rect_h="52" offset_x="102" offset_y="147" />
+        <frame rect_x="715" rect_y="175" rect_w="113" rect_h="52" offset_x="103" offset_y="147" />
+        <frame rect_x="694" rect_y="518" rect_w="114" rect_h="52" offset_x="102" offset_y="147" />
+        <frame rect_x="662" rect_y="611" rect_w="118" rect_h="52" offset_x="99" offset_y="147" />
+        <frame rect_x="661" rect_y="678" rect_w="120" rect_h="53" offset_x="98" offset_y="146" />
+        <frame rect_x="720" rect_y="348" rect_w="121" rect_h="55" offset_x="97" offset_y="144" />
+        <frame rect_x="715" rect_y="230" rect_w="122" rect_h="56" offset_x="97" offset_y="143" />
+        <frame rect_x="848" rect_y="1" rect_w="123" rect_h="56" offset_x="97" offset_y="143" />
+        <frame rect_x="837" rect_y="82" rect_w="123" rect_h="56" offset_x="97" offset_y="143" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_hurt.png">
+        <frame rect_x="809" rect_y="428" rect_w="93" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="811" rect_y="518" rect_w="92" rect_h="69" offset_x="116" offset_y="139" />
+        <frame rect_x="251" rect_y="525" rect_w="87" rect_h="70" offset_x="118" offset_y="138" />
+        <frame rect_x="474" rect_y="510" rect_w="86" rect_h="70" offset_x="119" offset_y="138" />
+        <frame rect_x="784" rect_y="678" rect_w="86" rect_h="70" offset_x="119" offset_y="138" />
+        <frame rect_x="844" rect_y="348" rect_w="87" rect_h="70" offset_x="118" offset_y="138" />
+        <frame rect_x="840" rect_y="230" rect_w="89" rect_h="70" offset_x="116" offset_y="138" />
+        <frame rect_x="837" rect_y="141" rect_w="91" rect_h="70" offset_x="115" offset_y="138" />
+        <frame rect_x="811" rect_y="590" rect_w="94" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="873" rect_y="678" rect_w="95" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="1" rect_y="780" rect_w="94" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="118" rect_y="719" rect_w="94" rect_h="69" offset_x="115" offset_y="139" />
+      </direction>
+    </sequence>
+    <sequence id="8" group="5">
+      <direction id="0" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="45" rect_h="56" offset_x="147" offset_y="162" />
+        <frame rect_x="1" rect_y="60" rect_w="44" rect_h="56" offset_x="146" offset_y="161" />
+        <frame rect_x="49" rect_y="1" rect_w="44" rect_h="55" offset_x="146" offset_y="161" />
+        <frame rect_x="48" rect_y="60" rect_w="43" rect_h="55" offset_x="146" offset_y="161" />
+        <frame rect_x="1" rect_y="119" rect_w="41" rect_h="55" offset_x="147" offset_y="161" />
+        <frame rect_x="96" rect_y="1" rect_w="42" rect_h="74" offset_x="146" offset_y="142" />
+        <frame rect_x="48" rect_y="118" rect_w="42" rect_h="55" offset_x="146" offset_y="161" />
+        <frame rect_x="93" rect_y="118" rect_w="43" rect_h="56" offset_x="146" offset_y="161" />
+        <frame rect_x="141" rect_y="1" rect_w="46" rect_h="74" offset_x="146" offset_y="143" />
+        <frame rect_x="139" rect_y="118" rect_w="48" rect_h="55" offset_x="146" offset_y="162" />
+        <frame rect_x="1" rect_y="177" rect_w="47" rect_h="55" offset_x="146" offset_y="162" />
+        <frame rect_x="1" rect_y="235" rect_w="45" rect_h="81" offset_x="148" offset_y="137" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="51" rect_y="177" rect_w="95" rect_h="57" offset_x="116" offset_y="155" />
+        <frame rect_x="51" rect_y="237" rect_w="94" rect_h="43" offset_x="118" offset_y="168" />
+        <frame rect_x="190" rect_y="1" rect_w="93" rect_h="56" offset_x="119" offset_y="155" />
+        <frame rect_x="190" rect_y="118" rect_w="88" rect_h="64" offset_x="124" offset_y="147" />
+        <frame rect_x="148" rect_y="237" rect_w="97" rect_h="55" offset_x="116" offset_y="155" />
+        <frame rect_x="286" rect_y="1" rect_w="96" rect_h="63" offset_x="116" offset_y="147" />
+        <frame rect_x="281" rect_y="118" rect_w="93" rect_h="42" offset_x="119" offset_y="168" />
+        <frame rect_x="248" rect_y="237" rect_w="90" rect_h="52" offset_x="122" offset_y="159" />
+        <frame rect_x="190" rect_y="185" rect_w="92" rect_h="47" offset_x="119" offset_y="165" />
+        <frame rect_x="285" rect_y="185" rect_w="92" rect_h="49" offset_x="119" offset_y="164" />
+        <frame rect_x="385" rect_y="1" rect_w="92" rect_h="54" offset_x="119" offset_y="158" />
+        <frame rect_x="377" rect_y="118" rect_w="98" rect_h="57" offset_x="113" offset_y="155" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="341" rect_y="237" rect_w="126" rect_h="49" offset_x="102" offset_y="149" />
+        <frame rect_x="286" rect_y="67" rect_w="124" rect_h="40" offset_x="102" offset_y="158" />
+        <frame rect_x="480" rect_y="1" rect_w="122" rect_h="51" offset_x="104" offset_y="149" />
+        <frame rect_x="478" rect_y="118" rect_w="120" rect_h="51" offset_x="106" offset_y="149" />
+        <frame rect_x="380" rect_y="185" rect_w="120" rect_h="49" offset_x="106" offset_y="149" />
+        <frame rect_x="470" rect_y="237" rect_w="122" rect_h="49" offset_x="104" offset_y="149" />
+        <frame rect_x="1" rect_y="319" rect_w="123" rect_h="49" offset_x="103" offset_y="149" />
+        <frame rect_x="148" rect_y="295" rect_w="118" rect_h="49" offset_x="110" offset_y="149" />
+        <frame rect_x="341" rect_y="289" rect_w="118" rect_h="48" offset_x="110" offset_y="149" />
+        <frame rect_x="413" rect_y="67" rect_w="121" rect_h="48" offset_x="107" offset_y="149" />
+        <frame rect_x="470" rect_y="289" rect_w="126" rect_h="48" offset_x="103" offset_y="150" />
+        <frame rect_x="96" rect_y="78" rect_w="120" rect_h="32" offset_x="108" offset_y="166" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="1" rect_y="371" rect_w="89" rect_h="71" offset_x="121" offset_y="143" />
+        <frame rect_x="148" rect_y="347" rect_w="88" rect_h="70" offset_x="123" offset_y="143" />
+        <frame rect_x="341" rect_y="340" rect_w="88" rect_h="59" offset_x="123" offset_y="154" />
+        <frame rect_x="470" rect_y="340" rect_w="88" rect_h="57" offset_x="124" offset_y="155" />
+        <frame rect_x="239" rect_y="347" rect_w="90" rect_h="72" offset_x="122" offset_y="140" />
+        <frame rect_x="1" rect_y="445" rect_w="85" rect_h="72" offset_x="127" offset_y="141" />
+        <frame rect_x="148" rect_y="420" rect_w="86" rect_h="74" offset_x="125" offset_y="139" />
+        <frame rect_x="341" rect_y="402" rect_w="98" rect_h="68" offset_x="113" offset_y="145" />
+        <frame rect_x="470" rect_y="400" rect_w="97" rect_h="64" offset_x="114" offset_y="150" />
+        <frame rect_x="239" rect_y="422" rect_w="90" rect_h="75" offset_x="121" offset_y="139" />
+        <frame rect_x="1" rect_y="520" rect_w="96" rect_h="72" offset_x="115" offset_y="142" />
+        <frame rect_x="341" rect_y="473" rect_w="92" rect_h="78" offset_x="118" offset_y="136" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="93" rect_y="371" rect_w="41" rect_h="95" offset_x="150" offset_y="127" />
+        <frame rect_x="148" rect_y="497" rect_w="44" rect_h="90" offset_x="147" offset_y="132" />
+        <frame rect_x="470" rect_y="467" rect_w="44" rect_h="65" offset_x="147" offset_y="156" />
+        <frame rect_x="239" rect_y="500" rect_w="44" rect_h="76" offset_x="148" offset_y="144" />
+        <frame rect_x="517" rect_y="467" rect_w="43" rect_h="84" offset_x="149" offset_y="136" />
+        <frame rect_x="100" rect_y="520" rect_w="45" rect_h="64" offset_x="147" offset_y="157" />
+        <frame rect_x="286" rect_y="500" rect_w="46" rect_h="89" offset_x="147" offset_y="133" />
+        <frame rect_x="605" rect_y="1" rect_w="44" rect_h="85" offset_x="147" offset_y="137" />
+        <frame rect_x="601" rect_y="118" rect_w="42" rect_h="86" offset_x="147" offset_y="137" />
+        <frame rect_x="599" rect_y="289" rect_w="41" rect_h="84" offset_x="147" offset_y="139" />
+        <frame rect_x="570" rect_y="400" rect_w="41" rect_h="87" offset_x="147" offset_y="136" />
+        <frame rect_x="601" rect_y="207" rect_w="42" rect_h="68" offset_x="147" offset_y="154" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="652" rect_y="1" rect_w="109" rect_h="54" offset_x="116" offset_y="160" />
+        <frame rect_x="646" rect_y="118" rect_w="106" rect_h="56" offset_x="117" offset_y="158" />
+        <frame rect_x="643" rect_y="289" rect_w="105" rect_h="62" offset_x="118" offset_y="150" />
+        <frame rect_x="614" rect_y="400" rect_w="102" rect_h="50" offset_x="119" offset_y="162" />
+        <frame rect_x="570" rect_y="490" rect_w="103" rect_h="58" offset_x="120" offset_y="154" />
+        <frame rect_x="646" rect_y="207" rect_w="103" rect_h="63" offset_x="119" offset_y="150" />
+        <frame rect_x="1" rect_y="595" rect_w="106" rect_h="60" offset_x="118" offset_y="154" />
+        <frame rect_x="341" rect_y="554" rect_w="105" rect_h="53" offset_x="117" offset_y="161" />
+        <frame rect_x="517" rect_y="554" rect_w="107" rect_h="71" offset_x="116" offset_y="142" />
+        <frame rect_x="627" rect_y="554" rect_w="104" rect_h="72" offset_x="116" offset_y="141" />
+        <frame rect_x="764" rect_y="1" rect_w="109" rect_h="72" offset_x="114" offset_y="142" />
+        <frame rect_x="148" rect_y="590" rect_w="111" rect_h="64" offset_x="114" offset_y="150" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="719" rect_y="400" rect_w="142" rect_h="50" offset_x="99" offset_y="149" />
+        <frame rect_x="676" rect_y="490" rect_w="137" rect_h="49" offset_x="100" offset_y="149" />
+        <frame rect_x="734" rect_y="554" rect_w="134" rect_h="49" offset_x="102" offset_y="149" />
+        <frame rect_x="734" rect_y="606" rect_w="132" rect_h="49" offset_x="102" offset_y="149" />
+        <frame rect_x="876" rect_y="1" rect_w="131" rect_h="50" offset_x="103" offset_y="149" />
+        <frame rect_x="755" rect_y="118" rect_w="133" rect_h="33" offset_x="102" offset_y="166" />
+        <frame rect_x="751" rect_y="289" rect_w="136" rect_h="41" offset_x="99" offset_y="158" />
+        <frame rect_x="752" rect_y="207" rect_w="138" rect_h="50" offset_x="99" offset_y="148" />
+        <frame rect_x="864" rect_y="400" rect_w="139" rect_h="51" offset_x="99" offset_y="148" />
+        <frame rect_x="816" rect_y="490" rect_w="141" rect_h="50" offset_x="98" offset_y="149" />
+        <frame rect_x="751" rect_y="333" rect_w="142" rect_h="54" offset_x="98" offset_y="145" />
+        <frame rect_x="755" rect_y="154" rect_w="142" rect_h="49" offset_x="98" offset_y="149" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_hurt_shadow.png">
+        <frame rect_x="871" rect_y="554" rect_w="111" rect_h="70" offset_x="116" offset_y="142" />
+        <frame rect_x="893" rect_y="207" rect_w="106" rect_h="68" offset_x="118" offset_y="144" />
+        <frame rect_x="876" rect_y="54" rect_w="103" rect_h="59" offset_x="119" offset_y="153" />
+        <frame rect_x="652" rect_y="58" rect_w="102" rect_h="57" offset_x="119" offset_y="154" />
+        <frame rect_x="896" rect_y="333" rect_w="99" rect_h="54" offset_x="120" offset_y="158" />
+        <frame rect_x="1" rect_y="658" rect_w="102" rect_h="69" offset_x="119" offset_y="143" />
+        <frame rect_x="341" rect_y="610" rect_w="105" rect_h="63" offset_x="116" offset_y="149" />
+        <frame rect_x="871" rect_y="627" rect_w="108" rect_h="73" offset_x="115" offset_y="138" />
+        <frame rect_x="148" rect_y="657" rect_w="108" rect_h="67" offset_x="117" offset_y="144" />
+        <frame rect_x="734" rect_y="658" rect_w="110" rect_h="50" offset_x="117" offset_y="160" />
+        <frame rect_x="1" rect_y="730" rect_w="111" rect_h="63" offset_x="116" offset_y="147" />
+        <frame rect_x="341" rect_y="676" rect_w="111" rect_h="61" offset_x="116" offset_y="151" />
+      </direction>
+    </sequence>
+    <sequence id="9" group="1">
+      <direction id="0" texture="animal_tiger1_idle.png">
+        <frame rect_x="1" rect_y="1" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="1" rect_y="80" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="32" rect_y="1" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="63" rect_y="1" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="94" rect_y="1" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="32" rect_y="81" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="63" rect_y="81" rect_w="28" rect_h="77" offset_x="146" offset_y="133" />
+        <frame rect_x="94" rect_y="81" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="1" rect_y="160" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="125" rect_y="1" rect_w="29" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="125" rect_y="81" rect_w="29" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="94" rect_y="160" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_idle.png">
+        <frame rect_x="157" rect_y="1" rect_w="93" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="157" rect_y="81" rect_w="91" rect_h="71" offset_x="114" offset_y="138" />
+        <frame rect_x="125" rect_y="160" rect_w="90" rect_h="71" offset_x="114" offset_y="138" />
+        <frame rect_x="253" rect_y="1" rect_w="90" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="251" rect_y="81" rect_w="89" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="218" rect_y="160" rect_w="88" rect_h="70" offset_x="114" offset_y="139" />
+        <frame rect_x="1" rect_y="239" rect_w="90" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="94" rect_y="239" rect_w="89" rect_h="70" offset_x="114" offset_y="139" />
+        <frame rect_x="218" rect_y="233" rect_w="91" rect_h="70" offset_x="113" offset_y="139" />
+        <frame rect_x="346" rect_y="1" rect_w="93" rect_h="70" offset_x="112" offset_y="139" />
+        <frame rect_x="343" rect_y="81" rect_w="93" rect_h="70" offset_x="112" offset_y="139" />
+        <frame rect_x="309" rect_y="160" rect_w="94" rect_h="70" offset_x="111" offset_y="139" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_idle.png">
+        <frame rect_x="312" rect_y="233" rect_w="124" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="442" rect_y="1" rect_w="120" rect_h="53" offset_x="103" offset_y="146" />
+        <frame rect_x="439" rect_y="81" rect_w="118" rect_h="53" offset_x="103" offset_y="147" />
+        <frame rect_x="406" rect_y="160" rect_w="117" rect_h="52" offset_x="102" offset_y="148" />
+        <frame rect_x="439" rect_y="233" rect_w="116" rect_h="51" offset_x="102" offset_y="149" />
+        <frame rect_x="1" rect_y="312" rect_w="117" rect_h="51" offset_x="102" offset_y="149" />
+        <frame rect_x="218" rect_y="306" rect_w="117" rect_h="52" offset_x="102" offset_y="148" />
+        <frame rect_x="439" rect_y="287" rect_w="119" rect_h="52" offset_x="101" offset_y="148" />
+        <frame rect_x="565" rect_y="1" rect_w="120" rect_h="52" offset_x="101" offset_y="147" />
+        <frame rect_x="560" rect_y="81" rect_w="122" rect_h="53" offset_x="100" offset_y="146" />
+        <frame rect_x="526" rect_y="160" rect_w="123" rect_h="54" offset_x="100" offset_y="145" />
+        <frame rect_x="561" rect_y="287" rect_w="123" rect_h="55" offset_x="100" offset_y="144" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_idle.png">
+        <frame rect_x="1" rect_y="366" rect_w="94" rect_h="78" offset_x="111" offset_y="130" />
+        <frame rect_x="121" rect_y="312" rect_w="92" rect_h="75" offset_x="113" offset_y="133" />
+        <frame rect_x="338" rect_y="306" rect_w="90" rect_h="74" offset_x="114" offset_y="134" />
+        <frame rect_x="218" rect_y="361" rect_w="89" rect_h="73" offset_x="114" offset_y="135" />
+        <frame rect_x="439" rect_y="342" rect_w="89" rect_h="73" offset_x="113" offset_y="135" />
+        <frame rect_x="561" rect_y="345" rect_w="90" rect_h="73" offset_x="112" offset_y="135" />
+        <frame rect_x="1" rect_y="447" rect_w="90" rect_h="73" offset_x="113" offset_y="135" />
+        <frame rect_x="121" rect_y="390" rect_w="91" rect_h="74" offset_x="112" offset_y="134" />
+        <frame rect_x="338" rect_y="383" rect_w="92" rect_h="75" offset_x="112" offset_y="133" />
+        <frame rect_x="218" rect_y="437" rect_w="93" rect_h="76" offset_x="111" offset_y="132" />
+        <frame rect_x="439" rect_y="418" rect_w="95" rect_h="77" offset_x="110" offset_y="131" />
+        <frame rect_x="561" rect_y="421" rect_w="94" rect_h="77" offset_x="111" offset_y="131" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_idle.png">
+        <frame rect_x="652" rect_y="160" rect_w="27" rect_h="90" offset_x="146" offset_y="126" />
+        <frame rect_x="658" rect_y="421" rect_w="27" rect_h="88" offset_x="146" offset_y="129" />
+        <frame rect_x="1" rect_y="523" rect_w="27" rect_h="86" offset_x="146" offset_y="131" />
+        <frame rect_x="121" rect_y="467" rect_w="27" rect_h="84" offset_x="146" offset_y="132" />
+        <frame rect_x="338" rect_y="461" rect_w="28" rect_h="83" offset_x="145" offset_y="132" />
+        <frame rect_x="218" rect_y="516" rect_w="27" rect_h="83" offset_x="146" offset_y="132" />
+        <frame rect_x="439" rect_y="498" rect_w="27" rect_h="85" offset_x="146" offset_y="131" />
+        <frame rect_x="561" rect_y="501" rect_w="27" rect_h="85" offset_x="146" offset_y="131" />
+        <frame rect_x="31" rect_y="523" rect_w="29" rect_h="86" offset_x="145" offset_y="130" />
+        <frame rect_x="658" rect_y="512" rect_w="27" rect_h="87" offset_x="146" offset_y="129" />
+        <frame rect_x="151" rect_y="467" rect_w="28" rect_h="88" offset_x="145" offset_y="128" />
+        <frame rect_x="369" rect_y="461" rect_w="28" rect_h="89" offset_x="145" offset_y="127" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_idle.png">
+        <frame rect_x="1" rect_y="612" rect_w="94" rect_h="78" offset_x="114" offset_y="130" />
+        <frame rect_x="218" rect_y="602" rect_w="92" rect_h="75" offset_x="114" offset_y="133" />
+        <frame rect_x="439" rect_y="586" rect_w="91" rect_h="74" offset_x="116" offset_y="134" />
+        <frame rect_x="469" rect_y="498" rect_w="88" rect_h="73" offset_x="117" offset_y="135" />
+        <frame rect_x="561" rect_y="589" rect_w="88" rect_h="73" offset_x="118" offset_y="135" />
+        <frame rect_x="98" rect_y="612" rect_w="89" rect_h="73" offset_x="118" offset_y="135" />
+        <frame rect_x="313" rect_y="602" rect_w="91" rect_h="73" offset_x="117" offset_y="135" />
+        <frame rect_x="1" rect_y="693" rect_w="90" rect_h="74" offset_x="117" offset_y="134" />
+        <frame rect_x="218" rect_y="680" rect_w="91" rect_h="75" offset_x="116" offset_y="133" />
+        <frame rect_x="439" rect_y="663" rect_w="93" rect_h="76" offset_x="115" offset_y="132" />
+        <frame rect_x="561" rect_y="665" rect_w="94" rect_h="77" offset_x="115" offset_y="131" />
+        <frame rect_x="98" rect_y="688" rect_w="94" rect_h="77" offset_x="114" offset_y="131" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_idle.png">
+        <frame rect_x="312" rect_y="680" rect_w="124" rect_h="55" offset_x="97" offset_y="144" />
+        <frame rect_x="688" rect_y="1" rect_w="120" rect_h="54" offset_x="97" offset_y="145" />
+        <frame rect_x="685" rect_y="81" rect_w="118" rect_h="52" offset_x="99" offset_y="147" />
+        <frame rect_x="687" rect_y="287" rect_w="117" rect_h="51" offset_x="101" offset_y="148" />
+        <frame rect_x="654" rect_y="345" rect_w="117" rect_h="50" offset_x="101" offset_y="149" />
+        <frame rect_x="682" rect_y="160" rect_w="117" rect_h="51" offset_x="101" offset_y="148" />
+        <frame rect_x="688" rect_y="421" rect_w="117" rect_h="51" offset_x="101" offset_y="148" />
+        <frame rect_x="688" rect_y="512" rect_w="119" rect_h="52" offset_x="100" offset_y="147" />
+        <frame rect_x="658" rect_y="602" rect_w="120" rect_h="52" offset_x="99" offset_y="147" />
+        <frame rect_x="658" rect_y="665" rect_w="122" rect_h="53" offset_x="98" offset_y="146" />
+        <frame rect_x="682" rect_y="214" rect_w="123" rect_h="54" offset_x="97" offset_y="145" />
+        <frame rect_x="811" rect_y="1" rect_w="123" rect_h="55" offset_x="97" offset_y="144" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_idle.png">
+        <frame rect_x="806" rect_y="81" rect_w="93" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="807" rect_y="287" rect_w="91" rect_h="70" offset_x="115" offset_y="138" />
+        <frame rect_x="808" rect_y="421" rect_w="91" rect_h="70" offset_x="116" offset_y="138" />
+        <frame rect_x="810" rect_y="512" rect_w="90" rect_h="70" offset_x="117" offset_y="138" />
+        <frame rect_x="783" rect_y="665" rect_w="89" rect_h="69" offset_x="118" offset_y="139" />
+        <frame rect_x="808" rect_y="214" rect_w="90" rect_h="69" offset_x="118" offset_y="139" />
+        <frame rect_x="810" rect_y="585" rect_w="89" rect_h="69" offset_x="118" offset_y="139" />
+        <frame rect_x="1" rect_y="770" rect_w="92" rect_h="69" offset_x="117" offset_y="139" />
+        <frame rect_x="218" rect_y="758" rect_w="92" rect_h="69" offset_x="116" offset_y="139" />
+        <frame rect_x="439" rect_y="742" rect_w="92" rect_h="69" offset_x="116" offset_y="139" />
+        <frame rect_x="561" rect_y="745" rect_w="94" rect_h="69" offset_x="115" offset_y="139" />
+        <frame rect_x="98" rect_y="768" rect_w="94" rect_h="69" offset_x="115" offset_y="139" />
+      </direction>
+    </sequence>
+    <sequence id="10" group="5">
+      <direction id="0" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="45" rect_h="56" offset_x="147" offset_y="162" />
+        <frame rect_x="1" rect_y="60" rect_w="45" rect_h="55" offset_x="146" offset_y="161" />
+        <frame rect_x="49" rect_y="1" rect_w="43" rect_h="75" offset_x="146" offset_y="141" />
+        <frame rect_x="1" rect_y="118" rect_w="43" rect_h="56" offset_x="146" offset_y="161" />
+        <frame rect_x="49" rect_y="79" rect_w="42" rect_h="55" offset_x="147" offset_y="162" />
+        <frame rect_x="95" rect_y="1" rect_w="43" rect_h="71" offset_x="146" offset_y="146" />
+        <frame rect_x="94" rect_y="79" rect_w="43" rect_h="74" offset_x="146" offset_y="143" />
+        <frame rect_x="141" rect_y="1" rect_w="43" rect_h="55" offset_x="146" offset_y="162" />
+        <frame rect_x="140" rect_y="79" rect_w="43" rect_h="55" offset_x="146" offset_y="162" />
+        <frame rect_x="187" rect_y="1" rect_w="44" rect_h="55" offset_x="146" offset_y="162" />
+        <frame rect_x="186" rect_y="79" rect_w="45" rect_h="56" offset_x="146" offset_y="162" />
+        <frame rect_x="1" rect_y="177" rect_w="43" rect_h="80" offset_x="148" offset_y="138" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="94" rect_y="156" rect_w="95" rect_h="57" offset_x="116" offset_y="155" />
+        <frame rect_x="234" rect_y="1" rect_w="93" rect_h="70" offset_x="119" offset_y="141" />
+        <frame rect_x="234" rect_y="79" rect_w="89" rect_h="53" offset_x="123" offset_y="158" />
+        <frame rect_x="192" rect_y="156" rect_w="91" rect_h="70" offset_x="120" offset_y="141" />
+        <frame rect_x="330" rect_y="1" rect_w="98" rect_h="56" offset_x="113" offset_y="155" />
+        <frame rect_x="326" rect_y="79" rect_w="93" rect_h="46" offset_x="118" offset_y="166" />
+        <frame rect_x="286" rect_y="156" rect_w="93" rect_h="43" offset_x="118" offset_y="168" />
+        <frame rect_x="286" rect_y="202" rect_w="89" rect_h="44" offset_x="122" offset_y="167" />
+        <frame rect_x="1" rect_y="260" rect_w="90" rect_h="45" offset_x="121" offset_y="166" />
+        <frame rect_x="94" rect_y="216" rect_w="91" rect_h="43" offset_x="120" offset_y="168" />
+        <frame rect_x="286" rect_y="249" rect_w="94" rect_h="52" offset_x="117" offset_y="160" />
+        <frame rect_x="1" rect_y="308" rect_w="92" rect_h="56" offset_x="119" offset_y="157" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="286" rect_y="304" rect_w="126" rect_h="49" offset_x="102" offset_y="149" />
+        <frame rect_x="94" rect_y="262" rect_w="124" rect_h="40" offset_x="104" offset_y="158" />
+        <frame rect_x="96" rect_y="308" rect_w="123" rect_h="42" offset_x="103" offset_y="155" />
+        <frame rect_x="431" rect_y="1" rect_w="119" rect_h="42" offset_x="106" offset_y="155" />
+        <frame rect_x="422" rect_y="79" rect_w="120" rect_h="50" offset_x="104" offset_y="150" />
+        <frame rect_x="382" rect_y="156" rect_w="115" rect_h="47" offset_x="109" offset_y="150" />
+        <frame rect_x="383" rect_y="249" rect_w="119" rect_h="46" offset_x="105" offset_y="151" />
+        <frame rect_x="415" rect_y="304" rect_w="124" rect_h="44" offset_x="101" offset_y="153" />
+        <frame rect_x="553" rect_y="1" rect_w="118" rect_h="47" offset_x="108" offset_y="151" />
+        <frame rect_x="545" rect_y="79" rect_w="119" rect_h="49" offset_x="108" offset_y="149" />
+        <frame rect_x="500" rect_y="156" rect_w="120" rect_h="44" offset_x="108" offset_y="154" />
+        <frame rect_x="382" rect_y="206" rect_w="120" rect_h="32" offset_x="108" offset_y="166" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="505" rect_y="206" rect_w="89" rect_h="71" offset_x="121" offset_y="143" />
+        <frame rect_x="1" rect_y="367" rect_w="93" rect_h="71" offset_x="118" offset_y="143" />
+        <frame rect_x="286" rect_y="356" rect_w="87" rect_h="48" offset_x="124" offset_y="165" />
+        <frame rect_x="542" rect_y="304" rect_w="92" rect_h="71" offset_x="118" offset_y="142" />
+        <frame rect_x="415" rect_y="351" rect_w="90" rect_h="70" offset_x="120" offset_y="142" />
+        <frame rect_x="97" rect_y="367" rect_w="88" rect_h="54" offset_x="122" offset_y="159" />
+        <frame rect_x="542" rect_y="378" rect_w="90" rect_h="60" offset_x="120" offset_y="153" />
+        <frame rect_x="1" rect_y="441" rect_w="97" rect_h="61" offset_x="113" offset_y="152" />
+        <frame rect_x="286" rect_y="407" rect_w="98" rect_h="72" offset_x="112" offset_y="141" />
+        <frame rect_x="415" rect_y="424" rect_w="89" rect_h="71" offset_x="121" offset_y="143" />
+        <frame rect_x="1" rect_y="505" rect_w="98" rect_h="67" offset_x="112" offset_y="147" />
+        <frame rect_x="188" rect_y="367" rect_w="90" rect_h="51" offset_x="120" offset_y="163" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="49" rect_y="137" rect_w="41" rect_h="95" offset_x="150" offset_y="127" />
+        <frame rect_x="623" rect_y="156" rect_w="41" rect_h="88" offset_x="149" offset_y="135" />
+        <frame rect_x="542" rect_y="441" rect_w="42" rect_h="65" offset_x="148" offset_y="157" />
+        <frame rect_x="286" rect_y="482" rect_w="41" rect_h="64" offset_x="148" offset_y="157" />
+        <frame rect_x="415" rect_y="498" rect_w="40" rect_h="65" offset_x="148" offset_y="156" />
+        <frame rect_x="188" rect_y="421" rect_w="41" rect_h="84" offset_x="147" offset_y="137" />
+        <frame rect_x="102" rect_y="505" rect_w="42" rect_h="65" offset_x="147" offset_y="156" />
+        <frame rect_x="587" rect_y="441" rect_w="42" rect_h="65" offset_x="147" offset_y="156" />
+        <frame rect_x="330" rect_y="482" rect_w="42" rect_h="67" offset_x="147" offset_y="155" />
+        <frame rect_x="458" rect_y="498" rect_w="43" rect_h="67" offset_x="147" offset_y="155" />
+        <frame rect_x="232" rect_y="421" rect_w="44" rect_h="86" offset_x="147" offset_y="136" />
+        <frame rect_x="1" rect_y="575" rect_w="44" rect_h="81" offset_x="147" offset_y="142" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="542" rect_y="509" rect_w="109" rect_h="54" offset_x="116" offset_y="160" />
+        <frame rect_x="102" rect_y="573" rect_w="105" rect_h="69" offset_x="116" offset_y="145" />
+        <frame rect_x="458" rect_y="568" rect_w="101" rect_h="59" offset_x="118" offset_y="154" />
+        <frame rect_x="210" rect_y="573" rect_w="102" rect_h="50" offset_x="117" offset_y="162" />
+        <frame rect_x="562" rect_y="568" rect_w="100" rect_h="49" offset_x="119" offset_y="163" />
+        <frame rect_x="315" rect_y="573" rect_w="103" rect_h="68" offset_x="118" offset_y="144" />
+        <frame rect_x="674" rect_y="1" rect_w="102" rect_h="65" offset_x="118" offset_y="148" />
+        <frame rect_x="667" rect_y="79" rect_w="104" rect_h="64" offset_x="118" offset_y="149" />
+        <frame rect_x="637" rect_y="304" rect_w="106" rect_h="75" offset_x="117" offset_y="139" />
+        <frame rect_x="667" rect_y="156" rect_w="106" rect_h="79" offset_x="117" offset_y="135" />
+        <frame rect_x="665" rect_y="568" rect_w="108" rect_h="71" offset_x="116" offset_y="142" />
+        <frame rect_x="637" rect_y="382" rect_w="109" rect_h="79" offset_x="116" offset_y="135" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="623" rect_y="247" rect_w="142" rect_h="50" offset_x="99" offset_y="149" />
+        <frame rect_x="779" rect_y="1" rect_w="138" rect_h="49" offset_x="98" offset_y="149" />
+        <frame rect_x="654" rect_y="509" rect_w="135" rect_h="49" offset_x="100" offset_y="149" />
+        <frame rect_x="774" rect_y="79" rect_w="133" rect_h="48" offset_x="102" offset_y="150" />
+        <frame rect_x="746" rect_y="304" rect_w="134" rect_h="50" offset_x="101" offset_y="149" />
+        <frame rect_x="776" rect_y="156" rect_w="133" rect_h="50" offset_x="102" offset_y="149" />
+        <frame rect_x="776" rect_y="568" rect_w="134" rect_h="48" offset_x="102" offset_y="151" />
+        <frame rect_x="749" rect_y="382" rect_w="136" rect_h="49" offset_x="101" offset_y="149" />
+        <frame rect_x="768" rect_y="247" rect_w="137" rect_h="50" offset_x="100" offset_y="149" />
+        <frame rect_x="637" rect_y="464" rect_w="139" rect_h="36" offset_x="99" offset_y="163" />
+        <frame rect_x="920" rect_y="1" rect_w="142" rect_h="50" offset_x="97" offset_y="149" />
+        <frame rect_x="792" rect_y="509" rect_w="142" rect_h="50" offset_x="98" offset_y="149" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_idle_shadow.png">
+        <frame rect_x="910" rect_y="79" rect_w="111" rect_h="70" offset_x="116" offset_y="142" />
+        <frame rect_x="883" rect_y="304" rect_w="110" rect_h="65" offset_x="115" offset_y="146" />
+        <frame rect_x="912" rect_y="156" rect_w="106" rect_h="73" offset_x="117" offset_y="138" />
+        <frame rect_x="913" rect_y="568" rect_w="105" rect_h="57" offset_x="117" offset_y="154" />
+        <frame rect_x="888" rect_y="382" rect_w="103" rect_h="43" offset_x="119" offset_y="167" />
+        <frame rect_x="912" rect_y="232" rect_w="103" rect_h="64" offset_x="118" offset_y="148" />
+        <frame rect_x="888" rect_y="428" rect_w="104" rect_h="63" offset_x="119" offset_y="148" />
+        <frame rect_x="1" rect_y="659" rect_w="105" rect_h="59" offset_x="119" offset_y="152" />
+        <frame rect_x="458" rect_y="630" rect_w="107" rect_h="43" offset_x="118" offset_y="168" />
+        <frame rect_x="315" rect_y="644" rect_w="107" rect_h="59" offset_x="117" offset_y="153" />
+        <frame rect_x="665" rect_y="642" rect_w="108" rect_h="72" offset_x="117" offset_y="139" />
+        <frame rect_x="776" rect_y="619" rect_w="109" rect_h="72" offset_x="116" offset_y="139" />
+      </direction>
+    </sequence>
+    <sequence id="11" group="2">
+      <direction id="0" texture="animal_tiger1_walk.png">
+        <frame rect_x="1" rect_y="1" rect_w="29" rect_h="81" offset_x="146" offset_y="135" />
+        <frame rect_x="1" rect_y="85" rect_w="28" rect_h="80" offset_x="147" offset_y="135" />
+        <frame rect_x="33" rect_y="1" rect_w="27" rect_h="80" offset_x="147" offset_y="134" />
+        <frame rect_x="32" rect_y="85" rect_w="28" rect_h="76" offset_x="146" offset_y="134" />
+        <frame rect_x="63" rect_y="1" rect_w="27" rect_h="75" offset_x="147" offset_y="134" />
+        <frame rect_x="93" rect_y="1" rect_w="29" rect_h="75" offset_x="146" offset_y="134" />
+        <frame rect_x="63" rect_y="85" rect_w="27" rect_h="80" offset_x="146" offset_y="135" />
+        <frame rect_x="93" rect_y="79" rect_w="27" rect_h="79" offset_x="147" offset_y="135" />
+        <frame rect_x="1" rect_y="168" rect_w="26" rect_h="81" offset_x="147" offset_y="135" />
+        <frame rect_x="32" rect_y="164" rect_w="28" rect_h="80" offset_x="146" offset_y="135" />
+        <frame rect_x="63" rect_y="168" rect_w="27" rect_h="78" offset_x="147" offset_y="135" />
+        <frame rect_x="93" rect_y="161" rect_w="26" rect_h="77" offset_x="147" offset_y="135" />
+        <frame rect_x="125" rect_y="1" rect_w="27" rect_h="76" offset_x="147" offset_y="134" />
+        <frame rect_x="122" rect_y="161" rect_w="26" rect_h="74" offset_x="148" offset_y="134" />
+        <frame rect_x="155" rect_y="1" rect_w="25" rect_h="82" offset_x="148" offset_y="135" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_walk.png">
+        <frame rect_x="183" rect_y="1" rect_w="97" rect_h="66" offset_x="112" offset_y="140" />
+        <frame rect_x="151" rect_y="161" rect_w="96" rect_h="66" offset_x="112" offset_y="140" />
+        <frame rect_x="155" rect_y="86" rect_w="97" rect_h="66" offset_x="110" offset_y="139" />
+        <frame rect_x="283" rect_y="1" rect_w="94" rect_h="64" offset_x="111" offset_y="139" />
+        <frame rect_x="250" rect_y="161" rect_w="93" rect_h="67" offset_x="111" offset_y="139" />
+        <frame rect_x="255" rect_y="86" rect_w="93" rect_h="68" offset_x="110" offset_y="139" />
+        <frame rect_x="1" rect_y="252" rect_w="91" rect_h="71" offset_x="111" offset_y="140" />
+        <frame rect_x="122" rect_y="238" rect_w="92" rect_h="70" offset_x="111" offset_y="140" />
+        <frame rect_x="250" rect_y="231" rect_w="92" rect_h="73" offset_x="111" offset_y="140" />
+        <frame rect_x="380" rect_y="1" rect_w="94" rect_h="72" offset_x="110" offset_y="140" />
+        <frame rect_x="346" rect_y="161" rect_w="94" rect_h="71" offset_x="111" offset_y="140" />
+        <frame rect_x="351" rect_y="86" rect_w="95" rect_h="70" offset_x="111" offset_y="140" />
+        <frame rect_x="346" rect_y="235" rect_w="95" rect_h="69" offset_x="112" offset_y="139" />
+        <frame rect_x="1" rect_y="326" rect_w="97" rect_h="69" offset_x="112" offset_y="139" />
+        <frame rect_x="122" rect_y="311" rect_w="99" rect_h="68" offset_x="111" offset_y="140" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_walk.png">
+        <frame rect_x="250" rect_y="307" rect_w="128" rect_h="53" offset_x="100" offset_y="146" />
+        <frame rect_x="477" rect_y="1" rect_w="128" rect_h="54" offset_x="99" offset_y="145" />
+        <frame rect_x="443" rect_y="161" rect_w="126" rect_h="55" offset_x="99" offset_y="145" />
+        <frame rect_x="449" rect_y="86" rect_w="125" rect_h="54" offset_x="98" offset_y="143" />
+        <frame rect_x="444" rect_y="235" rect_w="123" rect_h="54" offset_x="98" offset_y="143" />
+        <frame rect_x="381" rect_y="307" rect_w="122" rect_h="54" offset_x="98" offset_y="143" />
+        <frame rect_x="608" rect_y="1" rect_w="121" rect_h="55" offset_x="98" offset_y="143" />
+        <frame rect_x="572" rect_y="161" rect_w="120" rect_h="55" offset_x="99" offset_y="143" />
+        <frame rect_x="577" rect_y="86" rect_w="121" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="570" rect_y="235" rect_w="122" rect_h="54" offset_x="99" offset_y="145" />
+        <frame rect_x="506" rect_y="307" rect_w="123" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="1" rect_y="398" rect_w="125" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="250" rect_y="363" rect_w="127" rect_h="55" offset_x="99" offset_y="144" />
+        <frame rect_x="506" rect_y="365" rect_w="128" rect_h="54" offset_x="100" offset_y="145" />
+        <frame rect_x="732" rect_y="1" rect_w="129" rect_h="53" offset_x="100" offset_y="146" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_walk.png">
+        <frame rect_x="381" rect_y="364" rect_w="98" rect_h="80" offset_x="111" offset_y="132" />
+        <frame rect_x="695" rect_y="161" rect_w="97" rect_h="81" offset_x="111" offset_y="131" />
+        <frame rect_x="637" rect_y="365" rect_w="97" rect_h="80" offset_x="109" offset_y="131" />
+        <frame rect_x="732" rect_y="57" rect_w="95" rect_h="82" offset_x="110" offset_y="129" />
+        <frame rect_x="695" rect_y="245" rect_w="94" rect_h="82" offset_x="110" offset_y="129" />
+        <frame rect_x="737" rect_y="365" rect_w="93" rect_h="82" offset_x="110" offset_y="129" />
+        <frame rect_x="1" rect_y="456" rect_w="92" rect_h="83" offset_x="110" offset_y="129" />
+        <frame rect_x="129" rect_y="398" rect_w="92" rect_h="82" offset_x="110" offset_y="130" />
+        <frame rect_x="250" rect_y="421" rect_w="92" rect_h="82" offset_x="111" offset_y="130" />
+        <frame rect_x="506" rect_y="422" rect_w="92" rect_h="81" offset_x="111" offset_y="131" />
+        <frame rect_x="381" rect_y="447" rect_w="93" rect_h="81" offset_x="111" offset_y="131" />
+        <frame rect_x="637" rect_y="448" rect_w="95" rect_h="82" offset_x="111" offset_y="130" />
+        <frame rect_x="737" rect_y="450" rect_w="96" rect_h="82" offset_x="111" offset_y="130" />
+        <frame rect_x="1" rect_y="542" rect_w="97" rect_h="80" offset_x="111" offset_y="131" />
+        <frame rect_x="129" rect_y="483" rect_w="97" rect_h="79" offset_x="112" offset_y="132" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_walk.png">
+        <frame rect_x="795" rect_y="161" rect_w="27" rect_h="93" offset_x="146" offset_y="128" />
+        <frame rect_x="830" rect_y="57" rect_w="28" rect_h="94" offset_x="146" offset_y="127" />
+        <frame rect_x="345" rect_y="421" rect_w="28" rect_h="94" offset_x="146" offset_y="126" />
+        <frame rect_x="250" rect_y="506" rect_w="26" rect_h="95" offset_x="146" offset_y="125" />
+        <frame rect_x="601" rect_y="422" rect_w="27" rect_h="95" offset_x="146" offset_y="124" />
+        <frame rect_x="506" rect_y="506" rect_w="27" rect_h="95" offset_x="146" offset_y="124" />
+        <frame rect_x="825" rect_y="161" rect_w="28" rect_h="96" offset_x="145" offset_y="124" />
+        <frame rect_x="795" rect_y="257" rect_w="27" rect_h="95" offset_x="146" offset_y="125" />
+        <frame rect_x="345" rect_y="518" rect_w="27" rect_h="94" offset_x="146" offset_y="126" />
+        <frame rect_x="279" rect_y="506" rect_w="27" rect_h="94" offset_x="146" offset_y="126" />
+        <frame rect_x="601" rect_y="520" rect_w="28" rect_h="95" offset_x="146" offset_y="126" />
+        <frame rect_x="536" rect_y="506" rect_w="28" rect_h="95" offset_x="146" offset_y="126" />
+        <frame rect_x="477" rect_y="447" rect_w="26" rect_h="95" offset_x="146" offset_y="126" />
+        <frame rect_x="825" rect_y="260" rect_w="28" rect_h="94" offset_x="145" offset_y="127" />
+        <frame rect_x="309" rect_y="506" rect_w="28" rect_h="93" offset_x="146" offset_y="128" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_walk.png">
+        <frame rect_x="737" rect_y="535" rect_w="98" rect_h="79" offset_x="111" offset_y="132" />
+        <frame rect_x="1" rect_y="625" rect_w="98" rect_h="80" offset_x="112" offset_y="131" />
+        <frame rect_x="637" rect_y="533" rect_w="96" rect_h="80" offset_x="113" offset_y="131" />
+        <frame rect_x="129" rect_y="565" rect_w="94" rect_h="82" offset_x="115" offset_y="129" />
+        <frame rect_x="381" rect_y="531" rect_w="93" rect_h="82" offset_x="116" offset_y="129" />
+        <frame rect_x="250" rect_y="604" rect_w="92" rect_h="82" offset_x="117" offset_y="129" />
+        <frame rect_x="506" rect_y="604" rect_w="92" rect_h="82" offset_x="118" offset_y="129" />
+        <frame rect_x="601" rect_y="618" rect_w="92" rect_h="82" offset_x="117" offset_y="130" />
+        <frame rect_x="737" rect_y="617" rect_w="92" rect_h="81" offset_x="117" offset_y="131" />
+        <frame rect_x="381" rect_y="616" rect_w="94" rect_h="81" offset_x="116" offset_y="131" />
+        <frame rect_x="1" rect_y="708" rect_w="94" rect_h="81" offset_x="115" offset_y="131" />
+        <frame rect_x="129" rect_y="650" rect_w="96" rect_h="82" offset_x="114" offset_y="130" />
+        <frame rect_x="250" rect_y="689" rect_w="96" rect_h="80" offset_x="113" offset_y="131" />
+        <frame rect_x="601" rect_y="703" rect_w="97" rect_h="80" offset_x="111" offset_y="131" />
+        <frame rect_x="737" rect_y="701" rect_w="98" rect_h="79" offset_x="110" offset_y="132" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_walk.png">
+        <frame rect_x="381" rect_y="700" rect_w="129" rect_h="53" offset_x="92" offset_y="146" />
+        <frame rect_x="864" rect_y="1" rect_w="128" rect_h="54" offset_x="93" offset_y="145" />
+        <frame rect_x="833" rect_y="365" rect_w="126" rect_h="54" offset_x="95" offset_y="145" />
+        <frame rect_x="836" rect_y="450" rect_w="124" rect_h="56" offset_x="97" offset_y="143" />
+        <frame rect_x="856" rect_y="161" rect_w="123" rect_h="57" offset_x="99" offset_y="142" />
+        <frame rect_x="856" rect_y="260" rect_w="122" rect_h="56" offset_x="100" offset_y="143" />
+        <frame rect_x="838" rect_y="535" rect_w="121" rect_h="56" offset_x="101" offset_y="143" />
+        <frame rect_x="832" rect_y="617" rect_w="120" rect_h="55" offset_x="101" offset_y="144" />
+        <frame rect_x="838" rect_y="701" rect_w="121" rect_h="55" offset_x="100" offset_y="144" />
+        <frame rect_x="864" rect_y="58" rect_w="122" rect_h="54" offset_x="99" offset_y="145" />
+        <frame rect_x="995" rect_y="1" rect_w="123" rect_h="53" offset_x="98" offset_y="145" />
+        <frame rect_x="962" rect_y="365" rect_w="125" rect_h="51" offset_x="96" offset_y="144" />
+        <frame rect_x="963" rect_y="450" rect_w="127" rect_h="53" offset_x="94" offset_y="144" />
+        <frame rect_x="982" rect_y="161" rect_w="128" rect_h="52" offset_x="92" offset_y="145" />
+        <frame rect_x="981" rect_y="260" rect_w="129" rect_h="53" offset_x="91" offset_y="146" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_walk.png">
+        <frame rect_x="962" rect_y="535" rect_w="98" rect_h="73" offset_x="111" offset_y="140" />
+        <frame rect_x="955" rect_y="617" rect_w="97" rect_h="73" offset_x="112" offset_y="139" />
+        <frame rect_x="962" rect_y="701" rect_w="96" rect_h="72" offset_x="114" offset_y="139" />
+        <frame rect_x="989" rect_y="58" rect_w="96" rect_h="70" offset_x="115" offset_y="139" />
+        <frame rect_x="1" rect_y="792" rect_w="94" rect_h="69" offset_x="116" offset_y="139" />
+        <frame rect_x="129" rect_y="735" rect_w="93" rect_h="68" offset_x="117" offset_y="139" />
+        <frame rect_x="250" rect_y="772" rect_w="92" rect_h="65" offset_x="118" offset_y="140" />
+        <frame rect_x="601" rect_y="786" rect_w="92" rect_h="65" offset_x="118" offset_y="140" />
+        <frame rect_x="737" rect_y="783" rect_w="93" rect_h="67" offset_x="117" offset_y="140" />
+        <frame rect_x="381" rect_y="756" rect_w="92" rect_h="66" offset_x="117" offset_y="140" />
+        <frame rect_x="838" rect_y="759" rect_w="93" rect_h="65" offset_x="116" offset_y="140" />
+        <frame rect_x="962" rect_y="776" rect_w="95" rect_h="65" offset_x="114" offset_y="139" />
+        <frame rect_x="476" rect_y="756" rect_w="97" rect_h="63" offset_x="113" offset_y="139" />
+        <frame rect_x="1" rect_y="864" rect_w="97" rect_h="67" offset_x="112" offset_y="139" />
+        <frame rect_x="129" rect_y="806" rect_w="98" rect_h="73" offset_x="111" offset_y="140" />
+      </direction>
+    </sequence>
+    <sequence id="12" group="6">
+      <direction id="0" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="1" rect_y="1" rect_w="43" rect_h="55" offset_x="147" offset_y="163" />
+        <frame rect_x="1" rect_y="59" rect_w="44" rect_h="55" offset_x="147" offset_y="163" />
+        <frame rect_x="1" rect_y="117" rect_w="44" rect_h="71" offset_x="147" offset_y="147" />
+        <frame rect_x="47" rect_y="1" rect_w="42" rect_h="55" offset_x="150" offset_y="163" />
+        <frame rect_x="92" rect_y="1" rect_w="44" rect_h="55" offset_x="148" offset_y="163" />
+        <frame rect_x="48" rect_y="59" rect_w="40" rect_h="54" offset_x="151" offset_y="164" />
+        <frame rect_x="48" rect_y="117" rect_w="42" rect_h="71" offset_x="150" offset_y="147" />
+        <frame rect_x="93" rect_y="117" rect_w="43" rect_h="59" offset_x="148" offset_y="160" />
+        <frame rect_x="92" rect_y="59" rect_w="44" rect_h="55" offset_x="147" offset_y="163" />
+        <frame rect_x="139" rect_y="1" rect_w="44" rect_h="55" offset_x="147" offset_y="163" />
+        <frame rect_x="139" rect_y="117" rect_w="43" rect_h="71" offset_x="148" offset_y="147" />
+        <frame rect_x="139" rect_y="59" rect_w="41" rect_h="55" offset_x="150" offset_y="163" />
+        <frame rect_x="186" rect_y="1" rect_w="43" rect_h="56" offset_x="148" offset_y="162" />
+        <frame rect_x="185" rect_y="117" rect_w="42" rect_h="58" offset_x="149" offset_y="160" />
+        <frame rect_x="1" rect_y="191" rect_w="41" rect_h="83" offset_x="149" offset_y="135" />
+      </direction>
+      <direction id="1" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="48" rect_y="191" rect_w="97" rect_h="46" offset_x="116" offset_y="166" />
+        <frame rect_x="232" rect_y="1" rect_w="95" rect_h="46" offset_x="116" offset_y="167" />
+        <frame rect_x="230" rect_y="117" rect_w="94" rect_h="56" offset_x="116" offset_y="157" />
+        <frame rect_x="185" rect_y="178" rect_w="93" rect_h="69" offset_x="116" offset_y="143" />
+        <frame rect_x="186" rect_y="60" rect_w="90" rect_h="47" offset_x="119" offset_y="165" />
+        <frame rect_x="330" rect_y="1" rect_w="96" rect_h="43" offset_x="112" offset_y="170" />
+        <frame rect_x="327" rect_y="117" rect_w="92" rect_h="57" offset_x="116" offset_y="157" />
+        <frame rect_x="281" rect_y="178" rect_w="87" rect_h="69" offset_x="121" offset_y="146" />
+        <frame rect_x="279" rect_y="60" rect_w="92" rect_h="44" offset_x="117" offset_y="168" />
+        <frame rect_x="1" rect_y="277" rect_w="93" rect_h="43" offset_x="116" offset_y="169" />
+        <frame rect_x="185" rect_y="250" rect_w="93" rect_h="55" offset_x="116" offset_y="157" />
+        <frame rect_x="281" rect_y="250" rect_w="92" rect_h="48" offset_x="117" offset_y="164" />
+        <frame rect_x="1" rect_y="323" rect_w="95" rect_h="60" offset_x="116" offset_y="152" />
+        <frame rect_x="185" rect_y="308" rect_w="96" rect_h="71" offset_x="117" offset_y="141" />
+        <frame rect_x="284" rect_y="308" rect_w="98" rect_h="70" offset_x="116" offset_y="142" />
+      </direction>
+      <direction id="2" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="429" rect_y="1" rect_w="127" rect_h="40" offset_x="106" offset_y="159" />
+        <frame rect_x="422" rect_y="117" rect_w="130" rect_h="48" offset_x="100" offset_y="150" />
+        <frame rect_x="371" rect_y="178" rect_w="125" rect_h="50" offset_x="104" offset_y="149" />
+        <frame rect_x="374" rect_y="60" rect_w="128" rect_h="41" offset_x="98" offset_y="158" />
+        <frame rect_x="376" rect_y="250" rect_w="123" rect_h="47" offset_x="101" offset_y="151" />
+        <frame rect_x="385" rect_y="308" rect_w="123" rect_h="56" offset_x="99" offset_y="143" />
+        <frame rect_x="559" rect_y="1" rect_w="114" rect_h="39" offset_x="107" offset_y="160" />
+        <frame rect_x="499" rect_y="178" rect_w="122" rect_h="49" offset_x="99" offset_y="150" />
+        <frame rect_x="505" rect_y="60" rect_w="123" rect_h="48" offset_x="99" offset_y="150" />
+        <frame rect_x="555" rect_y="117" rect_w="116" rect_h="47" offset_x="107" offset_y="152" />
+        <frame rect_x="502" rect_y="250" rect_w="124" rect_h="49" offset_x="100" offset_y="149" />
+        <frame rect_x="511" rect_y="308" rect_w="120" rect_h="48" offset_x="107" offset_y="151" />
+        <frame rect_x="676" rect_y="1" rect_w="127" rect_h="49" offset_x="102" offset_y="149" />
+        <frame rect_x="624" rect_y="178" rect_w="129" rect_h="50" offset_x="103" offset_y="149" />
+        <frame rect_x="631" rect_y="60" rect_w="133" rect_h="47" offset_x="101" offset_y="151" />
+      </direction>
+      <direction id="3" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="1" rect_y="386" rect_w="93" rect_h="77" offset_x="120" offset_y="139" />
+        <frame rect_x="185" rect_y="382" rect_w="88" rect_h="62" offset_x="123" offset_y="153" />
+        <frame rect_x="284" rect_y="381" rect_w="95" rect_h="76" offset_x="115" offset_y="139" />
+        <frame rect_x="385" rect_y="367" rect_w="87" rect_h="65" offset_x="121" offset_y="149" />
+        <frame rect_x="634" rect_y="308" rect_w="88" rect_h="82" offset_x="120" offset_y="132" />
+        <frame rect_x="511" rect_y="359" rect_w="87" rect_h="84" offset_x="121" offset_y="129" />
+        <frame rect_x="634" rect_y="393" rect_w="90" rect_h="65" offset_x="117" offset_y="148" />
+        <frame rect_x="1" rect_y="466" rect_w="94" rect_h="69" offset_x="114" offset_y="144" />
+        <frame rect_x="185" rect_y="447" rect_w="89" rect_h="63" offset_x="119" offset_y="150" />
+        <frame rect_x="284" rect_y="460" rect_w="87" rect_h="74" offset_x="121" offset_y="140" />
+        <frame rect_x="385" rect_y="435" rect_w="87" rect_h="64" offset_x="122" offset_y="150" />
+        <frame rect_x="511" rect_y="446" rect_w="88" rect_h="65" offset_x="121" offset_y="150" />
+        <frame rect_x="634" rect_y="461" rect_w="89" rect_h="66" offset_x="121" offset_y="149" />
+        <frame rect_x="674" rect_y="117" rect_w="92" rect_h="58" offset_x="120" offset_y="158" />
+        <frame rect_x="1" rect_y="538" rect_w="92" rect_h="65" offset_x="121" offset_y="151" />
+      </direction>
+      <direction id="4" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="99" rect_y="323" rect_w="44" rect_h="71" offset_x="146" offset_y="154" />
+        <frame rect_x="756" rect_y="178" rect_w="45" rect_h="90" offset_x="146" offset_y="135" />
+        <frame rect_x="727" rect_y="393" rect_w="41" rect_h="93" offset_x="149" offset_y="131" />
+        <frame rect_x="725" rect_y="308" rect_w="44" rect_h="70" offset_x="148" offset_y="153" />
+        <frame rect_x="98" rect_y="466" rect_w="43" rect_h="89" offset_x="149" offset_y="133" />
+        <frame rect_x="385" rect_y="502" rect_w="44" rect_h="96" offset_x="148" offset_y="125" />
+        <frame rect_x="727" rect_y="489" rect_w="45" rect_h="92" offset_x="147" offset_y="129" />
+        <frame rect_x="432" rect_y="502" rect_w="42" rect_h="91" offset_x="149" offset_y="130" />
+        <frame rect_x="185" rect_y="513" rect_w="44" rect_h="89" offset_x="147" offset_y="133" />
+        <frame rect_x="511" rect_y="514" rect_w="44" rect_h="81" offset_x="147" offset_y="141" />
+        <frame rect_x="232" rect_y="513" rect_w="45" rect_h="89" offset_x="146" offset_y="133" />
+        <frame rect_x="1" rect_y="606" rect_w="44" rect_h="96" offset_x="147" offset_y="128" />
+        <frame rect_x="284" rect_y="537" rect_w="44" rect_h="97" offset_x="147" offset_y="127" />
+        <frame rect_x="634" rect_y="530" rect_w="44" rect_h="97" offset_x="147" offset_y="128" />
+        <frame rect_x="98" rect_y="558" rect_w="41" rect_h="86" offset_x="149" offset_y="140" />
+      </direction>
+      <direction id="5" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="385" rect_y="601" rect_w="112" rect_h="79" offset_x="112" offset_y="137" />
+        <frame rect_x="511" rect_y="598" rect_w="111" rect_h="56" offset_x="114" offset_y="159" />
+        <frame rect_x="629" rect_y="250" rect_w="112" rect_h="54" offset_x="114" offset_y="161" />
+        <frame rect_x="634" rect_y="630" rect_w="111" rect_h="67" offset_x="115" offset_y="147" />
+        <frame rect_x="806" rect_y="1" rect_w="111" rect_h="65" offset_x="116" offset_y="148" />
+        <frame rect_x="769" rect_y="117" rect_w="109" rect_h="54" offset_x="118" offset_y="159" />
+        <frame rect_x="804" rect_y="178" rect_w="108" rect_h="66" offset_x="118" offset_y="148" />
+        <frame rect_x="771" rect_y="393" rect_w="109" rect_h="80" offset_x="118" offset_y="134" />
+        <frame rect_x="772" rect_y="308" rect_w="108" rect_h="76" offset_x="118" offset_y="137" />
+        <frame rect_x="775" rect_y="489" rect_w="108" rect_h="62" offset_x="117" offset_y="151" />
+        <frame rect_x="748" rect_y="630" rect_w="109" rect_h="64" offset_x="116" offset_y="151" />
+        <frame rect_x="98" rect_y="647" rect_w="111" rect_h="55" offset_x="114" offset_y="159" />
+        <frame rect_x="775" rect_y="554" rect_w="113" rect_h="65" offset_x="113" offset_y="151" />
+        <frame rect_x="1" rect_y="705" rect_w="112" rect_h="64" offset_x="112" offset_y="151" />
+        <frame rect_x="385" rect_y="683" rect_w="113" rect_h="80" offset_x="111" offset_y="136" />
+      </direction>
+      <direction id="6" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="634" rect_y="700" rect_w="147" rect_h="49" offset_x="92" offset_y="150" />
+        <frame rect_x="212" rect_y="647" rect_w="148" rect_h="48" offset_x="94" offset_y="151" />
+        <frame rect_x="116" rect_y="705" rect_w="146" rect_h="50" offset_x="96" offset_y="149" />
+        <frame rect_x="920" rect_y="1" rect_w="146" rect_h="46" offset_x="97" offset_y="152" />
+        <frame rect_x="881" rect_y="117" rect_w="144" rect_h="51" offset_x="99" offset_y="148" />
+        <frame rect_x="806" rect_y="69" rect_w="143" rect_h="40" offset_x="101" offset_y="159" />
+        <frame rect_x="915" rect_y="178" rect_w="142" rect_h="49" offset_x="102" offset_y="150" />
+        <frame rect_x="804" rect_y="247" rect_w="140" rect_h="48" offset_x="103" offset_y="151" />
+        <frame rect_x="883" rect_y="393" rect_w="140" rect_h="48" offset_x="102" offset_y="150" />
+        <frame rect_x="883" rect_y="308" rect_w="141" rect_h="31" offset_x="100" offset_y="168" />
+        <frame rect_x="886" rect_y="489" rect_w="144" rect_h="48" offset_x="98" offset_y="150" />
+        <frame rect_x="860" rect_y="630" rect_w="145" rect_h="38" offset_x="97" offset_y="160" />
+        <frame rect_x="891" rect_y="554" rect_w="146" rect_h="44" offset_x="95" offset_y="154" />
+        <frame rect_x="784" rect_y="700" rect_w="147" rect_h="48" offset_x="93" offset_y="150" />
+        <frame rect_x="883" rect_y="444" rect_w="147" rect_h="35" offset_x="92" offset_y="164" />
+      </direction>
+      <direction id="7" texture="animal_tiger1_walk_shadow.png">
+        <frame rect_x="511" rect_y="657" rect_w="111" rect_h="74" offset_x="112" offset_y="139" />
+        <frame rect_x="265" rect_y="705" rect_w="113" rect_h="56" offset_x="113" offset_y="157" />
+        <frame rect_x="947" rect_y="247" rect_w="113" rect_h="50" offset_x="114" offset_y="163" />
+        <frame rect_x="934" rect_y="700" rect_w="115" rect_h="66" offset_x="115" offset_y="145" />
+        <frame rect_x="1" rect_y="772" rect_w="113" rect_h="52" offset_x="117" offset_y="160" />
+        <frame rect_x="634" rect_y="752" rect_w="110" rect_h="71" offset_x="118" offset_y="142" />
+        <frame rect_x="385" rect_y="766" rect_w="110" rect_h="51" offset_x="118" offset_y="161" />
+        <frame rect_x="784" rect_y="751" rect_w="109" rect_h="58" offset_x="119" offset_y="155" />
+        <frame rect_x="511" rect_y="734" rect_w="108" rect_h="52" offset_x="119" offset_y="161" />
+        <frame rect_x="265" rect_y="764" rect_w="109" rect_h="48" offset_x="118" offset_y="164" />
+        <frame rect_x="1" rect_y="827" rect_w="109" rect_h="63" offset_x="118" offset_y="148" />
+        <frame rect_x="934" rect_y="769" rect_w="112" rect_h="62" offset_x="114" offset_y="150" />
+        <frame rect_x="117" rect_y="772" rect_w="111" rect_h="70" offset_x="114" offset_y="142" />
+        <frame rect_x="784" rect_y="812" rect_w="114" rect_h="73" offset_x="113" offset_y="139" />
+        <frame rect_x="634" rect_y="826" rect_w="114" rect_h="61" offset_x="112" offset_y="153" />
+      </direction>
+    </sequence>
+  </sequences>
+</animation>

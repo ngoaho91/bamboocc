@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="19-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="142" rect_h="153" offset_x="144" offset_y="247" />
+    <frame rect_x="146" rect_y="1" rect_w="154" rect_h="159" offset_x="138" offset_y="241" />
+    <frame rect_x="303" rect_y="1" rect_w="153" rect_h="154" offset_x="138" offset_y="246" />
+    <frame rect_x="459" rect_y="1" rect_w="210" rect_h="153" offset_x="109" offset_y="247" />
+    <frame rect_x="146" rect_y="163" rect_w="209" rect_h="154" offset_x="110" offset_y="246" />
+    <frame rect_x="672" rect_y="1" rect_w="211" rect_h="155" offset_x="109" offset_y="245" />
+    <frame rect_x="886" rect_y="1" rect_w="217" rect_h="159" offset_x="106" offset_y="241" />
+    <frame rect_x="459" rect_y="157" rect_w="207" rect_h="145" offset_x="111" offset_y="255" />
+    <frame rect_x="672" rect_y="159" rect_w="209" rect_h="147" offset_x="110" offset_y="253" />
+    <frame rect_x="146" rect_y="320" rect_w="168" rect_h="159" offset_x="131" offset_y="241" />
+    <frame rect_x="886" rect_y="163" rect_w="178" rect_h="149" offset_x="126" offset_y="251" />
+    <frame rect_x="459" rect_y="305" rect_w="190" rect_h="158" offset_x="120" offset_y="242" />
+    <frame rect_x="672" rect_y="309" rect_w="159" rect_h="165" offset_x="135" offset_y="235" />
+    <frame rect_x="1106" rect_y="1" rect_w="167" rect_h="165" offset_x="131" offset_y="235" />
+    <frame rect_x="146" rect_y="482" rect_w="181" rect_h="168" offset_x="124" offset_y="232" />
+    <frame rect_x="886" rect_y="315" rect_w="196" rect_h="171" offset_x="117" offset_y="229" />
+    <frame rect_x="1276" rect_y="1" rect_w="211" rect_h="175" offset_x="109" offset_y="225" />
+    <frame rect_x="459" rect_y="466" rect_w="149" rect_h="179" offset_x="139" offset_y="221" />
+    <frame rect_x="1" rect_y="157" rect_w="139" rect_h="187" offset_x="145" offset_y="213" />
+    <frame rect_x="1106" rect_y="169" rect_w="147" rect_h="194" offset_x="140" offset_y="206" />
+    <frame rect_x="1276" rect_y="179" rect_w="142" rect_h="202" offset_x="144" offset_y="198" />
+    <frame rect_x="1106" rect_y="366" rect_w="144" rect_h="210" offset_x="143" offset_y="190" />
+    <frame rect_x="1276" rect_y="384" rect_w="143" rect_h="218" offset_x="143" offset_y="182" />
+    <frame rect_x="1" rect_y="347" rect_w="140" rect_h="226" offset_x="143" offset_y="174" />
+    <frame rect_x="146" rect_y="653" rect_w="147" rect_h="234" offset_x="139" offset_y="166" />
+    <frame rect_x="672" rect_y="477" rect_w="142" rect_h="242" offset_x="142" offset_y="158" />
+    <frame rect_x="886" rect_y="489" rect_w="147" rect_h="250" offset_x="140" offset_y="150" />
+    <frame rect_x="1106" rect_y="579" rect_w="150" rect_h="258" offset_x="138" offset_y="142" />
+    <frame rect_x="1276" rect_y="605" rect_w="146" rect_h="266" offset_x="138" offset_y="134" />
+    <frame rect_x="146" rect_y="890" rect_w="148" rect_h="273" offset_x="136" offset_y="127" />
+    <frame rect_x="459" rect_y="648" rect_w="155" rect_h="276" offset_x="134" offset_y="124" />
+    <frame rect_x="672" rect_y="722" rect_w="145" rect_h="280" offset_x="143" offset_y="120" />
+    <frame rect_x="886" rect_y="742" rect_w="147" rect_h="272" offset_x="143" offset_y="121" />
+    <frame rect_x="1" rect_y="576" rect_w="140" rect_h="268" offset_x="144" offset_y="118" />
+    <frame rect_x="1106" rect_y="840" rect_w="143" rect_h="256" offset_x="143" offset_y="123" />
+    <frame rect_x="1276" rect_y="874" rect_w="146" rect_h="254" offset_x="143" offset_y="117" />
+    <frame rect_x="297" rect_y="890" rect_w="146" rect_h="248" offset_x="142" offset_y="113" />
+    <frame rect_x="1490" rect_y="1" rect_w="146" rect_h="239" offset_x="141" offset_y="114" />
+    <frame rect_x="296" rect_y="653" rect_w="141" rect_h="228" offset_x="144" offset_y="119" />
+    <frame rect_x="1422" rect_y="384" rect_w="131" rect_h="201" offset_x="146" offset_y="115" />
+    <frame rect_x="1425" rect_y="605" rect_w="134" rect_h="193" offset_x="144" offset_y="117" />
+    <frame rect_x="459" rect_y="927" rect_w="138" rect_h="186" offset_x="142" offset_y="119" />
+    <frame rect_x="1" rect_y="847" rect_w="141" rect_h="188" offset_x="141" offset_y="111" />
+    <frame rect_x="1425" rect_y="874" rect_w="144" rect_h="181" offset_x="139" offset_y="113" />
+    <frame rect_x="1639" rect_y="1" rect_w="147" rect_h="162" offset_x="137" offset_y="119" />
+    <frame rect_x="672" rect_y="1005" rect_w="140" rect_h="155" offset_x="140" offset_y="120" />
+    <frame rect_x="1556" rect_y="384" rect_w="141" rect_h="153" offset_x="138" offset_y="116" />
+    <frame rect_x="886" rect_y="1017" rect_w="142" rect_h="144" offset_x="140" offset_y="120" />
+    <frame rect_x="1490" rect_y="243" rect_w="145" rect_h="134" offset_x="139" offset_y="119" />
+    <frame rect_x="1562" rect_y="605" rect_w="149" rect_h="129" offset_x="137" offset_y="119" />
+    <frame rect_x="317" rect_y="320" rect_w="132" rect_h="114" offset_x="156" offset_y="129" />
+    <frame rect_x="330" rect_y="482" rect_w="123" rect_h="106" offset_x="167" offset_y="122" />
+    <frame rect_x="1" rect_y="1038" rect_w="99" rect_h="101" offset_x="166" offset_y="120" />
+    <frame rect_x="358" rect_y="163" rect_w="76" rect_h="99" offset_x="190" offset_y="116" />
+  </frames>
+</animation>

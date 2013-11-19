@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <elements count="11">
+        <element file="resources.pak/525-1/525-1.xml" x="396" y="369"/>
+        <element file="resources.pak/525-1/525-1.xml" x="965" y="681"/>
+        <element file="resources.pak/534-1/534-1.xml" x="478" y="694"/>
+        <element file="resources.pak/525-1/525-1.xml" x="706" y="804"/>
+        <element file="resources.pak/525-1/525-1.xml" x="266" y="603"/>
+        <element file="resources.pak/house2/house2.xml" x="317" y="223"/>
+        <element file="resources.pak/525-1/525-1.xml" x="624" y="267"/>
+        <element file="resources.pak/525-1/525-1.xml" x="917" y="347"/>
+        <element file="resources.pak/525-1/525-1.xml" x="1139" y="566"/>
+        <element file="resources.pak/house1/house1.xml" x="1002" y="213"/>
+        <element file="resources.pak/building10/building10.xml" x="755" y="453"/>
+    </elements>
+    <tiles width="20" height="20" tileset="368" count="67">
+        <tile x="4" y="3" id="1"/>
+        <tile x="4" y="4" id="4"/>
+        <tile x="4" y="5" id="4"/>
+        <tile x="4" y="6" id="4"/>
+        <tile x="4" y="7" id="7"/>
+        <tile x="5" y="2" id="1"/>
+        <tile x="5" y="3" id="18"/>
+        <tile x="5" y="4" id="1"/>
+        <tile x="5" y="5" id="1"/>
+        <tile x="5" y="6" id="1"/>
+        <tile x="5" y="7" id="8"/>
+        <tile x="6" y="2" id="2"/>
+        <tile x="6" y="3" id="1"/>
+        <tile x="6" y="4" id="10"/>
+        <tile x="6" y="5" id="6"/>
+        <tile x="6" y="6" id="6"/>
+        <tile x="6" y="7" id="9"/>
+        <tile x="7" y="2" id="3"/>
+        <tile x="7" y="3" id="16"/>
+        <tile x="7" y="4" id="12"/>
+        <tile x="7" y="5" id="7"/>
+        <tile x="8" y="3" id="2"/>
+        <tile x="8" y="4" id="1"/>
+        <tile x="8" y="5" id="8"/>
+        <tile x="9" y="2" id="1"/>
+        <tile x="9" y="3" id="18"/>
+        <tile x="9" y="4" id="10"/>
+        <tile x="9" y="5" id="19"/>
+        <tile x="9" y="6" id="4"/>
+        <tile x="9" y="7" id="7"/>
+        <tile x="10" y="2" id="2"/>
+        <tile x="10" y="3" id="1"/>
+        <tile x="10" y="4" id="8"/>
+        <tile x="10" y="5" id="2"/>
+        <tile x="10" y="6" id="1"/>
+        <tile x="10" y="7" id="8"/>
+        <tile x="11" y="2" id="2"/>
+        <tile x="11" y="3" id="1"/>
+        <tile x="11" y="4" id="12"/>
+        <tile x="11" y="5" id="18"/>
+        <tile x="11" y="6" id="1"/>
+        <tile x="11" y="7" id="8"/>
+        <tile x="12" y="2" id="2"/>
+        <tile x="12" y="3" id="1"/>
+        <tile x="12" y="4" id="1"/>
+        <tile x="12" y="5" id="1"/>
+        <tile x="12" y="6" id="1"/>
+        <tile x="12" y="7" id="8"/>
+        <tile x="13" y="2" id="3"/>
+        <tile x="13" y="3" id="16"/>
+        <tile x="13" y="4" id="1"/>
+        <tile x="13" y="5" id="10"/>
+        <tile x="13" y="6" id="6"/>
+        <tile x="13" y="7" id="9"/>
+        <tile x="14" y="3" id="2"/>
+        <tile x="14" y="4" id="1"/>
+        <tile x="14" y="5" id="8"/>
+        <tile x="15" y="3" id="3"/>
+        <tile x="15" y="4" id="16"/>
+        <tile x="15" y="5" id="12"/>
+        <tile x="15" y="6" id="7"/>
+        <tile x="16" y="4" id="2"/>
+        <tile x="16" y="5" id="1"/>
+        <tile x="16" y="6" id="8"/>
+        <tile x="17" y="4" id="3"/>
+        <tile x="17" y="5" id="6"/>
+        <tile x="17" y="6" id="9"/>
+    </tiles>
+</map>

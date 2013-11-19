@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="231-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="30" rect_h="26" offset_x="85" offset_y="84" />
+    <frame rect_x="1" rect_y="30" rect_w="33" rect_h="36" offset_x="84" offset_y="80" />
+    <frame rect_x="1" rect_y="69" rect_w="47" rect_h="52" offset_x="78" offset_y="73" />
+    <frame rect_x="1" rect_y="124" rect_w="61" rect_h="70" offset_x="74" offset_y="63" />
+    <frame rect_x="1" rect_y="197" rect_w="84" rect_h="95" offset_x="65" offset_y="50" />
+  </frames>
+</animation>

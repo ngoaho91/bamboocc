@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<frames>
+		<frame name="frame_0" file="animations/sui_f0.png" offset_x = "359" offset_y="193" />
+		<frame name="frame_1" file="animations/sui_f1.png" offset_x = "358" offset_y="193" />
+		<frame name="frame_2" file="animations/sui_f2.png" offset_x = "358" offset_y="193" />
+		<frame name="frame_3" file="animations/sui_f3.png" offset_x = "357" offset_y="193" />
+		<frame name="frame_4" file="animations/sui_f4.png" offset_x = "356" offset_y="193" />
+		<frame name="frame_5" file="animations/sui_f5.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_6" file="animations/sui_f6.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_7" file="animations/sui_f7.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_8" file="animations/sui_f8.png" offset_x = "356" offset_y="193" />
+		<frame name="frame_9" file="animations/sui_f9.png" offset_x = "357" offset_y="193" />
+		<frame name="frame_10" file="animations/sui_f10.png" offset_x = "359" offset_y="193" />
+		<frame name="frame_11" file="animations/sui_f11.png" offset_x = "343" offset_y="193" />
+		<frame name="frame_12" file="animations/sui_f12.png" offset_x = "308" offset_y="192" />
+		<frame name="frame_13" file="animations/sui_f13.png" offset_x = "309" offset_y="191" />
+		<frame name="frame_14" file="animations/sui_f14.png" offset_x = "320" offset_y="191" />
+		<frame name="frame_15" file="animations/sui_f15.png" offset_x = "317" offset_y="191" />
+		<frame name="frame_16" file="animations/sui_f16.png" offset_x = "310" offset_y="190" />
+		<frame name="frame_17" file="animations/sui_f17.png" offset_x = "312" offset_y="189" />
+		<frame name="frame_18" file="animations/sui_f18.png" offset_x = "317" offset_y="189" />
+		<frame name="frame_19" file="animations/sui_f19.png" offset_x = "320" offset_y="189" />
+		<frame name="frame_20" file="animations/sui_f20.png" offset_x = "329" offset_y="189" />
+		<frame name="frame_21" file="animations/sui_f21.png" offset_x = "331" offset_y="189" />
+		<frame name="frame_22" file="animations/sui_f22.png" offset_x = "336" offset_y="189" />
+		<frame name="frame_23" file="animations/sui_f23.png" offset_x = "340" offset_y="189" />
+		<frame name="frame_24" file="animations/sui_f24.png" offset_x = "343" offset_y="189" />
+		<frame name="frame_25" file="animations/sui_f25.png" offset_x = "347" offset_y="189" />
+		<frame name="frame_26" file="animations/sui_f26.png" offset_x = "342" offset_y="189" />
+		<frame name="frame_27" file="animations/sui_f27.png" offset_x = "342" offset_y="189" />
+		<frame name="frame_28" file="animations/sui_f28.png" offset_x = "345" offset_y="190" />
+		<frame name="frame_29" file="animations/sui_f29.png" offset_x = "352" offset_y="190" />
+		<frame name="frame_30" file="animations/sui_f30.png" offset_x = "350" offset_y="192" />
+		<frame name="frame_31" file="animations/sui_f31.png" offset_x = "343" offset_y="193" />
+		<frame name="frame_32" file="animations/sui_f32.png" offset_x = "359" offset_y="193" />
+		<frame name="frame_33" file="animations/sui_f33.png" offset_x = "358" offset_y="193" />
+		<frame name="frame_34" file="animations/sui_f34.png" offset_x = "358" offset_y="193" />
+		<frame name="frame_35" file="animations/sui_f35.png" offset_x = "357" offset_y="193" />
+		<frame name="frame_36" file="animations/sui_f36.png" offset_x = "356" offset_y="193" />
+		<frame name="frame_37" file="animations/sui_f37.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_38" file="animations/sui_f38.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_39" file="animations/sui_f39.png" offset_x = "355" offset_y="193" />
+		<frame name="frame_40" file="animations/sui_f40.png" offset_x = "356" offset_y="193" />
+		<frame name="frame_41" file="animations/sui_f41.png" offset_x = "357" offset_y="193" />
+		<frame name="frame_42" file="animations/sui_f42.png" offset_x = "359" offset_y="193" />
+	</frames>
+	<sequences>
+		<sequence name="direction_0">
+			<frame name="frame_0" time="50" />
+			<frame name="frame_1" time="50" />
+			<frame name="frame_2" time="50" />
+			<frame name="frame_3" time="50" />
+			<frame name="frame_4" time="50" />
+			<frame name="frame_5" time="50" />
+			<frame name="frame_6" time="50" />
+			<frame name="frame_7" time="50" />
+			<frame name="frame_8" time="50" />
+			<frame name="frame_9" time="50" />
+			<frame name="frame_10" time="50" />
+		</sequence>
+		<sequence name="direction_1">
+			<frame name="frame_11" time="50" />
+			<frame name="frame_12" time="50" />
+			<frame name="frame_13" time="50" />
+			<frame name="frame_14" time="50" />
+			<frame name="frame_15" time="50" />
+			<frame name="frame_16" time="50" />
+			<frame name="frame_17" time="50" />
+			<frame name="frame_18" time="50" />
+			<frame name="frame_19" time="50" />
+			<frame name="frame_20" time="50" />
+			<frame name="frame_21" time="50" />
+			<frame name="frame_22" time="50" />
+			<frame name="frame_23" time="50" />
+			<frame name="frame_24" time="50" />
+			<frame name="frame_25" time="50" />
+			<frame name="frame_26" time="50" />
+			<frame name="frame_27" time="50" />
+			<frame name="frame_28" time="50" />
+			<frame name="frame_29" time="50" />
+			<frame name="frame_30" time="50" />
+			<frame name="frame_31" time="50" />
+		</sequence>
+		<sequence name="direction_2">
+			<frame name="frame_32" time="50" />
+			<frame name="frame_33" time="50" />
+			<frame name="frame_34" time="50" />
+			<frame name="frame_35" time="50" />
+			<frame name="frame_36" time="50" />
+			<frame name="frame_37" time="50" />
+			<frame name="frame_38" time="50" />
+			<frame name="frame_39" time="50" />
+			<frame name="frame_40" time="50" />
+			<frame name="frame_41" time="50" />
+			<frame name="frame_42" time="50" />
+		</sequence>
+	</sequences>
+</animation>

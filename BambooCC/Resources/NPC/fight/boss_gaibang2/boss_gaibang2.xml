@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation>
+  <sequences count="6">
+    <sequence id="1" group="1">
+      <direction id="0" texture="boss_gaibang2_attack.png">
+        <frame rect_x="1" rect_y="1" rect_w="82" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="86" rect_y="1" rect_w="93" rect_h="84" offset_x="140" offset_y="117" />
+        <frame rect_x="1" rect_y="91" rect_w="99" rect_h="79" offset_x="139" offset_y="119" />
+        <frame rect_x="182" rect_y="1" rect_w="109" rect_h="79" offset_x="133" offset_y="119" />
+        <frame rect_x="1" rect_y="173" rect_w="114" rect_h="107" offset_x="138" offset_y="91" />
+        <frame rect_x="182" rect_y="83" rect_w="79" rect_h="135" offset_x="138" offset_y="62" />
+        <frame rect_x="1" rect_y="283" rect_w="71" rect_h="150" offset_x="138" offset_y="61" />
+        <frame rect_x="118" rect_y="173" rect_w="59" rect_h="179" offset_x="139" offset_y="61" />
+        <frame rect_x="182" rect_y="221" rect_w="61" rect_h="109" offset_x="139" offset_y="132" />
+        <frame rect_x="1" rect_y="436" rect_w="83" rect_h="166" offset_x="140" offset_y="75" />
+        <frame rect_x="118" rect_y="355" rect_w="77" rect_h="136" offset_x="140" offset_y="62" />
+        <frame rect_x="198" rect_y="355" rect_w="74" rect_h="143" offset_x="140" offset_y="62" />
+        <frame rect_x="1" rect_y="605" rect_w="57" rect_h="178" offset_x="140" offset_y="62" />
+        <frame rect_x="118" rect_y="494" rect_w="59" rect_h="122" offset_x="140" offset_y="119" />
+        <frame rect_x="198" rect_y="501" rect_w="84" rect_h="158" offset_x="140" offset_y="83" />
+        <frame rect_x="118" rect_y="619" rect_w="77" rect_h="137" offset_x="140" offset_y="61" />
+        <frame rect_x="294" rect_y="1" rect_w="79" rect_h="142" offset_x="140" offset_y="61" />
+        <frame rect_x="285" rect_y="501" rect_w="57" rect_h="178" offset_x="140" offset_y="62" />
+        <frame rect_x="275" rect_y="355" rect_w="92" rect_h="135" offset_x="123" offset_y="107" />
+        <frame rect_x="246" rect_y="221" rect_w="98" rect_h="75" offset_x="132" offset_y="129" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_attack.png">
+        <frame rect_x="198" rect_y="662" rect_w="70" rect_h="95" offset_x="143" offset_y="111" />
+        <frame rect_x="285" rect_y="682" rect_w="70" rect_h="87" offset_x="143" offset_y="112" />
+        <frame rect_x="376" rect_y="1" rect_w="72" rect_h="86" offset_x="142" offset_y="113" />
+        <frame rect_x="345" rect_y="501" rect_w="78" rect_h="87" offset_x="137" offset_y="114" />
+        <frame rect_x="451" rect_y="1" rect_w="126" rect_h="89" offset_x="130" offset_y="106" />
+        <frame rect_x="370" rect_y="355" rect_w="122" rect_h="124" offset_x="141" offset_y="71" />
+        <frame rect_x="426" rect_y="501" rect_w="93" rect_h="135" offset_x="112" offset_y="65" />
+        <frame rect_x="451" rect_y="93" rect_w="107" rect_h="162" offset_x="89" offset_y="66" />
+        <frame rect_x="426" rect_y="639" rect_w="109" rect_h="107" offset_x="89" offset_y="119" />
+        <frame rect_x="580" rect_y="1" rect_w="133" rect_h="149" offset_x="89" offset_y="75" />
+        <frame rect_x="495" rect_y="355" rect_w="167" rect_h="127" offset_x="96" offset_y="68" />
+        <frame rect_x="522" rect_y="501" rect_w="87" rect_h="132" offset_x="119" offset_y="68" />
+        <frame rect_x="580" rect_y="153" rect_w="108" rect_h="159" offset_x="89" offset_y="69" />
+        <frame rect_x="538" rect_y="639" rect_w="109" rect_h="112" offset_x="89" offset_y="115" />
+        <frame rect_x="1" rect_y="786" rect_w="123" rect_h="146" offset_x="89" offset_y="79" />
+        <frame rect_x="285" rect_y="772" rect_w="169" rect_h="128" offset_x="94" offset_y="67" />
+        <frame rect_x="198" rect_y="760" rect_w="80" rect_h="133" offset_x="126" offset_y="67" />
+        <frame rect_x="538" rect_y="754" rect_w="111" rect_h="161" offset_x="88" offset_y="67" />
+        <frame rect_x="1" rect_y="935" rect_w="104" rect_h="126" offset_x="88" offset_y="102" />
+        <frame rect_x="347" rect_y="221" rect_w="74" rect_h="88" offset_x="131" offset_y="125" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_attack.png">
+        <frame rect_x="451" rect_y="258" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="612" rect_y="501" rect_w="79" rect_h="89" offset_x="134" offset_y="111" />
+        <frame rect_x="285" rect_y="903" rect_w="81" rect_h="88" offset_x="134" offset_y="112" />
+        <frame rect_x="198" rect_y="896" rect_w="79" rect_h="86" offset_x="137" offset_y="114" />
+        <frame rect_x="538" rect_y="918" rect_w="97" rect_h="87" offset_x="135" offset_y="113" />
+        <frame rect_x="369" rect_y="903" rect_w="141" rect_h="111" offset_x="138" offset_y="89" />
+        <frame rect_x="716" rect_y="1" rect_w="119" rect_h="130" offset_x="95" offset_y="70" />
+        <frame rect_x="665" rect_y="355" rect_w="156" rect_h="130" offset_x="58" offset_y="70" />
+        <frame rect_x="691" rect_y="153" rect_w="137" rect_h="104" offset_x="58" offset_y="96" />
+        <frame rect_x="652" rect_y="754" rect_w="163" rect_h="126" offset_x="58" offset_y="74" />
+        <frame rect_x="838" rect_y="1" rect_w="213" rect_h="126" offset_x="66" offset_y="74" />
+        <frame rect_x="694" rect_y="501" rect_w="110" rect_h="126" offset_x="104" offset_y="74" />
+        <frame rect_x="638" rect_y="918" rect_w="155" rect_h="126" offset_x="58" offset_y="74" />
+        <frame rect_x="650" rect_y="639" rect_w="137" rect_h="109" offset_x="58" offset_y="91" />
+        <frame rect_x="824" rect_y="355" rect_w="155" rect_h="126" offset_x="58" offset_y="74" />
+        <frame rect_x="831" rect_y="153" rect_w="215" rect_h="127" offset_x="64" offset_y="73" />
+        <frame rect_x="818" rect_y="754" rect_w="100" rect_h="127" offset_x="114" offset_y="73" />
+        <frame rect_x="807" rect_y="501" rect_w="158" rect_h="127" offset_x="56" offset_y="73" />
+        <frame rect_x="796" rect_y="918" rect_w="132" rect_h="128" offset_x="56" offset_y="85" />
+        <frame rect_x="108" rect_y="935" rect_w="83" rect_h="89" offset_x="119" offset_y="118" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_attack.png">
+        <frame rect_x="691" rect_y="260" rect_w="89" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="790" rect_y="639" rect_w="89" rect_h="94" offset_x="125" offset_y="108" />
+        <frame rect_x="921" rect_y="754" rect_w="94" rect_h="92" offset_x="121" offset_y="113" />
+        <frame rect_x="931" rect_y="918" rect_w="98" rect_h="91" offset_x="119" offset_y="114" />
+        <frame rect_x="882" rect_y="639" rect_w="107" rect_h="92" offset_x="118" offset_y="113" />
+        <frame rect_x="1" rect_y="1064" rect_w="117" rect_h="99" offset_x="143" offset_y="106" />
+        <frame rect_x="538" rect_y="1008" rect_w="88" rect_h="139" offset_x="113" offset_y="66" />
+        <frame rect_x="369" rect_y="1017" rect_w="111" rect_h="138" offset_x="86" offset_y="67" />
+        <frame rect_x="931" rect_y="1012" rect_w="104" rect_h="126" offset_x="86" offset_y="79" />
+        <frame rect_x="1054" rect_y="1" rect_w="135" rect_h="136" offset_x="87" offset_y="69" />
+        <frame rect_x="982" rect_y="355" rect_w="167" rect_h="136" offset_x="93" offset_y="69" />
+        <frame rect_x="198" rect_y="985" rect_w="82" rect_h="136" offset_x="118" offset_y="69" />
+        <frame rect_x="1049" rect_y="153" rect_w="111" rect_h="136" offset_x="86" offset_y="69" />
+        <frame rect_x="968" rect_y="501" rect_w="103" rect_h="131" offset_x="87" offset_y="74" />
+        <frame rect_x="1018" rect_y="754" rect_w="126" rect_h="136" offset_x="89" offset_y="69" />
+        <frame rect_x="1192" rect_y="1" rect_w="168" rect_h="136" offset_x="92" offset_y="69" />
+        <frame rect_x="285" rect_y="994" rect_w="78" rect_h="137" offset_x="124" offset_y="68" />
+        <frame rect_x="1038" rect_y="1012" rect_w="112" rect_h="134" offset_x="85" offset_y="69" />
+        <frame rect_x="1152" rect_y="355" rect_w="107" rect_h="133" offset_x="82" offset_y="69" />
+        <frame rect_x="638" rect_y="1047" rect_w="100" rect_h="84" offset_x="97" offset_y="116" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_attack.png">
+        <frame rect_x="796" rect_y="1049" rect_w="82" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="992" rect_y="639" rect_w="86" rect_h="105" offset_x="132" offset_y="96" />
+        <frame rect_x="1163" rect_y="153" rect_w="91" rect_h="103" offset_x="126" offset_y="102" />
+        <frame rect_x="1074" rect_y="501" rect_w="96" rect_h="99" offset_x="121" offset_y="106" />
+        <frame rect_x="1147" rect_y="754" rect_w="101" rect_h="100" offset_x="117" offset_y="105" />
+        <frame rect_x="1153" rect_y="1012" rect_w="95" rect_h="93" offset_x="121" offset_y="112" />
+        <frame rect_x="1262" rect_y="355" rect_w="69" rect_h="143" offset_x="143" offset_y="62" />
+        <frame rect_x="127" rect_y="786" rect_w="60" rect_h="138" offset_x="143" offset_y="67" />
+        <frame rect_x="376" rect_y="90" rect_w="66" rect_h="126" offset_x="143" offset_y="79" />
+        <frame rect_x="1257" rect_y="153" rect_w="82" rect_h="142" offset_x="144" offset_y="63" />
+        <frame rect_x="1173" rect_y="501" rect_w="72" rect_h="135" offset_x="144" offset_y="70" />
+        <frame rect_x="1251" rect_y="754" rect_w="69" rect_h="141" offset_x="144" offset_y="64" />
+        <frame rect_x="1147" rect_y="857" rect_w="59" rect_h="134" offset_x="143" offset_y="71" />
+        <frame rect_x="1251" rect_y="1012" rect_w="65" rect_h="133" offset_x="143" offset_y="72" />
+        <frame rect_x="1262" rect_y="501" rect_w="81" rect_h="142" offset_x="144" offset_y="63" />
+        <frame rect_x="1" rect_y="1166" rect_w="72" rect_h="138" offset_x="144" offset_y="67" />
+        <frame rect_x="121" rect_y="1064" rect_w="73" rect_h="143" offset_x="144" offset_y="62" />
+        <frame rect_x="538" rect_y="1150" rect_w="59" rect_h="137" offset_x="143" offset_y="66" />
+        <frame rect_x="369" rect_y="1158" rect_w="96" rect_h="136" offset_x="113" offset_y="65" />
+        <frame rect_x="1032" rect_y="918" rect_w="101" rect_h="86" offset_x="113" offset_y="113" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_attack.png">
+        <frame rect_x="457" rect_y="772" rect_w="72" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="931" rect_y="1141" rect_w="72" rect_h="110" offset_x="135" offset_y="90" />
+        <frame rect_x="198" rect_y="1124" rect_w="72" rect_h="105" offset_x="134" offset_y="95" />
+        <frame rect_x="285" rect_y="1134" rect_w="71" rect_h="103" offset_x="133" offset_y="97" />
+        <frame rect_x="1038" rect_y="1149" rect_w="99" rect_h="107" offset_x="116" offset_y="93" />
+        <frame rect_x="638" rect_y="1134" rect_w="94" rect_h="98" offset_x="112" offset_y="102" />
+        <frame rect_x="1140" rect_y="1149" rect_w="143" rect_h="132" offset_x="123" offset_y="69" />
+        <frame rect_x="1" rect_y="1307" rect_w="108" rect_h="129" offset_x="123" offset_y="72" />
+        <frame rect_x="538" rect_y="1290" rect_w="122" rect_h="115" offset_x="138" offset_y="85" />
+        <frame rect_x="369" rect_y="1297" rect_w="93" rect_h="131" offset_x="134" offset_y="69" />
+        <frame rect_x="931" rect_y="1254" rect_w="98" rect_h="126" offset_x="121" offset_y="74" />
+        <frame rect_x="1140" rect_y="1284" rect_w="138" rect_h="131" offset_x="122" offset_y="69" />
+        <frame rect_x="663" rect_y="1290" rect_w="110" rect_h="131" offset_x="121" offset_y="70" />
+        <frame rect_x="112" rect_y="1307" rect_w="120" rect_h="123" offset_x="138" offset_y="78" />
+        <frame rect_x="776" rect_y="1290" rect_w="103" rect_h="131" offset_x="134" offset_y="69" />
+        <frame rect_x="1038" rect_y="1259" rect_w="98" rect_h="131" offset_x="121" offset_y="69" />
+        <frame rect_x="1363" rect_y="1" rect_w="135" rect_h="132" offset_x="121" offset_y="68" />
+        <frame rect_x="1334" rect_y="355" rect_w="111" rect_h="132" offset_x="121" offset_y="69" />
+        <frame rect_x="1342" rect_y="153" rect_w="87" rect_h="127" offset_x="144" offset_y="73" />
+        <frame rect_x="345" rect_y="591" rect_w="74" rect_h="87" offset_x="143" offset_y="113" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_attack.png">
+        <frame rect_x="1081" rect_y="639" rect_w="88" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="1323" rect_y="754" rect_w="96" rect_h="106" offset_x="134" offset_y="94" />
+        <frame rect_x="1319" rect_y="1012" rect_w="95" rect_h="102" offset_x="133" offset_y="98" />
+        <frame rect_x="1346" rect_y="501" rect_w="92" rect_h="105" offset_x="131" offset_y="98" />
+        <frame rect_x="1286" rect_y="1149" rect_w="83" rect_h="118" offset_x="127" offset_y="82" />
+        <frame rect_x="1281" rect_y="1284" rect_w="111" rect_h="117" offset_x="104" offset_y="83" />
+        <frame rect_x="1323" rect_y="863" rect_w="171" rect_h="124" offset_x="117" offset_y="77" />
+        <frame rect_x="1346" rect_y="609" rect_w="146" rect_h="124" offset_x="116" offset_y="77" />
+        <frame rect_x="1501" rect_y="1" rect_w="155" rect_h="102" offset_x="137" offset_y="98" />
+        <frame rect_x="235" rect_y="1307" rect_w="129" rect_h="126" offset_x="133" offset_y="74" />
+        <frame rect_x="1448" rect_y="355" rect_w="148" rect_h="125" offset_x="106" offset_y="75" />
+        <frame rect_x="1432" rect_y="153" rect_w="174" rect_h="125" offset_x="107" offset_y="75" />
+        <frame rect_x="1417" rect_y="1012" rect_w="156" rect_h="126" offset_x="106" offset_y="75" />
+        <frame rect_x="1372" rect_y="1149" rect_w="152" rect_h="109" offset_x="137" offset_y="91" />
+        <frame rect_x="1395" rect_y="1284" rect_w="129" rect_h="125" offset_x="133" offset_y="75" />
+        <frame rect_x="1497" rect_y="863" rect_w="150" rect_h="126" offset_x="106" offset_y="74" />
+        <frame rect_x="1659" rect_y="1" rect_w="167" rect_h="126" offset_x="106" offset_y="74" />
+        <frame rect_x="1495" rect_y="609" rect_w="157" rect_h="126" offset_x="107" offset_y="74" />
+        <frame rect_x="1599" rect_y="355" rect_w="118" rect_h="125" offset_x="146" offset_y="84" />
+        <frame rect_x="1163" rect_y="259" rect_w="82" rect_h="86" offset_x="144" offset_y="119" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_attack.png">
+        <frame rect_x="1422" rect_y="754" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="1441" rect_y="501" rect_w="100" rect_h="95" offset_x="141" offset_y="105" />
+        <frame rect_x="1609" rect_y="153" rect_w="105" rect_h="90" offset_x="140" offset_y="110" />
+        <frame rect_x="1576" rect_y="1012" rect_w="105" rect_h="90" offset_x="139" offset_y="110" />
+        <frame rect_x="1527" rect_y="1149" rect_w="91" rect_h="121" offset_x="131" offset_y="80" />
+        <frame rect_x="1527" rect_y="1284" rect_w="86" rect_h="131" offset_x="123" offset_y="69" />
+        <frame rect_x="1650" rect_y="863" rect_w="142" rect_h="132" offset_x="123" offset_y="69" />
+        <frame rect_x="1655" rect_y="609" rect_w="110" rect_h="158" offset_x="124" offset_y="69" />
+        <frame rect_x="1599" rect_y="483" rect_w="118" rect_h="103" offset_x="146" offset_y="124" />
+        <frame rect_x="1720" rect_y="355" rect_w="93" rect_h="148" offset_x="140" offset_y="75" />
+        <frame rect_x="1717" rect_y="153" rect_w="101" rect_h="132" offset_x="123" offset_y="68" />
+        <frame rect_x="1684" rect_y="1012" rect_w="140" rect_h="132" offset_x="123" offset_y="68" />
+        <frame rect_x="1621" rect_y="1149" rect_w="111" rect_h="159" offset_x="123" offset_y="68" />
+        <frame rect_x="1621" rect_y="1311" rect_w="116" rect_h="115" offset_x="146" offset_y="112" />
+        <frame rect_x="1" rect_y="1439" rect_w="96" rect_h="144" offset_x="140" offset_y="79" />
+        <frame rect_x="538" rect_y="1408" rect_w="106" rect_h="133" offset_x="123" offset_y="67" />
+        <frame rect_x="369" rect_y="1431" rect_w="137" rect_h="133" offset_x="123" offset_y="67" />
+        <frame rect_x="1140" rect_y="1418" rect_w="111" rect_h="159" offset_x="124" offset_y="68" />
+        <frame rect_x="931" rect_y="1383" rect_w="98" rect_h="123" offset_x="141" offset_y="103" />
+        <frame rect_x="663" rect_y="1424" rect_w="99" rect_h="77" offset_x="145" offset_y="128" />
+      </direction>
+    </sequence>
+    <sequence id="2" group="1">
+      <direction id="0" texture="boss_gaibang2_magic.png">
+        <frame rect_x="1" rect_y="1" rect_w="82" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="86" rect_y="1" rect_w="93" rect_h="81" offset_x="141" offset_y="121" />
+        <frame rect_x="1" rect_y="91" rect_w="98" rect_h="75" offset_x="141" offset_y="123" />
+        <frame rect_x="182" rect_y="1" rect_w="108" rect_h="74" offset_x="136" offset_y="124" />
+        <frame rect_x="1" rect_y="169" rect_w="105" rect_h="109" offset_x="142" offset_y="92" />
+        <frame rect_x="182" rect_y="78" rect_w="100" rect_h="109" offset_x="144" offset_y="89" />
+        <frame rect_x="293" rect_y="1" rect_w="150" rect_h="108" offset_x="73" offset_y="90" />
+        <frame rect_x="446" rect_y="1" rect_w="158" rect_h="111" offset_x="68" offset_y="91" />
+        <frame rect_x="182" rect_y="190" rect_w="194" rect_h="86" offset_x="76" offset_y="113" />
+        <frame rect_x="1" rect_y="281" rect_w="175" rect_h="120" offset_x="77" offset_y="108" />
+        <frame rect_x="379" rect_y="190" rect_w="171" rect_h="98" offset_x="80" offset_y="108" />
+        <frame rect_x="182" rect_y="279" rect_w="184" rect_h="95" offset_x="67" offset_y="108" />
+        <frame rect_x="379" rect_y="291" rect_w="170" rect_h="105" offset_x="68" offset_y="95" />
+        <frame rect_x="607" rect_y="1" rect_w="182" rect_h="121" offset_x="68" offset_y="95" />
+        <frame rect_x="553" rect_y="190" rect_w="144" rect_h="124" offset_x="103" offset_y="98" />
+        <frame rect_x="1" rect_y="404" rect_w="121" rect_h="90" offset_x="134" offset_y="108" />
+        <frame rect_x="182" rect_y="377" rect_w="111" rect_h="88" offset_x="139" offset_y="110" />
+        <frame rect_x="379" rect_y="399" rect_w="103" rect_h="86" offset_x="137" offset_y="113" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_magic.png">
+        <frame rect_x="109" rect_y="169" rect_w="70" rect_h="95" offset_x="143" offset_y="111" />
+        <frame rect_x="700" rect_y="190" rect_w="70" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="553" rect_y="317" rect_w="71" rect_h="84" offset_x="140" offset_y="118" />
+        <frame rect_x="296" rect_y="377" rect_w="76" rect_h="88" offset_x="136" offset_y="119" />
+        <frame rect_x="627" rect_y="317" rect_w="120" rect_h="94" offset_x="135" offset_y="106" />
+        <frame rect_x="1" rect_y="497" rect_w="130" rect_h="91" offset_x="149" offset_y="109" />
+        <frame rect_x="182" rect_y="468" rect_w="151" rect_h="85" offset_x="77" offset_y="112" />
+        <frame rect_x="379" rect_y="488" rect_w="161" rect_h="88" offset_x="83" offset_y="110" />
+        <frame rect_x="792" rect_y="1" rect_w="163" rect_h="101" offset_x="96" offset_y="111" />
+        <frame rect_x="773" rect_y="190" rect_w="158" rect_h="120" offset_x="98" offset_y="108" />
+        <frame rect_x="750" rect_y="317" rect_w="184" rect_h="93" offset_x="71" offset_y="111" />
+        <frame rect_x="627" rect_y="414" rect_w="164" rect_h="107" offset_x="71" offset_y="97" />
+        <frame rect_x="958" rect_y="1" rect_w="212" rect_h="100" offset_x="73" offset_y="98" />
+        <frame rect_x="937" rect_y="317" rect_w="181" rect_h="130" offset_x="74" offset_y="99" />
+        <frame rect_x="934" rect_y="190" rect_w="115" rect_h="122" offset_x="134" offset_y="103" />
+        <frame rect_x="794" rect_y="414" rect_w="92" rect_h="96" offset_x="136" offset_y="110" />
+        <frame rect_x="937" rect_y="450" rect_w="85" rect_h="96" offset_x="136" offset_y="110" />
+        <frame rect_x="543" rect_y="488" rect_w="76" rect_h="93" offset_x="137" offset_y="110" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_magic.png">
+        <frame rect_x="1052" rect_y="190" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="1025" rect_y="450" rect_w="81" rect_h="88" offset_x="129" offset_y="112" />
+        <frame rect_x="1" rect_y="591" rect_w="79" rect_h="86" offset_x="128" offset_y="114" />
+        <frame rect_x="182" rect_y="556" rect_w="82" rect_h="87" offset_x="126" offset_y="115" />
+        <frame rect_x="379" rect_y="579" rect_w="103" rect_h="85" offset_x="132" offset_y="115" />
+        <frame rect_x="627" rect_y="524" rect_w="124" rect_h="86" offset_x="142" offset_y="115" />
+        <frame rect_x="937" rect_y="549" rect_w="143" rect_h="99" offset_x="90" offset_y="101" />
+        <frame rect_x="1173" rect_y="1" rect_w="184" rect_h="95" offset_x="95" offset_y="104" />
+        <frame rect_x="1121" rect_y="317" rect_w="125" rect_h="126" offset_x="133" offset_y="107" />
+        <frame rect_x="1133" rect_y="190" rect_w="180" rect_h="101" offset_x="78" offset_y="107" />
+        <frame rect_x="1109" rect_y="450" rect_w="186" rect_h="100" offset_x="72" offset_y="108" />
+        <frame rect_x="1109" rect_y="553" rect_w="187" rect_h="105" offset_x="73" offset_y="103" />
+        <frame rect_x="1360" rect_y="1" rect_w="201" rect_h="105" offset_x="73" offset_y="105" />
+        <frame rect_x="1249" rect_y="317" rect_w="184" rect_h="110" offset_x="74" offset_y="106" />
+        <frame rect_x="754" rect_y="524" rect_w="164" rect_h="93" offset_x="87" offset_y="113" />
+        <frame rect_x="1316" rect_y="190" rect_w="128" rect_h="99" offset_x="90" offset_y="112" />
+        <frame rect_x="1298" rect_y="450" rect_w="118" rect_h="96" offset_x="98" offset_y="112" />
+        <frame rect_x="543" rect_y="584" rect_w="79" rect_h="90" offset_x="136" offset_y="111" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_magic.png">
+        <frame rect_x="267" rect_y="556" rect_w="89" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="1299" rect_y="553" rect_w="89" rect_h="90" offset_x="121" offset_y="110" />
+        <frame rect_x="1173" rect_y="99" rect_w="89" rect_h="88" offset_x="116" offset_y="112" />
+        <frame rect_x="1436" rect_y="317" rect_w="95" rect_h="87" offset_x="109" offset_y="113" />
+        <frame rect_x="1447" rect_y="190" rect_w="88" rect_h="87" offset_x="130" offset_y="113" />
+        <frame rect_x="1419" rect_y="450" rect_w="95" rect_h="101" offset_x="132" offset_y="117" />
+        <frame rect_x="1419" rect_y="554" rect_w="140" rect_h="112" offset_x="96" offset_y="90" />
+        <frame rect_x="1" rect_y="680" rect_w="156" rect_h="128" offset_x="101" offset_y="93" />
+        <frame rect_x="379" rect_y="667" rect_w="137" rect_h="117" offset_x="113" offset_y="111" />
+        <frame rect_x="1109" rect_y="661" rect_w="183" rect_h="98" offset_x="71" offset_y="113" />
+        <frame rect_x="937" rect_y="651" rect_w="161" rect_h="104" offset_x="72" offset_y="107" />
+        <frame rect_x="543" rect_y="677" rect_w="216" rect_h="95" offset_x="71" offset_y="108" />
+        <frame rect_x="160" rect_y="680" rect_w="164" rect_h="123" offset_x="92" offset_y="111" />
+        <frame rect_x="1564" rect_y="1" rect_w="178" rect_h="90" offset_x="75" offset_y="111" />
+        <frame rect_x="1534" rect_y="317" rect_w="170" rect_h="84" offset_x="76" offset_y="116" />
+        <frame rect_x="1538" rect_y="190" rect_w="144" rect_h="86" offset_x="82" offset_y="114" />
+        <frame rect_x="1517" rect_y="450" rect_w="133" rect_h="88" offset_x="90" offset_y="112" />
+        <frame rect_x="1299" rect_y="646" rect_w="102" rect_h="89" offset_x="117" offset_y="111" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_magic.png">
+        <frame rect_x="1562" rect_y="554" rect_w="82" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="1419" rect_y="669" rect_w="83" rect_h="100" offset_x="131" offset_y="98" />
+        <frame rect_x="762" rect_y="677" rect_w="89" rect_h="99" offset_x="125" offset_y="99" />
+        <frame rect_x="1647" rect_y="554" rect_w="95" rect_h="96" offset_x="118" offset_y="103" />
+        <frame rect_x="1265" rect_y="99" rect_w="89" rect_h="87" offset_x="124" offset_y="111" />
+        <frame rect_x="1505" rect_y="669" rect_w="90" rect_h="95" offset_x="118" offset_y="117" />
+        <frame rect_x="1" rect_y="811" rect_w="185" rect_h="119" offset_x="92" offset_y="83" />
+        <frame rect_x="1109" rect_y="762" rect_w="155" rect_h="153" offset_x="97" offset_y="84" />
+        <frame rect_x="379" rect_y="787" rect_w="178" rect_h="98" offset_x="70" offset_y="112" />
+        <frame rect_x="1419" rect_y="772" rect_w="178" rect_h="95" offset_x="68" offset_y="115" />
+        <frame rect_x="762" rect_y="779" rect_w="195" rect_h="97" offset_x="73" offset_y="113" />
+        <frame rect_x="189" rect_y="811" rect_w="185" rect_h="109" offset_x="69" offset_y="112" />
+        <frame rect_x="1267" rect_y="762" rect_w="136" rect_h="116" offset_x="112" offset_y="112" />
+        <frame rect_x="1564" rect_y="94" rect_w="177" rect_h="87" offset_x="70" offset_y="115" />
+        <frame rect_x="560" rect_y="787" rect_w="149" rect_h="89" offset_x="74" offset_y="113" />
+        <frame rect_x="1598" rect_y="669" rect_w="115" rect_h="87" offset_x="99" offset_y="114" />
+        <frame rect_x="1600" rect_y="772" rect_w="117" rect_h="87" offset_x="99" offset_y="112" />
+        <frame rect_x="960" rect_y="779" rect_w="97" rect_h="88" offset_x="120" offset_y="110" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_magic.png">
+        <frame rect_x="1653" rect_y="450" rect_w="71" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="1" rect_y="933" rect_w="73" rect_h="106" offset_x="137" offset_y="93" />
+        <frame rect_x="1109" rect_y="918" rect_w="73" rect_h="106" offset_x="138" offset_y="93" />
+        <frame rect_x="379" rect_y="888" rect_w="72" rect_h="103" offset_x="137" offset_y="95" />
+        <frame rect_x="1419" rect_y="870" rect_w="89" rect_h="98" offset_x="117" offset_y="100" />
+        <frame rect_x="762" rect_y="879" rect_w="111" rect_h="85" offset_x="90" offset_y="114" />
+        <frame rect_x="560" rect_y="879" rect_w="174" rect_h="129" offset_x="89" offset_y="81" />
+        <frame rect_x="1511" rect_y="870" rect_w="153" rect_h="145" offset_x="89" offset_y="81" />
+        <frame rect_x="189" rect_y="923" rect_w="172" rect_h="93" offset_x="63" offset_y="114" />
+        <frame rect_x="1185" rect_y="918" rect_w="169" rect_h="90" offset_x="65" offset_y="116" />
+        <frame rect_x="876" rect_y="879" rect_w="206" rect_h="89" offset_x="66" offset_y="113" />
+        <frame rect_x="1" rect_y="1042" rect_w="158" rect_h="124" offset_x="91" offset_y="111" />
+        <frame rect_x="1109" rect_y="1027" rect_w="174" rect_h="95" offset_x="67" offset_y="114" />
+        <frame rect_x="379" rect_y="994" rect_w="177" rect_h="92" offset_x="65" offset_y="109" />
+        <frame rect_x="560" rect_y="1011" rect_w="141" rect_h="88" offset_x="71" offset_y="111" />
+        <frame rect_x="854" rect_y="677" rect_w="77" rect_h="97" offset_x="127" offset_y="101" />
+        <frame rect_x="77" rect_y="933" rect_w="73" rect_h="101" offset_x="128" offset_y="99" />
+        <frame rect_x="454" rect_y="888" rect_w="70" rect_h="99" offset_x="134" offset_y="101" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_magic.png">
+        <frame rect_x="1419" rect_y="971" rect_w="88" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="762" rect_y="967" rect_w="98" rect_h="102" offset_x="137" offset_y="98" />
+        <frame rect_x="1511" rect_y="1018" rect_w="96" rect_h="100" offset_x="140" offset_y="98" />
+        <frame rect_x="189" rect_y="1019" rect_w="96" rect_h="101" offset_x="139" offset_y="100" />
+        <frame rect_x="876" rect_y="971" rect_w="76" rect_h="109" offset_x="133" offset_y="88" />
+        <frame rect_x="1286" rect_y="1027" rect_w="109" rect_h="99" offset_x="101" offset_y="98" />
+        <frame rect_x="1610" rect_y="1018" rect_w="127" rect_h="148" offset_x="105" offset_y="82" />
+        <frame rect_x="1745" rect_y="1" rect_w="169" rect_h="123" offset_x="62" offset_y="81" />
+        <frame rect_x="1707" rect_y="317" rect_w="158" rect_h="90" offset_x="62" offset_y="115" />
+        <frame rect_x="1685" rect_y="190" rect_w="200" rect_h="86" offset_x="65" offset_y="115" />
+        <frame rect_x="1720" rect_y="772" rect_w="177" rect_h="117" offset_x="71" offset_y="110" />
+        <frame rect_x="1745" rect_y="554" rect_w="152" rect_h="109" offset_x="91" offset_y="110" />
+        <frame rect_x="1716" rect_y="669" rect_w="179" rect_h="89" offset_x="61" offset_y="114" />
+        <frame rect_x="1727" rect_y="450" rect_w="183" rect_h="96" offset_x="62" offset_y="105" />
+        <frame rect_x="1720" rect_y="892" rect_w="194" rect_h="90" offset_x="63" offset_y="107" />
+        <frame rect_x="955" rect_y="971" rect_w="93" rect_h="102" offset_x="130" offset_y="97" />
+        <frame rect_x="1740" rect_y="1018" rect_w="92" rect_h="103" offset_x="131" offset_y="97" />
+        <frame rect_x="1419" rect_y="1065" rect_w="89" rect_h="98" offset_x="133" offset_y="102" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_magic.png">
+        <frame rect_x="83" rect_y="591" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="762" rect_y="1072" rect_w="101" rect_h="90" offset_x="145" offset_y="110" />
+        <frame rect_x="955" rect_y="1076" rect_w="104" rect_h="88" offset_x="147" offset_y="112" />
+        <frame rect_x="1" rect_y="1169" rect_w="108" rect_h="86" offset_x="147" offset_y="116" />
+        <frame rect_x="1109" rect_y="1125" rect_w="83" rect_h="114" offset_x="138" offset_y="85" />
+        <frame rect_x="379" rect_y="1089" rect_w="92" rect_h="114" offset_x="127" offset_y="84" />
+        <frame rect_x="560" rect_y="1102" rect_w="110" rect_h="139" offset_x="112" offset_y="84" />
+        <frame rect_x="189" rect_y="1123" rect_w="161" rect_h="122" offset_x="63" offset_y="83" />
+        <frame rect_x="1610" rect_y="1169" rect_w="157" rect_h="86" offset_x="70" offset_y="114" />
+        <frame rect_x="1917" rect_y="1" rect_w="191" rect_h="95" offset_x="70" offset_y="111" />
+        <frame rect_x="1868" rect_y="317" rect_w="153" rect_h="121" offset_x="96" offset_y="108" />
+        <frame rect_x="1888" rect_y="190" rect_w="186" rect_h="94" offset_x="63" offset_y="111" />
+        <frame rect_x="1900" rect_y="772" rect_w="166" rect_h="102" offset_x="64" offset_y="97" />
+        <frame rect_x="1900" rect_y="554" rect_w="204" rect_h="100" offset_x="65" offset_y="98" />
+        <frame rect_x="1898" rect_y="669" rect_w="199" rect_h="97" offset_x="64" offset_y="101" />
+        <frame rect_x="1286" rect_y="1129" rect_w="115" rect_h="91" offset_x="131" offset_y="108" />
+        <frame rect_x="1913" rect_y="450" rect_w="111" rect_h="93" offset_x="135" offset_y="109" />
+        <frame rect_x="1917" rect_y="892" rect_w="105" rect_h="88" offset_x="139" offset_y="112" />
+      </direction>
+    </sequence>
+    <sequence id="3" group="1">
+      <direction id="0" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="1" rect_y="1" rect_w="82" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="86" rect_y="1" rect_w="85" rect_h="85" offset_x="133" offset_y="119" />
+        <frame rect_x="1" rect_y="91" rect_w="83" rect_h="86" offset_x="130" offset_y="118" />
+        <frame rect_x="1" rect_y="180" rect_w="74" rect_h="88" offset_x="134" offset_y="116" />
+        <frame rect_x="87" rect_y="91" rect_w="69" rect_h="88" offset_x="138" offset_y="116" />
+        <frame rect_x="174" rect_y="1" rect_w="70" rect_h="87" offset_x="139" offset_y="117" />
+        <frame rect_x="159" rect_y="91" rect_w="74" rect_h="86" offset_x="139" offset_y="118" />
+        <frame rect_x="87" rect_y="182" rect_w="79" rect_h="86" offset_x="139" offset_y="118" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="1" rect_y="271" rect_w="70" rect_h="95" offset_x="143" offset_y="111" />
+        <frame rect_x="169" rect_y="182" rect_w="69" rect_h="93" offset_x="145" offset_y="114" />
+        <frame rect_x="87" rect_y="271" rect_w="73" rect_h="88" offset_x="142" offset_y="119" />
+        <frame rect_x="247" rect_y="1" rect_w="76" rect_h="87" offset_x="139" offset_y="120" />
+        <frame rect_x="236" rect_y="91" rect_w="78" rect_h="87" offset_x="137" offset_y="120" />
+        <frame rect_x="241" rect_y="182" rect_w="75" rect_h="87" offset_x="140" offset_y="120" />
+        <frame rect_x="241" rect_y="272" rect_w="78" rect_h="89" offset_x="137" offset_y="118" />
+        <frame rect_x="1" rect_y="369" rect_w="78" rect_h="93" offset_x="136" offset_y="114" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="87" rect_y="362" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="241" rect_y="364" rect_w="82" rect_h="91" offset_x="135" offset_y="112" />
+        <frame rect_x="326" rect_y="1" rect_w="83" rect_h="89" offset_x="137" offset_y="115" />
+        <frame rect_x="319" rect_y="182" rect_w="83" rect_h="86" offset_x="139" offset_y="118" />
+        <frame rect_x="322" rect_y="272" rect_w="83" rect_h="84" offset_x="139" offset_y="120" />
+        <frame rect_x="412" rect_y="1" rect_w="86" rect_h="85" offset_x="137" offset_y="118" />
+        <frame rect_x="326" rect_y="364" rect_w="84" rect_h="90" offset_x="136" offset_y="114" />
+        <frame rect_x="412" rect_y="89" rect_w="82" rect_h="92" offset_x="135" offset_y="111" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="1" rect_y="465" rect_w="89" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="241" rect_y="458" rect_w="82" rect_h="93" offset_x="130" offset_y="110" />
+        <frame rect_x="413" rect_y="364" rect_w="79" rect_h="94" offset_x="133" offset_y="114" />
+        <frame rect_x="326" rect_y="457" rect_w="81" rect_h="91" offset_x="133" offset_y="117" />
+        <frame rect_x="412" rect_y="184" rect_w="81" rect_h="91" offset_x="134" offset_y="117" />
+        <frame rect_x="413" rect_y="461" rect_w="81" rect_h="91" offset_x="133" offset_y="117" />
+        <frame rect_x="93" rect_y="465" rect_w="79" rect_h="87" offset_x="133" offset_y="117" />
+        <frame rect_x="1" rect_y="558" rect_w="82" rect_h="89" offset_x="130" offset_y="113" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="241" rect_y="554" rect_w="82" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="326" rect_y="551" rect_w="80" rect_h="92" offset_x="139" offset_y="110" />
+        <frame rect_x="501" rect_y="1" rect_w="79" rect_h="96" offset_x="139" offset_y="111" />
+        <frame rect_x="496" rect_y="184" rect_w="77" rect_h="95" offset_x="139" offset_y="113" />
+        <frame rect_x="495" rect_y="364" rect_w="73" rect_h="94" offset_x="140" offset_y="113" />
+        <frame rect_x="497" rect_y="461" rect_w="75" rect_h="94" offset_x="140" offset_y="113" />
+        <frame rect_x="413" rect_y="555" rect_w="77" rect_h="92" offset_x="140" offset_y="111" />
+        <frame rect_x="93" rect_y="555" rect_w="80" rect_h="91" offset_x="139" offset_y="110" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="583" rect_y="1" rect_w="71" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="576" rect_y="184" rect_w="76" rect_h="95" offset_x="135" offset_y="106" />
+        <frame rect_x="571" rect_y="364" rect_w="79" rect_h="93" offset_x="132" offset_y="109" />
+        <frame rect_x="497" rect_y="558" rect_w="80" rect_h="89" offset_x="131" offset_y="111" />
+        <frame rect_x="657" rect_y="1" rect_w="80" rect_h="88" offset_x="131" offset_y="112" />
+        <frame rect_x="575" rect_y="461" rect_w="79" rect_h="89" offset_x="132" offset_y="111" />
+        <frame rect_x="655" rect_y="184" rect_w="77" rect_h="91" offset_x="135" offset_y="109" />
+        <frame rect_x="653" rect_y="364" rect_w="75" rect_h="94" offset_x="135" offset_y="106" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="1" rect_y="650" rect_w="88" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="241" rect_y="646" rect_w="90" rect_h="91" offset_x="133" offset_y="110" />
+        <frame rect_x="413" rect_y="650" rect_w="90" rect_h="89" offset_x="130" offset_y="113" />
+        <frame rect_x="93" rect_y="649" rect_w="88" rect_h="87" offset_x="129" offset_y="115" />
+        <frame rect_x="580" rect_y="558" rect_w="86" rect_h="84" offset_x="129" offset_y="116" />
+        <frame rect_x="506" rect_y="650" rect_w="88" rect_h="85" offset_x="129" offset_y="115" />
+        <frame rect_x="597" rect_y="650" rect_w="90" rect_h="87" offset_x="130" offset_y="113" />
+        <frame rect_x="740" rect_y="1" rect_w="90" rect_h="90" offset_x="133" offset_y="110" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_hurt.png">
+        <frame rect_x="657" rect_y="461" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="583" rect_y="99" rect_w="94" rect_h="82" offset_x="135" offset_y="118" />
+        <frame rect_x="735" rect_y="184" rect_w="93" rect_h="81" offset_x="130" offset_y="119" />
+        <frame rect_x="326" rect_y="93" rect_w="82" rect_h="81" offset_x="135" offset_y="119" />
+        <frame rect_x="655" rect_y="278" rect_w="82" rect_h="81" offset_x="134" offset_y="119" />
+        <frame rect_x="731" rect_y="364" rect_w="82" rect_h="81" offset_x="135" offset_y="119" />
+        <frame rect_x="669" rect_y="558" rect_w="86" rect_h="83" offset_x="137" offset_y="117" />
+        <frame rect_x="690" rect_y="650" rect_w="89" rect_h="84" offset_x="140" offset_y="116" />
+      </direction>
+    </sequence>
+    <sequence id="4" group="4">
+      <direction id="0" texture="boss_gaibang2_fall.png">
+        <frame rect_x="1" rect_y="1" rect_w="82" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="1" rect_y="91" rect_w="73" rect_h="95" offset_x="138" offset_y="108" />
+        <frame rect_x="86" rect_y="1" rect_w="95" rect_h="92" offset_x="127" offset_y="111" />
+        <frame rect_x="184" rect_y="1" rect_w="100" rect_h="90" offset_x="123" offset_y="113" />
+        <frame rect_x="1" rect_y="189" rect_w="113" rect_h="91" offset_x="119" offset_y="114" />
+        <frame rect_x="287" rect_y="1" rect_w="113" rect_h="92" offset_x="125" offset_y="114" />
+        <frame rect_x="287" rect_y="96" rect_w="109" rect_h="95" offset_x="133" offset_y="113" />
+        <frame rect_x="1" rect_y="283" rect_w="111" rect_h="94" offset_x="135" offset_y="117" />
+        <frame rect_x="86" rect_y="96" rect_w="109" rect_h="88" offset_x="142" offset_y="126" />
+        <frame rect_x="117" rect_y="189" rect_w="143" rect_h="63" offset_x="141" offset_y="149" />
+        <frame rect_x="115" rect_y="283" rect_w="147" rect_h="49" offset_x="143" offset_y="164" />
+        <frame rect_x="403" rect_y="1" rect_w="147" rect_h="47" offset_x="141" offset_y="164" />
+        <frame rect_x="399" rect_y="96" rect_w="144" rect_h="56" offset_x="141" offset_y="155" />
+        <frame rect_x="287" rect_y="194" rect_w="145" rect_h="55" offset_x="141" offset_y="156" />
+        <frame rect_x="265" rect_y="283" rect_w="144" rect_h="55" offset_x="141" offset_y="156" />
+        <frame rect_x="553" rect_y="1" rect_w="145" rect_h="50" offset_x="141" offset_y="161" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_fall.png">
+        <frame rect_x="546" rect_y="96" rect_w="70" rect_h="95" offset_x="143" offset_y="111" />
+        <frame rect_x="435" rect_y="194" rect_w="84" rect_h="99" offset_x="132" offset_y="109" />
+        <frame rect_x="546" rect_y="194" rect_w="83" rect_h="94" offset_x="138" offset_y="113" />
+        <frame rect_x="1" rect_y="380" rect_w="83" rect_h="93" offset_x="143" offset_y="114" />
+        <frame rect_x="115" rect_y="335" rect_w="87" rect_h="95" offset_x="145" offset_y="116" />
+        <frame rect_x="265" rect_y="341" rect_w="88" rect_h="93" offset_x="149" offset_y="117" />
+        <frame rect_x="435" rect_y="296" rect_w="91" rect_h="93" offset_x="149" offset_y="118" />
+        <frame rect_x="546" rect_y="291" rect_w="90" rect_h="91" offset_x="151" offset_y="123" />
+        <frame rect_x="435" rect_y="392" rect_w="99" rect_h="77" offset_x="145" offset_y="139" />
+        <frame rect_x="546" rect_y="385" rect_w="94" rect_h="60" offset_x="158" offset_y="167" />
+        <frame rect_x="701" rect_y="1" rect_w="110" rect_h="65" offset_x="152" offset_y="170" />
+        <frame rect_x="619" rect_y="96" rect_w="102" rect_h="62" offset_x="156" offset_y="172" />
+        <frame rect_x="632" rect_y="194" rect_w="100" rect_h="61" offset_x="156" offset_y="172" />
+        <frame rect_x="639" rect_y="291" rect_w="101" rect_h="61" offset_x="156" offset_y="172" />
+        <frame rect_x="643" rect_y="385" rect_w="101" rect_h="61" offset_x="156" offset_y="172" />
+        <frame rect_x="1" rect_y="476" rect_w="99" rect_h="61" offset_x="156" offset_y="172" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_fall.png">
+        <frame rect_x="115" rect_y="433" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="356" rect_y="341" rect_w="74" rect_h="93" offset_x="139" offset_y="112" />
+        <frame rect_x="265" rect_y="437" rect_w="76" rect_h="86" offset_x="140" offset_y="118" />
+        <frame rect_x="546" rect_y="448" rect_w="74" rect_h="87" offset_x="140" offset_y="117" />
+        <frame rect_x="724" rect_y="96" rect_w="80" rect_h="89" offset_x="134" offset_y="118" />
+        <frame rect_x="344" rect_y="437" rect_w="87" rect_h="89" offset_x="128" offset_y="119" />
+        <frame rect_x="1" rect_y="540" rect_w="91" rect_h="89" offset_x="124" offset_y="120" />
+        <frame rect_x="435" rect_y="472" rect_w="88" rect_h="85" offset_x="122" offset_y="126" />
+        <frame rect_x="643" rect_y="449" rect_w="85" rect_h="75" offset_x="118" offset_y="146" />
+        <frame rect_x="735" rect_y="194" rect_w="74" rect_h="67" offset_x="122" offset_y="174" />
+        <frame rect_x="115" rect_y="529" rect_w="77" rect_h="73" offset_x="120" offset_y="179" />
+        <frame rect_x="265" rect_y="526" rect_w="74" rect_h="68" offset_x="123" offset_y="180" />
+        <frame rect_x="546" rect_y="538" rect_w="74" rect_h="68" offset_x="123" offset_y="180" />
+        <frame rect_x="344" rect_y="529" rect_w="74" rect_h="69" offset_x="123" offset_y="180" />
+        <frame rect_x="435" rect_y="560" rect_w="74" rect_h="68" offset_x="123" offset_y="180" />
+        <frame rect_x="731" rect_y="449" rect_w="74" rect_h="69" offset_x="123" offset_y="180" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_fall.png">
+        <frame rect_x="643" rect_y="527" rect_w="89" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="1" rect_y="632" rect_w="88" rect_h="82" offset_x="132" offset_y="116" />
+        <frame rect_x="115" rect_y="605" rect_w="87" rect_h="77" offset_x="131" offset_y="121" />
+        <frame rect_x="643" rect_y="620" rect_w="95" rect_h="84" offset_x="131" offset_y="120" />
+        <frame rect_x="546" rect_y="609" rect_w="88" rect_h="88" offset_x="125" offset_y="118" />
+        <frame rect_x="344" rect_y="601" rect_w="87" rect_h="87" offset_x="122" offset_y="119" />
+        <frame rect_x="205" rect_y="605" rect_w="86" rect_h="87" offset_x="118" offset_y="120" />
+        <frame rect_x="1" rect_y="717" rect_w="87" rect_h="85" offset_x="115" offset_y="124" />
+        <frame rect_x="435" rect_y="631" rect_w="83" rect_h="73" offset_x="115" offset_y="144" />
+        <frame rect_x="643" rect_y="707" rect_w="112" rect_h="56" offset_x="86" offset_y="177" />
+        <frame rect_x="205" rect_y="695" rect_w="121" rect_h="54" offset_x="76" offset_y="183" />
+        <frame rect_x="435" rect_y="707" rect_w="119" rect_h="47" offset_x="78" offset_y="187" />
+        <frame rect_x="205" rect_y="752" rect_w="118" rect_h="47" offset_x="80" offset_y="189" />
+        <frame rect_x="814" rect_y="1" rect_w="118" rect_h="47" offset_x="80" offset_y="188" />
+        <frame rect_x="743" rect_y="291" rect_w="118" rect_h="44" offset_x="80" offset_y="189" />
+        <frame rect_x="403" rect_y="51" rect_w="119" rect_h="42" offset_x="79" offset_y="190" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_fall.png">
+        <frame rect_x="807" rect_y="96" rect_w="82" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="812" rect_y="194" rect_w="78" rect_h="84" offset_x="137" offset_y="113" />
+        <frame rect_x="808" rect_y="449" rect_w="88" rect_h="78" offset_x="131" offset_y="119" />
+        <frame rect_x="741" rect_y="620" rect_w="88" rect_h="82" offset_x="131" offset_y="120" />
+        <frame rect_x="115" rect_y="685" rect_w="84" rect_h="94" offset_x="124" offset_y="116" />
+        <frame rect_x="344" rect_y="691" rect_w="80" rect_h="95" offset_x="118" offset_y="115" />
+        <frame rect_x="758" rect_y="707" rect_w="83" rect_h="95" offset_x="113" offset_y="115" />
+        <frame rect_x="844" rect_y="707" rect_w="82" rect_h="91" offset_x="108" offset_y="118" />
+        <frame rect_x="808" rect_y="530" rect_w="87" rect_h="78" offset_x="94" offset_y="133" />
+        <frame rect_x="747" rect_y="385" rect_w="124" rect_h="57" offset_x="59" offset_y="151" />
+        <frame rect_x="435" rect_y="757" rect_w="140" rect_h="42" offset_x="40" offset_y="168" />
+        <frame rect_x="743" rect_y="338" rect_w="133" rect_h="40" offset_x="48" offset_y="170" />
+        <frame rect_x="935" rect_y="1" rect_w="132" rect_h="44" offset_x="49" offset_y="166" />
+        <frame rect_x="864" rect_y="291" rect_w="134" rect_h="43" offset_x="47" offset_y="167" />
+        <frame rect_x="892" rect_y="96" rect_w="133" rect_h="45" offset_x="48" offset_y="165" />
+        <frame rect_x="893" rect_y="194" rect_w="135" rect_h="43" offset_x="46" offset_y="167" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_fall.png">
+        <frame rect_x="899" rect_y="449" rect_w="71" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="929" rect_y="707" rect_w="78" rect_h="87" offset_x="132" offset_y="112" />
+        <frame rect_x="832" rect_y="620" rect_w="78" rect_h="84" offset_x="131" offset_y="115" />
+        <frame rect_x="879" rect_y="338" rect_w="74" rect_h="92" offset_x="126" offset_y="116" />
+        <frame rect_x="973" rect_y="449" rect_w="75" rect_h="106" offset_x="122" offset_y="112" />
+        <frame rect_x="956" rect_y="338" rect_w="73" rect_h="107" offset_x="118" offset_y="109" />
+        <frame rect_x="973" rect_y="558" rect_w="76" rect_h="104" offset_x="115" offset_y="108" />
+        <frame rect_x="1" rect_y="805" rect_w="74" rect_h="103" offset_x="112" offset_y="109" />
+        <frame rect_x="643" rect_y="766" rect_w="74" rect_h="93" offset_x="101" offset_y="118" />
+        <frame rect_x="205" rect_y="802" rect_w="86" rect_h="87" offset_x="78" offset_y="122" />
+        <frame rect_x="758" rect_y="805" rect_w="97" rect_h="77" offset_x="72" offset_y="133" />
+        <frame rect_x="435" rect_y="802" rect_w="89" rect_h="81" offset_x="75" offset_y="131" />
+        <frame rect_x="929" rect_y="797" rect_w="90" rect_h="82" offset_x="74" offset_y="129" />
+        <frame rect_x="78" rect_y="805" rect_w="89" rect_h="81" offset_x="75" offset_y="131" />
+        <frame rect_x="344" rect_y="789" rect_w="87" rect_h="81" offset_x="77" offset_y="130" />
+        <frame rect_x="527" rect_y="802" rect_w="84" rect_h="80" offset_x="80" offset_y="132" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_fall.png">
+        <frame rect_x="1070" rect_y="1" rect_w="88" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="1028" rect_y="96" rect_w="83" rect_h="88" offset_x="134" offset_y="112" />
+        <frame rect_x="735" rect_y="527" rect_w="68" rect_h="89" offset_x="138" offset_y="113" />
+        <frame rect_x="196" rect_y="433" rect_w="65" rect_h="93" offset_x="135" offset_y="113" />
+        <frame rect_x="1031" rect_y="194" rect_w="75" rect_h="104" offset_x="126" offset_y="109" />
+        <frame rect_x="1051" rect_y="449" rect_w="76" rect_h="103" offset_x="126" offset_y="107" />
+        <frame rect_x="1032" rect_y="338" rect_w="84" rect_h="100" offset_x="127" offset_y="106" />
+        <frame rect_x="1052" rect_y="558" rect_w="79" rect_h="99" offset_x="126" offset_y="107" />
+        <frame rect_x="1022" rect_y="797" rect_w="78" rect_h="90" offset_x="124" offset_y="112" />
+        <frame rect_x="1052" rect_y="660" rect_w="71" rect_h="94" offset_x="130" offset_y="108" />
+        <frame rect_x="1" rect_y="911" rect_w="75" rect_h="88" offset_x="125" offset_y="114" />
+        <frame rect_x="643" rect_y="862" rect_w="72" rect_h="87" offset_x="125" offset_y="115" />
+        <frame rect_x="205" rect_y="892" rect_w="72" rect_h="89" offset_x="125" offset_y="113" />
+        <frame rect_x="758" rect_y="885" rect_w="72" rect_h="88" offset_x="125" offset_y="114" />
+        <frame rect_x="435" rect_y="886" rect_w="72" rect_h="89" offset_x="125" offset_y="113" />
+        <frame rect_x="929" rect_y="882" rect_w="72" rect_h="86" offset_x="125" offset_y="116" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_fall.png">
+        <frame rect_x="527" rect_y="885" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="344" rect_y="873" rect_w="81" rect_h="91" offset_x="136" offset_y="110" />
+        <frame rect_x="1022" rect_y="890" rect_w="74" rect_h="87" offset_x="135" offset_y="112" />
+        <frame rect_x="79" rect_y="911" rect_w="90" rect_h="84" offset_x="118" offset_y="112" />
+        <frame rect_x="1161" rect_y="1" rect_w="107" rect_h="89" offset_x="109" offset_y="109" />
+        <frame rect_x="1114" rect_y="96" rect_w="106" rect_h="88" offset_x="114" offset_y="108" />
+        <frame rect_x="1109" rect_y="194" rect_w="104" rect_h="85" offset_x="120" offset_y="109" />
+        <frame rect_x="1130" rect_y="449" rect_w="105" rect_h="86" offset_x="121" offset_y="111" />
+        <frame rect_x="1119" rect_y="338" rect_w="100" rect_h="85" offset_x="124" offset_y="116" />
+        <frame rect_x="1134" rect_y="558" rect_w="126" rect_h="76" offset_x="127" offset_y="119" />
+        <frame rect_x="1103" rect_y="797" rect_w="124" rect_h="70" offset_x="125" offset_y="127" />
+        <frame rect_x="1126" rect_y="660" rect_w="127" rect_h="65" offset_x="125" offset_y="130" />
+        <frame rect_x="1099" rect_y="890" rect_w="124" rect_h="69" offset_x="125" offset_y="126" />
+        <frame rect_x="1271" rect_y="1" rect_w="125" rect_h="67" offset_x="125" offset_y="128" />
+        <frame rect_x="1223" rect_y="96" rect_w="123" rect_h="70" offset_x="125" offset_y="125" />
+        <frame rect_x="1216" rect_y="194" rect_w="127" rect_h="65" offset_x="125" offset_y="130" />
+      </direction>
+    </sequence>
+    <sequence id="5" group="1">
+      <direction id="0" texture="boss_gaibang2_idle.png">
+        <frame rect_x="1" rect_y="1" rect_w="82" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="1" rect_y="91" rect_w="83" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="86" rect_y="1" rect_w="83" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="172" rect_y="1" rect_w="85" rect_h="86" offset_x="139" offset_y="117" />
+        <frame rect_x="87" rect_y="91" rect_w="86" rect_h="86" offset_x="138" offset_y="117" />
+        <frame rect_x="1" rect_y="181" rect_w="87" rect_h="86" offset_x="138" offset_y="117" />
+        <frame rect_x="91" rect_y="181" rect_w="86" rect_h="86" offset_x="138" offset_y="117" />
+        <frame rect_x="260" rect_y="1" rect_w="85" rect_h="86" offset_x="139" offset_y="117" />
+        <frame rect_x="176" rect_y="91" rect_w="83" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="262" rect_y="91" rect_w="83" rect_h="87" offset_x="140" offset_y="116" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_idle.png">
+        <frame rect_x="1" rect_y="270" rect_w="70" rect_h="95" offset_x="143" offset_y="111" />
+        <frame rect_x="180" rect_y="181" rect_w="71" rect_h="94" offset_x="142" offset_y="112" />
+        <frame rect_x="91" rect_y="270" rect_w="72" rect_h="94" offset_x="142" offset_y="112" />
+        <frame rect_x="262" rect_y="181" rect_w="73" rect_h="94" offset_x="141" offset_y="112" />
+        <frame rect_x="1" rect_y="368" rect_w="72" rect_h="93" offset_x="141" offset_y="113" />
+        <frame rect_x="180" rect_y="278" rect_w="72" rect_h="93" offset_x="141" offset_y="113" />
+        <frame rect_x="91" rect_y="367" rect_w="72" rect_h="93" offset_x="141" offset_y="113" />
+        <frame rect_x="262" rect_y="278" rect_w="72" rect_h="94" offset_x="141" offset_y="112" />
+        <frame rect_x="1" rect_y="464" rect_w="72" rect_h="94" offset_x="142" offset_y="112" />
+        <frame rect_x="180" rect_y="374" rect_w="71" rect_h="94" offset_x="142" offset_y="112" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_idle.png">
+        <frame rect_x="91" rect_y="463" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="262" rect_y="375" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+        <frame rect_x="348" rect_y="1" rect_w="77" rect_h="93" offset_x="135" offset_y="110" />
+        <frame rect_x="338" rect_y="181" rect_w="77" rect_h="92" offset_x="135" offset_y="111" />
+        <frame rect_x="337" rect_y="278" rect_w="76" rect_h="92" offset_x="136" offset_y="111" />
+        <frame rect_x="343" rect_y="375" rect_w="76" rect_h="92" offset_x="136" offset_y="111" />
+        <frame rect_x="428" rect_y="1" rect_w="76" rect_h="92" offset_x="136" offset_y="111" />
+        <frame rect_x="418" rect_y="181" rect_w="77" rect_h="92" offset_x="135" offset_y="111" />
+        <frame rect_x="416" rect_y="278" rect_w="77" rect_h="93" offset_x="135" offset_y="110" />
+        <frame rect_x="422" rect_y="375" rect_w="78" rect_h="93" offset_x="134" offset_y="110" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_idle.png">
+        <frame rect_x="507" rect_y="1" rect_w="89" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="498" rect_y="181" rect_w="89" rect_h="90" offset_x="125" offset_y="110" />
+        <frame rect_x="496" rect_y="278" rect_w="89" rect_h="89" offset_x="125" offset_y="111" />
+        <frame rect_x="503" rect_y="375" rect_w="88" rect_h="89" offset_x="126" offset_y="111" />
+        <frame rect_x="503" rect_y="467" rect_w="88" rect_h="89" offset_x="126" offset_y="111" />
+        <frame rect_x="1" rect_y="561" rect_w="88" rect_h="89" offset_x="126" offset_y="111" />
+        <frame rect_x="180" rect_y="471" rect_w="88" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="503" rect_y="559" rect_w="88" rect_h="90" offset_x="126" offset_y="110" />
+        <frame rect_x="271" rect_y="471" rect_w="89" rect_h="90" offset_x="125" offset_y="110" />
+        <frame rect_x="363" rect_y="471" rect_w="90" rect_h="90" offset_x="125" offset_y="110" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_idle.png">
+        <frame rect_x="92" rect_y="561" rect_w="82" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="599" rect_y="1" rect_w="83" rect_h="89" offset_x="135" offset_y="109" />
+        <frame rect_x="590" rect_y="181" rect_w="84" rect_h="89" offset_x="134" offset_y="109" />
+        <frame rect_x="588" rect_y="278" rect_w="84" rect_h="89" offset_x="134" offset_y="109" />
+        <frame rect_x="594" rect_y="375" rect_w="84" rect_h="88" offset_x="134" offset_y="110" />
+        <frame rect_x="594" rect_y="467" rect_w="85" rect_h="88" offset_x="133" offset_y="110" />
+        <frame rect_x="594" rect_y="559" rect_w="84" rect_h="88" offset_x="134" offset_y="110" />
+        <frame rect_x="1" rect_y="653" rect_w="84" rect_h="89" offset_x="134" offset_y="109" />
+        <frame rect_x="180" rect_y="564" rect_w="84" rect_h="89" offset_x="134" offset_y="109" />
+        <frame rect_x="503" rect_y="652" rect_w="83" rect_h="89" offset_x="135" offset_y="109" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_idle.png">
+        <frame rect_x="271" rect_y="564" rect_w="71" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="363" rect_y="564" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="685" rect_y="1" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="677" rect_y="181" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="682" rect_y="467" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="682" rect_y="565" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="761" rect_y="1" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="753" rect_y="181" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="758" rect_y="467" rect_w="73" rect_h="95" offset_x="136" offset_y="105" />
+        <frame rect_x="758" rect_y="565" rect_w="72" rect_h="95" offset_x="136" offset_y="105" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_idle.png">
+        <frame rect_x="677" rect_y="279" rect_w="88" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="1" rect_y="745" rect_w="88" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="180" rect_y="656" rect_w="87" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="589" rect_y="652" rect_w="86" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="271" rect_y="662" rect_w="86" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="363" rect_y="662" rect_w="86" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="682" rect_y="663" rect_w="86" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="837" rect_y="1" rect_w="86" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="829" rect_y="181" rect_w="87" rect_h="92" offset_x="136" offset_y="108" />
+        <frame rect_x="834" rect_y="467" rect_w="88" rect_h="92" offset_x="136" offset_y="108" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_idle.png">
+        <frame rect_x="681" rect_y="375" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="768" rect_y="279" rect_w="92" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="771" rect_y="663" rect_w="92" rect_h="85" offset_x="142" offset_y="115" />
+        <frame rect_x="776" rect_y="375" rect_w="92" rect_h="85" offset_x="142" offset_y="115" />
+        <frame rect_x="771" rect_y="751" rect_w="91" rect_h="85" offset_x="142" offset_y="115" />
+        <frame rect_x="507" rect_y="94" rect_w="92" rect_h="84" offset_x="142" offset_y="116" />
+        <frame rect_x="1" rect_y="840" rect_w="91" rect_h="84" offset_x="142" offset_y="116" />
+        <frame rect_x="271" rect_y="757" rect_w="92" rect_h="84" offset_x="142" offset_y="116" />
+        <frame rect_x="771" rect_y="839" rect_w="92" rect_h="84" offset_x="142" offset_y="116" />
+        <frame rect_x="366" rect_y="757" rect_w="92" rect_h="85" offset_x="142" offset_y="115" />
+      </direction>
+    </sequence>
+    <sequence id="6" group="2">
+      <direction id="0" texture="boss_gaibang2_walk.png">
+        <frame rect_x="1" rect_y="1" rect_w="77" rect_h="84" offset_x="140" offset_y="115" />
+        <frame rect_x="1" rect_y="88" rect_w="77" rect_h="84" offset_x="140" offset_y="115" />
+        <frame rect_x="81" rect_y="1" rect_w="75" rect_h="85" offset_x="140" offset_y="115" />
+        <frame rect_x="1" rect_y="175" rect_w="74" rect_h="86" offset_x="140" offset_y="116" />
+        <frame rect_x="81" rect_y="89" rect_w="74" rect_h="86" offset_x="140" offset_y="116" />
+        <frame rect_x="159" rect_y="1" rect_w="76" rect_h="89" offset_x="140" offset_y="116" />
+        <frame rect_x="1" rect_y="264" rect_w="78" rect_h="94" offset_x="140" offset_y="115" />
+        <frame rect_x="82" rect_y="264" rect_w="78" rect_h="94" offset_x="140" offset_y="115" />
+        <frame rect_x="238" rect_y="1" rect_w="79" rect_h="93" offset_x="140" offset_y="115" />
+        <frame rect_x="163" rect_y="264" rect_w="79" rect_h="90" offset_x="140" offset_y="116" />
+        <frame rect_x="238" rect_y="97" rect_w="79" rect_h="89" offset_x="140" offset_y="116" />
+        <frame rect_x="1" rect_y="361" rect_w="78" rect_h="88" offset_x="140" offset_y="116" />
+        <frame rect_x="82" rect_y="361" rect_w="78" rect_h="87" offset_x="140" offset_y="116" />
+        <frame rect_x="163" rect_y="357" rect_w="78" rect_h="86" offset_x="140" offset_y="115" />
+      </direction>
+      <direction id="1" texture="boss_gaibang2_walk.png">
+        <frame rect_x="159" rect_y="93" rect_w="70" rect_h="93" offset_x="143" offset_y="111" />
+        <frame rect_x="245" rect_y="264" rect_w="70" rect_h="92" offset_x="144" offset_y="111" />
+        <frame rect_x="320" rect_y="1" rect_w="70" rect_h="91" offset_x="144" offset_y="111" />
+        <frame rect_x="318" rect_y="264" rect_w="71" rect_h="89" offset_x="142" offset_y="111" />
+        <frame rect_x="318" rect_y="356" rect_w="71" rect_h="93" offset_x="142" offset_y="111" />
+        <frame rect_x="320" rect_y="97" rect_w="70" rect_h="97" offset_x="144" offset_y="111" />
+        <frame rect_x="1" rect_y="452" rect_w="68" rect_h="100" offset_x="145" offset_y="111" />
+        <frame rect_x="82" rect_y="451" rect_w="69" rect_h="100" offset_x="144" offset_y="111" />
+        <frame rect_x="163" rect_y="446" rect_w="70" rect_h="100" offset_x="143" offset_y="111" />
+        <frame rect_x="318" rect_y="452" rect_w="71" rect_h="97" offset_x="142" offset_y="111" />
+        <frame rect_x="236" rect_y="446" rect_w="71" rect_h="97" offset_x="142" offset_y="111" />
+        <frame rect_x="393" rect_y="1" rect_w="71" rect_h="96" offset_x="142" offset_y="111" />
+        <frame rect_x="392" rect_y="264" rect_w="71" rect_h="95" offset_x="142" offset_y="111" />
+        <frame rect_x="392" rect_y="452" rect_w="70" rect_h="94" offset_x="143" offset_y="111" />
+      </direction>
+      <direction id="2" texture="boss_gaibang2_walk.png">
+        <frame rect_x="1" rect_y="555" rect_w="73" rect_h="94" offset_x="140" offset_y="109" />
+        <frame rect_x="82" rect_y="554" rect_w="73" rect_h="94" offset_x="140" offset_y="109" />
+        <frame rect_x="163" rect_y="549" rect_w="73" rect_h="94" offset_x="139" offset_y="109" />
+        <frame rect_x="318" rect_y="552" rect_w="73" rect_h="93" offset_x="139" offset_y="110" />
+        <frame rect_x="239" rect_y="549" rect_w="73" rect_h="94" offset_x="139" offset_y="110" />
+        <frame rect_x="467" rect_y="1" rect_w="76" rect_h="95" offset_x="136" offset_y="110" />
+        <frame rect_x="393" rect_y="100" rect_w="84" rect_h="94" offset_x="129" offset_y="110" />
+        <frame rect_x="394" rect_y="552" rect_w="85" rect_h="94" offset_x="128" offset_y="109" />
+        <frame rect_x="546" rect_y="1" rect_w="82" rect_h="95" offset_x="131" offset_y="109" />
+        <frame rect_x="466" rect_y="264" rect_w="80" rect_h="94" offset_x="133" offset_y="109" />
+        <frame rect_x="465" rect_y="452" rect_w="80" rect_h="94" offset_x="133" offset_y="110" />
+        <frame rect_x="480" rect_y="100" rect_w="74" rect_h="94" offset_x="139" offset_y="110" />
+        <frame rect_x="482" rect_y="552" rect_w="72" rect_h="94" offset_x="141" offset_y="110" />
+        <frame rect_x="549" rect_y="264" rect_w="71" rect_h="94" offset_x="142" offset_y="110" />
+      </direction>
+      <direction id="3" texture="boss_gaibang2_walk.png">
+        <frame rect_x="631" rect_y="1" rect_w="83" rect_h="89" offset_x="133" offset_y="110" />
+        <frame rect_x="548" rect_y="452" rect_w="83" rect_h="90" offset_x="133" offset_y="110" />
+        <frame rect_x="557" rect_y="100" rect_w="83" rect_h="91" offset_x="133" offset_y="110" />
+        <frame rect_x="557" rect_y="552" rect_w="81" rect_h="91" offset_x="134" offset_y="111" />
+        <frame rect_x="623" rect_y="264" rect_w="81" rect_h="91" offset_x="134" offset_y="111" />
+        <frame rect_x="1" rect_y="652" rect_w="85" rect_h="92" offset_x="130" offset_y="110" />
+        <frame rect_x="163" rect_y="646" rect_w="92" rect_h="91" offset_x="124" offset_y="110" />
+        <frame rect_x="394" rect_y="649" rect_w="92" rect_h="90" offset_x="124" offset_y="109" />
+        <frame rect_x="557" rect_y="646" rect_w="90" rect_h="89" offset_x="126" offset_y="109" />
+        <frame rect_x="466" rect_y="361" rect_w="86" rect_h="87" offset_x="128" offset_y="110" />
+        <frame rect_x="623" rect_y="358" rect_w="87" rect_h="88" offset_x="127" offset_y="110" />
+        <frame rect_x="717" rect_y="1" rect_w="83" rect_h="88" offset_x="131" offset_y="110" />
+        <frame rect_x="634" rect_y="452" rect_w="81" rect_h="89" offset_x="133" offset_y="110" />
+        <frame rect_x="643" rect_y="100" rect_w="81" rect_h="88" offset_x="134" offset_y="110" />
+      </direction>
+      <direction id="4" texture="boss_gaibang2_walk.png">
+        <frame rect_x="641" rect_y="552" rect_w="78" rect_h="91" offset_x="139" offset_y="109" />
+        <frame rect_x="707" rect_y="264" rect_w="77" rect_h="91" offset_x="140" offset_y="108" />
+        <frame rect_x="650" rect_y="646" rect_w="77" rect_h="91" offset_x="140" offset_y="109" />
+        <frame rect_x="713" rect_y="358" rect_w="76" rect_h="91" offset_x="141" offset_y="110" />
+        <frame rect_x="718" rect_y="452" rect_w="77" rect_h="92" offset_x="140" offset_y="110" />
+        <frame rect_x="1" rect_y="747" rect_w="79" rect_h="94" offset_x="139" offset_y="109" />
+        <frame rect_x="163" rect_y="740" rect_w="80" rect_h="92" offset_x="139" offset_y="109" />
+        <frame rect_x="394" rect_y="742" rect_w="80" rect_h="91" offset_x="139" offset_y="108" />
+        <frame rect_x="557" rect_y="738" rect_w="78" rect_h="93" offset_x="139" offset_y="107" />
+        <frame rect_x="650" rect_y="740" rect_w="80" rect_h="93" offset_x="139" offset_y="108" />
+        <frame rect_x="246" rect_y="740" rect_w="81" rect_h="93" offset_x="138" offset_y="109" />
+        <frame rect_x="803" rect_y="1" rect_w="81" rect_h="95" offset_x="138" offset_y="109" />
+        <frame rect_x="727" rect_y="100" rect_w="80" rect_h="95" offset_x="139" offset_y="109" />
+        <frame rect_x="798" rect_y="452" rect_w="79" rect_h="93" offset_x="139" offset_y="109" />
+      </direction>
+      <direction id="5" texture="boss_gaibang2_walk.png">
+        <frame rect_x="722" rect_y="552" rect_w="72" rect_h="91" offset_x="136" offset_y="109" />
+        <frame rect_x="318" rect_y="648" rect_w="71" rect_h="89" offset_x="136" offset_y="109" />
+        <frame rect_x="89" rect_y="652" rect_w="71" rect_h="88" offset_x="136" offset_y="109" />
+        <frame rect_x="787" rect_y="264" rect_w="71" rect_h="88" offset_x="136" offset_y="110" />
+        <frame rect_x="730" rect_y="646" rect_w="71" rect_h="88" offset_x="136" offset_y="110" />
+        <frame rect_x="792" rect_y="358" rect_w="71" rect_h="90" offset_x="136" offset_y="108" />
+        <frame rect_x="83" rect_y="747" rect_w="72" rect_h="92" offset_x="136" offset_y="106" />
+        <frame rect_x="477" rect_y="742" rect_w="72" rect_h="94" offset_x="136" offset_y="105" />
+        <frame rect_x="733" rect_y="740" rect_w="72" rect_h="96" offset_x="136" offset_y="105" />
+        <frame rect_x="810" rect_y="100" rect_w="73" rect_h="96" offset_x="136" offset_y="105" />
+        <frame rect_x="808" rect_y="740" rect_w="74" rect_h="96" offset_x="136" offset_y="106" />
+        <frame rect_x="798" rect_y="548" rect_w="73" rect_h="95" offset_x="136" offset_y="108" />
+        <frame rect_x="1" rect_y="844" rect_w="73" rect_h="94" offset_x="136" offset_y="109" />
+        <frame rect_x="163" rect_y="835" rect_w="72" rect_h="93" offset_x="136" offset_y="109" />
+      </direction>
+      <direction id="6" texture="boss_gaibang2_walk.png">
+        <frame rect_x="557" rect_y="834" rect_w="82" rect_h="88" offset_x="135" offset_y="111" />
+        <frame rect_x="394" rect_y="836" rect_w="80" rect_h="88" offset_x="136" offset_y="111" />
+        <frame rect_x="246" rect_y="836" rect_w="81" rect_h="87" offset_x="136" offset_y="112" />
+        <frame rect_x="650" rect_y="836" rect_w="80" rect_h="87" offset_x="136" offset_y="112" />
+        <frame rect_x="733" rect_y="839" rect_w="81" rect_h="86" offset_x="136" offset_y="112" />
+        <frame rect_x="77" rect_y="844" rect_w="82" rect_h="88" offset_x="136" offset_y="111" />
+        <frame rect_x="887" rect_y="1" rect_w="85" rect_h="90" offset_x="135" offset_y="109" />
+        <frame rect_x="880" rect_y="452" rect_w="86" rect_h="91" offset_x="135" offset_y="108" />
+        <frame rect_x="861" rect_y="264" rect_w="89" rect_h="90" offset_x="135" offset_y="109" />
+        <frame rect_x="804" rect_y="646" rect_w="90" rect_h="89" offset_x="135" offset_y="110" />
+        <frame rect_x="866" rect_y="358" rect_w="89" rect_h="88" offset_x="136" offset_y="111" />
+        <frame rect_x="886" rect_y="100" rect_w="83" rect_h="88" offset_x="135" offset_y="111" />
+        <frame rect_x="885" rect_y="740" rect_w="81" rect_h="88" offset_x="135" offset_y="111" />
+        <frame rect_x="874" rect_y="548" rect_w="80" rect_h="88" offset_x="135" offset_y="111" />
+      </direction>
+      <direction id="7" texture="boss_gaibang2_walk.png">
+        <frame rect_x="817" rect_y="839" rect_w="83" rect_h="84" offset_x="142" offset_y="114" />
+        <frame rect_x="1" rect_y="941" rect_w="83" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="163" rect_y="931" rect_w="81" rect_h="87" offset_x="142" offset_y="114" />
+        <frame rect_x="557" rect_y="925" rect_w="81" rect_h="87" offset_x="142" offset_y="115" />
+        <frame rect_x="394" rect_y="927" rect_w="81" rect_h="87" offset_x="142" offset_y="115" />
+        <frame rect_x="733" rect_y="928" rect_w="83" rect_h="88" offset_x="142" offset_y="114" />
+        <frame rect_x="247" rect_y="931" rect_w="84" rect_h="87" offset_x="142" offset_y="114" />
+        <frame rect_x="819" rect_y="928" rect_w="86" rect_h="86" offset_x="142" offset_y="114" />
+        <frame rect_x="1" rect_y="1030" rect_w="88" rect_h="84" offset_x="142" offset_y="114" />
+        <frame rect_x="163" rect_y="1021" rect_w="89" rect_h="83" offset_x="142" offset_y="114" />
+        <frame rect_x="557" rect_y="1015" rect_w="91" rect_h="83" offset_x="141" offset_y="115" />
+        <frame rect_x="394" rect_y="1017" rect_w="85" rect_h="83" offset_x="141" offset_y="115" />
+        <frame rect_x="733" rect_y="1019" rect_w="87" rect_h="83" offset_x="138" offset_y="114" />
+        <frame rect_x="255" rect_y="1021" rect_w="81" rect_h="83" offset_x="142" offset_y="114" />
+      </direction>
+    </sequence>
+  </sequences>
+</animation>

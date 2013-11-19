@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="98-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="148" rect_h="180" offset_x="138" offset_y="220" />
+    <frame rect_x="1" rect_y="184" rect_w="146" rect_h="179" offset_x="139" offset_y="221" />
+    <frame rect_x="152" rect_y="1" rect_w="136" rect_h="169" offset_x="144" offset_y="229" />
+    <frame rect_x="150" rect_y="184" rect_w="117" rect_h="146" offset_x="153" offset_y="244" />
+    <frame rect_x="291" rect_y="1" rect_w="51" rect_h="92" offset_x="186" offset_y="265" />
+    <frame rect_x="270" rect_y="184" rect_w="51" rect_h="92" offset_x="186" offset_y="265" />
+    <frame rect_x="152" rect_y="173" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="150" rect_y="333" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="291" rect_y="96" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="324" rect_y="184" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="270" rect_y="279" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="156" rect_y="173" rect_w="1" rect_h="1" offset_x="0" offset_y="0" />
+    <frame rect_x="1" rect_y="366" rect_w="51" rect_h="90" offset_x="186" offset_y="266" />
+  </frames>
+</animation>

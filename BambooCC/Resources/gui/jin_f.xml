@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+    <sequence name="active">
+      <frame id="0" texture="animations/jin_f0.png" offset_x = "359" offset_y="111" />
+      <frame id="1" texture="animations/jin_f1.png" offset_x = "364" offset_y="112" />
+      <frame id="2" texture="animations/jin_f2.png" offset_x = "364" offset_y="112" />
+      <frame id="3" texture="animations/jin_f3.png" offset_x = "364" offset_y="113" />
+      <frame id="4" texture="animations/jin_f4.png" offset_x = "363" offset_y="113" />
+      <frame id="5" texture="animations/jin_f5.png" offset_x = "362" offset_y="113" />
+      <frame id="6" texture="animations/jin_f6.png" offset_x = "360" offset_y="113" />
+      <frame id="7" texture="animations/jin_f7.png" offset_x = "354" offset_y="113" />
+      <frame id="8" texture="animations/jin_f8.png" offset_x = "352" offset_y="112" />
+      <frame id="9" texture="animations/jin_f9.png" offset_x = "354" offset_y="112" />
+    </sequence>
+    <sequence name="action">
+      <frame id="10" texture="animations/jin_f10.png" offset_x = "361" offset_y="111" />
+      <frame id="11" texture="animations/jin_f11.png" offset_x = "354" offset_y="124" />
+      <frame id="12" texture="animations/jin_f12.png" offset_x = "311" offset_y="101" />
+      <frame id="13" texture="animations/jin_f13.png" offset_x = "311" offset_y="21" />
+      <frame id="14" texture="animations/jin_f14.png" offset_x = "319" offset_y="20" />
+      <frame id="15" texture="animations/jin_f15.png" offset_x = "234" offset_y="26" />
+      <frame id="16" texture="animations/jin_f16.png" offset_x = "230" offset_y="81" />
+      <frame id="17" texture="animations/jin_f17.png" offset_x = "229" offset_y="56" />
+      <frame id="18" texture="animations/jin_f18.png" offset_x = "238" offset_y="48" />
+      <frame id="19" texture="animations/jin_f19.png" offset_x = "245" offset_y="48" />
+      <frame id="20" texture="animations/jin_f20.png" offset_x = "248" offset_y="58" />
+      <frame id="21" texture="animations/jin_f21.png" offset_x = "274" offset_y="64" />
+      <frame id="22" texture="animations/jin_f22.png" offset_x = "341" offset_y="87" />
+      <frame id="23" texture="animations/jin_f23.png" offset_x = "303" offset_y="118" />
+      <frame id="24" texture="animations/jin_f24.png" offset_x = "304" offset_y="105" />
+      <frame id="25" texture="animations/jin_f25.png" offset_x = "304" offset_y="31" />
+      <frame id="26" texture="animations/jin_f26.png" offset_x = "321" offset_y="23" />
+      <frame id="27" texture="animations/jin_f27.png" offset_x = "332" offset_y="23" />
+      <frame id="28" texture="animations/jin_f28.png" offset_x = "339" offset_y="23" />
+      <frame id="29" texture="animations/jin_f29.png" offset_x = "354" offset_y="25" />
+    </sequence>
+    <sequence name="inactive">
+      <frame id="30" texture="animations/jin_f30.png" offset_x = "359" offset_y="111" />
+      <frame id="31" texture="animations/jin_f31.png" offset_x = "364" offset_y="112" />
+      <frame id="32" texture="animations/jin_f32.png" offset_x = "364" offset_y="112" />
+      <frame id="33" texture="animations/jin_f33.png" offset_x = "364" offset_y="113" />
+      <frame id="34" texture="animations/jin_f34.png" offset_x = "363" offset_y="113" />
+      <frame id="35" texture="animations/jin_f35.png" offset_x = "362" offset_y="113" />
+      <frame id="36" texture="animations/jin_f36.png" offset_x = "360" offset_y="113" />
+      <frame id="37" texture="animations/jin_f37.png" offset_x = "354" offset_y="113" />
+      <frame id="38" texture="animations/jin_f38.png" offset_x = "352" offset_y="112" />
+      <frame id="39" texture="animations/jin_f39.png" offset_x = "354" offset_y="112" />
+    </sequence>
+</animation>

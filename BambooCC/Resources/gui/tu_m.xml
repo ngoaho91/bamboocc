@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<frames>
+		<frame name="frame_0" file="animations/tu_m0.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_1" file="animations/tu_m1.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_2" file="animations/tu_m2.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_3" file="animations/tu_m3.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_4" file="animations/tu_m4.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_5" file="animations/tu_m5.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_6" file="animations/tu_m6.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_7" file="animations/tu_m7.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_8" file="animations/tu_m8.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_9" file="animations/tu_m9.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_10" file="animations/tu_m10.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_11" file="animations/tu_m11.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_12" file="animations/tu_m12.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_13" file="animations/tu_m13.png" offset_x = "343" offset_y="130" />
+		<frame name="frame_14" file="animations/tu_m14.png" offset_x = "344" offset_y="129" />
+		<frame name="frame_15" file="animations/tu_m15.png" offset_x = "344" offset_y="129" />
+		<frame name="frame_16" file="animations/tu_m16.png" offset_x = "345" offset_y="129" />
+		<frame name="frame_17" file="animations/tu_m17.png" offset_x = "345" offset_y="129" />
+		<frame name="frame_18" file="animations/tu_m18.png" offset_x = "345" offset_y="129" />
+		<frame name="frame_19" file="animations/tu_m19.png" offset_x = "344" offset_y="130" />
+		<frame name="frame_20" file="animations/tu_m20.png" offset_x = "344" offset_y="130" />
+		<frame name="frame_21" file="animations/tu_m21.png" offset_x = "344" offset_y="131" />
+		<frame name="frame_22" file="animations/tu_m22.png" offset_x = "344" offset_y="131" />
+		<frame name="frame_23" file="animations/tu_m23.png" offset_x = "344" offset_y="132" />
+		<frame name="frame_24" file="animations/tu_m24.png" offset_x = "343" offset_y="132" />
+		<frame name="frame_25" file="animations/tu_m25.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_26" file="animations/tu_m26.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_27" file="animations/tu_m27.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_28" file="animations/tu_m28.png" offset_x = "342" offset_y="128" />
+		<frame name="frame_29" file="animations/tu_m29.png" offset_x = "342" offset_y="126" />
+		<frame name="frame_30" file="animations/tu_m30.png" offset_x = "342" offset_y="125" />
+		<frame name="frame_31" file="animations/tu_m31.png" offset_x = "342" offset_y="124" />
+		<frame name="frame_32" file="animations/tu_m32.png" offset_x = "342" offset_y="124" />
+		<frame name="frame_33" file="animations/tu_m33.png" offset_x = "342" offset_y="124" />
+		<frame name="frame_34" file="animations/tu_m34.png" offset_x = "342" offset_y="124" />
+		<frame name="frame_35" file="animations/tu_m35.png" offset_x = "342" offset_y="125" />
+		<frame name="frame_36" file="animations/tu_m36.png" offset_x = "342" offset_y="126" />
+		<frame name="frame_37" file="animations/tu_m37.png" offset_x = "342" offset_y="127" />
+		<frame name="frame_38" file="animations/tu_m38.png" offset_x = "342" offset_y="128" />
+		<frame name="frame_39" file="animations/tu_m39.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_40" file="animations/tu_m40.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_41" file="animations/tu_m41.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_42" file="animations/tu_m42.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_43" file="animations/tu_m43.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_44" file="animations/tu_m44.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_45" file="animations/tu_m45.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_46" file="animations/tu_m46.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_47" file="animations/tu_m47.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_48" file="animations/tu_m48.png" offset_x = "342" offset_y="129" />
+		<frame name="frame_49" file="animations/tu_m49.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_50" file="animations/tu_m50.png" offset_x = "342" offset_y="130" />
+		<frame name="frame_51" file="animations/tu_m51.png" offset_x = "342" offset_y="131" />
+		<frame name="frame_52" file="animations/tu_m52.png" offset_x = "342" offset_y="131" />
+	</frames>
+	<sequences>
+		<sequence name="direction_0">
+			<frame name="frame_0" time="50" />
+			<frame name="frame_1" time="50" />
+			<frame name="frame_2" time="50" />
+			<frame name="frame_3" time="50" />
+			<frame name="frame_4" time="50" />
+			<frame name="frame_5" time="50" />
+			<frame name="frame_6" time="50" />
+			<frame name="frame_7" time="50" />
+			<frame name="frame_8" time="50" />
+			<frame name="frame_9" time="50" />
+			<frame name="frame_10" time="50" />
+		</sequence>
+		<sequence name="direction_1">
+			<frame name="frame_11" time="50" />
+			<frame name="frame_12" time="50" />
+			<frame name="frame_13" time="50" />
+			<frame name="frame_14" time="50" />
+			<frame name="frame_15" time="50" />
+			<frame name="frame_16" time="50" />
+			<frame name="frame_17" time="50" />
+			<frame name="frame_18" time="50" />
+			<frame name="frame_19" time="50" />
+			<frame name="frame_20" time="50" />
+			<frame name="frame_21" time="50" />
+			<frame name="frame_22" time="50" />
+			<frame name="frame_23" time="50" />
+			<frame name="frame_24" time="50" />
+			<frame name="frame_25" time="50" />
+			<frame name="frame_26" time="50" />
+			<frame name="frame_27" time="50" />
+			<frame name="frame_28" time="50" />
+			<frame name="frame_29" time="50" />
+			<frame name="frame_30" time="50" />
+			<frame name="frame_31" time="50" />
+			<frame name="frame_32" time="50" />
+			<frame name="frame_33" time="50" />
+			<frame name="frame_34" time="50" />
+			<frame name="frame_35" time="50" />
+			<frame name="frame_36" time="50" />
+			<frame name="frame_37" time="50" />
+			<frame name="frame_38" time="50" />
+			<frame name="frame_39" time="50" />
+			<frame name="frame_40" time="50" />
+			<frame name="frame_41" time="50" />
+		</sequence>
+		<sequence name="direction_2">
+			<frame name="frame_42" time="50" />
+			<frame name="frame_43" time="50" />
+			<frame name="frame_44" time="50" />
+			<frame name="frame_45" time="50" />
+			<frame name="frame_46" time="50" />
+			<frame name="frame_47" time="50" />
+			<frame name="frame_48" time="50" />
+			<frame name="frame_49" time="50" />
+			<frame name="frame_50" time="50" />
+			<frame name="frame_51" time="50" />
+			<frame name="frame_52" time="50" />
+		</sequence>
+	</sequences>
+</animation>

@@ -1,0 +1,12 @@
+<missile_skill name="wu zhang shan" script="wu_zhang_shan.lua" scope="0" weapon="7">
+	<missile file="skill/missile/47-/47-.xml" speed="3" life_time="200" angle_offset="0"/>
+	<damages effect="">
+		<damage style="1" series="0" value="100"/>
+	</damages>
+	<buffs effect="">
+		<buff name="decrease 5% of target's move speed ">
+			<style type="0" detail="0"/>
+			<calculation type="1" method="0" detail="2" value="5"/>
+		</buff>
+	</buffs>
+</missile_skill>

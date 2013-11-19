@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<frames>
+		<frame name="frame_0" file="animations/mo_f0.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_1" file="animations/mo_f1.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_2" file="animations/mo_f2.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_3" file="animations/mo_f3.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_4" file="animations/mo_f4.png" offset_x = "366" offset_y="188" />
+		<frame name="frame_5" file="animations/mo_f5.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_6" file="animations/mo_f6.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_7" file="animations/mo_f7.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_8" file="animations/mo_f8.png" offset_x = "370" offset_y="188" />
+		<frame name="frame_9" file="animations/mo_f9.png" offset_x = "351" offset_y="170" />
+		<frame name="frame_10" file="animations/mo_f10.png" offset_x = "348" offset_y="157" />
+		<frame name="frame_11" file="animations/mo_f11.png" offset_x = "346" offset_y="188" />
+		<frame name="frame_12" file="animations/mo_f12.png" offset_x = "342" offset_y="184" />
+		<frame name="frame_13" file="animations/mo_f13.png" offset_x = "341" offset_y="188" />
+		<frame name="frame_14" file="animations/mo_f14.png" offset_x = "336" offset_y="180" />
+		<frame name="frame_15" file="animations/mo_f15.png" offset_x = "329" offset_y="168" />
+		<frame name="frame_16" file="animations/mo_f16.png" offset_x = "323" offset_y="156" />
+		<frame name="frame_17" file="animations/mo_f17.png" offset_x = "323" offset_y="145" />
+		<frame name="frame_18" file="animations/mo_f18.png" offset_x = "322" offset_y="133" />
+		<frame name="frame_19" file="animations/mo_f19.png" offset_x = "325" offset_y="138" />
+		<frame name="frame_20" file="animations/mo_f20.png" offset_x = "324" offset_y="125" />
+		<frame name="frame_21" file="animations/mo_f21.png" offset_x = "317" offset_y="156" />
+		<frame name="frame_22" file="animations/mo_f22.png" offset_x = "310" offset_y="142" />
+		<frame name="frame_23" file="animations/mo_f23.png" offset_x = "309" offset_y="130" />
+		<frame name="frame_24" file="animations/mo_f24.png" offset_x = "311" offset_y="188" />
+		<frame name="frame_25" file="animations/mo_f25.png" offset_x = "314" offset_y="188" />
+		<frame name="frame_26" file="animations/mo_f26.png" offset_x = "311" offset_y="186" />
+		<frame name="frame_27" file="animations/mo_f27.png" offset_x = "317" offset_y="176" />
+		<frame name="frame_28" file="animations/mo_f28.png" offset_x = "369" offset_y="188" />
+		<frame name="frame_29" file="animations/mo_f29.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_30" file="animations/mo_f30.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_31" file="animations/mo_f31.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_32" file="animations/mo_f32.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_33" file="animations/mo_f33.png" offset_x = "366" offset_y="188" />
+		<frame name="frame_34" file="animations/mo_f34.png" offset_x = "367" offset_y="188" />
+		<frame name="frame_35" file="animations/mo_f35.png" offset_x = "368" offset_y="188" />
+		<frame name="frame_36" file="animations/mo_f36.png" offset_x = "368" offset_y="188" />
+	</frames>
+	<sequences>
+		<sequence name="direction_0">
+			<frame name="frame_0" time="50" />
+			<frame name="frame_1" time="50" />
+			<frame name="frame_2" time="50" />
+			<frame name="frame_3" time="50" />
+			<frame name="frame_4" time="50" />
+			<frame name="frame_5" time="50" />
+			<frame name="frame_6" time="50" />
+			<frame name="frame_7" time="50" />
+		</sequence>
+		<sequence name="direction_1">
+			<frame name="frame_8" time="50" />
+			<frame name="frame_9" time="50" />
+			<frame name="frame_10" time="50" />
+			<frame name="frame_11" time="50" />
+			<frame name="frame_12" time="50" />
+			<frame name="frame_13" time="50" />
+			<frame name="frame_14" time="50" />
+			<frame name="frame_15" time="50" />
+			<frame name="frame_16" time="50" />
+			<frame name="frame_17" time="50" />
+			<frame name="frame_18" time="50" />
+			<frame name="frame_19" time="50" />
+			<frame name="frame_20" time="50" />
+			<frame name="frame_21" time="50" />
+			<frame name="frame_22" time="50" />
+			<frame name="frame_23" time="50" />
+			<frame name="frame_24" time="50" />
+			<frame name="frame_25" time="50" />
+			<frame name="frame_26" time="50" />
+			<frame name="frame_27" time="50" />
+			<frame name="frame_28" time="50" />
+		</sequence>
+		<sequence name="direction_2">
+			<frame name="frame_29" time="50" />
+			<frame name="frame_30" time="50" />
+			<frame name="frame_31" time="50" />
+			<frame name="frame_32" time="50" />
+			<frame name="frame_33" time="50" />
+			<frame name="frame_34" time="50" />
+			<frame name="frame_35" time="50" />
+			<frame name="frame_36" time="50" />
+		</sequence>
+	</sequences>
+</animation>

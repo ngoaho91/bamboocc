@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<frames>
+		<frame name="frame_0" file="animations/hua_f0.png" offset_x = "284" offset_y="182" />
+		<frame name="frame_1" file="animations/hua_f1.png" offset_x = "283" offset_y="182" />
+		<frame name="frame_2" file="animations/hua_f2.png" offset_x = "282" offset_y="182" />
+		<frame name="frame_3" file="animations/hua_f3.png" offset_x = "280" offset_y="182" />
+		<frame name="frame_4" file="animations/hua_f4.png" offset_x = "279" offset_y="182" />
+		<frame name="frame_5" file="animations/hua_f5.png" offset_x = "278" offset_y="182" />
+		<frame name="frame_6" file="animations/hua_f6.png" offset_x = "279" offset_y="182" />
+		<frame name="frame_7" file="animations/hua_f7.png" offset_x = "280" offset_y="182" />
+		<frame name="frame_8" file="animations/hua_f8.png" offset_x = "281" offset_y="182" />
+		<frame name="frame_9" file="animations/hua_f9.png" offset_x = "283" offset_y="182" />
+		<frame name="frame_10" file="animations/hua_f10.png" offset_x = "284" offset_y="182" />
+		<frame name="frame_11" file="animations/hua_f11.png" offset_x = "284" offset_y="182" />
+		<frame name="frame_12" file="animations/hua_f12.png" offset_x = "194" offset_y="181" />
+		<frame name="frame_13" file="animations/hua_f13.png" offset_x = "200" offset_y="148" />
+		<frame name="frame_14" file="animations/hua_f14.png" offset_x = "217" offset_y="70" />
+		<frame name="frame_15" file="animations/hua_f15.png" offset_x = "253" offset_y="86" />
+		<frame name="frame_16" file="animations/hua_f16.png" offset_x = "256" offset_y="97" />
+		<frame name="frame_17" file="animations/hua_f17.png" offset_x = "301" offset_y="112" />
+		<frame name="frame_18" file="animations/hua_f18.png" offset_x = "229" offset_y="136" />
+		<frame name="frame_19" file="animations/hua_f19.png" offset_x = "230" offset_y="161" />
+		<frame name="frame_20" file="animations/hua_f20.png" offset_x = "253" offset_y="173" />
+		<frame name="frame_21" file="animations/hua_f21.png" offset_x = "290" offset_y="178" />
+		<frame name="frame_22" file="animations/hua_f22.png" offset_x = "344" offset_y="182" />
+		<frame name="frame_23" file="animations/hua_f23.png" offset_x = "347" offset_y="181" />
+		<frame name="frame_24" file="animations/hua_f24.png" offset_x = "303" offset_y="183" />
+		<frame name="frame_25" file="animations/hua_f25.png" offset_x = "191" offset_y="184" />
+		<frame name="frame_26" file="animations/hua_f26.png" offset_x = "192" offset_y="184" />
+		<frame name="frame_27" file="animations/hua_f27.png" offset_x = "188" offset_y="184" />
+		<frame name="frame_28" file="animations/hua_f28.png" offset_x = "186" offset_y="183" />
+		<frame name="frame_29" file="animations/hua_f29.png" offset_x = "189" offset_y="183" />
+		<frame name="frame_30" file="animations/hua_f30.png" offset_x = "195" offset_y="183" />
+		<frame name="frame_31" file="animations/hua_f31.png" offset_x = "227" offset_y="182" />
+		<frame name="frame_32" file="animations/hua_f32.png" offset_x = "275" offset_y="182" />
+		<frame name="frame_33" file="animations/hua_f33.png" offset_x = "280" offset_y="182" />
+		<frame name="frame_34" file="animations/hua_f34.png" offset_x = "282" offset_y="182" />
+		<frame name="frame_35" file="animations/hua_f35.png" offset_x = "284" offset_y="182" />
+		<frame name="frame_36" file="animations/hua_f36.png" offset_x = "284" offset_y="182" />
+		<frame name="frame_37" file="animations/hua_f37.png" offset_x = "283" offset_y="182" />
+		<frame name="frame_38" file="animations/hua_f38.png" offset_x = "282" offset_y="182" />
+		<frame name="frame_39" file="animations/hua_f39.png" offset_x = "280" offset_y="182" />
+		<frame name="frame_40" file="animations/hua_f40.png" offset_x = "279" offset_y="182" />
+		<frame name="frame_41" file="animations/hua_f41.png" offset_x = "278" offset_y="182" />
+		<frame name="frame_42" file="animations/hua_f42.png" offset_x = "279" offset_y="182" />
+		<frame name="frame_43" file="animations/hua_f43.png" offset_x = "280" offset_y="182" />
+		<frame name="frame_44" file="animations/hua_f44.png" offset_x = "281" offset_y="182" />
+		<frame name="frame_45" file="animations/hua_f45.png" offset_x = "283" offset_y="182" />
+		<frame name="frame_46" file="animations/hua_f46.png" offset_x = "284" offset_y="182" />
+	</frames>
+	<sequences>
+		<sequence name="direction_0">
+			<frame name="frame_0" time="50" />
+			<frame name="frame_1" time="50" />
+			<frame name="frame_2" time="50" />
+			<frame name="frame_3" time="50" />
+			<frame name="frame_4" time="50" />
+			<frame name="frame_5" time="50" />
+			<frame name="frame_6" time="50" />
+			<frame name="frame_7" time="50" />
+			<frame name="frame_8" time="50" />
+			<frame name="frame_9" time="50" />
+			<frame name="frame_10" time="50" />
+		</sequence>
+		<sequence name="direction_1">
+			<frame name="frame_11" time="50" />
+			<frame name="frame_12" time="50" />
+			<frame name="frame_13" time="50" />
+			<frame name="frame_14" time="50" />
+			<frame name="frame_15" time="50" />
+			<frame name="frame_16" time="50" />
+			<frame name="frame_17" time="50" />
+			<frame name="frame_18" time="50" />
+			<frame name="frame_19" time="50" />
+			<frame name="frame_20" time="50" />
+			<frame name="frame_21" time="50" />
+			<frame name="frame_22" time="50" />
+			<frame name="frame_23" time="50" />
+			<frame name="frame_24" time="50" />
+			<frame name="frame_25" time="50" />
+			<frame name="frame_26" time="50" />
+			<frame name="frame_27" time="50" />
+			<frame name="frame_28" time="50" />
+			<frame name="frame_29" time="50" />
+			<frame name="frame_30" time="50" />
+			<frame name="frame_31" time="50" />
+			<frame name="frame_32" time="50" />
+			<frame name="frame_33" time="50" />
+			<frame name="frame_34" time="50" />
+			<frame name="frame_35" time="50" />
+		</sequence>
+		<sequence name="direction_2">
+			<frame name="frame_36" time="50" />
+			<frame name="frame_37" time="50" />
+			<frame name="frame_38" time="50" />
+			<frame name="frame_39" time="50" />
+			<frame name="frame_40" time="50" />
+			<frame name="frame_41" time="50" />
+			<frame name="frame_42" time="50" />
+			<frame name="frame_43" time="50" />
+			<frame name="frame_44" time="50" />
+			<frame name="frame_45" time="50" />
+			<frame name="frame_46" time="50" />
+		</sequence>
+	</sequences>
+</animation>

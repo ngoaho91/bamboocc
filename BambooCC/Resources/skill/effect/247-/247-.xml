@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="247-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="186" rect_h="273" offset_x="273" offset_y="156" />
+    <frame rect_x="190" rect_y="1" rect_w="231" rect_h="314" offset_x="255" offset_y="113" />
+    <frame rect_x="424" rect_y="1" rect_w="258" rect_h="323" offset_x="240" offset_y="104" />
+    <frame rect_x="685" rect_y="1" rect_w="284" rect_h="329" offset_x="224" offset_y="98" />
+    <frame rect_x="972" rect_y="1" rect_w="313" rect_h="347" offset_x="207" offset_y="80" />
+    <frame rect_x="1288" rect_y="1" rect_w="347" rect_h="362" offset_x="186" offset_y="65" />
+    <frame rect_x="1638" rect_y="1" rect_w="384" rect_h="372" offset_x="162" offset_y="55" />
+    <frame rect_x="2025" rect_y="1" rect_w="415" rect_h="382" offset_x="145" offset_y="47" />
+    <frame rect_x="2443" rect_y="1" rect_w="445" rect_h="389" offset_x="130" offset_y="40" />
+    <frame rect_x="2891" rect_y="1" rect_w="461" rect_h="393" offset_x="118" offset_y="36" />
+    <frame rect_x="3355" rect_y="1" rect_w="471" rect_h="396" offset_x="108" offset_y="33" />
+    <frame rect_x="3355" rect_y="400" rect_w="481" rect_h="401" offset_x="100" offset_y="27" />
+    <frame rect_x="3355" rect_y="804" rect_w="494" rect_h="402" offset_x="91" offset_y="24" />
+    <frame rect_x="3355" rect_y="1209" rect_w="518" rect_h="407" offset_x="75" offset_y="20" />
+    <frame rect_x="3355" rect_y="1619" rect_w="538" rect_h="416" offset_x="60" offset_y="12" />
+    <frame rect_x="3355" rect_y="2038" rect_w="551" rect_h="420" offset_x="47" offset_y="7" />
+    <frame rect_x="3355" rect_y="2461" rect_w="545" rect_h="424" offset_x="43" offset_y="5" />
+    <frame rect_x="3355" rect_y="2888" rect_w="571" rect_h="427" offset_x="35" offset_y="2" />
+    <frame rect_x="3355" rect_y="3318" rect_w="591" rect_h="429" offset_x="34" offset_y="0" />
+    <frame rect_x="4098" rect_y="1" rect_w="606" rect_h="429" offset_x="34" offset_y="0" />
+    <frame rect_x="4098" rect_y="433" rect_w="592" rect_h="429" offset_x="48" offset_y="0" />
+    <frame rect_x="4098" rect_y="865" rect_w="592" rect_h="416" offset_x="48" offset_y="12" />
+    <frame rect_x="4098" rect_y="1284" rect_w="557" rect_h="420" offset_x="52" offset_y="9" />
+  </frames>
+</animation>

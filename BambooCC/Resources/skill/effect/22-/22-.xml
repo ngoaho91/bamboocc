@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="22-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="23" rect_h="22" offset_x="55" offset_y="45" />
+    <frame rect_x="27" rect_y="1" rect_w="30" rect_h="27" offset_x="51" offset_y="43" />
+    <frame rect_x="60" rect_y="1" rect_w="36" rect_h="31" offset_x="48" offset_y="41" />
+    <frame rect_x="99" rect_y="1" rect_w="40" rect_h="31" offset_x="46" offset_y="41" />
+    <frame rect_x="142" rect_y="1" rect_w="56" rect_h="35" offset_x="35" offset_y="37" />
+    <frame rect_x="201" rect_y="1" rect_w="85" rect_h="38" offset_x="18" offset_y="34" />
+    <frame rect_x="289" rect_y="1" rect_w="117" rect_h="43" offset_x="1" offset_y="32" />
+    <frame rect_x="409" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="529" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="649" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="769" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="289" rect_y="47" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="889" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="1009" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="1129" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="1249" rect_y="1" rect_w="117" rect_h="47" offset_x="1" offset_y="28" />
+    <frame rect_x="409" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="529" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="649" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="769" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="889" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1009" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1129" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1249" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1369" rect_y="1" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1368" rect_y="51" rect_w="116" rect_h="46" offset_x="1" offset_y="29" />
+    <frame rect_x="1488" rect_y="1" rect_w="115" rect_h="46" offset_x="2" offset_y="29" />
+    <frame rect_x="1487" rect_y="51" rect_w="115" rect_h="46" offset_x="2" offset_y="29" />
+    <frame rect_x="1606" rect_y="1" rect_w="115" rect_h="46" offset_x="2" offset_y="29" />
+    <frame rect_x="1605" rect_y="51" rect_w="115" rect_h="46" offset_x="2" offset_y="29" />
+  </frames>
+</animation>

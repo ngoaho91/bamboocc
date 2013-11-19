@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="6-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="142" rect_h="103" offset_x="91" offset_y="74" />
+    <frame rect_x="146" rect_y="1" rect_w="142" rect_h="104" offset_x="91" offset_y="74" />
+    <frame rect_x="291" rect_y="1" rect_w="144" rect_h="105" offset_x="90" offset_y="74" />
+    <frame rect_x="438" rect_y="1" rect_w="144" rect_h="104" offset_x="90" offset_y="75" />
+    <frame rect_x="585" rect_y="1" rect_w="144" rect_h="105" offset_x="90" offset_y="75" />
+    <frame rect_x="732" rect_y="1" rect_w="148" rect_h="105" offset_x="89" offset_y="75" />
+    <frame rect_x="291" rect_y="109" rect_w="153" rect_h="105" offset_x="89" offset_y="76" />
+    <frame rect_x="585" rect_y="109" rect_w="157" rect_h="105" offset_x="89" offset_y="76" />
+    <frame rect_x="883" rect_y="1" rect_w="163" rect_h="104" offset_x="88" offset_y="77" />
+    <frame rect_x="745" rect_y="109" rect_w="152" rect_h="105" offset_x="88" offset_y="77" />
+    <frame rect_x="1049" rect_y="1" rect_w="159" rect_h="110" offset_x="88" offset_y="73" />
+    <frame rect_x="1211" rect_y="1" rect_w="162" rect_h="121" offset_x="84" offset_y="65" />
+    <frame rect_x="291" rect_y="217" rect_w="167" rect_h="124" offset_x="87" offset_y="58" />
+    <frame rect_x="1" rect_y="107" rect_w="128" rect_h="126" offset_x="86" offset_y="57" />
+    <frame rect_x="146" rect_y="108" rect_w="137" rect_h="127" offset_x="83" offset_y="56" />
+    <frame rect_x="585" rect_y="217" rect_w="147" rect_h="124" offset_x="78" offset_y="62" />
+    <frame rect_x="1049" rect_y="114" rect_w="152" rect_h="129" offset_x="73" offset_y="60" />
+    <frame rect_x="1211" rect_y="125" rect_w="148" rect_h="133" offset_x="83" offset_y="59" />
+    <frame rect_x="900" rect_y="109" rect_w="140" rect_h="116" offset_x="89" offset_y="79" />
+    <frame rect_x="745" rect_y="217" rect_w="142" rect_h="111" offset_x="83" offset_y="80" />
+    <frame rect_x="461" rect_y="217" rect_w="111" rect_h="94" offset_x="81" offset_y="71" />
+    <frame rect_x="1" rect_y="236" rect_w="85" rect_h="94" offset_x="105" offset_y="66" />
+  </frames>
+</animation>

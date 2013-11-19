@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="241-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="47" rect_h="43" offset_x="39" offset_y="35" />
+    <frame rect_x="51" rect_y="1" rect_w="49" rect_h="45" offset_x="38" offset_y="34" />
+    <frame rect_x="103" rect_y="1" rect_w="51" rect_h="47" offset_x="37" offset_y="33" />
+    <frame rect_x="157" rect_y="1" rect_w="51" rect_h="47" offset_x="37" offset_y="33" />
+    <frame rect_x="211" rect_y="1" rect_w="52" rect_h="47" offset_x="36" offset_y="33" />
+    <frame rect_x="266" rect_y="1" rect_w="52" rect_h="47" offset_x="36" offset_y="33" />
+    <frame rect_x="103" rect_y="51" rect_w="52" rect_h="47" offset_x="36" offset_y="33" />
+    <frame rect_x="211" rect_y="51" rect_w="51" rect_h="47" offset_x="37" offset_y="33" />
+    <frame rect_x="51" rect_y="49" rect_w="49" rect_h="45" offset_x="38" offset_y="34" />
+    <frame rect_x="1" rect_y="47" rect_w="47" rect_h="43" offset_x="39" offset_y="35" />
+  </frames>
+</animation>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="163-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="34" rect_h="35" offset_x="91" offset_y="84" />
+    <frame rect_x="38" rect_y="1" rect_w="57" rect_h="49" offset_x="81" offset_y="76" />
+    <frame rect_x="98" rect_y="1" rect_w="74" rect_h="63" offset_x="73" offset_y="69" />
+    <frame rect_x="175" rect_y="1" rect_w="83" rect_h="80" offset_x="68" offset_y="59" />
+    <frame rect_x="261" rect_y="1" rect_w="99" rect_h="92" offset_x="60" offset_y="50" />
+    <frame rect_x="363" rect_y="1" rect_w="101" rect_h="81" offset_x="59" offset_y="52" />
+  </frames>
+</animation>

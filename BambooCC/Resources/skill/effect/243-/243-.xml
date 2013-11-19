@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animation texture="243-.png">
+  <frames>
+    <frame rect_x="1" rect_y="1" rect_w="44" rect_h="43" offset_x="35" offset_y="33" />
+    <frame rect_x="1" rect_y="47" rect_w="54" rect_h="56" offset_x="31" offset_y="28" />
+    <frame rect_x="1" rect_y="106" rect_w="55" rect_h="57" offset_x="30" offset_y="28" />
+    <frame rect_x="58" rect_y="47" rect_w="49" rect_h="49" offset_x="33" offset_y="31" />
+  </frames>
+</animation>
