@@ -11,7 +11,7 @@ namespace Geometry
 	{
 	}
 	bool PolygonContainer::QueryPointInPolygon(Node* node, 
-		bool consider_touch = false)
+		bool consider_touch)
 	{
 		QuadTree* tree = this;
 		while(tree)
@@ -26,7 +26,7 @@ namespace Geometry
 				bool inside = PointInPolygon(node, poly, consider_touch);
 				if(inside) return true;
 			}
-			Geometry::TREE_LOCATION location = tree->GetLocation(x, y);
+			Geometry::TREE_LOCATION location = tree->GetLocation(node->X(), node->Y());
 			if(location == Geometry::TL_CHILD0)
 			{
 				tree = tree->SubNode(0);
@@ -51,7 +51,7 @@ namespace Geometry
 		return false;
 	}
 	bool PolygonContainer::QueryPolygonSegmentIntersect(Edge* edge, 
-		bool consider_touch = false)
+		bool consider_touch)
 	{
 		queue<QuadTree*> trees;
 		trees.push(this);

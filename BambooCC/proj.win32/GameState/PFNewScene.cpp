@@ -30,8 +30,8 @@ bool PFNewScene::init()
 		this->addChild(mouseSprite,99999);
 	}
 	{
-		pathFinder = new PathFinderNew();
-		pathFinder->SelfTest();
+		pathFinder = new PathFinder();
+		//pathFinder->SelfTest();
 		this->addChild(pathFinder->GetRender());
 	}
 	return true;
@@ -44,16 +44,16 @@ bool PFNewScene::onMouseEvent(const CCMouseEvent& evt)
 	case CCMouse::Press:
 		if(evt.button == CCMouse::LeftButton)
 		{
-			vertex_begin = make_pair<double, double>(evt.x/50.0, evt.y/50.0);
+			vertex_begin = new Node(evt.x/50.0, evt.y/50.0);
 		}
 		else if(evt.button == CCMouse::RightButton)
 		{
-			vertex_end = make_pair<double, double>(evt.x/50.0, evt.y/50.0);
+			vertex_end = new Node(evt.x/50.0, evt.y/50.0);
 		}
 		path.clear();
-		pathFinder->FindPath(vertex_begin.first, vertex_begin.second, 
+		/*pathFinder->FindPath(vertex_begin.first, vertex_begin.second, 
 			vertex_end.first, vertex_end.second, &path);
-		pathFinder->GetRender()->SetPath(path);
+		pathFinder->GetRender()->SetPath(path);*/
 		break;
 	case CCMouse::Release:
 

@@ -128,7 +128,7 @@ namespace Geometry
 	// - polygon = polygon
 	// - consider_touch = consider edge touch polygon as intersect
 	//-------------------------------------------------*/
-	bool PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon, bool consider_touch)
+	bool PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon, bool consider_touch, bool consider_cover)
 	{
 		{
 			Rectangle* bb1 = polygon->GetBoundingBox();
@@ -142,7 +142,7 @@ namespace Geometry
 		int cx = node_c->X();
 		int cy = node_c->Y();
 		int dx = node_d->X();
-		int cy = node_d->Y();
+		int dy = node_d->Y();
 		Nodes::iterator it1 = polygon->begin();
 		Nodes::iterator it2 = it1 + 1;
 		while(it2 != polygon->end())
@@ -212,7 +212,7 @@ namespace Geometry
 		int cx = node_c->X();
 		int cy = node_c->Y();
 		int dx = node_d->X();
-		int cy = node_d->Y();
+		int dy = node_d->Y();
 		Nodes::iterator it1 = polygon->begin();
 		Nodes::iterator it2 = it1 + 1;
 		while(it2 != polygon->end())

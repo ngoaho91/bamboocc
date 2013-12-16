@@ -7,7 +7,7 @@
 namespace Geometry
 {
 	class SimplePolygon
-		:public QuadObject, vector<Node*>
+		:public QuadObject, public vector<Node*>
 	{
 	public:
 		SimplePolygon();

@@ -185,7 +185,7 @@ namespace FightEngine
 				v.push_back(new Node(x+vx,y-vy));
 			}
 			m_NavMesh->AddPolygon(v);
-			PathEngine::World::instance()->GetMesh()->AddPolygon(v);
+			//PathEngine::World::instance()->GetMesh()->AddPolygon(v);
 		}
 	}
 	vector<Element*> Map::GetElements()

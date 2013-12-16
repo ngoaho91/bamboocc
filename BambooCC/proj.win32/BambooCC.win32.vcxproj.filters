@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{b3e77fa0-6cab-445b-9dfe-cc310a08eda0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{5d2915ee-752b-45d3-8841-353752f5e5d5}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{60b077ba-dfa9-45ce-ba25-92a01162fd8b}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+    <Filter Include="RigEngine">
+      <UniqueIdentifier>{c1fa5bbc-fb3d-4b41-9196-d3a3e0da3f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RigEngine\RigPart">
+      <UniqueIdentifier>{e564cd55-39c1-49e6-a292-cad1f816f88c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RigEngine\Character">
+      <UniqueIdentifier>{ea0a0db9-204d-4324-8c4b-faa10f372e61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PathEngine">
+      <UniqueIdentifier>{0072ef58-b2f5-4aae-b61a-875f9eca7a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PathEngine\Render">
+      <UniqueIdentifier>{738cf7b1-31ce-4b3a-8f5e-8b6b7bc61ceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PathEngine\PathFinder">
+      <UniqueIdentifier>{f0d3ce91-ac4a-4a66-a4e9-31579de2993c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileEngine">
+      <UniqueIdentifier>{4ed3b5ff-58da-4067-b714-b3be339ce981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileEngine\Element">
+      <UniqueIdentifier>{8dfffacc-63de-42c8-97ba-d3e813271685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileEngine\TileMap">
+      <UniqueIdentifier>{9e3b3548-26da-489e-a665-0d35ba56b53c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine">
+      <UniqueIdentifier>{12ac3631-a735-4256-b6e8-105fd9d78eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\Map">
+      <UniqueIdentifier>{aa3a31f8-d567-4abb-b509-0a996f4aa677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\World">
+      <UniqueIdentifier>{d5e69bf2-4c2c-40c4-b9dc-69bc8614a06d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill">
+      <UniqueIdentifier>{b932d60f-e559-49e0-9110-98769e13fd57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\Buff">
+      <UniqueIdentifier>{887b2d6b-7bae-4008-bd3d-8e80589f0150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\Damage">
+      <UniqueIdentifier>{f3f81182-00c7-4fd4-b8e2-b1cd66e2b9d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill">
+      <UniqueIdentifier>{6529bb3f-cc6d-4ad7-bde8-2f7b31eb03d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\AOE">
+      <UniqueIdentifier>{4b75ba5e-fd81-41a8-842c-4b36fec9da48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\Aura">
+      <UniqueIdentifier>{cf0b2a4c-9651-4087-b08e-52e8ba9788da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\Instant">
+      <UniqueIdentifier>{317de5a3-2a1c-4b56-bb0f-712a390969c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\Missile">
+      <UniqueIdentifier>{2d6fa678-edfa-4313-a93e-a81268cc315f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\Ray">
+      <UniqueIdentifier>{c5fa21b8-e3a7-4a9a-853e-81e0f1afe5d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\FightSkill\Trap">
+      <UniqueIdentifier>{5d9eb4f3-04e5-41f6-b5a9-25b8fbcf5e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\PassiveSkill">
+      <UniqueIdentifier>{118c78e3-a653-42eb-a686-502587ea4f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\Charge">
+      <UniqueIdentifier>{68efd678-cf7a-4478-8f4a-933629bf2d6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\FightSkill\SkillInputManager">
+      <UniqueIdentifier>{dc02f611-d7b2-421f-9491-055a5851e31e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\Actor">
+      <UniqueIdentifier>{1b79ee0f-bf3b-4b40-ac60-ba15dfd52279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\Actor\Mob">
+      <UniqueIdentifier>{838d94ab-ba06-40e9-b5b8-42528a322fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FightEngine\Actor\Human">
+      <UniqueIdentifier>{abbcaa68-3c5c-4070-9aaa-8c15e617fb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pugiXML">
+      <UniqueIdentifier>{96b70ede-1862-4ff0-b1a8-7f5c18a22374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState">
+      <UniqueIdentifier>{f7085334-3163-453f-99d9-d816e4da0f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{37bc4921-4fc5-4a58-9b77-ea653b1091fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkEngine">
+      <UniqueIdentifier>{04b3b538-f6a2-4417-a3c1-5486db9aacd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{3d2b0691-62e2-4d9c-ab8e-60eab2b32abc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\QuadTree">
+      <UniqueIdentifier>{48aa8587-b5c7-4600-8e0d-2c8537d4f38e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="RigEngine\RigPart.cpp">
+      <Filter>RigEngine\RigPart</Filter>
+    </ClCompile>
+    <ClCompile Include="RigEngine\RigPartRender.cpp">
+      <Filter>RigEngine\RigPart</Filter>
+    </ClCompile>
+    <ClCompile Include="RigEngine\Character.cpp">
+      <Filter>RigEngine\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="RigEngine\CharacterRender.cpp">
+      <Filter>RigEngine\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="PathEngine\PathRender.cpp">
+      <Filter>PathEngine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="PathEngine\PathFinder.cpp">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="PathEngine\PathFinderActor.cpp">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="PathEngine\PathFinderWorld.cpp">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="TileEngine\Element.cpp">
+      <Filter>TileEngine\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="TileEngine\ElementRender.cpp">
+      <Filter>TileEngine\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="TileEngine\TileMap.cpp">
+      <Filter>TileEngine\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="TileEngine\TileMapRender.cpp">
+      <Filter>TileEngine\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\tolua_fight.cpp">
+      <Filter>FightEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Map.cpp">
+      <Filter>FightEngine\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\MapRender.cpp">
+      <Filter>FightEngine\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\FightWorld.cpp">
+      <Filter>FightEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\FightWorldRender.cpp">
+      <Filter>FightEngine\World</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Buff.cpp">
+      <Filter>FightEngine\FightSkill\Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\BuffRender.cpp">
+      <Filter>FightEngine\FightSkill\Buff</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Damage.cpp">
+      <Filter>FightEngine\FightSkill\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\DamageRender.cpp">
+      <Filter>FightEngine\FightSkill\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\FightSkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\AOESkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\DamageField.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\DamageFieldRender.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Aura.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\AuraRender.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\AuraSkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\InstantSkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Instant</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Missile.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\MissileRender.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\MissileSkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\DamageRay.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\DamageRayRender.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\RaySkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Trap.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\TrapRender.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\TrapSkill.cpp">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\PassiveSkill.cpp">
+      <Filter>FightEngine\FightSkill\PassiveSkill</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Charge.cpp">
+      <Filter>FightEngine\FightSkill\Charge</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\SkillInputManager.cpp">
+      <Filter>FightEngine\FightSkill\SkillInputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\FightActor.cpp">
+      <Filter>FightEngine\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\FightActorRender.cpp">
+      <Filter>FightEngine\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\Mob.cpp">
+      <Filter>FightEngine\Actor\Mob</Filter>
+    </ClCompile>
+    <ClCompile Include="FightEngine\HumanActor.cpp">
+      <Filter>FightEngine\Actor\Human</Filter>
+    </ClCompile>
+    <ClCompile Include="pugiXML\pugixml.cpp">
+      <Filter>pugiXML</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\CreateScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\HelloWorldScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\PathFindingScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\PFNewScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\RigScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\TileScene.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Edge.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Node.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Polygon.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\PolygonContainer.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Rectangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\QuadObject.cpp">
+      <Filter>Geometry\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\QuadTree.cpp">
+      <Filter>Geometry\QuadTree</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="RigEngine\RigPart.h">
+      <Filter>RigEngine\RigPart</Filter>
+    </ClInclude>
+    <ClInclude Include="RigEngine\RigPartRender.h">
+      <Filter>RigEngine\RigPart</Filter>
+    </ClInclude>
+    <ClInclude Include="RigEngine\Character.h">
+      <Filter>RigEngine\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="RigEngine\CharacterRender.h">
+      <Filter>RigEngine\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="RigEngine\RigAction.h">
+      <Filter>RigEngine\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine\PathRender.h">
+      <Filter>PathEngine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine\PathFinder.h">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine\PathFinderActor.h">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine\PathFinderWorld.h">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="TileEngine\Element.h">
+      <Filter>TileEngine\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="TileEngine\ElementRender.h">
+      <Filter>TileEngine\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="TileEngine\TileMap.h">
+      <Filter>TileEngine\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="TileEngine\TileMapRender.h">
+      <Filter>TileEngine\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightEngine.h">
+      <Filter>FightEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightEngine_Prototype.h">
+      <Filter>FightEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\tolua_fight.h">
+      <Filter>FightEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Map.h">
+      <Filter>FightEngine\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\MapRender.h">
+      <Filter>FightEngine\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightWorld.h">
+      <Filter>FightEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightWorldRender.h">
+      <Filter>FightEngine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightMaterial.h">
+      <Filter>FightEngine\FightSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Vector2.h">
+      <Filter>FightEngine\FightSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Buff.h">
+      <Filter>FightEngine\FightSkill\Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\BuffRender.h">
+      <Filter>FightEngine\FightSkill\Buff</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Damage.h">
+      <Filter>FightEngine\FightSkill\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\DamageRender.h">
+      <Filter>FightEngine\FightSkill\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightSkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\AOESkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\DamageField.h">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\DamageFieldRender.h">
+      <Filter>FightEngine\FightSkill\FightSkill\AOE</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Aura.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\AuraRender.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\AuraSkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Aura</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\InstantSkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Instant</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Missile.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\MissileRender.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\MissileSkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\DamageRay.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\DamageRayRender.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\RaySkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Trap.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\TrapRender.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\TrapSkill.h">
+      <Filter>FightEngine\FightSkill\FightSkill\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\PassiveSkill.h">
+      <Filter>FightEngine\FightSkill\PassiveSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Charge.h">
+      <Filter>FightEngine\FightSkill\Charge</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\SkillInputManager.h">
+      <Filter>FightEngine\FightSkill\SkillInputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightActor.h">
+      <Filter>FightEngine\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\FightActorRender.h">
+      <Filter>FightEngine\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\Mob.h">
+      <Filter>FightEngine\Actor\Mob</Filter>
+    </ClInclude>
+    <ClInclude Include="FightEngine\HumanActor.h">
+      <Filter>FightEngine\Actor\Human</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiXML\pugiconfig.hpp">
+      <Filter>pugiXML</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiXML\pugixml.hpp">
+      <Filter>pugiXML</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\CreateScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\HelloWorldScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\PathFindingScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\PFNewScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\RigScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\TileScene.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Utilities.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Edge.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\GeometryConstant.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Node.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Polygon.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\PolygonContainer.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Rectangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\QuadObject.h">
+      <Filter>Geometry\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\QuadTree.h">
+      <Filter>Geometry\QuadTree</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BambooCC.ico">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\CloseNormal.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\CloseSelected.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\HelloWorld.png">
+      <Filter>resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BambooCC.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

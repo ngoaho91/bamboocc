@@ -92,17 +92,17 @@ namespace PathEngine
 	{
 		m_PositionX = x;
 		m_PositionY = y;
-		if(abs(m_PositionX - m_LocalGoal->X) < abs(m_SpeedX))
+		if(abs(m_PositionX - m_LocalGoal->X()) < abs(m_SpeedX))
 		{
-			m_PositionX = m_LocalGoal->X;
+			m_PositionX = m_LocalGoal->X();
 		}
-		if(abs(m_PositionY - m_LocalGoal->Y) < abs(m_SpeedY))
+		if(abs(m_PositionY - m_LocalGoal->Y()) < abs(m_SpeedY))
 		{
-			m_PositionY = m_LocalGoal->Y;
+			m_PositionY = m_LocalGoal->Y();
 		}
 		QuadObject::SetPosition(m_PositionX, m_PositionY);
 		cout<<this<<" move"<<endl;
-		if(m_PositionX == m_LocalGoal->X && m_PositionY == m_LocalGoal->Y)
+		if(m_PositionX == m_LocalGoal->X() && m_PositionY == m_LocalGoal->Y())
 		{
 			return NextGoal();
 		}
@@ -125,17 +125,17 @@ namespace PathEngine
 		float y = m_PositionY + m_SpeedY;
 		m_PositionX = x;
 		m_PositionY = y;
-		if(abs(m_PositionX - m_LocalGoal->X) < abs(m_SpeedX))
+		if(abs(m_PositionX - m_LocalGoal->X()) < abs(m_SpeedX))
 		{
-			m_PositionX = m_LocalGoal->X;
+			m_PositionX = m_LocalGoal->X();
 		}
-		if(abs(m_PositionY - m_LocalGoal->Y) < abs(m_SpeedY))
+		if(abs(m_PositionY - m_LocalGoal->Y()) < abs(m_SpeedY))
 		{
-			m_PositionY = m_LocalGoal->Y;
+			m_PositionY = m_LocalGoal->Y();
 		}
 		QuadObject::SetPosition(m_PositionX, m_PositionY);
 		cout<<this<<" move"<<endl;
-		if(m_PositionX == m_LocalGoal->X && m_PositionY == m_LocalGoal->Y)
+		if(m_PositionX == m_LocalGoal->X() && m_PositionY == m_LocalGoal->Y())
 		{
 			return NextGoal();
 		}
@@ -189,8 +189,8 @@ namespace PathEngine
 			float x = m_PositionX + m_SpeedX;
 			float y = m_PositionY + m_SpeedY;
 			QuadObject::SetPosition(x, y);
-			Rectangle* actor_aabb = m_EvadingObject->GetBoundingBox();
-			Rectangle* this_aabb = this->GetBoundingBox();
+			Geometry::Rectangle* actor_aabb = m_EvadingObject->GetBoundingBox();
+			Geometry::Rectangle* this_aabb = this->GetBoundingBox();
 			bool collide = actor_aabb->Collide(this_aabb);
 			QuadObject::SetPosition(m_PositionX, m_PositionY);
 			if(collide)
@@ -223,8 +223,8 @@ namespace PathEngine
 					if(quad == this) continue;
 					Actor* actor = (Actor*)quad;
 					if(actor->m_Through) continue;
-					Rectangle* actor_aabb = actor->GetBoundingBox();
-					Rectangle* this_aabb = this->GetBoundingBox();
+					Geometry::Rectangle* actor_aabb = actor->GetBoundingBox();
+					Geometry::Rectangle* this_aabb = this->GetBoundingBox();
 					bool collide = actor_aabb->Collide(this_aabb);
 					if(collide)
 					{
@@ -240,8 +240,8 @@ namespace PathEngine
 	}
 	void Actor::EvadeActor(Actor* other)
 	{
-		Rectangle* other_aabb = other->GetBoundingBox();
-		if(other_aabb->TestPointInside(m_LocalGoal->X, m_LocalGoal->Y))
+		Geometry::Rectangle* other_aabb = other->GetBoundingBox();
+		if(other_aabb->TestPointInside(m_LocalGoal->X(), m_LocalGoal->Y()))
 		{
 			NextGoal();
 		}
@@ -308,16 +308,16 @@ namespace PathEngine
 	{
 		if(m_FinalSolution.size() == 0)
 		{
-			return GoTo(m_LocalGoal->X, m_LocalGoal->Y);
+			return GoTo(m_LocalGoal->X(), m_LocalGoal->Y());
 		}
 		Node* next = m_FinalSolution.back();
 		m_FinalSolution.pop_back();
 		vector<Node*> solution = World::instance()->FindPath(
-			m_PositionX, m_PositionY, next->X, next->Y);
+			m_PositionX, m_PositionY, next->X(), next->Y());
 		if(solution.size() == 0)
 		{
 			Node* node = m_FinalSolution.front();
-			GoTo(node->X, node->Y);
+			GoTo(node->X(), node->Y());
 		}
 		else
 		{
@@ -341,7 +341,7 @@ namespace PathEngine
 		}
 		m_LocalGoal = m_FinalSolution.back();
 		m_FinalSolution.pop_back();
-		if(m_LocalGoal->X == m_PositionX && m_LocalGoal->Y == m_PositionY)
+		if(m_LocalGoal->X() == m_PositionX && m_LocalGoal->Y() == m_PositionY)
 		{
 			NextGoal();
 		}
@@ -355,8 +355,8 @@ namespace PathEngine
 	}
 	void Actor::RefreshGoalAngle()
 	{
-		float dx = m_LocalGoal->X - m_PositionX;
-		float dy = m_LocalGoal->Y - m_PositionY;
+		float dx = m_LocalGoal->X() - m_PositionX;
+		float dy = m_LocalGoal->Y() - m_PositionY;
 		m_GoalAngle = atan2(dy, dx);
 		m_LookedToGoal = false;
 	}

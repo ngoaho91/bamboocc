@@ -21,14 +21,12 @@ namespace PathEngine
 		static int			HEIGHT;
 	private:
 		PathFinder*			m_PathFinder;
-		Mesh*				m_Mesh;
 	public:
 		World();
 		~World();
-		Mesh*				GetMesh(){ return m_Mesh;}
 		void				AddActor(Actor* actor);
-		vector<Node*>		FindPath(int bx, int by, int gx, int gy);
-		vector<Node*>		FindPathNear(int bx, int by, int gx, int gy, int range);
+		Nodes				FindPath(int bx, int by, int gx, int gy);
+		Nodes				FindPathNear(int bx, int by, int gx, int gy, int range);
 		bool				AvailableXY(int x, int y);
 	};
 }

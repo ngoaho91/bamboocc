@@ -97,7 +97,7 @@ void PathFindingScene::TestPathFinder()
 		World::instance()->GetMesh()->AddPolygon(v2);
 	}
 	mesh->BuildVisiGraph();
-	finder =  new PathEngine::PathFinder(mesh);
+	//finder =  new PathEngine::PathFinder(mesh);
 	start = new Node(0,0);
 	end = new Node(0,0);
 	// draw the result
@@ -143,7 +143,7 @@ bool PathFindingScene::onMouseEvent(const CCMouseEvent& evt) {
 			{
 				//end = new Node(evt.x,evt.y);
 				mob->SetPosition(evt.x, evt.y);
-				mob->GoTo(start->X, start->Y);
+				mob->GoTo(start->X(), start->Y());
 				//pathRender->SetPath(finder->FindPath(start, end));
 			}
             break;

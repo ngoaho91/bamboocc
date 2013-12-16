@@ -8,7 +8,7 @@
 #include "GameState\TileScene.h"
 #include "GameState\PFNewScene.h"
 
-#include "PathEngine/PathFinderNew.h"
+#include "PathEngine/PathFinder.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate()

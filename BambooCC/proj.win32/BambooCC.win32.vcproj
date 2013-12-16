@@ -335,30 +335,6 @@
 					>
 				</File>
 			</Filter>
-			<Filter
-				Name="PathFinderNew"
-				>
-				<File
-					RelativePath=".\PathEngine\bg_typedef.h"
-					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderNew.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderNew.h"
-					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathRenderNew.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathRenderNew.h"
-					>
-				</File>
-			</Filter>
 		</Filter>
 		<Filter
 			Name="TileEngine"

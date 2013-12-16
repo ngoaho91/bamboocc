@@ -12,23 +12,23 @@ namespace PathEngine
 	World::World()
 		:QuadTree(WIDTH,HEIGHT)
 	{
-		m_Mesh = new Mesh(WIDTH,HEIGHT);
-		m_PathFinder = new PathFinder(m_Mesh);
+		//m_Mesh = new Mesh(WIDTH,HEIGHT);
+		//m_PathFinder = new PathFinder(m_Mesh);
 	}
 	World::~World()
 	{
 	}
-	vector<Node*> World::FindPath(int bx, int by, int gx, int gy)
+	Nodes World::FindPath(int bx, int by, int gx, int gy)
 	{
 		return m_PathFinder->FindPath(new Node(bx, by), new Node(gx, gy));
 	}
-	vector<Node*> World::FindPathNear(int bx, int by, int gx, int gy, int range)
+	Nodes World::FindPathNear(int bx, int by, int gx, int gy, int range)
 	{
 		return m_PathFinder->FindPathNear(new Node(bx, by), new Node(gx, gy), range);
 	}
 	void World::AddActor(Actor* actor)
 	{
-		Insert((QuadObject*)actor);
+		QuadTree::Insert(actor);
 	}
 	bool World::AvailableXY(int x, int y)
 	{

@@ -40,7 +40,7 @@ namespace PathEngine
 					Edge* edge = m_Mesh->m_VisibilityEdges[i];
 					Node* a = edge->GetNodeA();
 					Node* b = edge->GetNodeB();
-					ccDrawLine(ccp(a->X,a->Y), ccp(b->X,b->Y));
+					ccDrawLine(ccp(a->X(),a->Y()), ccp(b->X(),b->Y()));
 				}
 				
 
@@ -54,7 +54,7 @@ namespace PathEngine
 				{
 					Node* a = m_Mesh->m_Edges[i]->GetNodeA();
 					Node* b = m_Mesh->m_Edges[i]->GetNodeB();
-					ccDrawLine(ccp(a->X,a->Y), ccp(b->X,b->Y));
+					ccDrawLine(ccp(a->X(),a->Y()), ccp(b->X(),b->Y()));
 				}
 			}
 			CHECK_GL_ERROR_DEBUG();
@@ -63,14 +63,14 @@ namespace PathEngine
 			for(int i=0;i<size;i++)
 			{
 				Node* a = m_Mesh->m_Nodes[i];
-				ccDrawPoint(ccp(a->X,a->Y));
+				ccDrawPoint(ccp(a->X(),a->Y()));
 				if(!m_DrawComplete)
 				{
 					ostringstream soutA;
-					soutA<<"N"<<i<<"("<<a->X<<","<<a->Y<<")";
+					soutA<<"N"<<i<<"("<<a->X()<<","<<a->Y()<<")";
 					CCLabelTTF* labelA = CCLabelTTF::create(soutA.str().c_str(), "Code Bold", 15);
 					addChild(labelA, 1);
-					labelA->setPosition( ccp(a->X,a->Y-10) );
+					labelA->setPosition( ccp(a->X(),a->Y()-10) );
 				}
 			}
 			m_DrawComplete = true;
@@ -83,14 +83,14 @@ namespace PathEngine
 				size = m_Path.size();
 				
 				ccDrawColor4B(0, 128, 255, 255);
-				ccDrawPoint(ccp(m_Path[0]->X,m_Path[0]->Y));
-				ccDrawPoint(ccp(m_Path[size-1]->X,m_Path[size-1]->Y));
+				ccDrawPoint(ccp(m_Path[0]->X(),m_Path[0]->Y()));
+				ccDrawPoint(ccp(m_Path[size-1]->X(),m_Path[size-1]->Y()));
 				ccDrawColor4B(0, 128, 255, 255);
 				for(int i=0;i<size-1;i++)
 				{
 					Node* a = m_Path[i];
 					Node* b = m_Path[i+1];
-					ccDrawLine(ccp(a->X,a->Y), ccp(b->X,b->Y));
+					ccDrawLine(ccp(a->X(),a->Y()), ccp(b->X(),b->Y()));
 				}
 			}
 		}
