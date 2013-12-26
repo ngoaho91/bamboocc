@@ -300,6 +300,9 @@
     <ClCompile Include="Geometry\QuadTree.cpp">
       <Filter>Geometry\QuadTree</Filter>
     </ClCompile>
+    <ClCompile Include="PathEngine\PathFinderObstacle.cpp">
+      <Filter>PathEngine\PathFinder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -511,6 +514,9 @@
     </ClInclude>
     <ClInclude Include="Geometry\QuadTree.h">
       <Filter>Geometry\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PathEngine\PathFinderObstacle.h">
+      <Filter>PathEngine\PathFinder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

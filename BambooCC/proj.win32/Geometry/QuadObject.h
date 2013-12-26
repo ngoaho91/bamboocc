@@ -13,6 +13,7 @@ namespace Geometry
 		QuadTree*		m_ParentNode;
 		int				m_ObjectType;
 	public:
+		QuadObject();
 		QuadObject(int min_x, int min_y, int max_x, int max_y);
 		~QuadObject();
 	public:

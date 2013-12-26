@@ -24,9 +24,6 @@ namespace PathEngine
 		Geometry::QuadTree* m_QuadTree;
 		PathRender* m_Render;
 	private:
-		bool IsConvex(Node* prev, Node* current, Node* next, bool outer);
-		int GetLength(Node* u, Node* v);
-		int GetLength(int u, int v);
 		//void AddSinglePolygon(Geometry::Polygon* poly);
 		void SinglePolygonToMatrix(SimplePolygon* poly, bool outer);
 	public:

@@ -126,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PathEngine\PathFinderObstacle.cpp" />
     <ClCompile Include="RigEngine\RigPart.cpp" />
     <ClCompile Include="RigEngine\RigPartRender.cpp" />
     <ClCompile Include="RigEngine\Character.cpp" />
@@ -189,6 +190,7 @@
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="PathEngine\PathFinderObstacle.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigEngine\RigPart.h" />
     <ClInclude Include="RigEngine\RigPartRender.h" />

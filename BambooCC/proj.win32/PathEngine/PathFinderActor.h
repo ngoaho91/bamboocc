@@ -2,9 +2,9 @@
 #define PathFinderActor_h
 #include <vector>
 #include <math.h>
-#include "../Geometry/Node.h"
-#include "../Geometry/QuadTree.h"
-#include "../Geometry/GeometryConstant.h"
+#include "Geometry/Node.h"
+#include "Geometry/QuadTree.h"
+#include "Geometry/GeometryConstant.h"
 using namespace std;
 using namespace Geometry;
 #define QOT_PATHACTOR 2

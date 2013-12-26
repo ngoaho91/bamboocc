@@ -2,6 +2,10 @@
 #include "QuadTree.h"
 namespace Geometry
 {
+	QuadObject::QuadObject()
+	{
+		m_ParentNode = 0;
+	}
 	QuadObject::QuadObject(int min_x, int min_y, int max_x, int max_y)
 	{
 		SetBoundingBox(min_x, min_y, max_x, max_y);

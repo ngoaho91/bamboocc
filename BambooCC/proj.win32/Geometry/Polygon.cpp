@@ -31,14 +31,41 @@ namespace Geometry
 		}
 		SetBoundingBox(min_x, min_y, max_x, max_y);
 	}
+	bool SimplePolygon::IsConvexNode(SimplePolygon::iterator it, bool outer)
+	{
+		SimplePolygon::iterator it1 = it + 1;
+		SimplePolygon::iterator it2 = it - 1;
+		Node* current = *it;
+		Node* next;
+		Node* prev;
+		if (it1 == this->end())
+		{
+			next = *(this->begin());
+		}
+		else
+		{
+			next = *it1;
+		}
+		if (it == this->begin())
+		{
+			prev = *(this->end()-1);
+		}
+		else
+		{
+			prev = *it2;
+		}
+		IsConvex(prev, current, next, outer);
+		return true;
+	}
+	
 	/*------------------------------------------------
-	// function PointInPolygon
-	// 29th JUL 2013
-	// test point is in polygon
-	// - edge = edge
-	// - polygon = polygon
-	// - consider_touch = consider point at border of the polygon as in
-	//-------------------------------------------------*/
+	 NAME: PointInPolygon
+	 DATE: 29th JUL 2013
+	 TASK: test point is in polygon
+	 - edge = edge
+	 - polygon = polygon
+	 - consider_touch = consider point at border of the polygon as in
+	-------------------------------------------------*/
 	bool PointInPolygon(Node* node, SimplePolygon* polygon, bool consider_touch)
 	{
 		if(polygon->size() < 4) return false;

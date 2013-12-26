@@ -13,6 +13,7 @@ namespace Geometry
 		SimplePolygon();
 		~SimplePolygon();
 		void CalculateAABB();
+		bool IsConvexNode(SimplePolygon::iterator it, bool outer);
 	};
 	typedef vector<SimplePolygon*> SimplePolygons;
 	bool PointInPolygon(Node* node, SimplePolygon* polygon, bool consider_touch = false);
