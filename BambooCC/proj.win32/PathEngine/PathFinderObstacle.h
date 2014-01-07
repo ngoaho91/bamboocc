@@ -17,7 +17,7 @@ namespace PathEngine
 		: public QuadObject
 	{
 	public:
-		vector<Node*> m_Nodes;
+		Nodes m_Nodes;
 		Polygon* m_Polygon;
 		Shortcut** m_ShortcutMap;
 		int m_MapLength;
@@ -25,10 +25,10 @@ namespace PathEngine
 		Obstacle();
 		Obstacle(Polygon* polygon);
 		void SetPolygon(Polygon* polygon);
-		void Graham(SimplePolygon* polygon);
+		void Graham(SimplePolygon* polygon, bool outer);
 		void BuildShortcutMap(int n, int m);
-		bool PathIntersect(Node* a, Node* b);
-		vector<Node*> FindPath(Node* a, Node* b);
+		Nodes PathIntersect(Node* a, Node* b);
+		Nodes FindPath(Node* a, Node* b);
 		
 	};
 }

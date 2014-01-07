@@ -6,6 +6,7 @@
 #define QOT_POLYGON 1
 namespace Geometry
 {
+	
 	class SimplePolygon
 		:public QuadObject, public vector<Node*>
 	{
@@ -13,11 +14,10 @@ namespace Geometry
 		SimplePolygon();
 		~SimplePolygon();
 		void CalculateAABB();
-		bool IsConvexNode(SimplePolygon::iterator it, bool outer);
+		SimplePolygon::iterator GetNext(SimplePolygon::iterator it);
+		SimplePolygon::iterator GetPrevious(SimplePolygon::iterator it);
 	};
 	typedef vector<SimplePolygon*> SimplePolygons;
-	bool PointInPolygon(Node* node, SimplePolygon* polygon, bool consider_touch = false);
-	bool PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon, bool consider_touch = false, bool consider_cover = true);
 	class Polygon
 		:public QuadObject
 	{
@@ -34,8 +34,5 @@ namespace Geometry
 		SimplePolygons GetInners(){ return m_Inners;}
 	};
 	typedef vector<Polygon*> Polygons;
-	bool PointInPolygon(Node* node, Polygon* polygon, bool consider_touch = false);
-	bool PolygonSegmentIntersect(Edge* edge, Polygon* polygon, bool consider_touch = false);
-	
 }
 #endif

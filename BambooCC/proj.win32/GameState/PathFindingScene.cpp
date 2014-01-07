@@ -20,6 +20,7 @@ PathFindingScene::~PathFindingScene()
 void PathFindingScene::TestPathFinder()
 {
 	int len = 6;
+	/*
 	mesh = new PathEngine::Mesh(1000,1000);
 	
 	if(1){
@@ -109,6 +110,7 @@ void PathFindingScene::TestPathFinder()
 	mob = new PathEngine::Actor(20,20);
 	World::instance()->AddActor(mob);
 	mob->SetPosition(0,0);
+	*/
 	schedule(schedule_selector(PathFindingScene::update));
 }
 void PathFindingScene::update(float dt)

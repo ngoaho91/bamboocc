@@ -6,8 +6,18 @@ namespace PathEngine
 	// 1. graham
 	// 2. shortcut map
 	// 3. intersect, return list edges
-	// 4. find path combination
-	// 5. dijkstra find shortest path
+	// 4. find path combination, then return the shortest
+	*/
+	/*
+	TODO:
+	- Intersects result, bool -> enum
+	TODO: World Theory:
+	- we have a Quadtree to handle worlds
+	- world has a Quadtree to handle object(obstacle & actor)
+	- world has a convex hull as boundary
+	- 1 object belong to 1 world 
+	-> 2 object in 2 world can not collide
+	- object can only travel through worlds by jumping, moving cant
 	*/
 	Obstacle::Obstacle()
 	{
@@ -22,7 +32,7 @@ namespace PathEngine
 	DATE: 27th DEC 2013
 	TASK: find convex hull of a polygon
 	-------------------------------------------------*/
-	void Obstacle::Graham(SimplePolygon* polygon)
+	void Obstacle::Graham(SimplePolygon* polygon, bool outer)
 	{
 		int index = m_Nodes.size();
 		SimplePolygon::iterator it = polygon->begin();
@@ -34,16 +44,19 @@ namespace PathEngine
 		for (; it != polygon->end(); it++)
 		{
 			Node* node = *it;
-			if (!polygon->IsConvexNode(it, true)) continue;
+			Node* next = *(polygon->GetNext(it));
+			//Node* prev = *(polygon->GetPrevious(it));
+			Node* prev = last;
+			if (IsConvex(prev, node, next, outer)) continue;
 			m_Nodes.push_back(node);
 			int index1 = index - 1;
-			m_ShortcutMap[index1][index].length = GetLength(node, last);
+			m_ShortcutMap[index1][index].length = Distance(node, last);
 			m_ShortcutMap[index1][index].next = index;
 			last = node;
 			index++;
 		}
 		index--;
-		m_ShortcutMap[index_first][index].length = GetLength(first, last);
+		m_ShortcutMap[index_first][index].length = Distance(first, last);
 		m_ShortcutMap[index_first][index].next = index;
 		BuildShortcutMap(index_first, index);
 	}
@@ -76,19 +89,19 @@ namespace PathEngine
 			}
 		}
 		{
-			Graham(outer);
+			Graham(outer, true);
 			SimplePolygons::iterator it = inners.begin();
 			for (; it != inners.end(); it++)
 			{
 				SimplePolygon* inner = *it;
-				Graham(inner);
+				Graham(inner, false);
 			}
 		}
 	}
 	/*------------------------------------------------
 	NAME: BuildShortcutMap
 	DATE: 27th DEC 2013
-	TASK: build shortcut map for nodes n to m, if nodes n to m are in the same polygon
+	TASK: if nodes n to m are in the same polygon, build shortcut map for nodes n to m
 	-------------------------------------------------*/
 	void Obstacle::BuildShortcutMap(int n, int m)
 	{
@@ -103,6 +116,7 @@ namespace PathEngine
 			d[i] = d[i - 1] + m_ShortcutMap[ni - 1][ni].length;
 		}
 		d[0] = d[len1] + m_ShortcutMap[n][m].length;
+		int p = d[0] / 2;
 		for (int i = 0; i < len; i++)
 		{
 			int ni = n + i;
@@ -115,7 +129,7 @@ namespace PathEngine
 				int nj = n + j;
 				int dj = d[j];
 				int len_ccw = dj - di;
-				if(ccw) if (len_ccw > d[0] * 0.5)
+				if(ccw) if (len_ccw > p)
 				{
 					ccw = false;
 				}
@@ -139,13 +153,46 @@ namespace PathEngine
 			}
 		}
 	}
-	bool Obstacle::PathIntersect(Node* a, Node* b)
+	Nodes Obstacle::PathIntersect(Node* a, Node* b)
 	{
-		return false;
+		Nodes ret;
+		Edge* edge_ab = new Edge(a, b);
+		edge_ab->Calculate();
+		//TODO: find a fast intersect algorithm
+		/*
+		{
+			Rectangle* bb1 = polygon->GetBoundingBox();
+			Rectangle* bb2 = edge->GetBoundingBox();
+			if (!bb1->Collide(bb2, consider_touch))
+				return false;
+		}
+		Rectangle* bb1 = edge->GetBoundingBox();
+		Node* node_c = edge->GetNodeA();
+		Node* node_d = edge->GetNodeB();
+		Edge* edge_cd = new Edge(node_c, node_d);
+		Nodes::iterator it1 = polygon->begin();
+		Nodes::iterator it2 = it1 + 1;
+		while (it2 != polygon->end())
+		{
+			Node* node_a = *it1;
+			Node* node_b = *it2;
+			it1 = it2;
+			it2++;
+			Edge* edge_ab = new Edge(node_a, node_b);
+			edge_ab->Calculate();
+			Rectangle* bb2 = edge_ab->GetBoundingBox();
+			if (bb1->Collide(bb2, consider_touch))
+			{
+				bool result = SegmentSegmentIntersect(edge_ab, edge_cd, consider_touch);
+				if (result) return true;
+			}
+		}
+		*/
+		return ret;
 	}
-	vector<Node*> Obstacle::FindPath(Node* a, Node* b)
+	Nodes Obstacle::FindPath(Node* a, Node* b)
 	{
-		vector<Node*> ret;
+		Nodes ret;
 		return ret;
 	}
 }

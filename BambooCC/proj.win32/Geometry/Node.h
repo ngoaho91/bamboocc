@@ -5,19 +5,32 @@
 using namespace std;
 namespace Geometry
 {
+	class Vector;
+	class Node;
 	class Node
-		:public pair<int, int>
+		:public pair<double, double>
 	{
 	public:
-		Node(int x, int y)
-			:pair<int,int>(x,y)
-		{
-		}
-		int X(){ return first;}
-		int Y(){ return second;}
+		Node(double x, double y);
+		double X(){ return first; }
+		double Y(){ return second; }
+		void Apply(Vector* v);
+	};
+	class Vector
+		:public pair<double, double>
+	{
+	public:
+		Vector(double x, double y);
+		Vector(Node* a, Node* b);
+		void Inverse();
+		void Multiply(double m);
+		double X(){ return first; }
+		double Y(){ return second; }
 	};
 	typedef vector<Node*> Nodes;
 	bool IsConvex(Node* prev, Node* current, Node* next, bool outer);
-	double GetLength(Node* u, Node* v);
+	double Distance(Node* u, Node* v);
+	double Normal(Vector* v);
+	double DotProduct(Vector* u, Vector* v);
 }
 #endif

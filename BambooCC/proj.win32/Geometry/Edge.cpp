@@ -1,5 +1,6 @@
 #include "Edge.h"
 #include <math.h>
+#include <algorithm>
 namespace Geometry
 {
 	Edge::Edge()
@@ -18,73 +19,41 @@ namespace Geometry
 	}
 	void Edge::Calculate()
 	{
-		int min_x, min_y, max_x, max_y;
-		if(first->X() > second->X())
-		{
-			max_x = first->X();
-			min_x = second->X();
-		}
-		else
-		{
-			max_x = second->X();
-			min_x = first->X();
-		}
-		if(first->Y() > second->Y())
-		{
-			max_y = first->Y();
-			min_y = second->Y();
-		}
-		else
-		{
-			max_y = second->Y();
-			min_y = first->Y();
-		}
+		double min_x, min_y, max_x, max_y;
+		min_x = min(first->X(), second->X());
+		min_y = min(first->Y(), second->Y());
+		max_x = max(first->X(), second->X());
+		max_y = max(first->Y(), second->Y());
 		m_BoundingBox = new Rectangle(min_x, min_y, max_x, max_y);
 	}
-	int Edge::GetLength()
+	double Edge::GetLength()
 	{
 		if(m_Length == -1)
 		{
-			int dx = second->X() - first->X();
-			int dy = second->Y() - first->Y();
-			m_Length = sqrt((double)(dx*dx+dy*dy));
+			double dx = second->X() - first->X();
+			double dy = second->Y() - first->Y();
+			m_Length = sqrt(dx*dx+dy*dy);
 		}
 		return m_Length;
 	}
-	bool SegmentSegmentIntersect(Edge* edge1, Edge* edge2, bool consider_touch)
+	double PointSegmentDistance(Edge* edge, Node* p)
 	{
-		Rectangle* bb1 = edge1->GetBoundingBox();
-		Rectangle* bb2 = edge2->GetBoundingBox();
-		if(!bb1->Collide(bb2, consider_touch)) return false;
-		Node *a = edge1->GetNodeA();
-		Node *b = edge1->GetNodeB();
-		Node *c = edge2->GetNodeA();
-		Node *d = edge2->GetNodeB();
-		return SegmentSegmentIntersect(a->X(), a->Y(), b->X(), b->Y(), 
-			c->X(), c->Y(), d->X(), d->Y(), consider_touch);
-	}
-	bool SegmentSegmentIntersect(int ax, int ay, int bx, int by,
-		int cx, int cy, int dx, int dy, bool consider_touch)
-	{
-		float denominator = ((bx - ax) * (dy - cy)) 
-			- ((by - ay) * (dx - cx));
-		if (denominator == 0)
+		Vector* v = new Vector(edge->GetNodeB(), edge->GetNodeA());
+		Vector* w = new Vector(p, edge->GetNodeA());
+		double c1 = DotProduct(w, v);
+		if (c1 <= 0)
 		{
-			return false;
+			return Distance(p, edge->GetNodeA());
 		}
-		float numerator1 = ((ay - cy) * (dx - cx)) 
-			- ((ax - cx) * (dy - cy));
-		float numerator2 = ((ay - cy) * (bx - ax)) 
-			- ((ax - cx) * (by - ay));
-		float r = numerator1 / denominator;
-		float s = numerator2 / denominator;
-		if(consider_touch)
+		double c2 = DotProduct(v, v);
+		if (c2 <= c1)
 		{
-			return (r >= 0 && r <= 1) && (s >= 0 && s <= 1);
+			return Distance(p, edge->GetNodeB());
 		}
-		else
-		{
-			return (r > 0 && r < 1) && (s > 0 && s < 1);
-		}
+		double b = c1 / c2;
+		v->Multiply(b);
+		Node* pb = new Node(p->X(), p->Y());
+		pb->Apply(v);
+		return Distance(p, pb);
 	}
 }

@@ -303,6 +303,9 @@
     <ClCompile Include="PathEngine\PathFinderObstacle.cpp">
       <Filter>PathEngine\PathFinder</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry\Intersects.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -517,6 +520,9 @@
     </ClInclude>
     <ClInclude Include="PathEngine\PathFinderObstacle.h">
       <Filter>PathEngine\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Intersects.h">
+      <Filter>Geometry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

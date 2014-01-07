@@ -198,9 +198,9 @@ namespace FightEngine
 	}
 	void Map::BuildVisiGraph()
 	{
-		m_NavMesh->BuildVisiGraph();
-		m_Render->m_PathRender->SetMesh(m_NavMesh);
-		PathEngine::World::instance()->GetMesh()->BuildVisiGraph();
+		//m_NavMesh->BuildVisiGraph();
+		//m_Render->m_PathRender->SetMesh(m_NavMesh);
+		//PathEngine::World::instance()->GetMesh()->BuildVisiGraph();
 	}
 	void Map::RemoveElement(Element* element)
 	{
