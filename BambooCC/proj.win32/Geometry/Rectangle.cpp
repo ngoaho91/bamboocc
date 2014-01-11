@@ -1,7 +1,7 @@
 #include "Rectangle.h"
 namespace Geometry
 {
-	Rectangle::Rectangle(int min_x, int min_y, int max_x, int max_y)
+	Rectangle::Rectangle(double min_x, double min_y, double max_x, double max_y)
 	{
 		m_MinX = min_x;
 		m_MinY = min_y;
@@ -12,17 +12,17 @@ namespace Geometry
 	Rectangle::~Rectangle()
 	{
 	}
-	int Rectangle::GetWidth()
+	double Rectangle::GetWidth()
 	{
 		if(m_Width == -1) m_Width = m_MaxX - m_MinX;
 		return m_Width;
 	}
-	int Rectangle::GetHeight()
+	double Rectangle::GetHeight()
 	{
 		if(m_Height == -1) m_Height = m_MaxY - m_MinY;
 		return m_Height;
 	}
-	bool Rectangle::TestPointInside(int x, int y)
+	bool Rectangle::TestPointInside(double x, double y)
 	{
 		if(x < m_MinX) return false;
 		if(x > m_MaxX) return false;

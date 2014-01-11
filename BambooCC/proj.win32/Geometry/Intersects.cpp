@@ -41,27 +41,20 @@ namespace Geometry
 	NAME: PointInPolygon
 	DATE: 29th JUL 2013
 	TASK: test point is in polygon
-	- edge = edge
+	- node = node
 	- polygon = polygon
-	- consider_touch = consider point at border of the polygon as in
 	-------------------------------------------------*/
 	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon)
 	{
-		if (polygon->size() < 4) return IR_SEPERATE;
+		if (!polygon->PointInsideBB(node)) return IR_SEPERATE;
 		double x = node->X();
 		double y = node->Y();
-		Rectangle* bb = polygon->GetBoundingBox();
-		if (!bb->TestPointInside(x, y))
-			return IR_SEPERATE;
 		bool c = false;
-		Nodes::iterator it1 = polygon->begin();
-		Nodes::iterator it2 = it1 + 1;
-		while (it2 != polygon->end())
+		Nodes::iterator it = polygon->begin();
+		while (it != polygon->end())
 		{
-			Node* node_a = *it1;
-			Node* node_b = *it2;
-			it1 = it2;
-			it2++;
+			Node* node_a = *it;
+			Node* node_b = *(polygon->GetNext(it++));
 			double ax = node_a->X();
 			double ay = node_a->Y();
 			double bx = node_b->X();
@@ -90,15 +83,50 @@ namespace Geometry
 				c = !c;
 			}
 		}
-		return c ? IR_INTERSECT : IR_SEPERATE;
+		return c ? IR_WITHIN : IR_SEPERATE;
 	}
 	/*------------------------------------------------
-	// function PolygonSegmentIntersect
-	// 29th JUL 2013
-	// test edge is intersect polygon
+	NAME: PointInPolygon
+	DATE: 11st JAN 2014
+	TASK: test point is in polygon
+	- node = node
+	- polygon = convex hull
+	-------------------------------------------------*/
+	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon)
+	{
+		if (!polygon->PointInsideBB(node)) return IR_SEPERATE;
+		Nodes::iterator it = polygon->begin();
+		while (it != polygon->end())
+		{
+			Node* node_a = *it;
+			Node* node_b = *(polygon->GetNext(it++));
+			ConvexResult ret = GetConvex(node_a, node, node_b);
+			if (ret == CR_STRAIGHT)
+			{
+				if (PointSegmentDistance(
+					new Edge(node_a, node_b),
+					node) == 0)
+				{
+					return IR_TOUCH;
+				}
+				else
+				{
+					return IR_SEPERATE;
+				}
+			}
+			else if (ret == CR_CONVEX)
+			{
+				return IR_SEPERATE;
+			}
+		}
+		return IR_WITHIN;
+	}
+	/*------------------------------------------------
+	// NAME: PolygonSegmentIntersect
+	// DATE: 29th JUL 2013
+	// TASK: test edge is intersect polygon
 	// - edge = edge
 	// - polygon = polygon
-	// - consider_touch = consider edge touch polygon as intersect
 	//-------------------------------------------------*/
 	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon)
 	{
@@ -112,96 +140,22 @@ namespace Geometry
 		Node* node_c = edge->GetNodeA();
 		Node* node_d = edge->GetNodeB();
 		Edge* edge_cd = new Edge(node_c, node_d);
-		Nodes::iterator it1 = polygon->begin();
-		Nodes::iterator it2 = it1 + 1;
-		while (it2 != polygon->end())
+		Nodes::iterator it = polygon->begin();
+		IntersectResult ret = IR_SEPERATE;
+		while (it != polygon->end())
 		{
-			Node* node_a = *it1;
-			Node* node_b = *it2;
-			it1 = it2;
-			it2++;
+			Node* node_a = *it;
+			Node* node_b = *(polygon->GetNext(it++));
 			Edge* edge_ab = new Edge(node_a, node_b);
 			edge_ab->Calculate();
 			Rectangle* bb2 = edge_ab->GetBoundingBox();
 			if (bb1->Collide(bb2, true))
 			{
 				IntersectResult result = SegmentSegmentIntersect(edge_ab, edge_cd);
-				if (result != IR_SEPERATE) return result;
+				if (result == IR_INTERSECT) return IR_INTERSECT;
+				if (result == IR_TOUCH) ret = IR_TOUCH;
 			}
 		}
-		return IR_SEPERATE;
-	}
-	IntersectResult PointInPolygon(Node* node, Polygon* polygon)
-	{
-		{
-			SimplePolygon* outer = polygon->GetOuter();
-			IntersectResult result = PointInPolygon(node, outer);
-			if (result != IR_INTERSECT) return result;
-		}
-		{
-			SimplePolygons inners = polygon->GetInners();
-			SimplePolygons::iterator it = inners.begin();
-			while (it != inners.end())
-			{
-				SimplePolygon* inner = *it;
-				IntersectResult result = PointInPolygon(node, inner);
-				if (result == IR_SEPERATE) continue;
-				if (result == IR_TOUCH) return IR_TOUCH;
-				if (result == IR_INTERSECT) return IR_SEPERATE;
-			}
-		}
-		return IR_INTERSECT;
-	}
-	IntersectResult PolygonSegmentIntersect(Edge* edge, Polygon* polygon)
-	{
-		{
-			SimplePolygon* outer = polygon->GetOuter();
-			IntersectResult result = PolygonSegmentIntersect(edge, outer);
-			if (result != IR_SEPERATE) return result;
-			result = PointInPolygon(edge->GetNodeA(), outer);
-			if (result == IR_SEPERATE) return IR_SEPERATE;
-		}
-		{
-			SimplePolygons inners = polygon->GetInners();
-			SimplePolygons::iterator it = inners.begin();
-			while (it != inners.end())
-			{
-				SimplePolygon* inner = *it;
-				IntersectResult result = PolygonSegmentIntersect(edge, inner);
-				if (result != IR_SEPERATE) return result;
-				result = PointInPolygon(edge->GetNodeA(), inner);
-				if (result == IR_INTERSECT) return IR_SEPERATE;
-			}
-			return IR_INTERSECT;
-		}
-	}
-	//TODO: improve algorithm, now T(2(n+1))
-	IntersectResult PolygonSegmentWithin(Edge* edge, Polygon* polygon)
-	{
-		bool touch_outer;
-		{
-			SimplePolygon* outer = polygon->GetOuter();
-			IntersectResult result = PolygonSegmentIntersect(edge, outer);
-			touch_outer = result == IR_TOUCH;
-			if (result == IR_SEPERATE)
-			{
-				result = PointInPolygon(edge->GetNodeA(), outer);
-				if (result == IR_SEPERATE) return IR_SEPERATE;
-			}
-			else if (result == IR_INTERSECT) return IR_INTERSECT;
-		}
-		{
-			SimplePolygons inners = polygon->GetInners();
-			SimplePolygons::iterator it = inners.begin();
-			while (it != inners.end())
-			{
-				SimplePolygon* inner = *it;
-				IntersectResult result = PolygonSegmentIntersect(edge, inner);
-				if (result != IR_SEPERATE) return result;
-				result = PointInPolygon(edge->GetNodeA(), inner);
-				if (result != IR_SEPERATE) return result;
-			}
-		}
-		return touch_outer?IR_TOUCH:IR_INTERSECT;
+		return ret;
 	}
 }

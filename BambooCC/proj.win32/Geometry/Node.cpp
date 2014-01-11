@@ -26,12 +26,13 @@ namespace Geometry
 		first *= m;
 		second *= m;
 	}
-	bool IsConvex(Node* prev, Node* current, Node* next, bool outer)
+	ConvexResult GetConvex(Node* prev, Node* current, Node* next)
 	{
-		float cross = ((current->X() - prev->X()) * (next->Y() - current->Y())) -
+		double cross = ((current->X() - prev->X()) * (next->Y() - current->Y())) -
 			((current->Y() - prev->Y()) * (next->X() - current->X()));
-		bool convex = outer ? cross < 0 : cross > 0;
-		return convex;
+		if (cross == 0) return CR_STRAIGHT;
+		if (cross < 0) return CR_CONVEX;
+		return CR_CONCAVE;
 	}
 	double Normal(Vector* v)
 	{

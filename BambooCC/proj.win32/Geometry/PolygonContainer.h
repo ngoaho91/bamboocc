@@ -2,6 +2,7 @@
 #define PolygonContainer_h
 #include "QuadTree.h"
 #include "Polygon.h"
+#include "Intersects.h"
 namespace Geometry
 {
 	class PolygonContainer
@@ -10,8 +11,8 @@ namespace Geometry
 	public:
 		PolygonContainer(int width, int height);
 		~PolygonContainer();
-		bool QueryPointInPolygon(Node* node, bool consider_touch = false);
-		bool QueryPolygonSegmentIntersect(Edge* edge, bool consider_touch = false);
+		IntersectResult QueryPointInPolygon(Node* node);
+		IntersectResult QueryPolygonSegmentIntersect(Edge* edge);
 	};
 }
 #endif

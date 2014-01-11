@@ -12,10 +12,4 @@ namespace PathEngine
 	PathFinder::~PathFinder()
 	{
 	}
-	void PathFinder::AddSinglePolygon(Geometry::Polygon* poly)
-	{
-	}
-	void PathFinder::SinglePolygonToMatrix(SimplePolygon* poly, bool outer)
-	{
-	}
 }

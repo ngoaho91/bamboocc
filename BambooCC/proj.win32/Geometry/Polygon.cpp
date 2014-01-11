@@ -32,6 +32,10 @@ namespace Geometry
 		}
 		SetBoundingBox(min_x, min_y, max_x, max_y);
 	}
+	bool SimplePolygon::PointInsideBB(Node* node)
+	{
+		return m_BoundingBox->TestPointInside(node->X(), node->Y());
+	}
 	SimplePolygon::iterator SimplePolygon::GetNext(SimplePolygon::iterator it)
 	{
 		SimplePolygon::iterator it1 = it + 1;
@@ -44,7 +48,19 @@ namespace Geometry
 		if (it1 == this->begin()) return this->end() - 1;
 		return it;
 	}
+	/*------------------------------------------------
+	// class ConvexHull
+	// 11st JAN 2014
+	// describe a convex hull
+	------------------------------------------------*/
+	ConvexHull::ConvexHull()
+	{
+		
+	}
+	ConvexHull::~ConvexHull()
+	{
 
+	}
 	/*------------------------------------------------
 	// class Polygon
 	// 29th JUL 2013

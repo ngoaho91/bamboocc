@@ -24,15 +24,12 @@ namespace PathEngine
 		Geometry::QuadTree* m_QuadTree;
 		PathRender* m_Render;
 	private:
-		//void AddSinglePolygon(Geometry::Polygon* poly);
-		void SinglePolygonToMatrix(SimplePolygon* poly, bool outer);
 	public:
 		PathFinder();
 		~PathFinder();
 		PathRender* GetRender(){ return m_Render;}
 		void AddSinglePolygon(Geometry::Polygon* poly);
 		void UnionPolygon();
-		void PolygonToMatrix();
 		vector<Node*> FindPath
 			(Node* start, Node* end, PathFinderGoal goal=SHORTEST);
 		vector<Node*> FindPathNear

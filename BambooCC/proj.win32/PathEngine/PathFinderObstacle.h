@@ -23,13 +23,12 @@ namespace PathEngine
 		int m_MapLength;
 	public:
 		Obstacle();
-		Obstacle(Polygon* polygon);
-		void SetPolygon(Polygon* polygon);
-		void Graham(SimplePolygon* polygon, bool outer);
+		Obstacle(SimplePolygon* polygon);
+		void SetPolygon(SimplePolygon* polygon);
+		void Graham(SimplePolygon* polygon);
 		void BuildShortcutMap(int n, int m);
 		Nodes PathIntersect(Node* a, Node* b);
 		Nodes FindPath(Node* a, Node* b);
-		
 	};
 }
 #endif

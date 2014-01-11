@@ -5,6 +5,12 @@
 using namespace std;
 namespace Geometry
 {
+	enum ConvexResult
+	{
+		CR_STRAIGHT = 0,
+		CR_CONVEX = 1,
+		CR_CONCAVE = 2
+	};
 	class Vector;
 	class Node;
 	class Node
@@ -28,7 +34,7 @@ namespace Geometry
 		double Y(){ return second; }
 	};
 	typedef vector<Node*> Nodes;
-	bool IsConvex(Node* prev, Node* current, Node* next, bool outer);
+	ConvexResult GetConvex(Node* prev, Node* current, Node* next);
 	double Distance(Node* u, Node* v);
 	double Normal(Vector* v);
 	double DotProduct(Vector* u, Vector* v);

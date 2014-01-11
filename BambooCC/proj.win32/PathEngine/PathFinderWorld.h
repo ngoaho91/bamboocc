@@ -9,6 +9,7 @@ using namespace std;
 using namespace Geometry;
 namespace PathEngine
 {
+	
 	class World
 		:public QuadTree
 	{
@@ -28,6 +29,10 @@ namespace PathEngine
 		Nodes				FindPath(int bx, int by, int gx, int gy);
 		Nodes				FindPathNear(int bx, int by, int gx, int gy, int range);
 		bool				AvailableXY(int x, int y);
+	};
+	class WorldManager
+	{
+
 	};
 }
 #endif

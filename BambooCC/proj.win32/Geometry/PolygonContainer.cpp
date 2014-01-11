@@ -10,8 +10,7 @@ namespace Geometry
 	PolygonContainer::~PolygonContainer()
 	{
 	}
-	bool PolygonContainer::QueryPointInPolygon(Node* node, 
-		bool consider_touch)
+	IntersectResult PolygonContainer::QueryPointInPolygon(Node* node)
 	{
 		QuadTree* tree = this;
 		while(tree)
@@ -22,9 +21,9 @@ namespace Geometry
 			for(;it != objects.end();it++)
 			{
 				QuadObject* quad = *it;
-				Polygon* poly = (Polygon*)quad;
-				bool inside = PointInPolygon(node, poly, consider_touch);
-				if(inside) return true;
+				SimplePolygon* poly = (SimplePolygon*)quad;
+				IntersectResult ret = PointInPolygon(node, poly);
+				if (ret != IR_SEPERATE) return ret;
 			}
 			Geometry::TREE_LOCATION location = tree->GetLocation(node->X(), node->Y());
 			if(location == Geometry::TL_CHILD0)
@@ -48,10 +47,9 @@ namespace Geometry
 				break;
 			}
 		}
-		return false;
+		return IR_SEPERATE;
 	}
-	bool PolygonContainer::QueryPolygonSegmentIntersect(Edge* edge, 
-		bool consider_touch)
+	IntersectResult PolygonContainer::QueryPolygonSegmentIntersect(Edge* edge)
 	{
 		queue<QuadTree*> trees;
 		trees.push(this);
@@ -59,6 +57,7 @@ namespace Geometry
 		int ly = edge->GetBoundingBox()->GetMinY();
 		int hx = edge->GetBoundingBox()->GetMaxX();
 		int hy = edge->GetBoundingBox()->GetMaxY();
+		IntersectResult ret = IR_SEPERATE;
 		while(!trees.empty())
 		{
 			QuadTree* tree = trees.front();
@@ -69,11 +68,11 @@ namespace Geometry
 			for(;it != objects.end();it++)
 			{
 				QuadObject* quad = *it;
-				Polygon* poly = (Polygon*)quad;
-				bool intersect = PolygonSegmentIntersect(edge, poly, consider_touch);
-				if(intersect) return true;
+				SimplePolygon* poly = (SimplePolygon*)quad;
+				IntersectResult ret1 = PolygonSegmentIntersect(edge, poly);
+				if (ret1 == IR_WITHIN || ret1 == IR_INTERSECT) return ret1;
+				ret = ret1;
 			}
-			
 			Geometry::TREE_LOCATION location = tree->GetLocation(lx, ly, hx, hy);
 			if(location == Geometry::TL_CHILD0)
 			{
@@ -99,6 +98,6 @@ namespace Geometry
 				trees.push(tree->SubNode(3));
 			}
 		}
-		return false;
+		return ret;
 	}
 }

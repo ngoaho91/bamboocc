@@ -22,7 +22,7 @@ namespace PathEngine
 	Obstacle::Obstacle()
 	{
 	}
-	Obstacle::Obstacle(Polygon* polygon)
+	Obstacle::Obstacle(SimplePolygon* polygon)
 	{
 		Obstacle();
 		SetPolygon(polygon);
@@ -32,7 +32,7 @@ namespace PathEngine
 	DATE: 27th DEC 2013
 	TASK: find convex hull of a polygon
 	-------------------------------------------------*/
-	void Obstacle::Graham(SimplePolygon* polygon, bool outer)
+	void Obstacle::Graham(SimplePolygon* polygon)
 	{
 		int index = m_Nodes.size();
 		SimplePolygon::iterator it = polygon->begin();
@@ -41,13 +41,12 @@ namespace PathEngine
 		Node* last = *it++;
 		m_Nodes.push_back(last);
 		index++;
-		for (; it != polygon->end(); it++)
+		while (it != polygon->end())
 		{
 			Node* node = *it;
-			Node* next = *(polygon->GetNext(it));
-			//Node* prev = *(polygon->GetPrevious(it));
+			Node* next = *(polygon->GetNext(it++));
 			Node* prev = last;
-			if (IsConvex(prev, node, next, outer)) continue;
+			if (GetConvex(prev, node, next) == CR_CONVEX) continue;
 			m_Nodes.push_back(node);
 			int index1 = index - 1;
 			m_ShortcutMap[index1][index].length = Distance(node, last);
@@ -65,38 +64,19 @@ namespace PathEngine
 	DATE: 27th DEC 2013
 	TASK: Pre-compute some data
 	-------------------------------------------------*/
-	void Obstacle::SetPolygon(Polygon* polygon)
+	void Obstacle::SetPolygon(SimplePolygon* polygon)
 	{
-		SimplePolygon* outer = polygon->GetOuter();
-		SimplePolygons inners = polygon->GetInners();
+		m_MapLength = polygon->size();
+		m_ShortcutMap = new Shortcut*[m_MapLength];
+		for (int i = 0; i < m_MapLength; i++)
 		{
-			m_MapLength = 0;
-			m_MapLength += outer->size();
-			SimplePolygons::iterator it = inners.begin();
-			for (; it != inners.end(); it++)
+			m_ShortcutMap[i] = new Shortcut[m_MapLength];
+			for (int j = 0; j < m_MapLength; j++)
 			{
-				SimplePolygon* inner = *it;
-				m_MapLength += inner->size();
-			}
-			m_ShortcutMap = new Shortcut*[m_MapLength];
-			for (int i = 0; i < m_MapLength; i++)
-			{
-				m_ShortcutMap[i] = new Shortcut[m_MapLength];
-				for (int j = 0; j < m_MapLength; j++)
-				{
-					m_ShortcutMap[i][j].length = INF;
-				}
+				m_ShortcutMap[i][j].length = INF;
 			}
 		}
-		{
-			Graham(outer, true);
-			SimplePolygons::iterator it = inners.begin();
-			for (; it != inners.end(); it++)
-			{
-				SimplePolygon* inner = *it;
-				Graham(inner, false);
-			}
-		}
+		Graham(polygon);
 	}
 	/*------------------------------------------------
 	NAME: BuildShortcutMap

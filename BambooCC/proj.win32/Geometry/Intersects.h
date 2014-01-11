@@ -12,26 +12,16 @@ namespace Geometry
 		IR_INTERSECT = 2,
 		IR_WITHIN = 3
 	};
-	enum SegmentTouchResult
-	{
-		STR_A = 0,
-		STR_B = 1,
-		STR_C = 2,
-		STR_D = 3
-	};
 	IntersectResult SegmentSegmentIntersect(
 		Edge* edge1, 
-		Edge* edge2, 
-		SegmentTouchResult* touch_result);
+		Edge* edge2);
 	IntersectResult SegmentSegmentIntersect(
 		int ax, int ay, int bx, int by, 
-		int cx, int cy, int dx, int dy, 
-		SegmentTouchResult* touch_result);
+		int cx, int cy, int dx, int d);
 	
 	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon);
+	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon);
 	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon);
 	IntersectResult PolygonSegmentWithin(Edge* edge, SimplePolygon* polygon);
-	IntersectResult PointInPolygon(Node* node, Polygon* polygon);
-	IntersectResult PolygonSegmentIntersect(Edge* edge, Polygon* polygon);
 }
 #endif

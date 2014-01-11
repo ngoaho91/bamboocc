@@ -14,10 +14,19 @@ namespace Geometry
 		SimplePolygon();
 		~SimplePolygon();
 		void CalculateAABB();
+		bool PointInsideBB(Node* node);
 		SimplePolygon::iterator GetNext(SimplePolygon::iterator it);
 		SimplePolygon::iterator GetPrevious(SimplePolygon::iterator it);
 	};
 	typedef vector<SimplePolygon*> SimplePolygons;
+	class ConvexHull
+		:public SimplePolygon
+	{
+	public:
+		ConvexHull();
+		~ConvexHull();
+	};
+	typedef vector<ConvexHull*> ConvexHulls;
 	class Polygon
 		:public QuadObject
 	{
