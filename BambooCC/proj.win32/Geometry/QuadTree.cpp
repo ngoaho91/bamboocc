@@ -3,6 +3,18 @@ namespace Geometry
 {
 	const int QuadTree::MAX_OBJECTS = 10;
 	const int QuadTree::MAX_LEVEL = 4;
+	QuadTree::QuadTree()
+	{
+		m_BoundingBox = 0;
+		m_Level = 0;
+		m_MidX = 0;
+		m_MidY = 0;
+		m_ParentNode = 0;
+		m_SubNodes[0] = 0;
+		m_SubNodes[1] = 0;
+		m_SubNodes[2] = 0;
+		m_SubNodes[3] = 0;
+	}
 	QuadTree::QuadTree(int width, int height, 
 		int x, int y, int level, QuadTree* parent)
 	{

@@ -28,6 +28,7 @@ namespace Geometry
 		QuadTree*			m_SubNodes[4];
 		QuadTree*			m_ParentNode;
 	public:
+		QuadTree();
 		QuadTree(int width, int height, 
 			int x = 0, int y = 0, int level = 0, QuadTree* parent = 0);
 		~QuadTree();

@@ -9,6 +9,12 @@ namespace Geometry
 		first += v->first;
 		second += v->second;
 	}
+	bool Node::Equal(Node* other)
+	{
+		if (this->X() != other->X()) return false;
+		if (this->Y() != other->Y()) return false;
+		return true;
+	}
 	Vector::Vector(double x, double y)
 		:pair<double, double>(x, y){}
 	Vector::Vector(Node* a, Node* b)

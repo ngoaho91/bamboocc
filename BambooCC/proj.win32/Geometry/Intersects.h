@@ -22,6 +22,5 @@ namespace Geometry
 	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon);
 	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon);
 	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon);
-	IntersectResult PolygonSegmentWithin(Edge* edge, SimplePolygon* polygon);
 }
 #endif

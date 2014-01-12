@@ -2,6 +2,11 @@
 #include <algorithm>
 namespace Geometry
 {
+	/*------------------------------------------------
+	NAME: SegmentSegmentIntersect
+	DATE: 11st JAN 2014
+	TASK: return ralation of 2 segment, seperate, touch, or intersect
+	-------------------------------------------------*/
 	IntersectResult SegmentSegmentIntersect(Edge* edge1, Edge* edge2)
 	{
 		Rectangle* bb1 = edge1->GetBoundingBox();
@@ -14,6 +19,11 @@ namespace Geometry
 		return SegmentSegmentIntersect(a->X(), a->Y(), b->X(), b->Y(),
 			c->X(), c->Y(), d->X(), d->Y());
 	}
+	/*------------------------------------------------
+	NAME: SegmentSegmentIntersect
+	DATE: 11st JAN 2014
+	TASK: return ralation of 2 segment, seperate, touch, or intersect
+	-------------------------------------------------*/
 	IntersectResult SegmentSegmentIntersect(int ax, int ay, int bx, int by,
 		int cx, int cy, int dx, int dy)
 	{
@@ -41,8 +51,6 @@ namespace Geometry
 	NAME: PointInPolygon
 	DATE: 29th JUL 2013
 	TASK: test point is in polygon
-	- node = node
-	- polygon = polygon
 	-------------------------------------------------*/
 	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon)
 	{
@@ -51,10 +59,10 @@ namespace Geometry
 		double y = node->Y();
 		bool c = false;
 		Nodes::iterator it = polygon->begin();
-		while (it != polygon->end())
+		for (; it != polygon->end();it++)
 		{
 			Node* node_a = *it;
-			Node* node_b = *(polygon->GetNext(it++));
+			Node* node_b = *(polygon->GetNext(it));
 			double ax = node_a->X();
 			double ay = node_a->Y();
 			double bx = node_b->X();
@@ -89,17 +97,15 @@ namespace Geometry
 	NAME: PointInPolygon
 	DATE: 11st JAN 2014
 	TASK: test point is in polygon
-	- node = node
-	- polygon = convex hull
 	-------------------------------------------------*/
 	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon)
 	{
 		if (!polygon->PointInsideBB(node)) return IR_SEPERATE;
 		Nodes::iterator it = polygon->begin();
-		while (it != polygon->end())
+		for (; it != polygon->end();it++)
 		{
 			Node* node_a = *it;
-			Node* node_b = *(polygon->GetNext(it++));
+			Node* node_b = *(polygon->GetNext(it));
 			ConvexResult ret = GetConvex(node_a, node, node_b);
 			if (ret == CR_STRAIGHT)
 			{
@@ -125,8 +131,6 @@ namespace Geometry
 	// NAME: PolygonSegmentIntersect
 	// DATE: 29th JUL 2013
 	// TASK: test edge is intersect polygon
-	// - edge = edge
-	// - polygon = polygon
 	//-------------------------------------------------*/
 	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon)
 	{
@@ -142,10 +146,10 @@ namespace Geometry
 		Edge* edge_cd = new Edge(node_c, node_d);
 		Nodes::iterator it = polygon->begin();
 		IntersectResult ret = IR_SEPERATE;
-		while (it != polygon->end())
+		for (; it != polygon->end();it++)
 		{
 			Node* node_a = *it;
-			Node* node_b = *(polygon->GetNext(it++));
+			Node* node_b = *(polygon->GetNext(it));
 			Edge* edge_ab = new Edge(node_a, node_b);
 			edge_ab->Calculate();
 			Rectangle* bb2 = edge_ab->GetBoundingBox();
@@ -153,7 +157,31 @@ namespace Geometry
 			{
 				IntersectResult result = SegmentSegmentIntersect(edge_ab, edge_cd);
 				if (result == IR_INTERSECT) return IR_INTERSECT;
-				if (result == IR_TOUCH) ret = IR_TOUCH;
+				if (result == IR_TOUCH)
+				{
+					// CAD straight
+					if (node_c->Equal(node_a) || node_d->Equal(node_a))
+					{
+						ret = IR_TOUCH;
+					}
+					else if (GetConvex(node_c, node_a, node_d) == CR_STRAIGHT)
+					{
+						Node* node_z = *(polygon->GetPrevious(it));
+						// Z and B in 2 different plane seperated by CD
+						if (GetConvex(node_c, node_z, node_d) != GetConvex(node_c, node_b, node_d))
+						{
+							return IR_INTERSECT;
+						}
+						else
+						{
+							ret = IR_TOUCH;
+						}
+					}
+					else
+					{
+						ret = IR_TOUCH;
+					}
+				}
 			}
 		}
 		return ret;

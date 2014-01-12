@@ -21,6 +21,7 @@ namespace Geometry
 		double X(){ return first; }
 		double Y(){ return second; }
 		void Apply(Vector* v);
+		bool Equal(Node* other);
 	};
 	class Vector
 		:public pair<double, double>

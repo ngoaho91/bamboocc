@@ -14,19 +14,18 @@ namespace PathEngine
 		unsigned int length;
 	};
 	class Obstacle
-		: public QuadObject
+		: public SimplePolygon
 	{
 	public:
 		Nodes m_Nodes;
-		Polygon* m_Polygon;
 		Shortcut** m_ShortcutMap;
 		int m_MapLength;
 	public:
 		Obstacle();
 		Obstacle(SimplePolygon* polygon);
-		void SetPolygon(SimplePolygon* polygon);
-		void Graham(SimplePolygon* polygon);
-		void BuildShortcutMap(int n, int m);
+		void SetPolygon();
+		void Graham();
+		void BuildShortcutMap();
 		Nodes PathIntersect(Node* a, Node* b);
 		Nodes FindPath(Node* a, Node* b);
 	};

@@ -1,37 +1,45 @@
 #include "PathFinderWorld.h"
 namespace PathEngine
 {
-	World* World::m_Instance = 0;
-	int World::WIDTH = 3000;
-	int	World::HEIGHT = 3000;
-	World* World::instance()
-	{
-		if(!m_Instance) m_Instance = new World();
-		return m_Instance;
-	}
 	World::World()
-		:QuadTree(WIDTH,HEIGHT)
+		:QuadObject()
 	{
-		//m_Mesh = new Mesh(WIDTH,HEIGHT);
-		//m_PathFinder = new PathFinder(m_Mesh);
+
+	}
+	World::World(Geometry::Polygon* polygon)
+	{
+
 	}
 	World::~World()
 	{
+
 	}
-	Nodes World::FindPath(int bx, int by, int gx, int gy)
+	void World::SetBoundary(ConvexHull* polygon)
 	{
-		return m_PathFinder->FindPath(new Node(bx, by), new Node(gx, gy));
+		m_Boundary = polygon;
+		SetBoundingBox(polygon->GetBoundingBox());
 	}
-	Nodes World::FindPathNear(int bx, int by, int gx, int gy, int range)
+	void World::AddObstacle(Obstacle* obstacle)
 	{
-		return m_PathFinder->FindPathNear(new Node(bx, by), new Node(gx, gy), range);
+		m_Obstacles->Insert(obstacle);
+	}
+	void RemoveObstacle(Obstacle* obstacle)
+	{
 	}
 	void World::AddActor(Actor* actor)
 	{
-		QuadTree::Insert(actor);
+
 	}
-	bool World::AvailableXY(int x, int y)
+	void World::RemoveActor(Actor* actor)
 	{
-		return m_PathFinder->QueryPointAvailable(x,y);
+
+	}
+	IntersectResult World::PointInside(Node* node)
+	{
+		return PointInPolygon(node, m_Boundary);
+	}
+	IntersectResult World::PointIntersect(Node* node)
+	{
+		return m_Obstacles->QueryPointInPolygon(node);
 	}
 }

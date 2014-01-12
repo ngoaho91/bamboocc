@@ -19,7 +19,7 @@ namespace PathEngine
 		bool			m_Through;
 		Node*			m_LocalGoal;
 		double			m_GoalAngle;
-		vector<Node*>	m_FinalSolution;
+		Nodes			m_FinalSolution;
 		bool			m_Free;
 		bool			m_Lost;
 		bool			m_EvadingActor;
