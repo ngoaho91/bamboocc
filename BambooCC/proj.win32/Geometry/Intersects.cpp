@@ -159,11 +159,11 @@ namespace Geometry
 				if (result == IR_INTERSECT) return IR_INTERSECT;
 				if (result == IR_TOUCH)
 				{
-					// CAD straight
 					if (node_c->Equal(node_a) || node_d->Equal(node_a))
 					{
 						ret = IR_TOUCH;
 					}
+					// CAD straight
 					else if (GetConvex(node_c, node_a, node_d) == CR_STRAIGHT)
 					{
 						Node* node_z = *(polygon->GetPrevious(it));

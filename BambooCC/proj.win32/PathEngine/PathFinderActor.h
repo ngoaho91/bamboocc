@@ -10,57 +10,34 @@ using namespace Geometry;
 #define QOT_PATHACTOR 2
 namespace PathEngine
 {
+	enum ActorState
+	{
+		MS_STANDING = 0,// STANDING STILL
+		MS_WAITING = 1,// WANT TO MOVE BUT CANT MOVE, LET'S WAIT FOR SOME MIRACLE
+		MS_PULLING = 2,// PULLING OTHER(S) TO OPEN PATH
+		MS_BEINGPULL = 3,// BEING PULLED BY OTHER
+		MS_MOVING = 4,// MOVING, AS THE PATH GUIDE
+		MS_BLINDMOVING = 5// MOVING, BUT NOT SURE ABOUT THE PATH
+	};
 	class Actor
 		: public QuadObject
 	{
 	protected:
-		float			m_PositionX;
-		float			m_PositionY;
-		bool			m_Through;
-		Node*			m_LocalGoal;
-		double			m_GoalAngle;
-		Nodes			m_FinalSolution;
-		bool			m_Free;
-		bool			m_Lost;
-		bool			m_EvadingActor;
-		Actor*			m_EvadingObject;
-		int				m_EvadingTime;
-		bool			m_EvadingWall;
-		bool			m_LookingToGoal;
-		bool			m_LookedToGoal;
+		Node*			m_Position;
+		double			m_Size;
 		double			m_Speed;
-		double			m_SpeedX;
-		double			m_SpeedY;
+		Vector			m_SpeedVector;
 		double			m_Angle;
 		double			m_TurnSpeed;
+		Node*			m_LocalGoal;
+		Nodes			m_FinalSolution;
+		bool			m_Through;
+		ActorState		m_State;
 	public:
-		Actor(int width, int height);
+		Actor(double size);
 		~Actor();
 		void SetPosition(int x, int y);
-		void GoTo(int x, int y);
-		void GoNear(int x, int y, int range);
-		void ClearPath();
-		virtual void Step();
-		void UpdateIdle();
-		int GetPositionX(){return m_PositionX;}
-		int GetPositionY(){return m_PositionY;}
-		double GetAngle() { return m_Angle; }
-		bool IsThrough(){return m_Through;}
 	private:
-		void ActualStep(int x, int y);
-		void LookAtGoal();
-		void CheckActor();
-		void EvadeActor(Actor* other);
-		void CheckWall();
-		void EvadeWall();
-		void NextGoal();
-		void FindLocalSolution();
-	private:
-		void RotateCW();
-		void RotateCCW();
-		void RefreshSpeed();
-		void RefreshGoalAngle();
-		
 	};
 	
 }
