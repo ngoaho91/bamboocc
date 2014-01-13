@@ -57,6 +57,22 @@ namespace Geometry
 	{
 		
 	}
+	ConvexHull::ConvexHull(SimplePolygon* polygon)
+	{
+		SimplePolygon::iterator it = polygon->begin();
+		Node* first = *it;
+		Node* last = *it++;
+		this->push_back(last);
+		for (; it != this->end();it++)
+		{
+			Node* node = *it;
+			Node* next = *(polygon->GetNext(it));
+			Node* prev = last;
+			if (GetConvex(prev, node, next) == CR_CONVEX) continue;
+			this->push_back(node);
+			last = node;
+		}
+	}
 	ConvexHull::~ConvexHull()
 	{
 

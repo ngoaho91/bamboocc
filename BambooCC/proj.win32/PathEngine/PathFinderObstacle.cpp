@@ -34,30 +34,26 @@ namespace PathEngine
 	-------------------------------------------------*/
 	void Obstacle::Graham()
 	{
-		m_MapLength = this->size();
-		m_ShortcutMap = new Shortcut*[m_MapLength];
-		for (int i = 0; i < m_MapLength; i++)
+		const int len = this->size();
+		m_ShortcutMap = new Shortcut*[len];
+		for (int i = 0; i < len; i++)
 		{
-			m_ShortcutMap[i] = new Shortcut[m_MapLength];
-			for (int j = 0; j < m_MapLength; j++)
+			m_ShortcutMap[i] = new Shortcut[len];
+			for (int j = 0; j < len; j++)
 			{
 				m_ShortcutMap[i][j].length = INF;
 			}
 		}
-		m_Nodes.clear();
+		m_ConvexHull = new ConvexHull(this);
 		int index = 0;
-		SimplePolygon::iterator it = this->begin();
+		SimplePolygon::iterator it = m_ConvexHull->begin();
 		Node* first = *it;
 		Node* last = *it++;
-		m_Nodes.push_back(last);
 		index++;
-		while (it != this->end())
+		for (; it != m_ConvexHull->end(); it++)
 		{
 			Node* node = *it;
-			Node* next = *(this->GetNext(it++));
 			Node* prev = last;
-			if (GetConvex(prev, node, next) == CR_CONVEX) continue;
-			m_Nodes.push_back(node);
 			int index1 = index - 1;
 			m_ShortcutMap[index1][index].length = Distance(node, last);
 			m_ShortcutMap[index1][index].next = index;
@@ -78,22 +74,22 @@ namespace PathEngine
 		const int len = this->size();
 		if (len == 3) return;
 		const int len1 = len - 1;
-		int* d = new int[len];
+		double* d = new double[len];
 		d[0] = 0;
 		for (int i = 1; i < len; i++)
 		{
 			d[i] = d[i - 1] + m_ShortcutMap[i-1][i].length;
 		}
 		d[0] = d[len1] + m_ShortcutMap[0][len1].length;
-		int p = d[0] / 2;
+		double p = d[0] / 2;
 		for (int i = 0; i < len; i++)
 		{
-			int di = i == 0 ? 0 : d[i];
+			double di = i == 0 ? 0 : d[i];
 			bool ccw = true;
 			for (int j = i + 2; j < len; j++)
 			{
-				int dj = d[j];
-				int len_ccw = dj - di;
+				double dj = d[j];
+				double len_ccw = dj - di;
 				if(ccw) if (len_ccw > p)
 				{
 					ccw = false;
@@ -108,7 +104,7 @@ namespace PathEngine
 				}
 				else
 				{
-					int len_cw = d[0] - len_ccw;
+					double len_cw = d[0] - len_ccw;
 					int back;
 					if (i == 0) back = len1;
 					else back = i - 1;
@@ -118,16 +114,82 @@ namespace PathEngine
 			}
 		}
 	}
-	Nodes Obstacle::PathIntersect(Node* from, Node* to)
-	{
-		Nodes ret;
-		Edge* edge_ab = new Edge(from, to);
-		edge_ab->Calculate();
-		return ret;
-	}
 	Nodes Obstacle::FindPath(Node* from, Node* to)
 	{
 		Nodes ret;
+		// intersect
+		ConvexHull::iterator it = m_ConvexHull->begin();
+		Node *a, *b, *c, *d;
+		int ia, ib, ic, id;
+		a = b = c = d = *it;
+		ia, ib, ic, id = 0;
+		it++;
+		int i = 1;
+		for (; it != m_ConvexHull->end(); it++)
+		{
+			ConvexResult cr;
+			cr = GetConvex(from, *it, a);
+			if (cr == CR_CONCAVE)
+			{
+				a = *it;
+				ia = i;
+			}
+			cr = GetConvex(from, *it, b);
+			if (cr == CR_CONVEX)
+			{
+				b = *it;
+				ib = i;
+			}
+			cr = GetConvex(to, *it, c);
+			if (cr == CR_CONVEX)
+			{
+				c = *it;
+				ic = i;
+			}
+			cr = GetConvex(to, *it, d);
+			if (cr == CR_CONCAVE)
+			{
+				d = *it;
+				id = i;
+			}
+			i++;
+		}
+		// trace
+		double len_ad = GetLength(ia, id);
+		double len_bc = GetLength(ib, ic);
+		int i, j;
+		if (len_ad < len_bc)
+		{
+			i = ia;
+			j = id;
+		}
+		else
+		{
+			i = ib;
+			j = ic;
+		}
+		int i = ia;
+		while (true)
+		{
+			ret.push_back(m_ConvexHull->at(i));
+			if (i == j) break;
+			i = m_ShortcutMap[i][j].next;
+		}
+		ret.push_back(to);
 		return ret;
+	}
+	double Obstacle::GetLength(int from, int to)
+	{
+		if (from >= m_ConvexHull->size()) return;
+		if (to >= m_ConvexHull->size()) return;
+		if (from == to) return 0;
+		if (from < to)
+		{
+			return m_ShortcutMap[from][to].length;
+		}
+		else
+		{
+			return m_ShortcutMap[to][from].length;
+		}
 	}
 }

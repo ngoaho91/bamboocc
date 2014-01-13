@@ -11,23 +11,22 @@ namespace PathEngine
 	struct Shortcut
 	{
 		unsigned short next;
-		unsigned int length;
+		double length;
 	};
 	class Obstacle
 		: public SimplePolygon
 	{
 	public:
-		Nodes m_Nodes;
+		ConvexHull* m_ConvexHull;
 		Shortcut** m_ShortcutMap;
-		int m_MapLength;
 	public:
 		Obstacle();
 		Obstacle(SimplePolygon* polygon);
 		void SetPolygon();
 		void Graham();
 		void BuildShortcutMap();
-		Nodes PathIntersect(Node* a, Node* b);
-		Nodes FindPath(Node* a, Node* b);
+		Nodes FindPath(Node* from, Node* to);
+		double GetLength(int from, int to);
 	};
 }
 #endif

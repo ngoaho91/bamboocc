@@ -8,7 +8,7 @@ namespace Geometry
 {
 	
 	class SimplePolygon
-		:public QuadObject, public vector<Node*>
+		:public QuadObject, public Nodes
 	{
 	public:
 		SimplePolygon();
@@ -24,6 +24,7 @@ namespace Geometry
 	{
 	public:
 		ConvexHull();
+		ConvexHull(SimplePolygon* polygon);
 		~ConvexHull();
 	};
 	typedef vector<ConvexHull*> ConvexHulls;
