@@ -48,7 +48,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external;$(SolutionDir)scripting\lua\lua;$(SolutionDir)scripting\lua\tolua;$(SolutionDir)boost_1_54_0\"
+				AdditionalIncludeDirectories=".;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external;$(SolutionDir)scripting\lua\lua;$(SolutionDir)scripting\lua\tolua;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -134,7 +134,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external"
+				AdditionalIncludeDirectories=".;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external"
 				PreprocessorDefinitions="WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGSNDEBUG"
 				ExceptionHandling="0"
 				RuntimeLibrary="2"
@@ -194,11 +194,11 @@
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
 			>
 			<File
-				RelativePath="..\Classes\AppDelegate.cpp"
+				RelativePath="..\Contents\AppDelegate.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\main.cpp"
+				RelativePath="..\Contents\main.cpp"
 				>
 			</File>
 		</Filter>
@@ -207,11 +207,11 @@
 			Filter="h;hpp;hxx;hm;inl;inc"
 			>
 			<File
-				RelativePath="..\Classes\AppDelegate.h"
+				RelativePath="..\Contents\AppDelegate.h"
 				>
 			</File>
 			<File
-				RelativePath=".\main.h"
+				RelativePath="..\Contents\main.h"
 				>
 			</File>
 			<File
@@ -244,646 +244,654 @@
 				>
 			</File>
 		</Filter>
-		<Filter
+    <Filter
 			Name="RigEngine"
 			>
-			<Filter
+      <Filter
 				Name="RigPart"
 				>
-				<File
-					RelativePath=".\RigEngine\RigPart.cpp"
+        <File
+					RelativePath="..\Contents\RigEngine\RigPart.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\RigPart.h"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\RigPart.h"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\RigPartRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\RigPartRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\RigPartRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\RigPartRender.h"
 					>
-				</File>
-			</Filter>
-			<Filter
+        </File>
+      </Filter>
+      <Filter
 				Name="Character"
 				>
-				<File
-					RelativePath=".\RigEngine\Character.cpp"
+        <File
+					RelativePath="..\Contents\RigEngine\Character.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\Character.h"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\Character.h"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\CharacterRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\CharacterRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\CharacterRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\CharacterRender.h"
 					>
-				</File>
-				<File
-					RelativePath=".\RigEngine\RigAction.h"
+        </File>
+        <File
+					RelativePath="..\Contents\RigEngine\RigAction.h"
 					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
+        </File>
+      </Filter>
+    </Filter>
+    <Filter
 			Name="PathEngine"
 			>
-			<Filter
+      <Filter
 				Name="Render"
 				>
-				<File
-					RelativePath=".\PathEngine\PathRender.cpp"
+        <File
+					RelativePath="..\Contents\PathEngine\PathRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathRender.h"
 					>
-				</File>
-			</Filter>
-			<Filter
+        </File>
+      </Filter>
+      <Filter
 				Name="PathFinder"
 				>
-				<File
-					RelativePath=".\PathEngine\PathFinder.cpp"
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinder.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinder.h"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinder.h"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderActor.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinderActor.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderActor.h"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinderActor.h"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderWorld.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinderWorld.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\PathEngine\PathFinderWorld.h"
+        </File>
+        <File
+					RelativePath="..\Contents\PathEngine\PathFinderWorld.h"
 					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
+        </File>
+      </Filter>
+    </Filter>
+    <Filter
 			Name="TileEngine"
 			>
-			<Filter
+      <Filter
 				Name="Element"
 				>
-				<File
-					RelativePath=".\TileEngine\Element.cpp"
+        <File
+					RelativePath="..\Contents\TileEngine\Element.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\Element.h"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\Element.h"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\ElementRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\ElementRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\ElementRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\ElementRender.h"
 					>
-				</File>
-			</Filter>
-			<Filter
+        </File>
+      </Filter>
+      <Filter
 				Name="TileMap"
 				>
-				<File
-					RelativePath=".\TileEngine\TileMap.cpp"
+        <File
+					RelativePath="..\Contents\TileEngine\TileMap.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\TileMap.h"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\TileMap.h"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\TileMapRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\TileMapRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\TileEngine\TileMapRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\TileEngine\TileMapRender.h"
 					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
+        </File>
+      </Filter>
+    </Filter>
+    <Filter
 			Name="FightEngine"
 			>
-			<File
-				RelativePath=".\FightEngine\FightEngine.h"
+      <File
+				RelativePath="..\Contents\FightEngine\FightEngine.h"
 				>
-			</File>
-			<File
-				RelativePath=".\FightEngine\FightEngine_Prototype.h"
+      </File>
+      <File
+				RelativePath="..\Contents\FightEngine\FightEngine_Prototype.h"
 				>
-			</File>
-			<File
-				RelativePath=".\FightEngine\tolua_fight.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\FightEngine\tolua_fight.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\FightEngine\tolua_fight.h"
+      </File>
+      <File
+				RelativePath="..\Contents\FightEngine\tolua_fight.h"
 				>
-			</File>
-			<Filter
+      </File>
+      <Filter
 				Name="Map"
 				>
-				<File
-					RelativePath=".\FightEngine\Map.cpp"
+        <File
+					RelativePath="..\Contents\FightEngine\Map.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\Map.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\Map.h"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\MapRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\MapRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\MapRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\MapRender.h"
 					>
-				</File>
-			</Filter>
-			<Filter
+        </File>
+      </Filter>
+      <Filter
 				Name="World"
 				>
-				<File
-					RelativePath=".\FightEngine\FightWorld.cpp"
+        <File
+					RelativePath="..\Contents\FightEngine\FightWorld.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightWorld.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightWorld.h"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightWorldRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightWorldRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightWorldRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightWorldRender.h"
 					>
-				</File>
-			</Filter>
-			<Filter
+        </File>
+      </Filter>
+      <Filter
 				Name="FightSkill"
 				>
-				<File
-					RelativePath=".\FightEngine\FightMaterial.h"
+        <File
+					RelativePath="..\Contents\FightEngine\FightMaterial.h"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\Vector2.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\Vector2.h"
 					>
-				</File>
-				<Filter
+        </File>
+        <Filter
 					Name="Buff"
 					>
-					<File
-						RelativePath=".\FightEngine\Buff.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\Buff.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\Buff.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\Buff.h"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\BuffRender.cpp"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\BuffRender.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\BuffRender.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\BuffRender.h"
 						>
-					</File>
-				</Filter>
-				<Filter
+          </File>
+        </Filter>
+        <Filter
 					Name="Damage"
 					>
-					<File
-						RelativePath=".\FightEngine\Damage.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\Damage.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\Damage.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\Damage.h"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\DamageRender.cpp"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\DamageRender.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\DamageRender.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\DamageRender.h"
 						>
-					</File>
-				</Filter>
-				<Filter
+          </File>
+        </Filter>
+        <Filter
 					Name="FightSkill"
 					>
-					<File
-						RelativePath=".\FightEngine\FightSkill.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\FightSkill.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\FightSkill.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\FightSkill.h"
 						>
-					</File>
-					<Filter
+          </File>
+          <Filter
 						Name="AOE"
 						>
-						<File
-							RelativePath=".\FightEngine\AOESkill.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\AOESkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\AOESkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\AOESkill.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageField.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageField.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageField.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageField.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageFieldRender.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageFieldRender.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageFieldRender.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageFieldRender.h"
 							>
-						</File>
-					</Filter>
-					<Filter
+            </File>
+          </Filter>
+          <Filter
 						Name="Aura"
 						>
-						<File
-							RelativePath=".\FightEngine\Aura.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\Aura.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\Aura.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\Aura.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\AuraRender.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\AuraRender.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\AuraRender.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\AuraRender.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\AuraSkill.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\AuraSkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\AuraSkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\AuraSkill.h"
 							>
-						</File>
-					</Filter>
-					<Filter
+            </File>
+          </Filter>
+          <Filter
 						Name="Instant"
 						>
-						<File
-							RelativePath=".\FightEngine\InstantSkill.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\InstantSkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\InstantSkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\InstantSkill.h"
 							>
-						</File>
-					</Filter>
-					<Filter
+            </File>
+          </Filter>
+          <Filter
 						Name="Missile"
 						>
-						<File
-							RelativePath=".\FightEngine\Missile.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\Missile.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\Missile.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\Missile.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\MissileRender.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\MissileRender.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\MissileRender.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\MissileRender.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\MissileSkill.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\MissileSkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\MissileSkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\MissileSkill.h"
 							>
-						</File>
-					</Filter>
-					<Filter
+            </File>
+          </Filter>
+          <Filter
 						Name="Ray"
 						>
-						<File
-							RelativePath=".\FightEngine\DamageRay.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\DamageRay.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageRay.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageRay.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageRayRender.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageRayRender.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\DamageRayRender.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\DamageRayRender.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\RaySkill.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\RaySkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\RaySkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\RaySkill.h"
 							>
-						</File>
-					</Filter>
-					<Filter
+            </File>
+          </Filter>
+          <Filter
 						Name="Trap"
 						>
-						<File
-							RelativePath=".\FightEngine\Trap.cpp"
+            <File
+							RelativePath="..\Contents\FightEngine\Trap.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\Trap.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\Trap.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\TrapRender.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\TrapRender.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\TrapRender.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\TrapRender.h"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\TrapSkill.cpp"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\TrapSkill.cpp"
 							>
-						</File>
-						<File
-							RelativePath=".\FightEngine\TrapSkill.h"
+            </File>
+            <File
+							RelativePath="..\Contents\FightEngine\TrapSkill.h"
 							>
-						</File>
-					</Filter>
-				</Filter>
-				<Filter
+            </File>
+          </Filter>
+        </Filter>
+        <Filter
 					Name="PassiveSkill"
 					>
-					<File
-						RelativePath=".\FightEngine\PassiveSkill.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\PassiveSkill.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\PassiveSkill.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\PassiveSkill.h"
 						>
-					</File>
-				</Filter>
-				<Filter
+          </File>
+        </Filter>
+        <Filter
 					Name="Charge"
 					>
-					<File
-						RelativePath=".\FightEngine\Charge.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\Charge.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\Charge.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\Charge.h"
 						>
-					</File>
-				</Filter>
-				<Filter
+          </File>
+        </Filter>
+        <Filter
 					Name="SkillInputManager"
 					>
-					<File
-						RelativePath=".\FightEngine\SkillInputManager.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\SkillInputManager.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\SkillInputManager.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\SkillInputManager.h"
 						>
-					</File>
-				</Filter>
-			</Filter>
-			<Filter
+          </File>
+        </Filter>
+      </Filter>
+      <Filter
 				Name="Actor"
 				>
-				<File
-					RelativePath=".\FightEngine\FightActor.cpp"
+        <File
+					RelativePath="..\Contents\FightEngine\FightActor.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightActor.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightActor.h"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightActorRender.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightActorRender.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\FightEngine\FightActorRender.h"
+        </File>
+        <File
+					RelativePath="..\Contents\FightEngine\FightActorRender.h"
 					>
-				</File>
-				<Filter
+        </File>
+        <Filter
 					Name="Mob"
 					>
-					<File
-						RelativePath=".\FightEngine\Mob.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\Mob.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\Mob.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\Mob.h"
 						>
-					</File>
-				</Filter>
-				<Filter
+          </File>
+        </Filter>
+        <Filter
 					Name="Human"
 					>
-					<File
-						RelativePath=".\FightEngine\HumanActor.cpp"
+          <File
+						RelativePath="..\Contents\FightEngine\HumanActor.cpp"
 						>
-					</File>
-					<File
-						RelativePath=".\FightEngine\HumanActor.h"
+          </File>
+          <File
+						RelativePath="..\Contents\FightEngine\HumanActor.h"
 						>
-					</File>
-				</Filter>
-			</Filter>
-		</Filter>
-		<Filter
+          </File>
+        </Filter>
+      </Filter>
+    </Filter>
+    <Filter
 			Name="pugiXML"
 			>
-			<File
-				RelativePath=".\pugiXML\pugiconfig.hpp"
+      <File
+				RelativePath="..\Contents\pugiXML\pugiconfig.hpp"
 				>
-			</File>
-			<File
-				RelativePath=".\pugiXML\pugixml.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\pugiXML\pugixml.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\pugiXML\pugixml.hpp"
+      </File>
+      <File
+				RelativePath="..\Contents\pugiXML\pugixml.hpp"
 				>
-			</File>
-		</Filter>
-		<Filter
+      </File>
+    </Filter>
+    <Filter
 			Name="GameState"
 			>
-			<File
-				RelativePath=".\GameState\CreateScene.cpp"
+      <File
+				RelativePath="..\Contents\GameState\CreateScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\CreateScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\CreateScene.h"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\HelloWorldScene.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\HelloWorldScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\HelloWorldScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\HelloWorldScene.h"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\PathFindingScene.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\PathFindingScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\PathFindingScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\PathFindingScene.h"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\PFNewScene.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\PFNewScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\PFNewScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\PFNewScene.h"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\RigScene.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\RigScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\RigScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\RigScene.h"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\TileScene.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\TileScene.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\GameState\TileScene.h"
+      </File>
+      <File
+				RelativePath="..\Contents\GameState\TileScene.h"
 				>
-			</File>
-		</Filter>
-		<Filter
+      </File>
+    </Filter>
+    <Filter
 			Name="Utilities"
 			>
-			<File
-				RelativePath=".\Utilities\Utilities.h"
+      <File
+				RelativePath="..\Contents\Utilities\Utilities.h"
 				>
-			</File>
-		</Filter>
-		<Filter
+      </File>
+    </Filter>
+    <Filter
 			Name="NetworkEngine"
 			>
-		</Filter>
-		<Filter
+    </Filter>
+    <Filter
 			Name="Geometry"
 			>
-			<File
-				RelativePath=".\Geometry\Edge.cpp"
+      <File
+				RelativePath="..\Contents\Geometry\Edge.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Edge.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Edge.h"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\GeometryConstant.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\GeometryConstant.h"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Node.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Intersects.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Node.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Intersects.h"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Polygon.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Node.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Polygon.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Node.h"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\PolygonContainer.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Polygon.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\PolygonContainer.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Polygon.h"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Rectangle.cpp"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\PolygonContainer.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Geometry\Rectangle.h"
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\PolygonContainer.h"
 				>
-			</File>
-			<Filter
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Rectangle.cpp"
+				>
+      </File>
+      <File
+				RelativePath="..\Contents\Geometry\Rectangle.h"
+				>
+      </File>
+      <Filter
 				Name="QuadTree"
 				>
-				<File
-					RelativePath=".\Geometry\QuadObject.cpp"
+        <File
+					RelativePath="..\Contents\Geometry\QuadObject.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\Geometry\QuadObject.h"
+        </File>
+        <File
+					RelativePath="..\Contents\Geometry\QuadObject.h"
 					>
-				</File>
-				<File
-					RelativePath=".\Geometry\QuadTree.cpp"
+        </File>
+        <File
+					RelativePath="..\Contents\Geometry\QuadTree.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\Geometry\QuadTree.h"
+        </File>
+        <File
+					RelativePath="..\Contents\Geometry\QuadTree.h"
 					>
-				</File>
-			</Filter>
-		</Filter>
+        </File>
+      </Filter>
+    </Filter>
 	</Files>
 	<Globals>
 	</Globals>
