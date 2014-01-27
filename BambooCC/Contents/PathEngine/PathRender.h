@@ -1,7 +1,6 @@
 #ifndef PATHRENDER_H
 #define PATHRENDER_H
 #include "cocos2d.h"
-#include "Mesh.h"
 using namespace cocos2d;
 using namespace Geometry;
 namespace PathEngine
