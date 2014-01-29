@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="BambooCC"
 	ProjectGUID="{5FBB829B-0942-4520-85D8-0E5C9580B5B5}"
+	RootNamespace="BambooCC"
 	TargetFrameworkVersion="196613"
 	>
 	<Platforms>
@@ -48,7 +49,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external;$(SolutionDir)scripting\lua\lua;$(SolutionDir)scripting\lua\tolua;$(SolutionDir)boost_1_54_0\"
+				AdditionalIncludeDirectories=".;&quot;$(SolutionDir)\..\cocos2dx&quot;;&quot;$(SolutionDir)\..\cocos2dx\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\kazmath\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32\OGLES&quot;;&quot;$(SolutionDir)\..\external&quot;;&quot;$(SolutionDir)\..\scripting\lua\lua&quot;;&quot;$(SolutionDir)\..\scripting\lua\tolua&quot;;&quot;$(ProjectDir)\..\Contents\&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -134,7 +135,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".;..\Classes;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external"
+				AdditionalIncludeDirectories=".;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)external"
 				PreprocessorDefinitions="WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGSNDEBUG"
 				ExceptionHandling="0"
 				RuntimeLibrary="2"
@@ -190,32 +191,31 @@
 	</References>
 	<Files>
 		<Filter
-			Name="source"
+			Name="main"
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
 			>
 			<File
-				RelativePath="..\Classes\AppDelegate.cpp"
+				RelativePath="..\Contents\AppDelegate.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\main.cpp"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="include"
-			Filter="h;hpp;hxx;hm;inl;inc"
-			>
-			<File
-				RelativePath="..\Classes\AppDelegate.h"
+				RelativePath="..\Contents\AppDelegate.h"
 				>
 			</File>
 			<File
-				RelativePath=".\main.h"
+				RelativePath="..\Contents\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\main.h"
 				>
 			</File>
 			<File
 				RelativePath=".\resource.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\Utilities.h"
 				>
 			</File>
 		</Filter>
@@ -231,18 +231,6 @@
 				RelativePath=".\BambooCC.rc"
 				>
 			</File>
-			<File
-				RelativePath="..\Resources\CloseNormal.png"
-				>
-			</File>
-			<File
-				RelativePath="..\Resources\CloseSelected.png"
-				>
-			</File>
-			<File
-				RelativePath="..\Resources\HelloWorld.png"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="RigEngine"
@@ -251,19 +239,19 @@
 				Name="RigPart"
 				>
 				<File
-					RelativePath=".\RigEngine\RigPart.cpp"
+					RelativePath="..\Contents\RigEngine\RigPart.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\RigPart.h"
+					RelativePath="..\Contents\RigEngine\RigPart.h"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\RigPartRender.cpp"
+					RelativePath="..\Contents\RigEngine\RigPartRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\RigPartRender.h"
+					RelativePath="..\Contents\RigEngine\RigPartRender.h"
 					>
 				</File>
 			</Filter>
@@ -271,23 +259,23 @@
 				Name="Character"
 				>
 				<File
-					RelativePath=".\RigEngine\Character.cpp"
+					RelativePath="..\Contents\RigEngine\Character.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\Character.h"
+					RelativePath="..\Contents\RigEngine\Character.h"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\CharacterRender.cpp"
+					RelativePath="..\Contents\RigEngine\CharacterRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\CharacterRender.h"
+					RelativePath="..\Contents\RigEngine\CharacterRender.h"
 					>
 				</File>
 				<File
-					RelativePath=".\RigEngine\RigAction.h"
+					RelativePath="..\Contents\RigEngine\RigAction.h"
 					>
 				</File>
 			</Filter>
@@ -299,11 +287,11 @@
 				Name="Render"
 				>
 				<File
-					RelativePath=".\PathEngine\PathRender.cpp"
+					RelativePath="..\Contents\PathEngine\PathRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathRender.h"
+					RelativePath="..\Contents\PathEngine\PathRender.h"
 					>
 				</File>
 			</Filter>
@@ -311,27 +299,35 @@
 				Name="PathFinder"
 				>
 				<File
-					RelativePath=".\PathEngine\PathFinder.cpp"
+					RelativePath="..\Contents\PathEngine\PathFinderActor.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathFinder.h"
+					RelativePath="..\Contents\PathEngine\PathFinderActor.h"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathFinderActor.cpp"
+					RelativePath="..\Contents\PathEngine\PathFinderObstacle.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathFinderActor.h"
+					RelativePath="..\Contents\PathEngine\PathFinderObstacle.h"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathFinderWorld.cpp"
+					RelativePath="..\Contents\PathEngine\PathFinderRegion.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\PathEngine\PathFinderWorld.h"
+					RelativePath="..\Contents\PathEngine\PathFinderRegion.h"
+					>
+				</File>
+				<File
+					RelativePath="..\Contents\PathEngine\PathFinderWorld.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\Contents\PathEngine\PathFinderWorld.h"
 					>
 				</File>
 			</Filter>
@@ -343,19 +339,19 @@
 				Name="Element"
 				>
 				<File
-					RelativePath=".\TileEngine\Element.cpp"
+					RelativePath="..\Contents\TileEngine\Element.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\Element.h"
+					RelativePath="..\Contents\TileEngine\Element.h"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\ElementRender.cpp"
+					RelativePath="..\Contents\TileEngine\ElementRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\ElementRender.h"
+					RelativePath="..\Contents\TileEngine\ElementRender.h"
 					>
 				</File>
 			</Filter>
@@ -363,19 +359,19 @@
 				Name="TileMap"
 				>
 				<File
-					RelativePath=".\TileEngine\TileMap.cpp"
+					RelativePath="..\Contents\TileEngine\TileMap.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\TileMap.h"
+					RelativePath="..\Contents\TileEngine\TileMap.h"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\TileMapRender.cpp"
+					RelativePath="..\Contents\TileEngine\TileMapRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\TileEngine\TileMapRender.h"
+					RelativePath="..\Contents\TileEngine\TileMapRender.h"
 					>
 				</File>
 			</Filter>
@@ -384,38 +380,30 @@
 			Name="FightEngine"
 			>
 			<File
-				RelativePath=".\FightEngine\FightEngine.h"
+				RelativePath="..\Contents\FightEngine\FightEngine.h"
 				>
 			</File>
 			<File
-				RelativePath=".\FightEngine\FightEngine_Prototype.h"
-				>
-			</File>
-			<File
-				RelativePath=".\FightEngine\tolua_fight.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\FightEngine\tolua_fight.h"
+				RelativePath="..\Contents\FightEngine\FightEngine_Prototype.h"
 				>
 			</File>
 			<Filter
 				Name="Map"
 				>
 				<File
-					RelativePath=".\FightEngine\Map.cpp"
+					RelativePath="..\Contents\FightEngine\Map.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\Map.h"
+					RelativePath="..\Contents\FightEngine\Map.h"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\MapRender.cpp"
+					RelativePath="..\Contents\FightEngine\MapRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\MapRender.h"
+					RelativePath="..\Contents\FightEngine\MapRender.h"
 					>
 				</File>
 			</Filter>
@@ -423,19 +411,19 @@
 				Name="World"
 				>
 				<File
-					RelativePath=".\FightEngine\FightWorld.cpp"
+					RelativePath="..\Contents\FightEngine\FightWorld.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightWorld.h"
+					RelativePath="..\Contents\FightEngine\FightWorld.h"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightWorldRender.cpp"
+					RelativePath="..\Contents\FightEngine\FightWorldRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightWorldRender.h"
+					RelativePath="..\Contents\FightEngine\FightWorldRender.h"
 					>
 				</File>
 			</Filter>
@@ -443,30 +431,30 @@
 				Name="FightSkill"
 				>
 				<File
-					RelativePath=".\FightEngine\FightMaterial.h"
+					RelativePath="..\Contents\FightEngine\FightMaterial.h"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\Vector2.h"
+					RelativePath="..\Contents\FightEngine\Vector2.h"
 					>
 				</File>
 				<Filter
 					Name="Buff"
 					>
 					<File
-						RelativePath=".\FightEngine\Buff.cpp"
+						RelativePath="..\Contents\FightEngine\Buff.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\Buff.h"
+						RelativePath="..\Contents\FightEngine\Buff.h"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\BuffRender.cpp"
+						RelativePath="..\Contents\FightEngine\BuffRender.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\BuffRender.h"
+						RelativePath="..\Contents\FightEngine\BuffRender.h"
 						>
 					</File>
 				</Filter>
@@ -474,19 +462,19 @@
 					Name="Damage"
 					>
 					<File
-						RelativePath=".\FightEngine\Damage.cpp"
+						RelativePath="..\Contents\FightEngine\Damage.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\Damage.h"
+						RelativePath="..\Contents\FightEngine\Damage.h"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\DamageRender.cpp"
+						RelativePath="..\Contents\FightEngine\DamageRender.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\DamageRender.h"
+						RelativePath="..\Contents\FightEngine\DamageRender.h"
 						>
 					</File>
 				</Filter>
@@ -494,38 +482,38 @@
 					Name="FightSkill"
 					>
 					<File
-						RelativePath=".\FightEngine\FightSkill.cpp"
+						RelativePath="..\Contents\FightEngine\FightSkill.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\FightSkill.h"
+						RelativePath="..\Contents\FightEngine\FightSkill.h"
 						>
 					</File>
 					<Filter
 						Name="AOE"
 						>
 						<File
-							RelativePath=".\FightEngine\AOESkill.cpp"
+							RelativePath="..\Contents\FightEngine\AOESkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\AOESkill.h"
+							RelativePath="..\Contents\FightEngine\AOESkill.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageField.cpp"
+							RelativePath="..\Contents\FightEngine\DamageField.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageField.h"
+							RelativePath="..\Contents\FightEngine\DamageField.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageFieldRender.cpp"
+							RelativePath="..\Contents\FightEngine\DamageFieldRender.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageFieldRender.h"
+							RelativePath="..\Contents\FightEngine\DamageFieldRender.h"
 							>
 						</File>
 					</Filter>
@@ -533,27 +521,27 @@
 						Name="Aura"
 						>
 						<File
-							RelativePath=".\FightEngine\Aura.cpp"
+							RelativePath="..\Contents\FightEngine\Aura.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\Aura.h"
+							RelativePath="..\Contents\FightEngine\Aura.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\AuraRender.cpp"
+							RelativePath="..\Contents\FightEngine\AuraRender.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\AuraRender.h"
+							RelativePath="..\Contents\FightEngine\AuraRender.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\AuraSkill.cpp"
+							RelativePath="..\Contents\FightEngine\AuraSkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\AuraSkill.h"
+							RelativePath="..\Contents\FightEngine\AuraSkill.h"
 							>
 						</File>
 					</Filter>
@@ -561,11 +549,11 @@
 						Name="Instant"
 						>
 						<File
-							RelativePath=".\FightEngine\InstantSkill.cpp"
+							RelativePath="..\Contents\FightEngine\InstantSkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\InstantSkill.h"
+							RelativePath="..\Contents\FightEngine\InstantSkill.h"
 							>
 						</File>
 					</Filter>
@@ -573,27 +561,27 @@
 						Name="Missile"
 						>
 						<File
-							RelativePath=".\FightEngine\Missile.cpp"
+							RelativePath="..\Contents\FightEngine\Missile.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\Missile.h"
+							RelativePath="..\Contents\FightEngine\Missile.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\MissileRender.cpp"
+							RelativePath="..\Contents\FightEngine\MissileRender.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\MissileRender.h"
+							RelativePath="..\Contents\FightEngine\MissileRender.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\MissileSkill.cpp"
+							RelativePath="..\Contents\FightEngine\MissileSkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\MissileSkill.h"
+							RelativePath="..\Contents\FightEngine\MissileSkill.h"
 							>
 						</File>
 					</Filter>
@@ -601,27 +589,27 @@
 						Name="Ray"
 						>
 						<File
-							RelativePath=".\FightEngine\DamageRay.cpp"
+							RelativePath="..\Contents\FightEngine\DamageRay.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageRay.h"
+							RelativePath="..\Contents\FightEngine\DamageRay.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageRayRender.cpp"
+							RelativePath="..\Contents\FightEngine\DamageRayRender.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\DamageRayRender.h"
+							RelativePath="..\Contents\FightEngine\DamageRayRender.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\RaySkill.cpp"
+							RelativePath="..\Contents\FightEngine\RaySkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\RaySkill.h"
+							RelativePath="..\Contents\FightEngine\RaySkill.h"
 							>
 						</File>
 					</Filter>
@@ -629,27 +617,27 @@
 						Name="Trap"
 						>
 						<File
-							RelativePath=".\FightEngine\Trap.cpp"
+							RelativePath="..\Contents\FightEngine\Trap.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\Trap.h"
+							RelativePath="..\Contents\FightEngine\Trap.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\TrapRender.cpp"
+							RelativePath="..\Contents\FightEngine\TrapRender.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\TrapRender.h"
+							RelativePath="..\Contents\FightEngine\TrapRender.h"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\TrapSkill.cpp"
+							RelativePath="..\Contents\FightEngine\TrapSkill.cpp"
 							>
 						</File>
 						<File
-							RelativePath=".\FightEngine\TrapSkill.h"
+							RelativePath="..\Contents\FightEngine\TrapSkill.h"
 							>
 						</File>
 					</Filter>
@@ -658,11 +646,11 @@
 					Name="PassiveSkill"
 					>
 					<File
-						RelativePath=".\FightEngine\PassiveSkill.cpp"
+						RelativePath="..\Contents\FightEngine\PassiveSkill.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\PassiveSkill.h"
+						RelativePath="..\Contents\FightEngine\PassiveSkill.h"
 						>
 					</File>
 				</Filter>
@@ -670,11 +658,11 @@
 					Name="Charge"
 					>
 					<File
-						RelativePath=".\FightEngine\Charge.cpp"
+						RelativePath="..\Contents\FightEngine\Charge.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\Charge.h"
+						RelativePath="..\Contents\FightEngine\Charge.h"
 						>
 					</File>
 				</Filter>
@@ -682,11 +670,11 @@
 					Name="SkillInputManager"
 					>
 					<File
-						RelativePath=".\FightEngine\SkillInputManager.cpp"
+						RelativePath="..\Contents\FightEngine\SkillInputManager.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\SkillInputManager.h"
+						RelativePath="..\Contents\FightEngine\SkillInputManager.h"
 						>
 					</File>
 				</Filter>
@@ -695,30 +683,30 @@
 				Name="Actor"
 				>
 				<File
-					RelativePath=".\FightEngine\FightActor.cpp"
+					RelativePath="..\Contents\FightEngine\FightActor.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightActor.h"
+					RelativePath="..\Contents\FightEngine\FightActor.h"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightActorRender.cpp"
+					RelativePath="..\Contents\FightEngine\FightActorRender.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\FightEngine\FightActorRender.h"
+					RelativePath="..\Contents\FightEngine\FightActorRender.h"
 					>
 				</File>
 				<Filter
 					Name="Mob"
 					>
 					<File
-						RelativePath=".\FightEngine\Mob.cpp"
+						RelativePath="..\Contents\FightEngine\Mob.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\Mob.h"
+						RelativePath="..\Contents\FightEngine\Mob.h"
 						>
 					</File>
 				</Filter>
@@ -726,11 +714,11 @@
 					Name="Human"
 					>
 					<File
-						RelativePath=".\FightEngine\HumanActor.cpp"
+						RelativePath="..\Contents\FightEngine\HumanActor.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\FightEngine\HumanActor.h"
+						RelativePath="..\Contents\FightEngine\HumanActor.h"
 						>
 					</File>
 				</Filter>
@@ -740,15 +728,15 @@
 			Name="pugiXML"
 			>
 			<File
-				RelativePath=".\pugiXML\pugiconfig.hpp"
+				RelativePath="..\Contents\pugiXML\pugiconfig.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\pugiXML\pugixml.cpp"
+				RelativePath="..\Contents\pugiXML\pugixml.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\pugiXML\pugixml.hpp"
+				RelativePath="..\Contents\pugiXML\pugixml.hpp"
 				>
 			</File>
 		</Filter>
@@ -756,59 +744,35 @@
 			Name="GameState"
 			>
 			<File
-				RelativePath=".\GameState\CreateScene.cpp"
+				RelativePath="..\Contents\GameState\CreateScene.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\CreateScene.h"
+				RelativePath="..\Contents\GameState\CreateScene.h"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\HelloWorldScene.cpp"
+				RelativePath="..\Contents\GameState\HelloWorldScene.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\HelloWorldScene.h"
+				RelativePath="..\Contents\GameState\HelloWorldScene.h"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\PathFindingScene.cpp"
+				RelativePath="..\Contents\GameState\RigScene.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\PathFindingScene.h"
+				RelativePath="..\Contents\GameState\RigScene.h"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\PFNewScene.cpp"
+				RelativePath="..\Contents\GameState\TileScene.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GameState\PFNewScene.h"
-				>
-			</File>
-			<File
-				RelativePath=".\GameState\RigScene.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GameState\RigScene.h"
-				>
-			</File>
-			<File
-				RelativePath=".\GameState\TileScene.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GameState\TileScene.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Utilities"
-			>
-			<File
-				RelativePath=".\Utilities\Utilities.h"
+				RelativePath="..\Contents\GameState\TileScene.h"
 				>
 			</File>
 		</Filter>
@@ -820,69 +784,89 @@
 			Name="Geometry"
 			>
 			<File
-				RelativePath=".\Geometry\Edge.cpp"
+				RelativePath="..\Contents\Geometry\GeometryConstant.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Edge.h"
+				RelativePath="..\Contents\Geometry\Intersects.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\GeometryConstant.h"
+				RelativePath="..\Contents\Geometry\Intersects.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Node.cpp"
+				RelativePath="..\Contents\Geometry\Node.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Node.h"
+				RelativePath="..\Contents\Geometry\Node.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Polygon.cpp"
+				RelativePath="..\Contents\Geometry\Polygon.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Polygon.h"
+				RelativePath="..\Contents\Geometry\Polygon.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\PolygonContainer.cpp"
+				RelativePath="..\Contents\Geometry\PolygonContainer.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\PolygonContainer.h"
+				RelativePath="..\Contents\Geometry\PolygonContainer.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Rectangle.cpp"
+				RelativePath="..\Contents\Geometry\Rectangle.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Geometry\Rectangle.h"
+				RelativePath="..\Contents\Geometry\Rectangle.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\Geometry\Segment.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\Geometry\Segment.h"
 				>
 			</File>
 			<Filter
 				Name="QuadTree"
 				>
 				<File
-					RelativePath=".\Geometry\QuadObject.cpp"
+					RelativePath="..\Contents\Geometry\QuadObject.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\Geometry\QuadObject.h"
+					RelativePath="..\Contents\Geometry\QuadObject.h"
 					>
 				</File>
 				<File
-					RelativePath=".\Geometry\QuadTree.cpp"
+					RelativePath="..\Contents\Geometry\QuadTree.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\Geometry\QuadTree.h"
+					RelativePath="..\Contents\Geometry\QuadTree.h"
 					>
 				</File>
 			</Filter>
+		</Filter>
+		<Filter
+			Name="Clipper"
+			>
+			<File
+				RelativePath="..\Contents\Clipper\clipper.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\Clipper\clipper.hpp"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

@@ -14,9 +14,6 @@ class PathFindingScene : public cocos2d::CCLayer, public cocos2d::CCInputListene
 private:
 	CCLabelTTF* pLabel;
 	CCSprite *mouseSprite;
-	PathEngine::PathRender *pathRender;
-	PathEngine::PathFinder *finder;
-	PathEngine::Mesh *mesh;
 	Node *start;
 	Node *end;
 	Actor* actor;

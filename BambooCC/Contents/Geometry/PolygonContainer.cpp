@@ -49,14 +49,14 @@ namespace Geometry
 		}
 		return IR_SEPERATE;
 	}
-	IntersectResult PolygonContainer::QueryPolygonSegmentIntersect(Edge* edge)
+	IntersectResult PolygonContainer::QueryPolygonSegmentIntersect(Segment* s)
 	{
 		queue<QuadTree*> trees;
 		trees.push(this);
-		int lx = edge->GetBoundingBox()->GetMinX();
-		int ly = edge->GetBoundingBox()->GetMinY();
-		int hx = edge->GetBoundingBox()->GetMaxX();
-		int hy = edge->GetBoundingBox()->GetMaxY();
+		int lx = s->GetBoundingBox()->GetMinX();
+		int ly = s->GetBoundingBox()->GetMinY();
+		int hx = s->GetBoundingBox()->GetMaxX();
+		int hy = s->GetBoundingBox()->GetMaxY();
 		IntersectResult ret = IR_SEPERATE;
 		while(!trees.empty())
 		{
@@ -69,7 +69,7 @@ namespace Geometry
 			{
 				QuadObject* quad = *it;
 				SimplePolygon* poly = (SimplePolygon*)quad;
-				IntersectResult ret1 = PolygonSegmentIntersect(edge, poly);
+				IntersectResult ret1 = PolygonSegmentIntersect(s, poly);
 				if (ret1 == IR_WITHIN || ret1 == IR_INTERSECT) return ret1;
 				ret = ret1;
 			}

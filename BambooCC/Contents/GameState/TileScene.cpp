@@ -41,7 +41,7 @@ bool TileScene::init()
 		actor->GetRender()->SetParentNode(this);
 		actor->GetRender()->SetPositionZ(100000);
 		actor->SetPosition(10,10);
-		PathEngine::World::instance()->AddActor(actor);
+		//PathEngine::World::instance()->AddActor(actor);
 		if(false){// test weapon change
 			actor->GetCharacter()->SetDualWeapon("blade2");
 			actor->GetCharacter()->SetWeaponState(WS_DUAL_WEAPON);
@@ -72,7 +72,7 @@ bool TileScene::onMouseEvent(const CCMouseEvent& evt)
 		{
 			int x,y;
 			map->GetRender()->MouseToMap(evt.x,evt.y,&x,&y);
-			actor->GoTo(x,y);
+			//actor->GoTo(x,y);
 		}
 		else if(evt.button == CCMouse::RightButton)
 		{

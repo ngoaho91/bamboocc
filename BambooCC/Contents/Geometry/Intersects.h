@@ -1,7 +1,7 @@
 #ifndef Intersects_h
 #define Intersects_h
 #include "Node.h"
-#include "Edge.h"
+#include "Segment.h"
 #include "Polygon.h"
 namespace Geometry
 {
@@ -13,14 +13,14 @@ namespace Geometry
 		IR_WITHIN = 3
 	};
 	IntersectResult SegmentSegmentIntersect(
-		Edge* edge1, 
-		Edge* edge2);
+		Segment* s1, 
+		Segment* s2);
 	IntersectResult SegmentSegmentIntersect(
 		int ax, int ay, int bx, int by, 
 		int cx, int cy, int dx, int d);
 	
 	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon);
 	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon);
-	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon);
+	IntersectResult PolygonSegmentIntersect(Segment* s, SimplePolygon* polygon);
 }
 #endif

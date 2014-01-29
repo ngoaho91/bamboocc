@@ -3,7 +3,6 @@
 #include "cocos2d.h"
 #include "../TileEngine/TileMap.h"
 #include "../TileEngine/Element.h"
-#include "../PathEngine/Mesh.h"
 #include "../PathEngine/PathRender.h"
 using namespace cocos2d;
 using namespace TileEngine;

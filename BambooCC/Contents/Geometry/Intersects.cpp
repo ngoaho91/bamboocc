@@ -7,15 +7,15 @@ namespace Geometry
 	DATE: 11st JAN 2014
 	TASK: return ralation of 2 segment, seperate, touch, or intersect
 	-------------------------------------------------*/
-	IntersectResult SegmentSegmentIntersect(Edge* edge1, Edge* edge2)
+	IntersectResult SegmentSegmentIntersect(Segment* s1, Segment* s2)
 	{
-		Rectangle* bb1 = edge1->GetBoundingBox();
-		Rectangle* bb2 = edge2->GetBoundingBox();
+		Rectangle* bb1 = s1->GetBoundingBox();
+		Rectangle* bb2 = s2->GetBoundingBox();
 		if (!bb1->Collide(bb2, true)) return IR_SEPERATE;
-		Node *a = edge1->GetNodeA();
-		Node *b = edge1->GetNodeB();
-		Node *c = edge2->GetNodeA();
-		Node *d = edge2->GetNodeB();
+		Node *a = s1->GetNodeA();
+		Node *b = s1->GetNodeB();
+		Node *c = s2->GetNodeA();
+		Node *d = s2->GetNodeB();
 		return SegmentSegmentIntersect(a->X(), a->Y(), b->X(), b->Y(),
 			c->X(), c->Y(), d->X(), d->Y());
 	}
@@ -110,7 +110,7 @@ namespace Geometry
 			if (ret == CR_STRAIGHT)
 			{
 				if (PointSegmentDistance(
-					new Edge(node_a, node_b),
+					new Segment(node_a, node_b),
 					node) == 0)
 				{
 					return IR_TOUCH;
@@ -132,7 +132,7 @@ namespace Geometry
 	// DATE: 29th JUL 2013
 	// TASK: test edge is intersect polygon
 	//-------------------------------------------------*/
-	IntersectResult PolygonSegmentIntersect(Edge* edge, SimplePolygon* polygon)
+	IntersectResult PolygonSegmentIntersect(Segment* edge, SimplePolygon* polygon)
 	{
 		{
 			Rectangle* bb1 = polygon->GetBoundingBox();
@@ -143,14 +143,14 @@ namespace Geometry
 		Rectangle* bb1 = edge->GetBoundingBox();
 		Node* node_c = edge->GetNodeA();
 		Node* node_d = edge->GetNodeB();
-		Edge* edge_cd = new Edge(node_c, node_d);
+		Segment* edge_cd = new Segment(node_c, node_d);
 		Nodes::iterator it = polygon->begin();
 		IntersectResult ret = IR_SEPERATE;
 		for (; it != polygon->end();it++)
 		{
 			Node* node_a = *it;
 			Node* node_b = *(polygon->GetNext(it));
-			Edge* edge_ab = new Edge(node_a, node_b);
+			Segment* edge_ab = new Segment(node_a, node_b);
 			edge_ab->Calculate();
 			Rectangle* bb2 = edge_ab->GetBoundingBox();
 			if (bb1->Collide(bb2, true))

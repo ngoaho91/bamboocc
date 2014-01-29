@@ -37,7 +37,6 @@ namespace PathEngine
 	}
 	TurnDirection Actor::TurnAwayOf(Actor* other)
 	{
-		// etc
 		return TD_CLOCKWISE;
 	}
 }

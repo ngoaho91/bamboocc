@@ -1,6 +1,7 @@
 #ifndef PATHRENDER_H
 #define PATHRENDER_H
 #include "cocos2d.h"
+#include "Geometry/Node.h"
 using namespace cocos2d;
 using namespace Geometry;
 namespace PathEngine
@@ -9,8 +10,7 @@ namespace PathEngine
 	{
 	private:
 		CCNode*					m_ParentNode;
-		Mesh*					m_Mesh;
-		vector<Node*>			m_Path;
+		Nodes					m_Path;
 		bool					m_DrawVisibilityGraph;
 		bool					m_DrawGraph;
 		bool					m_DrawPath;
@@ -25,8 +25,7 @@ namespace PathEngine
 		void					SetDrawPath(bool draw);
 		void					SetDrawVisibility(bool draw);
 		void					ToggleDrawVisibility();
-		void					SetMesh(Mesh* mesh);
-		void					SetPath(vector<Node*> path);
+		void					SetPath(Nodes path);
 	};
 }
 #endif

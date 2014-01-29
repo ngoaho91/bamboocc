@@ -26,7 +26,7 @@ namespace FightEngine
 	{
 		float x = m_FightPositionX + m_SpeedX;
 		float y = m_FightPositionY + m_SpeedY;
-		bool inside = PathEngine::World::instance()->AvailableXY(x,y);
+		bool inside = false;//PathEngine::World::instance()->AvailableXY(x,y);
 		if(!inside)
 		{
 			return Destroy();
@@ -42,7 +42,7 @@ namespace FightEngine
 				QuadObject* quad = *it;
 				if(quad == this) continue;
 				Actor* actor = (Actor*)quad;
-				if(actor->IsThrough()) continue;
+				//if(actor->IsThrough()) continue;
 				if(!ShouldCollide(actor)) continue;
 				Geometry::Rectangle* actor_aabb = actor->GetFightBoundingBox();
 				Geometry::Rectangle* this_aabb = this->GetBoundingBox();

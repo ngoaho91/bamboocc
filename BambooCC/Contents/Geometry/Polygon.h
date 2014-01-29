@@ -1,8 +1,8 @@
 #ifndef PathFinderPolygon_h
 #define PathFinderPolygon_h
-#include "Edge.h"
 #include "Rectangle.h"
 #include "QuadTree.h"
+#include "Node.h"
 #define QOT_POLYGON 1
 namespace Geometry
 {

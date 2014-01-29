@@ -2,6 +2,7 @@
 #define NODE_H
 #include <utility>
 #include <vector>
+#include <math.h>
 using namespace std;
 namespace Geometry
 {

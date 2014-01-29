@@ -18,14 +18,26 @@ namespace PathEngine
 	Obstacle::Obstacle(SimplePolygon* polygon)
 	{
 		Obstacle();
+		SetPolygon(polygon);
+		Graham();
+		BuildShortcutMap();
+	}
+	Obstacle::~Obstacle()
+	{
+	}
+	/*------------------------------------------------
+	NAME: SetPolygon
+	DATE: 27th JAN 2014
+	TASK: set polygon as obstacle
+	-------------------------------------------------*/
+	void Obstacle::SetPolygon(SimplePolygon* polygon)
+	{
 		SimplePolygon::iterator it = polygon->begin();
 		while (it != polygon->end())
 		{
 			Node* node = *it;
 			this->push_back(node);
 		}
-		Graham();
-		BuildShortcutMap();
 	}
 	/*------------------------------------------------
 	NAME: Graham
@@ -114,74 +126,82 @@ namespace PathEngine
 			}
 		}
 	}
+	/*------------------------------------------------
+	NAME: FindPath
+	DATE: 27th DEC 2013
+	TASK: find path connect 2 node, and evade this obstacle
+	-------------------------------------------------*/
 	Nodes Obstacle::FindPath(Node* from, Node* to)
 	{
 		Nodes ret;
-		// intersect
-		ConvexHull::iterator it = m_ConvexHull->begin();
-		Node *a, *b, *c, *d;
 		int ia, ib, ic, id;
-		a = b = c = d = *it;
-		ia, ib, ic, id = 0;
-		it++;
-		int i = 1;
-		for (; it != m_ConvexHull->end(); it++)
+		// intersect
 		{
-			ConvexResult cr;
-			cr = GetConvex(from, *it, a);
-			if (cr == CR_CONCAVE)
+			Node *a, *b, *c, *d;
+			ConvexHull::iterator it = m_ConvexHull->begin();
+			a = b = c = d = *it;
+			ia, ib, ic, id = 0;
+			it++;
+			int i = 1;
+			for (; it != m_ConvexHull->end(); it++)
 			{
-				a = *it;
-				ia = i;
+				ConvexResult cr;
+				cr = GetConvex(from, *it, a);
+				if (cr == CR_CONCAVE)
+				{
+					a = *it;
+					ia = i;
+				}
+				cr = GetConvex(from, *it, b);
+				if (cr == CR_CONVEX)
+				{
+					b = *it;
+					ib = i;
+				}
+				cr = GetConvex(to, *it, c);
+				if (cr == CR_CONVEX)
+				{
+					c = *it;
+					ic = i;
+				}
+				cr = GetConvex(to, *it, d);
+				if (cr == CR_CONCAVE)
+				{
+					d = *it;
+					id = i;
+				}
+				i++;
 			}
-			cr = GetConvex(from, *it, b);
-			if (cr == CR_CONVEX)
-			{
-				b = *it;
-				ib = i;
-			}
-			cr = GetConvex(to, *it, c);
-			if (cr == CR_CONVEX)
-			{
-				c = *it;
-				ic = i;
-			}
-			cr = GetConvex(to, *it, d);
-			if (cr == CR_CONCAVE)
-			{
-				d = *it;
-				id = i;
-			}
-			i++;
 		}
 		// trace
-		double len_ad = GetLength(ia, id);
-		double len_bc = GetLength(ib, ic);
-		int i, j;
-		if (len_ad < len_bc)
 		{
-			i = ia;
-			j = id;
+			double len_ad = GetLength(ia, id);
+			double len_bc = GetLength(ib, ic);
+			int i, j;
+			if (len_ad < len_bc)
+			{
+				i = ia;
+				j = id;
+			}
+			else
+			{
+				i = ib;
+				j = ic;
+			}
+			while (true)
+			{
+				ret.push_back(m_ConvexHull->at(i));
+				if (i == j) break;
+				i = m_ShortcutMap[i][j].next;
+			}
+			ret.push_back(to);
 		}
-		else
-		{
-			i = ib;
-			j = ic;
-		}
-		int i = ia;
-		while (true)
-		{
-			ret.push_back(m_ConvexHull->at(i));
-			if (i == j) break;
-			i = m_ShortcutMap[i][j].next;
-		}
-		ret.push_back(to);
 		return ret;
 	}
-	double Obstacle::GetLength(int from, int to)
+	double Obstacle::GetLength(unsigned int from,unsigned int to)
 	{
-		if (from >= m_ConvexHull->size()) return;
-		if (to >= m_ConvexHull->size()) return;
+		if (from >= m_ConvexHull->size()) return 0;
+		if (to >= m_ConvexHull->size()) return 0;
 		if (from == to) return 0;
 		if (from < to)
 		{

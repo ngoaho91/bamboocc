@@ -1,11 +1,8 @@
 #include "CreateScene.h"
 #include "HelloWorldScene.h"
-#include "..\pugiXML\pugixml.hpp"
+#include "pugiXML\pugixml.hpp"
 #include <algorithm>
 #include <string>
-// this is a test
-#include "PathEngine/PathFinder.h"
-using namespace PathEngine;
 
 CreateScene::CreateScene()
 {

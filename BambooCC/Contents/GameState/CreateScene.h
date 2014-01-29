@@ -3,8 +3,6 @@
 
 #include "cocos2d.h"
 #include "keyboard_dispatcher/CCInputListener.h"
-#include "PathEngine/PathRender.h"
-using namespace PathEngine;
 using namespace cocos2d;
 
 class CreateScene : public cocos2d::CCLayer, public cocos2d::CCInputListener

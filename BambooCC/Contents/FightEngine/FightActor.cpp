@@ -3,7 +3,7 @@
 namespace FightEngine
 {
 	Actor::Actor()
-		:PathEngine::Actor(20,20)
+		:PathEngine::Actor()
 	{
 		m_ObjectType = QOT_FIGHTACTOR;
 		m_Character = new RigEngine::Character();
@@ -47,14 +47,15 @@ namespace FightEngine
 	}
 	void Actor::Step()
 	{
-		if(m_Free)
+		//if(m_Free)
+		if(true)
 		{
 			//m_Character->SetActionState(AS_FIGHTIDLE);
 			return;
 		}
-		PathEngine::Actor::Step();
+		/*PathEngine::Actor::Step();
 		m_FightPositionX = m_PositionX;
-		m_FightPositionY = m_PositionY;
+		m_FightPositionY = m_PositionY;*/
 		m_Character->SetPosition(m_FightPositionX, m_FightPositionY);
 		m_Character->SetActionState(AS_MOVE);
 	}
@@ -108,25 +109,26 @@ namespace FightEngine
 		{
 			Step();
 			//SetPosition(m_PositionX,m_PositionY);
-			UpdateIdle();
+			//UpdateIdle();
 			UpdateAnimation();
 			RefreshFaceDirection();
 		}
 	}
 	void Actor::LookAt(int x, int y)
 	{
-		float dx = x - m_PositionX;
-		float dy = y - m_PositionY;
-		m_GoalAngle = atan2(dy, dx);
-		m_LookedToGoal = false;
+		//float dx = x - m_PositionX;
+		//float dy = y - m_PositionY;
+		//m_GoalAngle = atan2(dy, dx);
+		//m_LookedToGoal = false;
 	}
 	Vector2* Actor::GetFrontPoint(float range_distance, float angle_distance)
 	{
-		float x = m_PositionX;
-		float y = m_PositionY;
-		float ax = sin(m_Angle + angle_distance)*range_distance;
-		float ay = cos(m_Angle + angle_distance)*range_distance;
-		Vector2* ret = new Vector2(x+ax,y+ay);
+		//float x = m_PositionX;
+		//float y = m_PositionY;
+		//float ax = sin(m_Angle + angle_distance)*range_distance;
+		//float ay = cos(m_Angle + angle_distance)*range_distance;
+		//Vector2* ret = new Vector2(x+ax,y+ay);
+		Vector2* ret = new Vector2(0,0);
 		return ret;
 	}
 	void Actor::Stop()
@@ -136,7 +138,7 @@ namespace FightEngine
 			state == AS_CAST || state == AS_MOVE ||
 			state == AS_THROW_DAGGER)
 		{
-			m_Free = true;
+			//m_Free = true;
 			m_FinalSolution.clear();
 			m_Character->SetActionState(AS_FIGHTIDLE);
 		}
@@ -182,7 +184,8 @@ namespace FightEngine
 		}
 		else if(state == AS_MOVE)
 		{
-			if(m_Free)
+			//if(m_Free)
+			if(false)
 			{
 				m_Character->SetActionState(AS_FIGHTIDLE);
 			}

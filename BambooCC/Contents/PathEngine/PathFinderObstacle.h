@@ -16,17 +16,19 @@ namespace PathEngine
 	class Obstacle
 		: public SimplePolygon
 	{
-	public:
+	private:
 		ConvexHull* m_ConvexHull;
 		Shortcut** m_ShortcutMap;
 	public:
 		Obstacle();
 		Obstacle(SimplePolygon* polygon);
-		void SetPolygon();
+		~Obstacle();
+		void SetPolygon(SimplePolygon* polygon);
+		Nodes FindPath(Node* from, Node* to);
+	private:
 		void Graham();
 		void BuildShortcutMap();
-		Nodes FindPath(Node* from, Node* to);
-		double GetLength(int from, int to);
+		double GetLength(unsigned int from, unsigned int to);
 	};
 }
 #endif

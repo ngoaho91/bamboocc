@@ -12,7 +12,7 @@ namespace Geometry
 		PolygonContainer(int width, int height);
 		~PolygonContainer();
 		IntersectResult QueryPointInPolygon(Node* node);
-		IntersectResult QueryPolygonSegmentIntersect(Edge* edge);
+		IntersectResult QueryPolygonSegmentIntersect(Segment* edge);
 	};
 }
 #endif

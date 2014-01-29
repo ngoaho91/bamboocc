@@ -1,7 +1,7 @@
 #include <algorithm>
 #include "Map.h"
 #include "../pugiXML/pugixml.hpp"
-#include "../Utilities/Utilities.h"
+#include "../Utilities.h"
 #include "../PathEngine/PathFinderWorld.h"
 namespace FightEngine
 {
@@ -9,7 +9,7 @@ namespace FightEngine
 	{
 		m_Width = width;
 		m_Height = height;
-		m_NavMesh = new PathEngine::Mesh(width, height);
+		//m_NavMesh = new PathEngine::Mesh(width, height);
 		m_Tilemap = new Tilemap(1,1);
 		m_Render = new MapRender();
 		m_Render->m_Tilemap = m_Tilemap->GetRender();
@@ -70,9 +70,9 @@ namespace FightEngine
 			v.push_back(new Node(220,120));
 			v.push_back(new Node(220,60));
 			reverse(v.begin(),v.end());
-			m_NavMesh->AddPolygon(v);
-			m_NavMesh->BuildVisiGraph();
-			m_Render->m_PathRender->SetMesh(m_NavMesh);
+			//m_NavMesh->AddPolygon(v);
+			//m_NavMesh->BuildVisiGraph();
+			//m_Render->m_PathRender->SetMesh(m_NavMesh);
 		}
 	}
 	Map::~Map()
@@ -184,7 +184,7 @@ namespace FightEngine
 				int vy = vertexTAG.attribute("y").as_int();
 				v.push_back(new Node(x+vx,y-vy));
 			}
-			m_NavMesh->AddPolygon(v);
+			//m_NavMesh->AddPolygon(v);
 			//PathEngine::World::instance()->GetMesh()->AddPolygon(v);
 		}
 	}

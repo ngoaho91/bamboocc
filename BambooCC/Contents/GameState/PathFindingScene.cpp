@@ -1,8 +1,6 @@
 #include "CreateScene.h"
 #include "PathFindingScene.h"
 #include <algorithm>
-// this is a test
-#include "PathEngine/PathFinder.h"
 using namespace PathEngine;
 
 using namespace cocos2d;
@@ -115,14 +113,14 @@ void PathFindingScene::TestPathFinder()
 }
 void PathFindingScene::update(float dt)
 {
-	actor->Step();
+	/*actor->Step();
 	actorSprite->
 		setPosition(ccp(actor->GetPositionX(),actor->GetPositionY()));
 	actorSprite->setRotation(actor->GetAngle()/PI*-180);
 	mob->Step();
 	mobSprite->
 		setPosition(ccp(mob->GetPositionX(),mob->GetPositionY()));
-	mobSprite->setRotation(mob->GetAngle()/PI*-180);
+	mobSprite->setRotation(mob->GetAngle()/PI*-180);*/
 }
 
 bool PathFindingScene::onMouseEvent(const CCMouseEvent& evt) {
@@ -169,11 +167,11 @@ bool PathFindingScene::onKeyEvent(const CCKeyEvent& evt) {
 			{
 				if(evt.key == CCKey::F2)
 				{
-					pathRender->ToggleDrawGraph();
+					//pathRender->ToggleDrawGraph();
 				}
 				else if(evt.key == CCKey::F3)
 				{
-					pathRender->ToggleDrawVisibility();
+					//pathRender->ToggleDrawVisibility();
 				}
 				break;
 			}
@@ -206,7 +204,7 @@ CCScene* PathFindingScene::scene()
 bool PathFindingScene::init()
 {
 	// path render
-	pathRender = new PathEngine::PathRender();
+	//pathRender = new PathEngine::PathRender();
 	if(!pathRender) return false;
 	//pathRender->SetDrawVisibility(false);
 	this->addChild(pathRender,2);

@@ -4,7 +4,6 @@ namespace PathEngine
 	PathRender::PathRender()
 		:CCLayer()
 	{
-		m_Mesh = 0;
 		m_DrawGraph = true;
 		m_DrawPath = true;
 		m_DrawVisibilityGraph = true;
@@ -27,6 +26,7 @@ namespace PathEngine
 	void PathRender::draw()
 	{
 		int size;
+		/*
 		ccPointSize(10);
 		if(m_Mesh)
 		{
@@ -75,13 +75,13 @@ namespace PathEngine
 			}
 			m_DrawComplete = true;
 		}
+		*/
 		if(m_DrawPath)
 		{
 			if(m_Path.size()>=2)
 			{
 				CHECK_GL_ERROR_DEBUG();
 				size = m_Path.size();
-				
 				ccDrawColor4B(0, 128, 255, 255);
 				ccDrawPoint(ccp(m_Path[0]->X(),m_Path[0]->Y()));
 				ccDrawPoint(ccp(m_Path[size-1]->X(),m_Path[size-1]->Y()));
@@ -115,11 +115,7 @@ namespace PathEngine
 	{
 		m_DrawVisibilityGraph = !m_DrawVisibilityGraph;
 	}
-	void PathRender::SetMesh(Mesh* mesh)
-	{
-		m_Mesh = mesh;
-	}
-	void PathRender::SetPath(vector<Node*> path)
+	void PathRender::SetPath(Nodes path)
 	{
 		m_Path = path;
 	}

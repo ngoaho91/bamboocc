@@ -2,7 +2,6 @@
 #define Map_h
 #include "../TileEngine/TileMap.h"
 #include "../TileEngine/Element.h"
-#include "../PathEngine/Mesh.h"
 #include "MapRender.h"
 using namespace TileEngine;
 using namespace PathEngine;
@@ -12,7 +11,6 @@ namespace FightEngine
 	class Map
 	{
 	private:
-		PathEngine::Mesh*	m_NavMesh;
 		vector<Element*>	m_Elements;
 		Tilemap*			m_Tilemap;
 		MapRender*			m_Render;
@@ -21,7 +19,6 @@ namespace FightEngine
 	public:
 		Map(int width, int height);
 		~Map();
-		PathEngine::Mesh*	GetMesh(){ return m_NavMesh;}
 		MapRender*			GetRender(){ return m_Render;}
 		void				ResetRender();
 		void				LoadXml(const char* xmlFile);
