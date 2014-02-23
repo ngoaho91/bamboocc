@@ -9,19 +9,19 @@ namespace Geometry
 		:public pair<Node*, Node*>
 	{
 	private:
-		Rectangle* m_BoundingBox;
-		double m_Length;
+		Rectangle*	m_BoundingBox;
+		double		m_Length;
 	public:
 		Segment();
-		~Segment();
 		Segment(Node* nodeA, Node* nodeB);
-		Rectangle* GetBoundingBox(){ return m_BoundingBox;}
-		void Calculate();
-		double GetLength();
-		Node* GetNodeA(){ return first;}
-		Node* GetNodeB(){ return second;}
+		~Segment();
+		Rectangle*	GetBoundingBox(){ return m_BoundingBox;}
+		void		Calculate();
+		double		GetLength();
+		Node*		A(){ return first;}
+		Node*		B(){ return second;}
 	};
-	double PointSegmentDistance(Segment* edge, Node* p);
+	double NodeSegmentDistance(Segment* edge, Node* p);
 	
 }
 #endif

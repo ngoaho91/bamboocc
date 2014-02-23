@@ -3,19 +3,19 @@
 namespace Geometry
 {
 	/*------------------------------------------------
-	// class SimplePolygon
+	// class Polygon
 	// 29th JUL 2013
 	// describe a polygon, convex or concave, no hole
 	------------------------------------------------*/
-	SimplePolygon::SimplePolygon()
+	Polygon::Polygon()
 		:QuadObject()
 	{
 		m_ObjectType = QOT_POLYGON;
 	}
-	SimplePolygon::~SimplePolygon()
+	Polygon::~Polygon()
 	{
 	}
-	void SimplePolygon::CalculateAABB()
+	void Polygon::CalculateAABB()
 	{
 		int min_x, min_y, max_x, max_y;
 		Nodes::iterator it = this->begin();
@@ -32,19 +32,19 @@ namespace Geometry
 		}
 		SetBoundingBox(min_x, min_y, max_x, max_y);
 	}
-	bool SimplePolygon::PointInsideBB(Node* node)
+	bool Polygon::PointInsideBB(Node* node)
 	{
 		return m_BoundingBox->TestPointInside(node->X(), node->Y());
 	}
-	SimplePolygon::iterator SimplePolygon::GetNext(SimplePolygon::iterator it)
+	Polygon::iterator Polygon::GetNext(Polygon::iterator it)
 	{
-		SimplePolygon::iterator it1 = it + 1;
+		Polygon::iterator it1 = it + 1;
 		if (it1 == this->end()) return this->begin();
 		return it;
 	}
-	SimplePolygon::iterator SimplePolygon::GetPrevious(SimplePolygon::iterator it)
+	Polygon::iterator Polygon::GetPrevious(Polygon::iterator it)
 	{
-		SimplePolygon::iterator it1 = it - 1;
+		Polygon::iterator it1 = it - 1;
 		if (it1 == this->begin()) return this->end() - 1;
 		return it;
 	}
@@ -57,9 +57,9 @@ namespace Geometry
 	{
 		
 	}
-	ConvexHull::ConvexHull(SimplePolygon* polygon)
+	ConvexHull::ConvexHull(Polygon* polygon)
 	{
-		SimplePolygon::iterator it = polygon->begin();
+		Polygon::iterator it = polygon->begin();
 		Node* first = *it;
 		Node* last = *it++;
 		this->push_back(last);
@@ -76,33 +76,5 @@ namespace Geometry
 	ConvexHull::~ConvexHull()
 	{
 
-	}
-	/*------------------------------------------------
-	// class Polygon
-	// 29th JUL 2013
-	// describe a polygon, convex or concave, has hole
-	------------------------------------------------*/
-	Polygon::Polygon()
-		:QuadObject()
-	{
-		m_ObjectType = QOT_POLYGON;
-		m_Outer = 0;
-	}
-	Polygon::~Polygon()
-	{
-	}
-	void Polygon::CalculateAABB()
-	{
-		Rectangle* bb = m_Outer->GetBoundingBox();
-		if (bb == 0) return;
-		SetBoundingBox(bb);
-	}
-	void Polygon::SetOuter(SimplePolygon* polygon)
-	{
-		m_Outer = polygon;
-	}
-	void Polygon::AddInner(SimplePolygon* polygon)
-	{
-		m_Inners.push_back(polygon);
 	}
 }

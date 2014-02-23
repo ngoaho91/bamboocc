@@ -3,6 +3,7 @@
 #include "Node.h"
 #include "Segment.h"
 #include "Polygon.h"
+#include "OpenPolygon.h"
 namespace Geometry
 {
 	enum IntersectResult
@@ -18,9 +19,10 @@ namespace Geometry
 	IntersectResult SegmentSegmentIntersect(
 		int ax, int ay, int bx, int by, 
 		int cx, int cy, int dx, int d);
-	
-	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon);
+	IntersectResult PointInPolygon(Node* node, Polygon* polygon);
 	IntersectResult PointInPolygon(Node* node, ConvexHull* polygon);
-	IntersectResult PolygonSegmentIntersect(Segment* s, SimplePolygon* polygon);
+	template <class TYPE>
+	IntersectResult PolygonSegmentIntersect(Segment* s, TYPE* polygon);
+	IntersectResult PortalSegmentIntersect(Segment* edge, OpenPolygon* polygon);
 }
 #endif

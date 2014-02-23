@@ -12,10 +12,10 @@ namespace Geometry
 		Rectangle* bb1 = s1->GetBoundingBox();
 		Rectangle* bb2 = s2->GetBoundingBox();
 		if (!bb1->Collide(bb2, true)) return IR_SEPERATE;
-		Node *a = s1->GetNodeA();
-		Node *b = s1->GetNodeB();
-		Node *c = s2->GetNodeA();
-		Node *d = s2->GetNodeB();
+		Node *a = s1->A();
+		Node *b = s1->B();
+		Node *c = s2->A();
+		Node *d = s2->B();
 		return SegmentSegmentIntersect(a->X(), a->Y(), b->X(), b->Y(),
 			c->X(), c->Y(), d->X(), d->Y());
 	}
@@ -52,7 +52,7 @@ namespace Geometry
 	DATE: 29th JUL 2013
 	TASK: test point is in polygon
 	-------------------------------------------------*/
-	IntersectResult PointInPolygon(Node* node, SimplePolygon* polygon)
+	IntersectResult PointInPolygon(Node* node, Polygon* polygon)
 	{
 		if (!polygon->PointInsideBB(node)) return IR_SEPERATE;
 		double x = node->X();
@@ -109,7 +109,7 @@ namespace Geometry
 			ConvexResult ret = GetConvex(node_a, node, node_b);
 			if (ret == CR_STRAIGHT)
 			{
-				if (PointSegmentDistance(
+				if (NodeSegmentDistance(
 					new Segment(node_a, node_b),
 					node) == 0)
 				{
@@ -132,7 +132,8 @@ namespace Geometry
 	// DATE: 29th JUL 2013
 	// TASK: test edge is intersect polygon
 	//-------------------------------------------------*/
-	IntersectResult PolygonSegmentIntersect(Segment* edge, SimplePolygon* polygon)
+	template<class TYPE>
+	IntersectResult PolygonSegmentIntersect(Segment* edge, TYPE* polygon)
 	{
 		{
 			Rectangle* bb1 = polygon->GetBoundingBox();
@@ -141,13 +142,66 @@ namespace Geometry
 				return IR_SEPERATE;
 		}
 		Rectangle* bb1 = edge->GetBoundingBox();
-		Node* node_c = edge->GetNodeA();
-		Node* node_d = edge->GetNodeB();
+		Node* node_c = edge->A();
+		Node* node_d = edge->B();
 		Segment* edge_cd = new Segment(node_c, node_d);
 		Nodes::iterator it = polygon->begin();
 		IntersectResult ret = IR_SEPERATE;
-		for (; it != polygon->end();it++)
+		int index = 0;
+		for (; it != polygon->end();it++,index++)
 		{
+			if(typeid(polygon) == typeid(OpenPolygon*))
+				if(polygon->IsPortal(index)) continue;
+			Node* node_a = *it;
+			Node* node_b = *(polygon->GetNext(it));
+			Segment* edge_ab = new Segment(node_a, node_b);
+			edge_ab->Calculate();
+			Rectangle* bb2 = edge_ab->GetBoundingBox();
+			if (bb1->Collide(bb2, true))
+			{
+				IntersectResult result = SegmentSegmentIntersect(edge_ab, edge_cd);
+				if (result == IR_INTERSECT) return IR_INTERSECT;
+				if (result == IR_TOUCH)
+				{
+					if (node_c->Equal(node_a) || node_d->Equal(node_a))
+					{
+						ret = IR_TOUCH;
+					}
+					// CAD straight
+					else if (GetConvex(node_c, node_a, node_d) == CR_STRAIGHT)
+					{
+						Node* node_z = *(polygon->GetPrevious(it));
+						// Z and B in 2 different plane seperated by CD
+						if (GetConvex(node_c, node_z, node_d) != GetConvex(node_c, node_b, node_d))
+						{
+							return IR_INTERSECT;
+						}
+						else
+						{
+							ret = IR_TOUCH;
+						}
+					}
+					else
+					{
+						ret = IR_TOUCH;
+					}
+				}
+			}
+		}
+		return ret;
+	}
+	IntersectResult PortalSegmentIntersect(Segment* edge, OpenPolygon* polygon)
+	{
+		Rectangle* bb1 = edge->GetBoundingBox();
+		Node* node_c = edge->A();
+		Node* node_d = edge->B();
+		Segment* edge_cd = new Segment(node_c, node_d);
+		Nodes::iterator it = polygon->begin();
+		IntersectResult ret = IR_SEPERATE;
+		int index = 0;
+		for (; it != polygon->end();it++,index++)
+		{
+			if(!polygon->IsPortal(index)) continue;
 			Node* node_a = *it;
 			Node* node_b = *(polygon->GetNext(it));
 			Segment* edge_ab = new Segment(node_a, node_b);

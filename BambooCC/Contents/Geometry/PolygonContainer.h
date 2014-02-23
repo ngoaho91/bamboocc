@@ -5,6 +5,7 @@
 #include "Intersects.h"
 namespace Geometry
 {
+	template<class TYPE>
 	class PolygonContainer
 		:public QuadTree
 	{

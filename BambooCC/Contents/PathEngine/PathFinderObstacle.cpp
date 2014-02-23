@@ -12,10 +12,10 @@ namespace PathEngine
 	- object can only travel through worlds by jumping, moving cant
 	*/
 	Obstacle::Obstacle()
-		:SimplePolygon()
+		:Polygon()
 	{
 	}
-	Obstacle::Obstacle(SimplePolygon* polygon)
+	Obstacle::Obstacle(Polygon* polygon)
 	{
 		Obstacle();
 		SetPolygon(polygon);
@@ -30,9 +30,9 @@ namespace PathEngine
 	DATE: 27th JAN 2014
 	TASK: set polygon as obstacle
 	-------------------------------------------------*/
-	void Obstacle::SetPolygon(SimplePolygon* polygon)
+	void Obstacle::SetPolygon(Polygon* polygon)
 	{
-		SimplePolygon::iterator it = polygon->begin();
+		Polygon::iterator it = polygon->begin();
 		while (it != polygon->end())
 		{
 			Node* node = *it;
@@ -58,7 +58,7 @@ namespace PathEngine
 		}
 		m_ConvexHull = new ConvexHull(this);
 		int index = 0;
-		SimplePolygon::iterator it = m_ConvexHull->begin();
+		Polygon::iterator it = m_ConvexHull->begin();
 		Node* first = *it;
 		Node* last = *it++;
 		index++;
@@ -131,7 +131,7 @@ namespace PathEngine
 	DATE: 27th DEC 2013
 	TASK: find path connect 2 node, and evade this obstacle
 	-------------------------------------------------*/
-	Nodes Obstacle::FindPath(Node* from, Node* to)
+	Path Obstacle::FindPath(Node* from, Node* to)
 	{
 		Nodes ret;
 		int ia, ib, ic, id;

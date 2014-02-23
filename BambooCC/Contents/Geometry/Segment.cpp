@@ -36,19 +36,19 @@ namespace Geometry
 		}
 		return m_Length;
 	}
-	double PointSegmentDistance(Segment* s, Node* p)
+	double NodeSegmentDistance(Segment* s, Node* p)
 	{
-		Vector* v = new Vector(s->GetNodeB(), s->GetNodeA());
-		Vector* w = new Vector(p, s->GetNodeA());
+		Vector* v = new Vector(s->B(), s->A());
+		Vector* w = new Vector(p, s->A());
 		double c1 = DotProduct(w, v);
 		if (c1 <= 0)
 		{
-			return Distance(p, s->GetNodeA());
+			return Distance(p, s->A());
 		}
 		double c2 = DotProduct(v, v);
 		if (c2 <= c1)
 		{
-			return Distance(p, s->GetNodeB());
+			return Distance(p, s->B());
 		}
 		double b = c1 / c2;
 		v->Multiply(b);

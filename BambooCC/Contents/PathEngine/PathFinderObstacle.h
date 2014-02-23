@@ -4,6 +4,7 @@
 #include "Geometry/Polygon.h"
 #include "Geometry/QuadTree.h"
 #include "Geometry/GeometryConstant.h"
+#include "Path.h"
 using namespace std;
 using namespace Geometry;
 namespace PathEngine
@@ -14,17 +15,17 @@ namespace PathEngine
 		double length;
 	};
 	class Obstacle
-		: public SimplePolygon
+		: public Polygon
 	{
 	private:
 		ConvexHull* m_ConvexHull;
 		Shortcut** m_ShortcutMap;
 	public:
 		Obstacle();
-		Obstacle(SimplePolygon* polygon);
+		Obstacle(Polygon* polygon);
 		~Obstacle();
-		void SetPolygon(SimplePolygon* polygon);
-		Nodes FindPath(Node* from, Node* to);
+		void SetPolygon(Polygon* polygon);
+		Path FindPath(Node* from, Node* to);
 	private:
 		void Graham();
 		void BuildShortcutMap();

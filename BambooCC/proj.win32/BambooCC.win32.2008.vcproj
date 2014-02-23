@@ -804,6 +804,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\Contents\Geometry\OpenPolygon.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\Contents\Geometry\OpenPolygon.h"
+				>
+			</File>
+			<File
 				RelativePath="..\Contents\Geometry\Polygon.cpp"
 				>
 			</File>

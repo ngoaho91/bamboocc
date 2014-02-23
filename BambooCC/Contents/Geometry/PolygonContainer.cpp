@@ -2,15 +2,15 @@
 #include <queue>
 namespace Geometry
 {
-	PolygonContainer::PolygonContainer(int width, int height)
+	PolygonContainer<TYPE>::PolygonContainer(int width, int height)
 		:QuadTree(width,height)
 	{
 		//QuadTree::QuadTree(width,height);
 	}
-	PolygonContainer::~PolygonContainer()
+	PolygonContainer<TYPE>::~PolygonContainer()
 	{
 	}
-	IntersectResult PolygonContainer::QueryPointInPolygon(Node* node)
+	IntersectResult PolygonContainer<TYPE>::QueryPointInPolygon(Node* node)
 	{
 		QuadTree* tree = this;
 		while(tree)
@@ -21,7 +21,7 @@ namespace Geometry
 			for(;it != objects.end();it++)
 			{
 				QuadObject* quad = *it;
-				SimplePolygon* poly = (SimplePolygon*)quad;
+				TYPE* poly = (TYPE*)quad;
 				IntersectResult ret = PointInPolygon(node, poly);
 				if (ret != IR_SEPERATE) return ret;
 			}
@@ -49,7 +49,7 @@ namespace Geometry
 		}
 		return IR_SEPERATE;
 	}
-	IntersectResult PolygonContainer::QueryPolygonSegmentIntersect(Segment* s)
+	IntersectResult PolygonContainer<TYPE>::QueryPolygonSegmentIntersect(Segment* s)
 	{
 		queue<QuadTree*> trees;
 		trees.push(this);
@@ -68,7 +68,7 @@ namespace Geometry
 			for(;it != objects.end();it++)
 			{
 				QuadObject* quad = *it;
-				SimplePolygon* poly = (SimplePolygon*)quad;
+				TYPE* poly = (TYPE*)quad;
 				IntersectResult ret1 = PolygonSegmentIntersect(s, poly);
 				if (ret1 == IR_WITHIN || ret1 == IR_INTERSECT) return ret1;
 				ret = ret1;

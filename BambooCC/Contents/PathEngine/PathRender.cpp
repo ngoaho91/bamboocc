@@ -38,8 +38,8 @@ namespace PathEngine
 				for(int i=0;i<size;i++)
 				{
 					Edge* edge = m_Mesh->m_VisibilityEdges[i];
-					Node* a = edge->GetNodeA();
-					Node* b = edge->GetNodeB();
+					Node* a = edge->A();
+					Node* b = edge->B();
 					ccDrawLine(ccp(a->X(),a->Y()), ccp(b->X(),b->Y()));
 				}
 				
@@ -52,8 +52,8 @@ namespace PathEngine
 				size = m_Mesh->m_Edges.size();
 				for(int i=0;i<size;i++)
 				{
-					Node* a = m_Mesh->m_Edges[i]->GetNodeA();
-					Node* b = m_Mesh->m_Edges[i]->GetNodeB();
+					Node* a = m_Mesh->m_Edges[i]->A();
+					Node* b = m_Mesh->m_Edges[i]->B();
 					ccDrawLine(ccp(a->X(),a->Y()), ccp(b->X(),b->Y()));
 				}
 			}
