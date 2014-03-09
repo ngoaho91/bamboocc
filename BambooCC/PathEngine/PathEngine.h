@@ -45,5 +45,11 @@ namespace PathEngine
 		~NavMesh(){}
 		void SetMesh(InputGeom* geom);
 		bool Build();
+		void AddObstacle(const float* pos);
+		void RemoveObstacle(const float* sp, const float* sq);
+		void ClearAllObstacle();
+		void Update(const float dt);
+		//TODO: crowd tool
+		// 
 	}
 }

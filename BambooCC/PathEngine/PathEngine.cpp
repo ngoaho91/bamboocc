@@ -389,4 +389,37 @@ namespace PathEngine
 			for (int x = 0; x < tw; ++x)
 				m_tileCache->buildNavMeshTilesAt(x,y, m_navMesh);
 	}
+	void NavMesh::AddObstacle(const float* pos)
+	{
+		if (!m_tileCache)
+			return;
+		dtObstacleRef ref = hitTestObstacle(m_tileCache, sp, sq);
+		m_tileCache->removeObstacle(ref);
+	}
+	void NavMesh::RemoveObstacle(const float* sp, const float* sq)
+	{
+		if (!m_tileCache)
+			return;
+		dtObstacleRef ref = hitTestObstacle(m_tileCache, sp, sq);
+		m_tileCache->removeObstacle(ref);
+	}
+	void NavMesh::ClearAllObstacle()
+	{
+		if (!m_tileCache)
+			return;
+		for (int i = 0; i < m_tileCache->getObstacleCount(); ++i)
+		{
+			const dtTileCacheObstacle* ob = m_tileCache->getObstacle(i);
+			if (ob->state == DT_OBSTACLE_EMPTY) continue;
+			m_tileCache->removeObstacle(m_tileCache->getObstacleRef(ob));
+		}
+	}
+	void Update(const float dt)
+	{
+		if (!m_navMesh)
+			return;
+		if (!m_tileCache)
+			return;
+		m_tileCache->update(dt, m_navMesh);
+	}
 }
