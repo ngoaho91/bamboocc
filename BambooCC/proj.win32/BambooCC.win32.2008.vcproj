@@ -49,7 +49,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".;&quot;$(SolutionDir)\..\cocos2dx&quot;;&quot;$(SolutionDir)\..\cocos2dx\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\kazmath\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32\OGLES&quot;;&quot;$(SolutionDir)\..\external&quot;;&quot;$(SolutionDir)\..\scripting\lua\lua&quot;;&quot;$(SolutionDir)\..\scripting\lua\tolua&quot;;&quot;$(ProjectDir)\..\Contents\&quot;"
+				AdditionalIncludeDirectories=".;&quot;$(SolutionDir)\..\cocos2dx&quot;;&quot;$(SolutionDir)\..\cocos2dx\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\kazmath\include&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32&quot;;&quot;$(SolutionDir)\..\cocos2dx\platform\third_party\win32\OGLES&quot;;&quot;$(SolutionDir)\..\external&quot;;&quot;$(SolutionDir)\..\scripting\lua\lua&quot;;&quot;$(SolutionDir)\..\scripting\lua\tolua&quot;;&quot;$(ProjectDir)\..\Contents\&quot;;&quot;$(SolutionDir)\..recastnavigation\DebugUtils\Include&quot;;&quot;$(SolutionDir)\..recastnavigation\Detour\Include&quot;;&quot;$(SolutionDir)\..recastnavigation\DetourCrowd\Include&quot;;&quot;$(SolutionDir)\..recastnavigation\DetourTileCache\Include&quot;;&quot;$(SolutionDir)\..recastnavigation\Recast\Include&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -73,7 +73,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libcocos2d.lib libExtensions.lib opengl32.lib glew32.lib libBox2d.lib liblua.lib"
+				AdditionalDependencies="DebugUtils.lib Detour.lib DetourCrowd.lib DetourTileCache.lib Recast.lib glu32.lib sdlmain.lib sdl.lib libcocos2d.lib libExtensions.lib opengl32.lib glew32.lib libBox2d.lib liblua.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(OutDir)"
 				GenerateDebugInformation="true"
@@ -283,54 +283,14 @@
 		<Filter
 			Name="PathEngine"
 			>
-			<Filter
-				Name="Render"
+			<File
+				RelativePath="..\Contents\PathEngine\PathEngine.cpp"
 				>
-				<File
-					RelativePath="..\Contents\PathEngine\PathRender.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathRender.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="PathFinder"
+			</File>
+			<File
+				RelativePath="..\Contents\PathEngine\PathEngine.h"
 				>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderActor.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderActor.h"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderObstacle.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderObstacle.h"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderRegion.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderRegion.h"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderWorld.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\Contents\PathEngine\PathFinderWorld.h"
-					>
-				</File>
-			</Filter>
+			</File>
 		</Filter>
 		<Filter
 			Name="TileEngine"
@@ -863,18 +823,6 @@
 					>
 				</File>
 			</Filter>
-		</Filter>
-		<Filter
-			Name="Clipper"
-			>
-			<File
-				RelativePath="..\Contents\Clipper\clipper.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\Contents\Clipper\clipper.hpp"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>
