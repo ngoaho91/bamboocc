@@ -15,8 +15,6 @@ namespace PathEngine
 		dtNavMeshQuery* m_navQuery;
 		dtCrowd* m_crowd;
 
-		unsigned char m_navMeshDrawFlags;
-
 		float m_cellSize;
 		float m_cellHeight;
 		float m_agentHeight;
@@ -25,7 +23,6 @@ namespace PathEngine
 		float m_agentMaxSlope;
 		float m_regionMinSize;
 		float m_regionMergeSize;
-		bool m_monotonePartitioning;
 		float m_edgeMaxLen;
 		float m_edgeMaxError;
 		float m_vertsPerPoly;
@@ -43,13 +40,18 @@ namespace PathEngine
 	public:
 		NavMesh(){}
 		~NavMesh(){}
+		// navigation mesh
 		void SetMesh(InputGeom* geom);
 		bool Build();
 		void AddObstacle(const float* pos);
 		void RemoveObstacle(const float* sp, const float* sq);
 		void ClearAllObstacle();
 		void Update(const float dt);
-		//TODO: crowd tool
-		// 
+		// crowd tool
+		void AddAgent(const float* p);
+		void HitTestAgent(const float* s, const float* p);
+		void RemoveAgent(const int idx);
+		void UpdateAgentParams();
+		void UpdateCrowd(const float dt);
 	}
 }

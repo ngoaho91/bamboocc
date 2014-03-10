@@ -414,7 +414,7 @@ namespace PathEngine
 			m_tileCache->removeObstacle(m_tileCache->getObstacleRef(ob));
 		}
 	}
-	void Update(const float dt)
+	void NavMesh::UpdateMesh(const float dt)
 	{
 		if (!m_navMesh)
 			return;
@@ -422,4 +422,235 @@ namespace PathEngine
 			return;
 		m_tileCache->update(dt, m_navMesh);
 	}
+
+
+
+	// ===================================================================================
+
+	static const int AGENT_MAX_TRAIL = 64;
+	static const int MAX_AGENTS = 128;
+	struct AgentTrail
+	{
+		float trail[AGENT_MAX_TRAIL*3];
+		int htrail;
+	};
+
+	static bool isectSegAABB(const float* sp, const float* sq,
+		const float* amin, const float* amax,
+		float& tmin, float& tmax)
+	{
+		static const float EPS = 1e-6f;
+
+		float d[3];
+		dtVsub(d, sq, sp);
+		tmin = 0;  // set to -FLT_MAX to get first hit on line
+		tmax = FLT_MAX;		// set to max distance ray can travel (for segment)
+
+		// For all three slabs
+		for (int i = 0; i < 3; i++)
+		{
+			if (fabsf(d[i]) < EPS)
+			{
+				// Ray is parallel to slab. No hit if origin not within slab
+				if (sp[i] < amin[i] || sp[i] > amax[i])
+					return false;
+			}
+			else
+			{
+				// Compute intersection t value of ray with near and far plane of slab
+				const float ood = 1.0f / d[i];
+				float t1 = (amin[i] - sp[i]) * ood;
+				float t2 = (amax[i] - sp[i]) * ood;
+				// Make t1 be intersection with near plane, t2 with far plane
+				if (t1 > t2) dtSwap(t1, t2);
+				// Compute the intersection of slab intersections intervals
+				if (t1 > tmin) tmin = t1;
+				if (t2 < tmax) tmax = t2;
+				// Exit with no collision as soon as slab intersection becomes empty
+				if (tmin > tmax) return false;
+			}
+		}
+
+		return true;
+	}
+
+	static void getAgentBounds(const dtCrowdAgent* ag, float* bmin, float* bmax)
+	{
+		const float* p = ag->npos;
+		const float r = ag->params.radius;
+		const float h = ag->params.height;
+		bmin[0] = p[0] - r;
+		bmin[1] = p[1];
+		bmin[2] = p[2] - r;
+		bmax[0] = p[0] + r;
+		bmax[1] = p[1] + h;
+		bmax[2] = p[2] + r;
+	}
+
+	void NavMesh::InitCrowd()
+	{
+		if (m_navMesh && m_crowd)
+		{
+			m_crowd->init(MAX_AGENTS, m_sample->getAgentRadius(), m_navMesh);
+
+			// Make polygons with 'disabled' flag invalid.
+			m_crowd->getEditableFilter()->setExcludeFlags(SAMPLE_POLYFLAGS_DISABLED);
+
+			// Setup local avoidance params to different qualities.
+			dtObstacleAvoidanceParams params;
+			// Use mostly default settings, copy from dtCrowd.
+			memcpy(&params, crowd->getObstacleAvoidanceParams(0), sizeof(dtObstacleAvoidanceParams));
+
+			// Low (11)
+			params.velBias = 0.5f;
+			params.adaptiveDivs = 5;
+			params.adaptiveRings = 2;
+			params.adaptiveDepth = 1;
+			m_crowd->setObstacleAvoidanceParams(0, &params);
+
+			// Medium (22)
+			params.velBias = 0.5f;
+			params.adaptiveDivs = 5; 
+			params.adaptiveRings = 2;
+			params.adaptiveDepth = 2;
+			m_crowd->setObstacleAvoidanceParams(1, &params);
+
+			// Good (45)
+			params.velBias = 0.5f;
+			params.adaptiveDivs = 7;
+			params.adaptiveRings = 2;
+			params.adaptiveDepth = 3;
+			m_crowd->setObstacleAvoidanceParams(2, &params);
+
+			// High (66)
+			params.velBias = 0.5f;
+			params.adaptiveDivs = 7;
+			params.adaptiveRings = 3;
+			params.adaptiveDepth = 3;
+			m_crowd->setObstacleAvoidanceParams(3, &params);
+		}
+	}
+	void NavMesh::AddAgent(const float* p)
+	{
+		dtCrowd* crowd = m_crowd;
+
+		dtCrowdAgentParams ap;
+		memset(&ap, 0, sizeof(ap));
+		ap.radius = m_sample->getAgentRadius();
+		ap.height = m_sample->getAgentHeight();
+		ap.maxAcceleration = 8.0f;
+		ap.maxSpeed = 3.5f;
+		ap.collisionQueryRange = ap.radius * 12.0f;
+		ap.pathOptimizationRange = ap.radius * 30.0f;
+		ap.updateFlags = 0; 
+		if (m_toolParams.m_anticipateTurns)
+			ap.updateFlags |= DT_CROWD_ANTICIPATE_TURNS;
+		if (m_toolParams.m_optimizeVis)
+			ap.updateFlags |= DT_CROWD_OPTIMIZE_VIS;
+		if (m_toolParams.m_optimizeTopo)
+			ap.updateFlags |= DT_CROWD_OPTIMIZE_TOPO;
+		if (m_toolParams.m_obstacleAvoidance)
+			ap.updateFlags |= DT_CROWD_OBSTACLE_AVOIDANCE;
+		if (m_toolParams.m_separation)
+			ap.updateFlags |= DT_CROWD_SEPARATION;
+		ap.obstacleAvoidanceType = (unsigned char)m_toolParams.m_obstacleAvoidanceType;
+		ap.separationWeight = m_toolParams.m_separationWeight;
+
+		int idx = crowd->addAgent(p, &ap);
+		if (idx != -1)
+		{
+			if (m_targetRef)
+				crowd->requestMoveTarget(idx, m_targetRef, m_targetPos);
+
+			// Init trail
+			AgentTrail* trail = &m_trails[idx];
+			for (int i = 0; i < AGENT_MAX_TRAIL; ++i)
+				dtVcopy(&trail->trail[i*3], p);
+			trail->htrail = 0;
+		}
+	}
+	void NavMesh::HitTestAgent(const float* s, const float* p)
+	{
+		int isel = -1;
+		float tsel = FLT_MAX;
+
+		for (int i = 0; i < crowd->getAgentCount(); ++i)
+		{
+			const dtCrowdAgent* ag = crowd->getAgent(i);
+			if (!ag->active) continue;
+			float bmin[3], bmax[3];
+			getAgentBounds(ag, bmin, bmax);
+			float tmin, tmax;
+			if (isectSegAABB(s, p, bmin,bmax, tmin, tmax))
+			{
+				if (tmin > 0 && tmin < tsel)
+				{
+					isel = i;
+					tsel = tmin;
+				} 
+			}
+		}
+
+		return isel;
+	}
+	void NavMesh::RemoveAgent(const int idx)
+	{
+		m_crowd->removeAgent(idx);
+	}
+	void NavMesh::UpdateAgentParams()
+	{
+		if (!m_crowd) return;
+
+		unsigned char updateFlags = 0;
+		unsigned char obstacleAvoidanceType = 0;
+
+		if (m_toolParams.m_anticipateTurns)
+			updateFlags |= DT_CROWD_ANTICIPATE_TURNS;
+		if (m_toolParams.m_optimizeVis)
+			updateFlags |= DT_CROWD_OPTIMIZE_VIS;
+		if (m_toolParams.m_optimizeTopo)
+			updateFlags |= DT_CROWD_OPTIMIZE_TOPO;
+		if (m_toolParams.m_obstacleAvoidance)
+			updateFlags |= DT_CROWD_OBSTACLE_AVOIDANCE;
+		if (m_toolParams.m_obstacleAvoidance)
+			updateFlags |= DT_CROWD_OBSTACLE_AVOIDANCE;
+		if (m_toolParams.m_separation)
+			updateFlags |= DT_CROWD_SEPARATION;
+
+		obstacleAvoidanceType = (unsigned char)m_toolParams.m_obstacleAvoidanceType;
+
+		dtCrowdAgentParams params;
+
+		for (int i = 0; i < m_crowd->getAgentCount(); ++i)
+		{
+			const dtCrowdAgent* ag = m_crowd->getAgent(i);
+			if (!ag->active) continue;
+			memcpy(&params, &ag->params, sizeof(dtCrowdAgentParams));
+			params.updateFlags = updateFlags;
+			params.obstacleAvoidanceType = obstacleAvoidanceType;
+			params.separationWeight = m_toolParams.m_separationWeight;
+			m_crowd->updateAgentParameters(i, &params);
+		}
+	}
+
+	void NavMesh::UpdateCrowd(const float dt)
+	{
+		if (!m_navMesh || !m_crowd) return;
+
+		crowd->update(dt, &m_agentDebug);
+
+		// Update agent trails
+		for (int i = 0; i < m_crowd->getAgentCount(); ++i)
+		{
+			const dtCrowdAgent* ag = m_crowd->getAgent(i);
+			AgentTrail* trail = &m_trails[i];
+			if (!ag->active)
+				continue;
+			// Update agent movement trail.
+			trail->htrail = (trail->htrail + 1) % AGENT_MAX_TRAIL;
+			dtVcopy(&trail->trail[trail->htrail*3], ag->npos);
+		}
+
+	}
+
 }
