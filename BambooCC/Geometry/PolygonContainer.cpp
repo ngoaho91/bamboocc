@@ -2,14 +2,17 @@
 #include <queue>
 namespace Geometry
 {
+	template<class TYPE>
 	PolygonContainer<TYPE>::PolygonContainer(int width, int height)
 		:QuadTree(width,height)
 	{
 		//QuadTree::QuadTree(width,height);
 	}
+	template<class TYPE>
 	PolygonContainer<TYPE>::~PolygonContainer()
 	{
 	}
+	template<class TYPE>
 	IntersectResult PolygonContainer<TYPE>::QueryPointInPolygon(Node* node)
 	{
 		QuadTree* tree = this;
@@ -49,6 +52,7 @@ namespace Geometry
 		}
 		return IR_SEPERATE;
 	}
+	template<class TYPE>
 	IntersectResult PolygonContainer<TYPE>::QueryPolygonSegmentIntersect(Segment* s)
 	{
 		queue<QuadTree*> trees;

@@ -534,7 +534,13 @@ namespace PathEngine
 		bmax[1] = p[1] + h;
 		bmax[2] = p[2] + r;
 	}
-
+	static void calcVel(float* vel, const float* pos, const float* tgt, const float speed)
+	{
+		dtVsub(vel, tgt, pos);
+		vel[1] = 0.0;
+		dtVnormalize(vel);
+		dtVscale(vel, vel, speed);
+	}
 	void NavMesh::InitCrowd()
 	{
 		if (m_navMesh && m_crowd)
@@ -615,7 +621,7 @@ namespace PathEngine
 			trail->htrail = 0;
 		}
 	}
-	void NavMesh::HitTestAgent(const float* s, const float* p)
+	int NavMesh::HitTestAgent(const float* s, const float* p)
 	{
 		int isel = -1;
 		float tsel = FLT_MAX;
@@ -643,6 +649,25 @@ namespace PathEngine
 	{
 		if (!m_crowd) return;
 		m_crowd->removeAgent(idx);
+	}
+	void MoveAgent(int id,const float* p)
+	{
+		const dtQueryFilter* filter = m_crowd->getFilter();
+		const float* ext = m_crowd->getQueryExtents();
+		m_navQuery->findNearestPoly(p, ext, filter, &m_targetRef, m_targetPos);
+		const dtCrowdAgent* ag = m_crowd->getAgent(id);
+		if (ag && ag->active)
+			crowd->requestMoveTarget(id, m_targetRef, m_targetPos);
+	}
+	void ForceAgent(int id, const float* p)
+	{
+		float vel[3];
+		const dtCrowdAgent* ag = crowd->getAgent(id);
+		if (ag && ag->active)
+		{
+			calcVel(vel, ag->npos, p, ag->params.maxSpeed);
+			crowd->requestMoveVelocity(id, vel);
+		}
 	}
 	void NavMesh::UpdateAgentParams()
 	{
@@ -677,7 +702,7 @@ namespace PathEngine
 			m_crowd->updateAgentParameters(i, &params);
 		}
 	}
-
+	
 	void NavMesh::UpdateCrowd(const float dt)
 	{
 		if (!m_navMesh || !m_crowd) return;

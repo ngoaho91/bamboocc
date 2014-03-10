@@ -18,7 +18,7 @@ namespace Geometry
 	}
 	void OpenPolygon::ResetPortal()
 	{
-		size = this->size();
+		const unsigned int size = this->size();
 		m_Portal = new bool[size];
 		memset(m_Portal, false, sizeof(m_Portal));
 	}

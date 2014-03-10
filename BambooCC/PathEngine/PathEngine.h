@@ -49,9 +49,11 @@ namespace PathEngine
 		// crowd tool
 		void InitCrowd();
 		void AddAgent(const float* p);
-		void HitTestAgent(const float* s, const float* p);
+		int HitTestAgent(const float* s, const float* p);
 		void RemoveAgent(const int idx);
 		void UpdateAgentParams();
 		void UpdateCrowd(const float dt);
+		void MoveAgent(const float* p);
+		void ForceAgent(const float* p);
 	}
 }
