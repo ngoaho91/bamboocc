@@ -279,7 +279,49 @@ namespace PathEngine
 		return n;
 	}
 
-
+	NavMesh::NavMesh()
+	{
+		InitMesh();
+		InitCrowd();
+	}
+	NavMesh::~NavMesh()
+	{
+		dtFreeNavMesh(m_navMesh);
+		m_navMesh = 0;
+		dtFreeTileCache(m_tileCache);
+	}
+	void NavMesh::InitMesh()
+	{
+		// common setting
+		m_cellSize = 0.3f;
+		m_cellHeight = 0.2f;
+		m_agentHeight = 2.0f;
+		m_agentRadius = 0.6f;
+		m_agentMaxClimb = 0.9f;
+		m_agentMaxSlope = 45.0f;
+		m_regionMinSize = 8;
+		m_regionMergeSize = 20;
+		m_edgeMaxLen = 12.0f;
+		m_edgeMaxError = 1.3f;
+		m_vertsPerPoly = 6.0f;
+		m_detailSampleDist = 6.0f;
+		m_detailSampleMaxError = 1.0f;
+		//
+		m_geom = 0;
+		m_navMesh = 0;
+		m_navMeshDrawFlags = DU_DRAWNAVMESH_OFFMESHCONS|DU_DRAWNAVMESH_CLOSEDLIST;
+		m_ctx = 0;
+		m_navQuery = dtAllocNavMeshQuery();
+		m_crowd = dtAllocCrowd();
+		m_tileCache = 0;
+		m_drawMode = DRAWMODE_NAVMESH;
+		m_maxTiles = 0;
+		m_maxPolysPerTile = 0;
+		m_tileSize = 48;
+		m_talloc = new LinearAllocator(32000);
+		m_tcomp = new FastLZCompressor;
+		m_tmproc = new MeshProcess;
+	}
 	void NavMesh::SetMesh(InputGeom* geom)
 	{
 		m_geom = geom;
@@ -395,6 +437,12 @@ namespace PathEngine
 			return;
 		dtObstacleRef ref = hitTestObstacle(m_tileCache, sp, sq);
 		m_tileCache->removeObstacle(ref);
+	}
+	dtObstacleRef NavMesh::HitTestObstacle(const float* sp, const float* sq)
+	{
+		if (!m_tileCache)
+			return;
+		return hitTestObstacle(m_tileCache, sp, sq);
 	}
 	void NavMesh::RemoveObstacle(const float* sp, const float* sq)
 	{
@@ -532,12 +580,10 @@ namespace PathEngine
 	}
 	void NavMesh::AddAgent(const float* p)
 	{
-		dtCrowd* crowd = m_crowd;
-
 		dtCrowdAgentParams ap;
 		memset(&ap, 0, sizeof(ap));
-		ap.radius = m_sample->getAgentRadius();
-		ap.height = m_sample->getAgentHeight();
+		ap.radius = 0.6f;
+		ap.height = 2.0f;
 		ap.maxAcceleration = 8.0f;
 		ap.maxSpeed = 3.5f;
 		ap.collisionQueryRange = ap.radius * 12.0f;
@@ -553,14 +599,14 @@ namespace PathEngine
 			ap.updateFlags |= DT_CROWD_OBSTACLE_AVOIDANCE;
 		if (m_toolParams.m_separation)
 			ap.updateFlags |= DT_CROWD_SEPARATION;
-		ap.obstacleAvoidanceType = (unsigned char)m_toolParams.m_obstacleAvoidanceType;
-		ap.separationWeight = m_toolParams.m_separationWeight;
+		ap.obstacleAvoidanceType = 3.0f;
+		ap.separationWeight = 2.0f;
 
-		int idx = crowd->addAgent(p, &ap);
+		int idx = m_crowd->addAgent(p, &ap);
 		if (idx != -1)
 		{
 			if (m_targetRef)
-				crowd->requestMoveTarget(idx, m_targetRef, m_targetPos);
+				m_crowd->requestMoveTarget(idx, m_targetRef, m_targetPos);
 
 			// Init trail
 			AgentTrail* trail = &m_trails[idx];
@@ -574,9 +620,9 @@ namespace PathEngine
 		int isel = -1;
 		float tsel = FLT_MAX;
 
-		for (int i = 0; i < crowd->getAgentCount(); ++i)
+		for (int i = 0; i < m_crowd->getAgentCount(); ++i)
 		{
-			const dtCrowdAgent* ag = crowd->getAgent(i);
+			const dtCrowdAgent* ag = m_crowd->getAgent(i);
 			if (!ag->active) continue;
 			float bmin[3], bmax[3];
 			getAgentBounds(ag, bmin, bmax);
@@ -595,6 +641,7 @@ namespace PathEngine
 	}
 	void NavMesh::RemoveAgent(const int idx)
 	{
+		if (!m_crowd) return;
 		m_crowd->removeAgent(idx);
 	}
 	void NavMesh::UpdateAgentParams()
@@ -602,7 +649,7 @@ namespace PathEngine
 		if (!m_crowd) return;
 
 		unsigned char updateFlags = 0;
-		unsigned char obstacleAvoidanceType = 0;
+		unsigned char obstacleAvoidanceType = 3.0f;
 
 		if (m_toolParams.m_anticipateTurns)
 			updateFlags |= DT_CROWD_ANTICIPATE_TURNS;
@@ -617,8 +664,6 @@ namespace PathEngine
 		if (m_toolParams.m_separation)
 			updateFlags |= DT_CROWD_SEPARATION;
 
-		obstacleAvoidanceType = (unsigned char)m_toolParams.m_obstacleAvoidanceType;
-
 		dtCrowdAgentParams params;
 
 		for (int i = 0; i < m_crowd->getAgentCount(); ++i)
@@ -628,7 +673,7 @@ namespace PathEngine
 			memcpy(&params, &ag->params, sizeof(dtCrowdAgentParams));
 			params.updateFlags = updateFlags;
 			params.obstacleAvoidanceType = obstacleAvoidanceType;
-			params.separationWeight = m_toolParams.m_separationWeight;
+			params.separationWeight = 2.0f;
 			m_crowd->updateAgentParameters(i, &params);
 		}
 	}
@@ -637,7 +682,7 @@ namespace PathEngine
 	{
 		if (!m_navMesh || !m_crowd) return;
 
-		crowd->update(dt, &m_agentDebug);
+		m_crowd->update(dt, &m_agentDebug);
 
 		// Update agent trails
 		for (int i = 0; i < m_crowd->getAgentCount(); ++i)

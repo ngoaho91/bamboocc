@@ -4,9 +4,6 @@
 
 namespace PathEngine
 {
-	class Agent;
-	class Obstacle;
-	class Terrain;
 	class NavMesh
 	{
 	private:
@@ -14,7 +11,7 @@ namespace PathEngine
 		dtNavMesh* m_navMesh;
 		dtNavMeshQuery* m_navQuery;
 		dtCrowd* m_crowd;
-
+	private:
 		float m_cellSize;
 		float m_cellHeight;
 		float m_agentHeight;
@@ -34,6 +31,7 @@ namespace PathEngine
 		struct FastLZCompressor* m_tcomp;
 		struct MeshProcess* m_tmproc;
 		class dtTileCache* m_tileCache;
+
 		int m_maxTiles;
 		int m_maxPolysPerTile;
 		float m_tileSize;
@@ -41,6 +39,7 @@ namespace PathEngine
 		NavMesh(){}
 		~NavMesh(){}
 		// navigation mesh
+		void InitMesh();
 		void SetMesh(InputGeom* geom);
 		bool Build();
 		void AddObstacle(const float* pos);
@@ -48,6 +47,7 @@ namespace PathEngine
 		void ClearAllObstacle();
 		void Update(const float dt);
 		// crowd tool
+		void InitCrowd();
 		void AddAgent(const float* p);
 		void HitTestAgent(const float* s, const float* p);
 		void RemoveAgent(const int idx);
