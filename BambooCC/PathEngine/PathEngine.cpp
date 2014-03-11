@@ -650,7 +650,7 @@ namespace PathEngine
 		if (!m_crowd) return;
 		m_crowd->removeAgent(idx);
 	}
-	void MoveAgent(int id,const float* p)
+	void NavMesh::MoveAgent(int id,const float* p)
 	{
 		const dtQueryFilter* filter = m_crowd->getFilter();
 		const float* ext = m_crowd->getQueryExtents();
@@ -659,14 +659,14 @@ namespace PathEngine
 		if (ag && ag->active)
 			crowd->requestMoveTarget(id, m_targetRef, m_targetPos);
 	}
-	void ForceAgent(int id, const float* p)
+	void NavMesh::ForceAgent(int id, const float* p)
 	{
 		float vel[3];
-		const dtCrowdAgent* ag = crowd->getAgent(id);
+		const dtCrowdAgent* ag = m_crowd->getAgent(id);
 		if (ag && ag->active)
 		{
 			calcVel(vel, ag->npos, p, ag->params.maxSpeed);
-			crowd->requestMoveVelocity(id, vel);
+			m_crowd->requestMoveVelocity(id, vel);
 		}
 	}
 	void NavMesh::UpdateAgentParams()
