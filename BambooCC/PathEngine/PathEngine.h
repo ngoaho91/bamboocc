@@ -7,6 +7,9 @@
 #include "DetourTileCache.h"
 #include "DetourCrowd.h"
 
+struct LinearAllocator;
+struct FastLZCompressor;
+struct MeshProcess;
 namespace PathEngine
 {
 	class BuildContext : public rcContext
@@ -81,18 +84,18 @@ namespace PathEngine
 		void InitMesh();
 		void SetMesh(InputGeom* geom);
 		bool Build();
+		dtObstacleRef HitTestObstacle(const float* sp, const float* sq);
 		void AddObstacle(const float* pos);
 		void RemoveObstacle(const float* sp, const float* sq);
 		void ClearAllObstacle();
-		void Update(const float dt);
+		void UpdateMesh(const float dt);
 		// crowd tool
 		void InitCrowd();
 		void AddAgent(const float* p);
 		int HitTestAgent(const float* s, const float* p);
 		void RemoveAgent(const int idx);
-		void UpdateAgentParams();
 		void UpdateCrowd(const float dt);
-		void MoveAgent(const float* p);
-		void ForceAgent(const float* p);
+		void MoveAgent(int id, const float* p);
+		void ForceAgent(int id, const float* p);
 	};
 }
