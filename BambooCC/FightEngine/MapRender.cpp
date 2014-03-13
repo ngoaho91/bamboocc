@@ -3,8 +3,6 @@ namespace FightEngine
 {
 	MapRender::MapRender()
 	{
-		m_ParentNode = 0;
-		m_PathRender = new PathEngine::PathRender();
 	}
 	MapRender::~MapRender()
 	{
@@ -20,8 +18,8 @@ namespace FightEngine
 				element->SetParentNode(parent);
 			}
 			m_Tilemap->SetParentNode(parent);
-			m_PathRender->SetParentNode(parent);
-			m_ParentNode = parent;
+			//m_PathRender->SetParentNode(parent);
+			//m_ParentNode = parent;
 		}
 	}
 	void MapRender::Focus(float x, float y)

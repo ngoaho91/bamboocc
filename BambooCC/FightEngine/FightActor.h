@@ -1,7 +1,7 @@
 #ifndef FightActor_h
 #define FightActor_h
 #include "cocos2d.h"
-#include "../PathEngine/PathFinderActor.h"
+#include "../PathEngine/PathEngine.h"
 #include "../RigEngine/Character.h"
 #include "../Geometry/Rectangle.h"
 #include "Vector2.h"
@@ -17,6 +17,7 @@ namespace FightEngine
 		:public PathEngine::Actor
 	{
 	private:
+		// -----------------------------
 		Geometry::Rectangle*	m_FightBoundingBox;
 		float					m_FightPositionX;
 		float					m_FightPositionY;

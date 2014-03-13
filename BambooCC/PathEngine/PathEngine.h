@@ -53,7 +53,19 @@ struct AgentTrail
 };
 namespace PathEngine
 {
-
+	// TODO: implement these 2 class
+	class Actor
+	{
+	public:
+		int m_Angle;
+	public:
+		Actor(){m_Angle = 0;}
+		~Actor(){}
+		void SetPosition(int x, int y){}
+	};
+	class Obstacle
+	{
+	};
 	class NavMesh
 	{
 	private:

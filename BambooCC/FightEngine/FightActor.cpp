@@ -5,7 +5,6 @@ namespace FightEngine
 	Actor::Actor()
 		:PathEngine::Actor()
 	{
-		m_ObjectType = QOT_FIGHTACTOR;
 		m_Character = new RigEngine::Character();
 		m_Character->SetFullCloth("tianwang3");
 		m_Character->SetHead("tianwang3");
@@ -40,7 +39,7 @@ namespace FightEngine
 	}
 	void Actor::SetPosition(int x, int y)
 	{
-		PathEngine::Actor::SetPosition(x, y);
+		//PathEngine::Actor::SetPosition(x, y);
 		m_FightPositionX = x;
 		m_FightPositionY = y;
 		m_Character->SetPosition(m_FightPositionX, m_FightPositionY);
@@ -139,7 +138,7 @@ namespace FightEngine
 			state == AS_THROW_DAGGER)
 		{
 			//m_Free = true;
-			m_FinalSolution.clear();
+			//m_FinalSolution.clear();
 			m_Character->SetActionState(AS_FIGHTIDLE);
 		}
 	}

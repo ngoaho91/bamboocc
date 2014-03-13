@@ -292,6 +292,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\external\fastlz\fastlz.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\external\fastlz\fastlz.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\PathEngine\InputGeom.cpp"
 				>
 			</File>
@@ -313,6 +321,14 @@
 			</File>
 			<File
 				RelativePath="..\..\PathEngine\PathEngine.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\PathEngine\PerfTimer.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\PathEngine\PerfTimer.h"
 				>
 			</File>
 		</Filter>

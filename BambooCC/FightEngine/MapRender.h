@@ -3,10 +3,8 @@
 #include "cocos2d.h"
 #include "../TileEngine/TileMap.h"
 #include "../TileEngine/Element.h"
-#include "../PathEngine/PathRender.h"
 using namespace cocos2d;
 using namespace TileEngine;
-using namespace PathEngine;
 namespace FightEngine
 {
 	class MapRender
@@ -16,7 +14,6 @@ namespace FightEngine
 		CCNode*					m_ParentNode;
 		vector<ElementRender*>	m_Elements;
 		TilemapRender*			m_Tilemap;
-		PathEngine::PathRender*	m_PathRender;
 	public:
 		MapRender();
 		~MapRender();
