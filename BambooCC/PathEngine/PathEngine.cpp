@@ -757,6 +757,7 @@ namespace PathEngine
 		m_talloc = new LinearAllocator(32000);
 		m_tcomp = new FastLZCompressor;
 		m_tmproc = new MeshProcess;
+		m_targetRef = 0;
 	}
 	void NavMesh::SetMesh(InputGeom* geom)
 	{
@@ -1039,7 +1040,7 @@ namespace PathEngine
 	{
 		if (!m_navMesh || !m_crowd) return;
 
-		m_crowd->update(dt, &m_agentDebug);
+		m_crowd->update(dt, 0);
 
 		// Update agent trails
 		for (int i = 0; i < m_crowd->getAgentCount(); ++i)

@@ -87,6 +87,8 @@ namespace PathEngine
 		float m_tileSize;
 	private:
 		AgentTrail m_trails[MAX_AGENTS];
+		float m_targetPos[3];
+		dtPolyRef m_targetRef;
 	public:
 		NavMesh();
 		~NavMesh();
