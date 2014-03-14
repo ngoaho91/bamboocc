@@ -54,14 +54,17 @@ struct AgentTrail
 namespace PathEngine
 {
 	// TODO: implement these 2 class
-	class Actor
+	class Agent
 	{
 	public:
+		dtCrowdAgent* m_AgentRef;
 		int m_Angle;
 	public:
-		Actor(){m_Angle = 0;}
-		~Actor(){}
+		Agent(){m_Angle = 0;}
+		~Agent(){}
+		int* GetPosition();
 		void SetPosition(int x, int y){}
+		int* GetVelocity();
 	};
 	class Obstacle
 	{

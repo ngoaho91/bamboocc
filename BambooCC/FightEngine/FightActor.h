@@ -14,7 +14,7 @@
 namespace FightEngine
 {
 	class Actor
-		:public PathEngine::Actor
+		:public PathEngine::Agent
 	{
 	private:
 		// -----------------------------

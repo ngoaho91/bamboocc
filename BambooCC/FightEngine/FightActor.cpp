@@ -3,7 +3,7 @@
 namespace FightEngine
 {
 	Actor::Actor()
-		:PathEngine::Actor()
+		:PathEngine::Agent()
 	{
 		m_Character = new RigEngine::Character();
 		m_Character->SetFullCloth("tianwang3");
@@ -39,7 +39,7 @@ namespace FightEngine
 	}
 	void Actor::SetPosition(int x, int y)
 	{
-		//PathEngine::Actor::SetPosition(x, y);
+		//PathEngine::Agent::SetPosition(x, y);
 		m_FightPositionX = x;
 		m_FightPositionY = y;
 		m_Character->SetPosition(m_FightPositionX, m_FightPositionY);
@@ -52,7 +52,7 @@ namespace FightEngine
 			//m_Character->SetActionState(AS_FIGHTIDLE);
 			return;
 		}
-		/*PathEngine::Actor::Step();
+		/*PathEngine::Agent::Step();
 		m_FightPositionX = m_PositionX;
 		m_FightPositionY = m_PositionY;*/
 		m_Character->SetPosition(m_FightPositionX, m_FightPositionY);
