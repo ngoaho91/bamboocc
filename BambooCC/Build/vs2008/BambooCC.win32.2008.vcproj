@@ -331,6 +331,10 @@
 				RelativePath="..\..\PathEngine\PerfTimer.h"
 				>
 			</File>
+			<File
+				RelativePath="..\..\PathEngine\RecastHelper.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="TileEngine"
