@@ -3,7 +3,6 @@
 namespace FightEngine
 {
 	Actor::Actor()
-		:PathEngine::Agent()
 	{
 		m_Character = new RigEngine::Character();
 		m_Character->SetFullCloth("tianwang3");

@@ -14,9 +14,9 @@
 namespace FightEngine
 {
 	class Actor
-		:public PathEngine::Agent
 	{
 	private:
+		int m_Angle;// TODO: need to work on, if you know what to do
 		// -----------------------------
 		Geometry::Rectangle*	m_FightBoundingBox;
 		float					m_FightPositionX;

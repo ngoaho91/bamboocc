@@ -3,24 +3,6 @@
 
 namespace PathEngine
 {
-	// TODO: implement these 2 class
-	class Agent
-	{
-	protected:
-		dtCrowdAgent* m_AgentRef;
-		int m_Angle;
-	public:
-		Agent(){m_Angle = 0;}
-		~Agent(){}
-		int* GetPosition();
-		void SetPosition(int x, int y){}
-		int* GetVelocity();
-	};
-	class Obstacle
-	{
-	private:
-		//dtObstacleRef 
-	};
 	class NavMesh
 	{
 	private:
