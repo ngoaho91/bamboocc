@@ -17,8 +17,7 @@
 #include "InputGeom.h"
 #include "fastlz.h"
 
-static const int MAX_LAYERS = 32;
-static const int EXPECTED_LAYERS_PER_TILE = 4;
+
 enum SamplePolyAreas
 {
 	SAMPLE_POLYAREA_GROUND,
@@ -38,6 +37,8 @@ enum SamplePolyFlags
 	SAMPLE_POLYFLAGS_ALL		= 0xffff	// All abilities.
 };
 
+static const int MAX_LAYERS = 32;
+static const int EXPECTED_LAYERS_PER_TILE = 4;
 struct TileCacheData
 {
 	unsigned char* data;

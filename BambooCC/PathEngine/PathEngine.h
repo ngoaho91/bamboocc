@@ -63,14 +63,14 @@ namespace PathEngine
 		void InitMesh();
 		void SetMesh(InputGeom* geom);
 		bool Build();
-		dtObstacleRef HitTestObstacle(const float* sp, const float* sq);
-		void AddObstacle(const float* pos);
+		int HitTestObstacle(const float* sp, const float* sq);
+		int AddObstacle(const float* pos);
 		void RemoveObstacle(const float* sp, const float* sq);
 		void ClearAllObstacle();
 		void UpdateMesh(const float dt);
 		// crowd control
 		void InitCrowd();
-		void AddAgent(const float* p);
+		int AddAgent(const float* p);
 		int HitTestAgent(const float* s, const float* p);
 		void RemoveAgent(const int idx);
 		void UpdateCrowd(const float dt);

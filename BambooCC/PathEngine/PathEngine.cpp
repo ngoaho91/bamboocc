@@ -157,16 +157,18 @@ namespace PathEngine
 			for (int x = 0; x < tw; ++x)
 				m_tileCache->buildNavMeshTilesAt(x,y, m_navMesh);
 	}
-	void NavMesh::AddObstacle(const float* pos)
+	int NavMesh::AddObstacle(const float* pos)
 	{
 		if (!m_tileCache)
-			return;
+			return -1;
 		float p[3];
 		dtVcopy(p, pos);
 		p[1] -= 0.5f;
-		m_tileCache->addObstacle(p, 1.0f, 2.0f, 0);
+		dtObstacleRef result;
+		m_tileCache->addObstacle(p, 1.0f, 2.0f, &result);
+		return result;
 	}
-	dtObstacleRef NavMesh::HitTestObstacle(const float* sp, const float* sq)
+	int NavMesh::HitTestObstacle(const float* sp, const float* sq)
 	{
 		if (!m_tileCache)
 			return 0;
@@ -267,7 +269,7 @@ namespace PathEngine
 			m_crowd->setObstacleAvoidanceParams(3, &params);
 		}
 	}
-	void NavMesh::AddAgent(const float* p)
+	int NavMesh::AddAgent(const float* p)
 	{
 		dtCrowdAgentParams ap;
 		memset(&ap, 0, sizeof(ap));
@@ -295,6 +297,7 @@ namespace PathEngine
 				dtVcopy(&trail->trail[i*3], p);
 			trail->htrail = 0;
 		}
+		return idx;
 	}
 	int NavMesh::HitTestAgent(const float* s, const float* p)
 	{
