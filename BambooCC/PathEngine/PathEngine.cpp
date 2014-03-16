@@ -306,7 +306,17 @@ namespace PathEngine
 			const dtCrowdAgent* ag = m_crowd->getAgent(i);
 			if (!ag->active) continue;
 			float bmin[3], bmax[3];
-			getAgentBounds(ag, bmin, bmax);
+			// get agent bounds
+			const float* p = ag->npos;
+			const float r = ag->params.radius;
+			const float h = ag->params.height;
+			bmin[0] = p[0] - r;
+			bmin[1] = p[1];
+			bmin[2] = p[2] - r;
+			bmax[0] = p[0] + r;
+			bmax[1] = p[1] + h;
+			bmax[2] = p[2] + r;
+
 			float tmin, tmax;
 			if (isectSegAABB(s, p, bmin,bmax, tmin, tmax))
 			{
@@ -340,7 +350,12 @@ namespace PathEngine
 		const dtCrowdAgent* ag = m_crowd->getAgent(id);
 		if (ag && ag->active)
 		{
-			calcVel(vel, ag->npos, p, ag->params.maxSpeed);
+			// calculate velocity
+			dtVsub(vel, p, ag->npos);
+			vel[1] = 0.0;
+			dtVnormalize(vel);
+			dtVscale(vel, vel, ag->params.maxSpeed);
+
 			m_crowd->requestMoveVelocity(id, vel);
 		}
 	}

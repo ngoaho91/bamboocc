@@ -694,28 +694,3 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 
 	return n;
 }
-
-
-
-
-static void getAgentBounds(const dtCrowdAgent* ag, float* bmin, float* bmax)
-{
-	const float* p = ag->npos;
-	const float r = ag->params.radius;
-	const float h = ag->params.height;
-	bmin[0] = p[0] - r;
-	bmin[1] = p[1];
-	bmin[2] = p[2] - r;
-	bmax[0] = p[0] + r;
-	bmax[1] = p[1] + h;
-	bmax[2] = p[2] + r;
-}
-static void calcVel(float* vel, const float* pos, const float* tgt, const float speed)
-{
-	dtVsub(vel, tgt, pos);
-	vel[1] = 0.0;
-	dtVnormalize(vel);
-	dtVscale(vel, vel, speed);
-}
-
-

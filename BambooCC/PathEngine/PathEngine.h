@@ -68,7 +68,7 @@ namespace PathEngine
 		void RemoveObstacle(const float* sp, const float* sq);
 		void ClearAllObstacle();
 		void UpdateMesh(const float dt);
-		// crowd tool
+		// crowd control
 		void InitCrowd();
 		void AddAgent(const float* p);
 		int HitTestAgent(const float* s, const float* p);
