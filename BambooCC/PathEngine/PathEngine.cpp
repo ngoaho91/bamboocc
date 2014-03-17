@@ -6,6 +6,42 @@
 
 namespace PathEngine
 {
+	Agent::Agent()
+	{
+	}
+	Agent::Agent(int id)
+	{
+		Agent();
+		SetID(id);
+	}
+	Agent::~Agent()
+	{
+	}
+	void Agent::SetID(int id)
+	{
+		m_AgentID = id;
+	}
+	void Agent::RefreshVelocity()
+	{
+		const dtCrowdAgent* ag = m_crowd->getAgent(m_AgentID);
+		if (!ag || !ag->active) return;
+		if(m_Velocity[0] == ag->vel[0]) 
+			if(m_Velocity[1] == ag->vel[1])
+				if(m_Velocity[2] == ag->vel[2])
+					return;
+		m_Velocity[0] = ag->vel[0];
+		m_Velocity[1] = ag->vel[1];
+		m_Velocity[2] = ag->vel[2];
+		m_Angle = 0;// calculate
+	}
+	void Agent::RefreshPosition()
+	{
+		const dtCrowdAgent* ag = m_crowd->getAgent(m_AgentID);
+		if (!ag || !ag->active) return;
+		m_Position[0] = ag->pos[0];
+		m_Position[1] = ag->pos[1];
+		m_Position[2] = ag->pos[2];
+	}
 	NavMesh::NavMesh()
 	{
 		InitMesh();

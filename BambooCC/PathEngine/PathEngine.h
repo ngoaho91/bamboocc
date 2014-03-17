@@ -3,6 +3,21 @@
 
 namespace PathEngine
 {
+	class Agent
+	{
+	protected:
+		float m_Angle;
+		int m_AgentID;
+		float m_Velocity[3];
+		float m_Position[3];
+	public:
+		Agent();
+		Agent(int id);
+		~Agent();
+		void SetID(int id);
+		void RefreshVelocity();
+		void RefreshPosition();
+	};
 	class NavMesh
 	{
 	private:
