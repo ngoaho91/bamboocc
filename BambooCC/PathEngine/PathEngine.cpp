@@ -6,12 +6,15 @@
 
 namespace PathEngine
 {
-	Agent::Agent()
+	Agent::Agent(NavMesh* mesh)
 	{
+		m_AgentID = -1;
+		m_NavMesh = mesh;
 	}
-	Agent::Agent(int id)
+	Agent::Agent(NavMesh* mesh, int id)
 	{
-		Agent();
+		m_AgentID = -1;
+		m_NavMesh = mesh;
 		SetID(id);
 	}
 	Agent::~Agent()
@@ -20,27 +23,51 @@ namespace PathEngine
 	void Agent::SetID(int id)
 	{
 		m_AgentID = id;
+		SyncPosition();
+		SyncVelocity();
+		m_CrowdAgent = m_Crowd->getAgent(m_AgentID);
 	}
-	void Agent::RefreshVelocity()
+	void Agent::SyncVelocity()
 	{
-		const dtCrowdAgent* ag = m_crowd->getAgent(m_AgentID);
-		if (!ag || !ag->active) return;
-		if(m_Velocity[0] == ag->vel[0]) 
-			if(m_Velocity[1] == ag->vel[1])
-				if(m_Velocity[2] == ag->vel[2])
+		if (!m_CrowdAgent || !m_CrowdAgent->active) return;
+		if(m_Velocity[0] == m_CrowdAgent->vel[0]) 
+			if(m_Velocity[1] == m_CrowdAgent->vel[1])
+				if(m_Velocity[2] == m_CrowdAgent->vel[2])
 					return;
-		m_Velocity[0] = ag->vel[0];
-		m_Velocity[1] = ag->vel[1];
-		m_Velocity[2] = ag->vel[2];
+		m_Velocity[0] = m_CrowdAgent->vel[0];
+		m_Velocity[1] = m_CrowdAgent->vel[1];
+		m_Velocity[2] = m_CrowdAgent->vel[2];
 		m_Angle = 0;// calculate
 	}
-	void Agent::RefreshPosition()
+	void Agent::SyncPosition()
 	{
-		const dtCrowdAgent* ag = m_crowd->getAgent(m_AgentID);
-		if (!ag || !ag->active) return;
-		m_Position[0] = ag->pos[0];
-		m_Position[1] = ag->pos[1];
-		m_Position[2] = ag->pos[2];
+		if (!m_CrowdAgent || !m_CrowdAgent->active) return;
+		m_Position[0] = m_CrowdAgent->npos[0];
+		m_Position[1] = m_CrowdAgent->npos[1];
+		m_Position[2] = m_CrowdAgent->npos[2];
+	}
+	void Agent::Move(const float* p)
+	{
+		static float target_pos[3];
+		static dtPolyRef target_ref;
+		const dtQueryFilter* filter = m_NavMesh->Crowd()->getFilter();
+		const float* ext = m_NavMesh->Crowd()->getQueryExtents();
+		m_NavMesh->Query()->findNearestPoly(p, ext, filter, &target_ref, target_pos);
+		if (m_CrowdAgent && m_CrowdAgent->active)
+			m_Crowd->requestMoveTarget(m_AgentID, target_ref, target_pos);
+	}
+	void Agent::Force(const float* p)
+	{
+		float vel[3];
+		if (m_CrowdAgent && m_CrowdAgent->active)
+		{
+			// calculate velocity
+			dtVsub(vel, p, m_CrowdAgent->npos);
+			vel[1] = 0.0;
+			dtVnormalize(vel);
+			dtVscale(vel, vel, m_CrowdAgent->params.maxSpeed);
+			m_Crowd->requestMoveVelocity(m_AgentID, vel);
+		}
 	}
 	NavMesh::NavMesh()
 	{
@@ -82,7 +109,6 @@ namespace PathEngine
 		m_talloc = new LinearAllocator(32000);
 		m_tcomp = new FastLZCompressor;
 		m_tmproc = new MeshProcess;
-		m_targetRef = 0;
 	}
 	void NavMesh::SetMesh(InputGeom* geom)
 	{
@@ -93,7 +119,7 @@ namespace PathEngine
 		dtFreeNavMesh(m_navMesh);
 		m_navMesh = 0;
 	}
-	bool NavMesh::Build()
+	bool NavMesh::BuildMesh()
 	{
 		dtStatus status;
 		if (!m_geom || !m_geom->getMesh()) return false;
@@ -325,14 +351,6 @@ namespace PathEngine
 		ap.separationWeight = 2.0f;
 
 		int idx = m_crowd->addAgent(p, &ap);
-		if (idx != -1)
-		{
-			// Init trail
-			AgentTrail* trail = &m_trails[idx];
-			for (int i = 0; i < AGENT_MAX_TRAIL; ++i)
-				dtVcopy(&trail->trail[i*3], p);
-			trail->htrail = 0;
-		}
 		return idx;
 	}
 	int NavMesh::HitTestAgent(const float* s, const float* p)
@@ -374,49 +392,12 @@ namespace PathEngine
 		if (!m_crowd) return;
 		m_crowd->removeAgent(idx);
 	}
-	void NavMesh::MoveAgent(int id, const float* p)
-	{
-		const dtQueryFilter* filter = m_crowd->getFilter();
-		const float* ext = m_crowd->getQueryExtents();
-		m_navQuery->findNearestPoly(p, ext, filter, &m_targetRef, m_targetPos);
-		const dtCrowdAgent* ag = m_crowd->getAgent(id);
-		if (ag && ag->active)
-			m_crowd->requestMoveTarget(id, m_targetRef, m_targetPos);
-	}
-	void NavMesh::ForceAgent(int id, const float* p)
-	{
-		float vel[3];
-		const dtCrowdAgent* ag = m_crowd->getAgent(id);
-		if (ag && ag->active)
-		{
-			// calculate velocity
-			dtVsub(vel, p, ag->npos);
-			vel[1] = 0.0;
-			dtVnormalize(vel);
-			dtVscale(vel, vel, ag->params.maxSpeed);
-
-			m_crowd->requestMoveVelocity(id, vel);
-		}
-	}
+	
 
 	void NavMesh::UpdateCrowd(const float dt)
 	{
 		if (!m_navMesh || !m_crowd) return;
-
 		m_crowd->update(dt, 0);
-
-		// Update agent trails
-		for (int i = 0; i < m_crowd->getAgentCount(); ++i)
-		{
-			const dtCrowdAgent* ag = m_crowd->getAgent(i);
-			AgentTrail* trail = &m_trails[i];
-			if (!ag->active)
-				continue;
-			// Update agent movement trail.
-			trail->htrail = (trail->htrail + 1) % AGENT_MAX_TRAIL;
-			dtVcopy(&trail->trail[trail->htrail*3], ag->npos);
-		}
-
 	}
 
 }

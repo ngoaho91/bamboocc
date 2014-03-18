@@ -3,21 +3,6 @@
 
 namespace PathEngine
 {
-	class Agent
-	{
-	protected:
-		float m_Angle;
-		int m_AgentID;
-		float m_Velocity[3];
-		float m_Position[3];
-	public:
-		Agent();
-		Agent(int id);
-		~Agent();
-		void SetID(int id);
-		void RefreshVelocity();
-		void RefreshPosition();
-	};
 	class NavMesh
 	{
 	private:
@@ -49,29 +34,50 @@ namespace PathEngine
 		int m_maxTiles;
 		int m_maxPolysPerTile;
 		float m_tileSize;
-	private:
-		AgentTrail m_trails[MAX_AGENTS];
-		float m_targetPos[3];
-		dtPolyRef m_targetRef;
+	public:
+		dtCrowd* Crowd(){ return m_crowd;}
+		dtNavMesh* Mesh(){ return m_navMesh;}
+		dtNavMeshQuery* Query(){ return m_navQuery;}
 	public:
 		NavMesh();
 		~NavMesh();
 		// navigation mesh
 		void InitMesh();
 		void SetMesh(InputGeom* geom);
-		bool Build();
+		bool BuildMesh();
+		void UpdateMesh(const float dt);
+		
+		// temp obstacle
 		int HitTestObstacle(const float* sp, const float* sq);
 		int AddObstacle(const float* pos);
 		void RemoveObstacle(const float* sp, const float* sq);
 		void ClearAllObstacle();
-		void UpdateMesh(const float dt);
+		
 		// crowd control
 		void InitCrowd();
 		int AddAgent(const float* p);
 		int HitTestAgent(const float* s, const float* p);
 		void RemoveAgent(const int idx);
 		void UpdateCrowd(const float dt);
-		void MoveAgent(int id, const float* p);
-		void ForceAgent(int id, const float* p);
+	};
+	class Agent
+	{
+	protected:
+		dtCrowd* m_Crowd;
+		const dtCrowdAgent* m_CrowdAgent;
+		NavMesh* m_NavMesh;
+		float m_Angle;
+		int m_AgentID;
+		float m_Velocity[3];
+		float m_Position[3];
+	public:
+		Agent(NavMesh* mesh);
+		Agent(NavMesh* mesh, int id);
+		~Agent();
+		void SetID(int id);
+		void SyncVelocity();
+		void SyncPosition();
+		void Move(const float* p);
+		void Force(const float* p);
 	};
 }

@@ -45,13 +45,7 @@ struct TileCacheData
 	int dataSize;
 };
 
-static const int AGENT_MAX_TRAIL = 64;
 static const int MAX_AGENTS = 128;
-struct AgentTrail
-{
-	float trail[AGENT_MAX_TRAIL*3];
-	int htrail;
-};
 
 struct RasterizationContext
 {
