@@ -63,9 +63,10 @@ namespace PathEngine
 	class Agent
 	{
 	protected:
-		dtCrowd* m_Crowd;
 		const dtCrowdAgent* m_CrowdAgent;
 		NavMesh* m_NavMesh;
+		bool m_Moving;// not sure agent want to move or being pulled
+		bool m_MovingRequested;// agent want to move
 		float m_Angle;
 		int m_AgentID;
 		float m_Velocity[3];
@@ -79,5 +80,6 @@ namespace PathEngine
 		void SyncPosition();
 		void Move(const float* p);
 		void Force(const float* p);
+		void Stop();
 	};
 }
