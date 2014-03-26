@@ -1,14 +1,20 @@
+#include "PathEngine/PathEngine.h"
 #include "HelloWorldScene.h"
 #include "CreateScene.h"
 using namespace cocos2d;
-
+using namespace PathEngine;
+void TestPathEngine()
+{
+	NavMesh* mesh = new NavMesh();
+	mesh->LoadMesh("nav_test.obj");
+	mesh->BuildMesh();
+}
 CCScene* HelloWorld::scene()
 {
 	CCScene * scene = NULL;
 	// 'scene' is an autorelease object
 	scene = CCScene::create();
 	if(! scene) return 0;
-
 	// 'layer' is an autorelease object
 	HelloWorld *layer = HelloWorld::create();
 	if(!layer) return scene;
@@ -24,16 +30,8 @@ CCScene* HelloWorld::scene()
 bool HelloWorld::init()
 {
 	bool bRet = false;
-	//////////////////////////////////////////////////////////////////////////
-	// super init first
-	//////////////////////////////////////////////////////////////////////////
-
 	if(! CCLayer::init()) return bRet;
-
-	//////////////////////////////////////////////////////////////////////////
-	// add your codes below...
-	//////////////////////////////////////////////////////////////////////////
-
+	TestPathEngine();
 	// 1. Add a menu item with "X" image, which is clicked to quit the program.
 
 	// Create a "close" menu item with close icon, it's an auto release object.

@@ -77,10 +77,10 @@ namespace FightEngine
 	void DamageRay::SetAngle(float value)
 	{
 		m_Angle = value;
-		if(m_Angle > PI)
-			m_Angle -= _2PI;
-		if(m_Angle < -PI)
-			m_Angle += _2PI;
+		if(m_Angle > 3.14)
+			m_Angle -= 6.28;
+		if(m_Angle < -3.14)
+			m_Angle += 6.28;
 	}
 	void DamageRay::SetAngleFromVertex(int x1, int y1, int x2, int y2)
 	{

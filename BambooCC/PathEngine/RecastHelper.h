@@ -1,10 +1,10 @@
+#pragma once
 #include <stdio.h>
 #include <stdarg.h>
 #include <float.h>
 #include <math.h>
 #include <string.h>
 
-#include "PerfTimer.h"
 #include "Recast.h"
 #include "DetourNavMesh.h"
 #include "DetourNavMeshBuilder.h"
@@ -75,137 +75,6 @@ struct RasterizationContext
 	}
 
 };
-
-class BuildContext : public rcContext
-{
-	TimeVal m_startTime[RC_MAX_TIMERS];
-	int m_accTime[RC_MAX_TIMERS];
-	static const int MAX_MESSAGES = 1000;
-	const char* m_messages[MAX_MESSAGES];
-	int m_messageCount;
-	static const int TEXT_POOL_SIZE = 8000;
-	char m_textPool[TEXT_POOL_SIZE];
-	int m_textPoolSize;
-
-public:
-	BuildContext()
-	{
-		m_messageCount = 0;
-		m_textPoolSize = 0;
-		resetTimers();
-	}
-	virtual ~BuildContext();
-
-	/// Dumps the log to stdout.
-	void dumpLog(const char* format, ...)
-	{
-		// Print header.
-		va_list ap;
-		va_start(ap, format);
-		vprintf(format, ap);
-		va_end(ap);
-		printf("\n");
-
-		// Print messages
-		const int TAB_STOPS[4] = { 28, 36, 44, 52 };
-		for (int i = 0; i < m_messageCount; ++i)
-		{
-			const char* msg = m_messages[i]+1;
-			int n = 0;
-			while (*msg)
-			{
-				if (*msg == '\t')
-				{
-					int count = 1;
-					for (int j = 0; j < 4; ++j)
-					{
-						if (n < TAB_STOPS[j])
-						{
-							count = TAB_STOPS[j] - n;
-							break;
-						}
-					}
-					while (--count)
-					{
-						putchar(' ');
-						n++;
-					}
-				}
-				else
-				{
-					putchar(*msg);
-					n++;
-				}
-				msg++;
-			}
-			putchar('\n');
-		}
-	}
-	/// Returns number of log messages.
-	int getLogCount() const
-	{
-		return m_messageCount;
-	}
-	/// Returns log message text.
-	const char* getLogText(const int i) const
-	{
-		return m_messages[i]+1;
-	}
-
-protected:	
-	/// Virtual functions for custom implementations.
-	///@{
-	virtual void doResetLog()
-	{
-		m_messageCount = 0;
-		m_textPoolSize = 0;
-	}
-	virtual void doLog(const rcLogCategory category, const char* msg, const int len)
-	{
-		if (!len) return;
-		if (m_messageCount >= MAX_MESSAGES)
-			return;
-		char* dst = &m_textPool[m_textPoolSize];
-		int n = TEXT_POOL_SIZE - m_textPoolSize;
-		if (n < 2)
-			return;
-		char* cat = dst;
-		char* text = dst+1;
-		const int maxtext = n-1;
-		// Store category
-		*cat = (char)category;
-		// Store message
-		const int count = rcMin(len+1, maxtext);
-		memcpy(text, msg, count);
-		text[count-1] = '\0';
-		m_textPoolSize += 1 + count;
-		m_messages[m_messageCount++] = dst;
-	}
-	virtual void doResetTimers()
-	{
-		for (int i = 0; i < RC_MAX_TIMERS; ++i)
-			m_accTime[i] = -1;
-	}
-	virtual void doStartTimer(const rcTimerLabel label)
-	{
-		m_startTime[label] = getPerfTime();
-	}
-	virtual void doStopTimer(const rcTimerLabel label)
-	{
-		const TimeVal endTime = getPerfTime();
-		const int deltaTime = (int)(endTime - m_startTime[label]);
-		if (m_accTime[label] == -1)
-			m_accTime[label] = deltaTime;
-		else
-			m_accTime[label] += deltaTime;
-	}
-	virtual int doGetAccumulatedTime(const rcTimerLabel label) const
-	{
-		return m_accTime[label];
-	}
-	///@}
-};
-
 
 struct FastLZCompressor : public dtTileCacheCompressor
 {
@@ -370,7 +239,7 @@ static bool isectSegAABB(const float* sp, const float* sq,
 	return true;
 }
 
-static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
+static int rasterizeTileLayers(InputGeom* geom,
 							   const int tx, const int ty,
 							   const rcConfig& cfg,
 							   TileCacheData* tiles,
@@ -378,7 +247,6 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 {
 	if (!geom || !geom->getMesh() || !geom->getChunkyMesh())
 	{
-		ctx->log(RC_LOG_ERROR, "buildTile: Input mesh is not specified.");
 		return 0;
 	}
 
@@ -410,12 +278,10 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 	rc.solid = rcAllocHeightfield();
 	if (!rc.solid)
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Out of memory 'solid'.");
 		return 0;
 	}
-	if (!rcCreateHeightfield(ctx, *rc.solid, tcfg.width, tcfg.height, tcfg.bmin, tcfg.bmax, tcfg.cs, tcfg.ch))
+	if (!rcCreateHeightfield(0, *rc.solid, tcfg.width, tcfg.height, tcfg.bmin, tcfg.bmax, tcfg.cs, tcfg.ch))
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Could not create solid heightfield.");
 		return 0;
 	}
 
@@ -425,7 +291,6 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 	rc.triareas = new unsigned char[chunkyMesh->maxTrisPerChunk];
 	if (!rc.triareas)
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Out of memory 'm_triareas' (%d).", chunkyMesh->maxTrisPerChunk);
 		return 0;
 	}
 
@@ -448,36 +313,31 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 		const int ntris = node.n;
 
 		memset(rc.triareas, 0, ntris*sizeof(unsigned char));
-		rcMarkWalkableTriangles(ctx, tcfg.walkableSlopeAngle,
+		rcMarkWalkableTriangles(0, tcfg.walkableSlopeAngle,
 			verts, nverts, tris, ntris, rc.triareas);
 
-		rcRasterizeTriangles(ctx, verts, nverts, tris, rc.triareas, ntris, *rc.solid, tcfg.walkableClimb);
+		rcRasterizeTriangles(0, verts, nverts, tris, rc.triareas, ntris, *rc.solid, tcfg.walkableClimb);
 	}
 
 	// Once all geometry is rasterized, we do initial pass of filtering to
 	// remove unwanted overhangs caused by the conservative rasterization
 	// as well as filter spans where the character cannot possibly stand.
-	rcFilterLowHangingWalkableObstacles(ctx, tcfg.walkableClimb, *rc.solid);
-	rcFilterLedgeSpans(ctx, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid);
-	rcFilterWalkableLowHeightSpans(ctx, tcfg.walkableHeight, *rc.solid);
-
-
+	rcFilterLowHangingWalkableObstacles(0, tcfg.walkableClimb, *rc.solid);
+	rcFilterLedgeSpans(0, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid);
+	rcFilterWalkableLowHeightSpans(0, tcfg.walkableHeight, *rc.solid);
 	rc.chf = rcAllocCompactHeightfield();
 	if (!rc.chf)
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Out of memory 'chf'.");
 		return 0;
 	}
-	if (!rcBuildCompactHeightfield(ctx, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid, *rc.chf))
+	if (!rcBuildCompactHeightfield(0, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid, *rc.chf))
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Could not build compact data.");
 		return 0;
 	}
 
 	// Erode the walkable area by agent radius.
-	if (!rcErodeWalkableArea(ctx, tcfg.walkableRadius, *rc.chf))
+	if (!rcErodeWalkableArea(0, tcfg.walkableRadius, *rc.chf))
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Could not erode.");
 		return 0;
 	}
 
@@ -485,7 +345,7 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 	const ConvexVolume* vols = geom->getConvexVolumes();
 	for (int i  = 0; i < geom->getConvexVolumeCount(); ++i)
 	{
-		rcMarkConvexPolyArea(ctx, vols[i].verts, vols[i].nverts,
+		rcMarkConvexPolyArea(0, vols[i].verts, vols[i].nverts,
 			vols[i].hmin, vols[i].hmax,
 			(unsigned char)vols[i].area, *rc.chf);
 	}
@@ -493,12 +353,10 @@ static int rasterizeTileLayers(BuildContext* ctx, InputGeom* geom,
 	rc.lset = rcAllocHeightfieldLayerSet();
 	if (!rc.lset)
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Out of memory 'lset'.");
 		return 0;
 	}
-	if (!rcBuildHeightfieldLayers(ctx, *rc.chf, tcfg.borderSize, tcfg.walkableHeight, *rc.lset))
+	if (!rcBuildHeightfieldLayers(0, *rc.chf, tcfg.borderSize, tcfg.walkableHeight, *rc.lset))
 	{
-		ctx->log(RC_LOG_ERROR, "buildNavigation: Could not build heighfield layers.");
 		return 0;
 	}
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <string.h>
 #include "RecastHelper.h"
 
@@ -24,7 +25,6 @@ namespace PathEngine
 		float m_vertsPerPoly;
 		float m_detailSampleDist;
 		float m_detailSampleMaxError;
-		BuildContext* m_ctx;
 	private:
 		struct LinearAllocator* m_talloc;
 		struct FastLZCompressor* m_tcomp;
@@ -43,6 +43,7 @@ namespace PathEngine
 		~NavMesh();
 		// navigation mesh
 		void InitMesh();
+		void LoadMesh(const char* filepath);
 		void SetMesh(InputGeom* geom);
 		bool BuildMesh();
 		void UpdateMesh(const float dt);
@@ -65,7 +66,7 @@ namespace PathEngine
 	protected:
 		const dtCrowdAgent* m_CrowdAgent;
 		NavMesh* m_NavMesh;
-		bool m_Moving;// not sure agent want to move or being pulled
+		bool m_Moving;// not sure agent want to move or being pushed
 		bool m_MovingRequested;// agent want to move
 		float m_Angle;
 		int m_AgentID;

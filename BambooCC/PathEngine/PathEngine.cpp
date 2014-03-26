@@ -108,7 +108,6 @@ namespace PathEngine
 		//
 		m_geom = 0;
 		m_navMesh = 0;
-		m_ctx = 0;
 		m_navQuery = dtAllocNavMeshQuery();
 		m_crowd = dtAllocCrowd();
 		m_tileCache = 0;
@@ -118,6 +117,12 @@ namespace PathEngine
 		m_talloc = new LinearAllocator(32000);
 		m_tcomp = new FastLZCompressor;
 		m_tmproc = new MeshProcess;
+	}
+	void NavMesh::LoadMesh(const char* filepath)
+	{
+		InputGeom* geom = new InputGeom();
+		geom->loadMesh(filepath);
+		SetMesh(geom);
 	}
 	void NavMesh::SetMesh(InputGeom* geom)
 	{
@@ -210,7 +215,7 @@ namespace PathEngine
 			{
 				TileCacheData tiles[MAX_LAYERS];
 				memset(tiles, 0, sizeof(tiles));
-				int n = rasterizeTileLayers(m_ctx, m_geom, x, y, cfg, tiles, MAX_LAYERS);
+				int n = rasterizeTileLayers(m_geom, x, y, cfg, tiles, MAX_LAYERS);
 				for (int i = 0; i < n; ++i)
 				{
 					TileCacheData* tile = &tiles[i];

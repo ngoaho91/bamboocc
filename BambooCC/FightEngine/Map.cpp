@@ -2,7 +2,7 @@
 #include "Map.h"
 #include "../pugiXML/pugixml.hpp"
 #include "../Utilities.h"
-#include "../PathEngine/PathFinderWorld.h"
+#include "../PathEngine/PathEngine.h"
 namespace FightEngine
 {
 	Map::Map(int width, int height)
@@ -14,66 +14,6 @@ namespace FightEngine
 		m_Render = new MapRender();
 		m_Render->m_Tilemap = m_Tilemap->GetRender();
 		system("cls");
-		return;
-		{// this for testing only
-			vector<Node*> v;
-			v.push_back(new Node(160,60));
-			v.push_back(new Node(160,180));
-			v.push_back(new Node(220,180));
-			v.push_back(new Node(220,240));
-			v.push_back(new Node(160,240));
-			v.push_back(new Node(160,360));
-			v.push_back(new Node(220,360));
-			v.push_back(new Node(220,300));
-			v.push_back(new Node(340,300));
-			v.push_back(new Node(340,360));
-			v.push_back(new Node(280,360));
-			v.push_back(new Node(280,420));
-			v.push_back(new Node(340,420));
-			v.push_back(new Node(340,480));
-			v.push_back(new Node(220,480));
-			v.push_back(new Node(220,420));
-			v.push_back(new Node(160,420));
-			v.push_back(new Node(160,540));
-			v.push_back(new Node(640,540));
-			v.push_back(new Node(640,420));
-			v.push_back(new Node(580,420));
-			v.push_back(new Node(580,480));
-			v.push_back(new Node(460,480));
-			v.push_back(new Node(460,420));
-			v.push_back(new Node(520,420));
-			v.push_back(new Node(520,360));
-			v.push_back(new Node(460,360));
-			v.push_back(new Node(460,300));
-			v.push_back(new Node(580,300));
-			v.push_back(new Node(580,360));
-			v.push_back(new Node(640,360));
-			v.push_back(new Node(640,240));
-			v.push_back(new Node(580,240));
-			v.push_back(new Node(580,180));
-			v.push_back(new Node(640,180));
-			v.push_back(new Node(640,60));
-			v.push_back(new Node(580,60));
-			v.push_back(new Node(580,120));
-			v.push_back(new Node(520,120));
-			v.push_back(new Node(520,60));
-			v.push_back(new Node(460,60));
-			v.push_back(new Node(460,180));
-			v.push_back(new Node(520,180));
-			v.push_back(new Node(520,240));
-			v.push_back(new Node(280,240));
-			v.push_back(new Node(280,180));
-			v.push_back(new Node(340,180));
-			v.push_back(new Node(340,60));
-			v.push_back(new Node(280,60));
-			v.push_back(new Node(280,120));
-			v.push_back(new Node(220,120));
-			v.push_back(new Node(220,60));
-			reverse(v.begin(),v.end());
-			//m_NavMesh->AddPolygon(v);
-			//m_NavMesh->BuildVisiGraph();
-			//m_Render->m_PathRender->SetMesh(m_NavMesh);
-		}
 	}
 	Map::~Map()
 	{
@@ -176,6 +116,7 @@ namespace FightEngine
 		pugi::xml_node polygonTAG = polygonsTAG.first_child();
 		for(;polygonTAG; polygonTAG = polygonTAG.next_sibling())
 		{
+			/*
 			vector<Node*> v;
 			pugi::xml_node vertexTAG = polygonTAG.first_child();
 			for(;vertexTAG;vertexTAG = vertexTAG.next_sibling())
@@ -184,6 +125,7 @@ namespace FightEngine
 				int vy = vertexTAG.attribute("y").as_int();
 				v.push_back(new Node(x+vx,y-vy));
 			}
+			*/
 			//m_NavMesh->AddPolygon(v);
 			//PathEngine::World::instance()->GetMesh()->AddPolygon(v);
 		}

@@ -1,5 +1,5 @@
 #include "TrapSkill.h"
-#include "../Utilities/Utilities.h"
+#include "../Utilities.h"
 #include "../pugiXML/pugixml.hpp"
 #include "FightActor.h"
 #include "FightWorld.h"

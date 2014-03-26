@@ -118,7 +118,7 @@ InputGeom::~InputGeom()
 	delete m_mesh;
 }
 		
-bool InputGeom::loadMesh(rcContext* ctx, const char* filepath)
+bool InputGeom::loadMesh(const char* filepath)
 {
 	if (m_mesh)
 	{
@@ -133,12 +133,10 @@ bool InputGeom::loadMesh(rcContext* ctx, const char* filepath)
 	m_mesh = new rcMeshLoaderObj;
 	if (!m_mesh)
 	{
-		ctx->log(RC_LOG_ERROR, "loadMesh: Out of memory 'm_mesh'.");
 		return false;
 	}
 	if (!m_mesh->load(filepath))
 	{
-		ctx->log(RC_LOG_ERROR, "buildTiledNavigation: Could not load '%s'", filepath);
 		return false;
 	}
 
@@ -147,19 +145,17 @@ bool InputGeom::loadMesh(rcContext* ctx, const char* filepath)
 	m_chunkyMesh = new rcChunkyTriMesh;
 	if (!m_chunkyMesh)
 	{
-		ctx->log(RC_LOG_ERROR, "buildTiledNavigation: Out of memory 'm_chunkyMesh'.");
 		return false;
 	}
 	if (!rcCreateChunkyTriMesh(m_mesh->getVerts(), m_mesh->getTris(), m_mesh->getTriCount(), 256, m_chunkyMesh))
 	{
-		ctx->log(RC_LOG_ERROR, "buildTiledNavigation: Failed to build chunky mesh.");
 		return false;
 	}		
 
 	return true;
 }
 
-bool InputGeom::load(rcContext* ctx, const char* filePath)
+bool InputGeom::load(const char* filePath)
 {
 	char* buf = 0;
 	FILE* fp = fopen(filePath, "rb");
@@ -199,7 +195,7 @@ bool InputGeom::load(rcContext* ctx, const char* filePath)
 				name++;
 			if (*name)
 			{
-				if (!loadMesh(ctx, name))
+				if (!loadMesh(name))
 				{
 					delete [] buf;
 					return false;

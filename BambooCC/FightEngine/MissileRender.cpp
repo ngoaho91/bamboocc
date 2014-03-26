@@ -1,5 +1,5 @@
 #include "MissileRender.h"
-#include "../Utilities/Utilities.h"
+#include "../Utilities.h"
 #include "../pugiXML/pugixml.hpp"
 namespace FightEngine
 {

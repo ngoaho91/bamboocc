@@ -1,6 +1,6 @@
 #include "Element.h"
 #include "..\pugiXML\pugixml.hpp"
-#include "..\Utilities\Utilities.h"
+#include "..\Utilities.h"
 namespace TileEngine
 {
 	Element::Element()

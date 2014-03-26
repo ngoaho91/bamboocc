@@ -1,6 +1,5 @@
 #include "Missile.h"
-#include "../PathEngine/PathFinderActor.h"
-#include "../PathEngine/PathFinderWorld.h"
+#include "../PathEngine/PathEngine.h"
 #ifndef MAP_INF
 #define MAP_INF 2000000
 #endif

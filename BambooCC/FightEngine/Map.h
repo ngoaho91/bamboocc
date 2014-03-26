@@ -4,7 +4,6 @@
 #include "../TileEngine/Element.h"
 #include "MapRender.h"
 using namespace TileEngine;
-using namespace PathEngine;
 namespace FightEngine
 {
 	// TODO: implement these
