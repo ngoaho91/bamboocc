@@ -33,12 +33,8 @@
 /// #rcFilterLedgeSpans after calling this filter. 
 ///
 /// @see rcHeightfield, rcConfig
-void rcFilterLowHangingWalkableObstacles(rcContext* ctx, const int walkableClimb, rcHeightfield& solid)
-{
-	rcAssert(ctx);
-
-	ctx->startTimer(RC_TIMER_FILTER_LOW_OBSTACLES);
-	
+void rcFilterLowHangingWalkableObstacles(const int walkableClimb, rcHeightfield& solid)
+{	
 	const int w = solid.width;
 	const int h = solid.height;
 	
@@ -67,8 +63,6 @@ void rcFilterLowHangingWalkableObstacles(rcContext* ctx, const int walkableClimb
 			}
 		}
 	}
-
-	ctx->stopTimer(RC_TIMER_FILTER_LOW_OBSTACLES);
 }
 
 /// @par
@@ -81,13 +75,9 @@ void rcFilterLowHangingWalkableObstacles(rcContext* ctx, const int walkableClimb
 /// A span is a ledge if: <tt>rcAbs(currentSpan.smax - neighborSpan.smax) > walkableClimb</tt>
 /// 
 /// @see rcHeightfield, rcConfig
-void rcFilterLedgeSpans(rcContext* ctx, const int walkableHeight, const int walkableClimb,
+void rcFilterLedgeSpans(const int walkableHeight, const int walkableClimb,
 						rcHeightfield& solid)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_FILTER_BORDER);
-
 	const int w = solid.width;
 	const int h = solid.height;
 	const int MAX_HEIGHT = 0xffff;
@@ -167,8 +157,6 @@ void rcFilterLedgeSpans(rcContext* ctx, const int walkableHeight, const int walk
 			}
 		}
 	}
-	
-	ctx->stopTimer(RC_TIMER_FILTER_BORDER);
 }	
 
 /// @par
@@ -177,12 +165,8 @@ void rcFilterLedgeSpans(rcContext* ctx, const int walkableHeight, const int walk
 /// maximum to the next higher span's minimum. (Same grid column.)
 /// 
 /// @see rcHeightfield, rcConfig
-void rcFilterWalkableLowHeightSpans(rcContext* ctx, int walkableHeight, rcHeightfield& solid)
+void rcFilterWalkableLowHeightSpans(int walkableHeight, rcHeightfield& solid)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_FILTER_WALKABLE);
-	
 	const int w = solid.width;
 	const int h = solid.height;
 	const int MAX_HEIGHT = 0xffff;
@@ -202,6 +186,4 @@ void rcFilterWalkableLowHeightSpans(rcContext* ctx, int walkableHeight, rcHeight
 			}
 		}
 	}
-	
-	ctx->stopTimer(RC_TIMER_FILTER_WALKABLE);
 }

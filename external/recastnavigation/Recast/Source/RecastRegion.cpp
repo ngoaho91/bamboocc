@@ -768,7 +768,7 @@ static void walkContour(int x, int y, int i, int dir,
 	}
 }
 
-static bool filterSmallRegions(rcContext* ctx, int minRegionArea, int mergeRegionSize,
+static bool filterSmallRegions(int minRegionArea, int mergeRegionSize,
 							   unsigned short& maxRegionId,
 							   rcCompactHeightfield& chf,
 							   unsigned short* srcReg)
@@ -780,7 +780,6 @@ static bool filterSmallRegions(rcContext* ctx, int minRegionArea, int mergeRegio
 	rcRegion* regions = (rcRegion*)rcAlloc(sizeof(rcRegion)*nreg, RC_ALLOC_TEMP);
 	if (!regions)
 	{
-		ctx->log(RC_LOG_ERROR, "filterSmallRegions: Out of memory 'regions' (%d).", nreg);
 		return false;
 	}
 
@@ -1021,12 +1020,8 @@ static bool filterSmallRegions(rcContext* ctx, int minRegionArea, int mergeRegio
 /// and rcCompactHeightfield::dist fields.
 ///
 /// @see rcCompactHeightfield, rcBuildRegions, rcBuildRegionsMonotone
-bool rcBuildDistanceField(rcContext* ctx, rcCompactHeightfield& chf)
+bool rcBuildDistanceField(rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_BUILD_DISTANCEFIELD);
-	
 	if (chf.dist)
 	{
 		rcFree(chf.dist);
@@ -1036,27 +1031,19 @@ bool rcBuildDistanceField(rcContext* ctx, rcCompactHeightfield& chf)
 	unsigned short* src = (unsigned short*)rcAlloc(sizeof(unsigned short)*chf.spanCount, RC_ALLOC_TEMP);
 	if (!src)
 	{
-		ctx->log(RC_LOG_ERROR, "rcBuildDistanceField: Out of memory 'src' (%d).", chf.spanCount);
 		return false;
 	}
 	unsigned short* dst = (unsigned short*)rcAlloc(sizeof(unsigned short)*chf.spanCount, RC_ALLOC_TEMP);
 	if (!dst)
 	{
-		ctx->log(RC_LOG_ERROR, "rcBuildDistanceField: Out of memory 'dst' (%d).", chf.spanCount);
 		rcFree(src);
 		return false;
 	}
 	
 	unsigned short maxDist = 0;
 
-	ctx->startTimer(RC_TIMER_BUILD_DISTANCEFIELD_DIST);
-	
 	calculateDistanceField(chf, src, maxDist);
 	chf.maxDistance = maxDist;
-	
-	ctx->stopTimer(RC_TIMER_BUILD_DISTANCEFIELD_DIST);
-	
-	ctx->startTimer(RC_TIMER_BUILD_DISTANCEFIELD_BLUR);
 	
 	// Blur
 	if (boxBlur(chf, 1, src, dst) != src)
@@ -1064,10 +1051,6 @@ bool rcBuildDistanceField(rcContext* ctx, rcCompactHeightfield& chf)
 	
 	// Store distance.
 	chf.dist = src;
-	
-	ctx->stopTimer(RC_TIMER_BUILD_DISTANCEFIELD_BLUR);
-
-	ctx->stopTimer(RC_TIMER_BUILD_DISTANCEFIELD);
 	
 	rcFree(dst);
 	
@@ -1122,13 +1105,9 @@ struct rcSweepSpan
 /// @warning The distance field must be created using #rcBuildDistanceField before attempting to build regions.
 /// 
 /// @see rcCompactHeightfield, rcCompactSpan, rcBuildDistanceField, rcBuildRegionsMonotone, rcConfig
-bool rcBuildRegionsMonotone(rcContext* ctx, rcCompactHeightfield& chf,
+bool rcBuildRegionsMonotone(rcCompactHeightfield& chf,
 							const int borderSize, const int minRegionArea, const int mergeRegionArea)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_BUILD_REGIONS);
-	
 	const int w = chf.width;
 	const int h = chf.height;
 	unsigned short id = 1;
@@ -1136,7 +1115,6 @@ bool rcBuildRegionsMonotone(rcContext* ctx, rcCompactHeightfield& chf,
 	rcScopedDelete<unsigned short> srcReg = (unsigned short*)rcAlloc(sizeof(unsigned short)*chf.spanCount, RC_ALLOC_TEMP);
 	if (!srcReg)
 	{
-		ctx->log(RC_LOG_ERROR, "rcBuildRegionsMonotone: Out of memory 'src' (%d).", chf.spanCount);
 		return false;
 	}
 	memset(srcReg,0,sizeof(unsigned short)*chf.spanCount);
@@ -1145,7 +1123,6 @@ bool rcBuildRegionsMonotone(rcContext* ctx, rcCompactHeightfield& chf,
 	rcScopedDelete<rcSweepSpan> sweeps = (rcSweepSpan*)rcAlloc(sizeof(rcSweepSpan)*nsweeps, RC_ALLOC_TEMP);
 	if (!sweeps)
 	{
-		ctx->log(RC_LOG_ERROR, "rcBuildRegionsMonotone: Out of memory 'sweeps' (%d).", nsweeps);
 		return false;
 	}
 	
@@ -1255,21 +1232,14 @@ bool rcBuildRegionsMonotone(rcContext* ctx, rcCompactHeightfield& chf,
 			}
 		}
 	}
-
-	ctx->startTimer(RC_TIMER_BUILD_REGIONS_FILTER);
-
 	// Filter out small regions.
 	chf.maxRegions = id;
-	if (!filterSmallRegions(ctx, minRegionArea, mergeRegionArea, chf.maxRegions, chf, srcReg))
+	if (!filterSmallRegions(minRegionArea, mergeRegionArea, chf.maxRegions, chf, srcReg))
 		return false;
 
-	ctx->stopTimer(RC_TIMER_BUILD_REGIONS_FILTER);
-	
 	// Store the result out.
 	for (int i = 0; i < chf.spanCount; ++i)
 		chf.spans[i].reg = srcReg[i];
-	
-	ctx->stopTimer(RC_TIMER_BUILD_REGIONS);
 
 	return true;
 }
@@ -1293,24 +1263,17 @@ bool rcBuildRegionsMonotone(rcContext* ctx, rcCompactHeightfield& chf,
 /// @warning The distance field must be created using #rcBuildDistanceField before attempting to build regions.
 /// 
 /// @see rcCompactHeightfield, rcCompactSpan, rcBuildDistanceField, rcBuildRegionsMonotone, rcConfig
-bool rcBuildRegions(rcContext* ctx, rcCompactHeightfield& chf,
+bool rcBuildRegions(rcCompactHeightfield& chf,
 					const int borderSize, const int minRegionArea, const int mergeRegionArea)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_BUILD_REGIONS);
-	
 	const int w = chf.width;
 	const int h = chf.height;
 	
 	rcScopedDelete<unsigned short> buf = (unsigned short*)rcAlloc(sizeof(unsigned short)*chf.spanCount*4, RC_ALLOC_TEMP);
 	if (!buf)
 	{
-		ctx->log(RC_LOG_ERROR, "rcBuildRegions: Out of memory 'tmp' (%d).", chf.spanCount*4);
 		return false;
 	}
-	
-	ctx->startTimer(RC_TIMER_BUILD_REGIONS_WATERSHED);
 
 	const int LOG_NB_STACKS = 3;
 	const int NB_STACKS = 1 << LOG_NB_STACKS;
@@ -1358,28 +1321,18 @@ bool rcBuildRegions(rcContext* ctx, rcCompactHeightfield& chf,
 		level = level >= 2 ? level-2 : 0;
 		sId = (sId+1) & (NB_STACKS-1);
 
-//		ctx->startTimer(RC_TIMER_DIVIDE_TO_LEVELS);
-
 		if (sId == 0)
 			sortCellsByLevel(level, chf, srcReg, NB_STACKS, lvlStacks, 1);
 		else 
 			appendStacks(lvlStacks[sId-1], lvlStacks[sId], srcReg); // copy left overs from last level
 
-//		ctx->stopTimer(RC_TIMER_DIVIDE_TO_LEVELS);
-
-		ctx->startTimer(RC_TIMER_BUILD_REGIONS_EXPAND);
-		
 		// Expand current regions until no empty connected cells found.
 		if (expandRegions(expandIters, level, chf, srcReg, srcDist, dstReg, dstDist, lvlStacks[sId], false) != srcReg)
 		{
 			rcSwap(srcReg, dstReg);
 			rcSwap(srcDist, dstDist);
 		}
-		
-		ctx->stopTimer(RC_TIMER_BUILD_REGIONS_EXPAND);
-		
-		ctx->startTimer(RC_TIMER_BUILD_REGIONS_FLOOD);
-		
+
 		// Mark new regions with IDs.
 		for (int j=0; j<lvlStacks[sId].size(); j+=3)
 		{
@@ -1392,8 +1345,6 @@ bool rcBuildRegions(rcContext* ctx, rcCompactHeightfield& chf,
 					regionId++;
 			}
 		}
-		
-		ctx->stopTimer(RC_TIMER_BUILD_REGIONS_FLOOD);
 	}
 	
 	// Expand current regions until no empty connected cells found.
@@ -1403,22 +1354,14 @@ bool rcBuildRegions(rcContext* ctx, rcCompactHeightfield& chf,
 		rcSwap(srcDist, dstDist);
 	}
 	
-	ctx->stopTimer(RC_TIMER_BUILD_REGIONS_WATERSHED);
-	
-	ctx->startTimer(RC_TIMER_BUILD_REGIONS_FILTER);
-	
 	// Filter out small regions.
 	chf.maxRegions = regionId;
-	if (!filterSmallRegions(ctx, minRegionArea, mergeRegionArea, chf.maxRegions, chf, srcReg))
+	if (!filterSmallRegions(minRegionArea, mergeRegionArea, chf.maxRegions, chf, srcReg))
 		return false;
-	
-	ctx->stopTimer(RC_TIMER_BUILD_REGIONS_FILTER);
 		
 	// Write the result out.
 	for (int i = 0; i < chf.spanCount; ++i)
 		chf.spans[i].reg = srcReg[i];
-	
-	ctx->stopTimer(RC_TIMER_BUILD_REGIONS);
 	
 	return true;
 }

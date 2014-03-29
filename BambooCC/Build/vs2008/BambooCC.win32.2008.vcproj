@@ -324,14 +324,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\PathEngine\PerfTimer.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\PathEngine\PerfTimer.h"
-				>
-			</File>
-			<File
 				RelativePath="..\..\PathEngine\RecastHelper.h"
 				>
 			</File>

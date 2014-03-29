@@ -161,11 +161,11 @@ static void addSpan(rcHeightfield& hf, const int x, const int y,
 /// from the existing span, the span flags are merged.
 ///
 /// @see rcHeightfield, rcSpan.
-void rcAddSpan(rcContext* /*ctx*/, rcHeightfield& hf, const int x, const int y,
+void rcAddSpan(rcHeightfield& hf, const int x, const int y,
 			   const unsigned short smin, const unsigned short smax,
 			   const unsigned char area, const int flagMergeThr)
 {
-//	rcAssert(ctx);
+//	
 	addSpan(hf, x,y, smin, smax, area, flagMergeThr);
 }
 
@@ -325,19 +325,13 @@ static void rasterizeTri(const float* v0, const float* v1, const float* v2,
 /// No spans will be added if the triangle does not overlap the heightfield grid.
 ///
 /// @see rcHeightfield
-void rcRasterizeTriangle(rcContext* ctx, const float* v0, const float* v1, const float* v2,
+void rcRasterizeTriangle(const float* v0, const float* v1, const float* v2,
 						 const unsigned char area, rcHeightfield& solid,
 						 const int flagMergeThr)
 {
-	rcAssert(ctx);
-
-	ctx->startTimer(RC_TIMER_RASTERIZE_TRIANGLES);
-
 	const float ics = 1.0f/solid.cs;
 	const float ich = 1.0f/solid.ch;
 	rasterizeTri(v0, v1, v2, area, solid, solid.bmin, solid.bmax, solid.cs, ics, ich, flagMergeThr);
-
-	ctx->stopTimer(RC_TIMER_RASTERIZE_TRIANGLES);
 }
 
 /// @par
@@ -345,14 +339,10 @@ void rcRasterizeTriangle(rcContext* ctx, const float* v0, const float* v1, const
 /// Spans will only be added for triangles that overlap the heightfield grid.
 ///
 /// @see rcHeightfield
-void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
+void rcRasterizeTriangles(const float* verts, const int /*nv*/,
 						  const int* tris, const unsigned char* areas, const int nt,
 						  rcHeightfield& solid, const int flagMergeThr)
 {
-	if(ctx) rcAssert(ctx);
-
-	if(ctx) ctx->startTimer(RC_TIMER_RASTERIZE_TRIANGLES);
-	
 	const float ics = 1.0f/solid.cs;
 	const float ich = 1.0f/solid.ch;
 	// Rasterize triangles.
@@ -364,8 +354,6 @@ void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
 		// Rasterize.
 		rasterizeTri(v0, v1, v2, areas[i], solid, solid.bmin, solid.bmax, solid.cs, ics, ich, flagMergeThr);
 	}
-	
-	if(ctx) ctx->stopTimer(RC_TIMER_RASTERIZE_TRIANGLES);
 }
 
 /// @par
@@ -373,14 +361,10 @@ void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
 /// Spans will only be added for triangles that overlap the heightfield grid.
 ///
 /// @see rcHeightfield
-void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
+void rcRasterizeTriangles(const float* verts, const int /*nv*/,
 						  const unsigned short* tris, const unsigned char* areas, const int nt,
 						  rcHeightfield& solid, const int flagMergeThr)
 {
-	rcAssert(ctx);
-
-	ctx->startTimer(RC_TIMER_RASTERIZE_TRIANGLES);
-	
 	const float ics = 1.0f/solid.cs;
 	const float ich = 1.0f/solid.ch;
 	// Rasterize triangles.
@@ -392,8 +376,6 @@ void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
 		// Rasterize.
 		rasterizeTri(v0, v1, v2, areas[i], solid, solid.bmin, solid.bmax, solid.cs, ics, ich, flagMergeThr);
 	}
-	
-	ctx->stopTimer(RC_TIMER_RASTERIZE_TRIANGLES);
 }
 
 /// @par
@@ -401,13 +383,9 @@ void rcRasterizeTriangles(rcContext* ctx, const float* verts, const int /*nv*/,
 /// Spans will only be added for triangles that overlap the heightfield grid.
 ///
 /// @see rcHeightfield
-void rcRasterizeTriangles(rcContext* ctx, const float* verts, const unsigned char* areas, const int nt,
+void rcRasterizeTriangles(const float* verts, const unsigned char* areas, const int nt,
 						  rcHeightfield& solid, const int flagMergeThr)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_RASTERIZE_TRIANGLES);
-	
 	const float ics = 1.0f/solid.cs;
 	const float ich = 1.0f/solid.ch;
 	// Rasterize triangles.
@@ -419,6 +397,4 @@ void rcRasterizeTriangles(rcContext* ctx, const float* verts, const unsigned cha
 		// Rasterize.
 		rasterizeTri(v0, v1, v2, areas[i], solid, solid.bmin, solid.bmax, solid.cs, ics, ich, flagMergeThr);
 	}
-	
-	ctx->stopTimer(RC_TIMER_RASTERIZE_TRIANGLES);
 }

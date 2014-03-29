@@ -34,19 +34,14 @@
 /// This method is usually called immediately after the heightfield has been built.
 ///
 /// @see rcCompactHeightfield, rcBuildCompactHeightfield, rcConfig::walkableRadius
-bool rcErodeWalkableArea(rcContext* ctx, int radius, rcCompactHeightfield& chf)
+bool rcErodeWalkableArea(int radius, rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
 	const int w = chf.width;
 	const int h = chf.height;
-	
-	ctx->startTimer(RC_TIMER_ERODE_AREA);
 	
 	unsigned char* dist = (unsigned char*)rcAlloc(sizeof(unsigned char)*chf.spanCount, RC_ALLOC_TEMP);
 	if (!dist)
 	{
-		ctx->log(RC_LOG_ERROR, "erodeWalkableArea: Out of memory 'dist' (%d).", chf.spanCount);
 		return false;
 	}
 	
@@ -215,8 +210,6 @@ bool rcErodeWalkableArea(rcContext* ctx, int radius, rcCompactHeightfield& chf)
 	
 	rcFree(dist);
 	
-	ctx->stopTimer(RC_TIMER_ERODE_AREA);
-	
 	return true;
 }
 
@@ -238,19 +231,14 @@ static void insertSort(unsigned char* a, const int n)
 /// such as #rcMarkBoxArea, #rcMarkConvexPolyArea, and #rcMarkCylinderArea.
 /// 
 /// @see rcCompactHeightfield
-bool rcMedianFilterWalkableArea(rcContext* ctx, rcCompactHeightfield& chf)
+bool rcMedianFilterWalkableArea(rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
 	const int w = chf.width;
 	const int h = chf.height;
-	
-	ctx->startTimer(RC_TIMER_MEDIAN_AREA);
 	
 	unsigned char* areas = (unsigned char*)rcAlloc(sizeof(unsigned char)*chf.spanCount, RC_ALLOC_TEMP);
 	if (!areas)
 	{
-		ctx->log(RC_LOG_ERROR, "medianFilterWalkableArea: Out of memory 'areas' (%d).", chf.spanCount);
 		return false;
 	}
 	
@@ -306,8 +294,6 @@ bool rcMedianFilterWalkableArea(rcContext* ctx, rcCompactHeightfield& chf)
 	memcpy(chf.areas, areas, sizeof(unsigned char)*chf.spanCount);
 	
 	rcFree(areas);
-
-	ctx->stopTimer(RC_TIMER_MEDIAN_AREA);
 	
 	return true;
 }
@@ -317,13 +303,9 @@ bool rcMedianFilterWalkableArea(rcContext* ctx, rcCompactHeightfield& chf)
 /// The value of spacial parameters are in world units.
 /// 
 /// @see rcCompactHeightfield, rcMedianFilterWalkableArea
-void rcMarkBoxArea(rcContext* ctx, const float* bmin, const float* bmax, unsigned char areaId,
+void rcMarkBoxArea(const float* bmin, const float* bmax, unsigned char areaId,
 				   rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_MARK_BOX_AREA);
-
 	int minx = (int)((bmin[0]-chf.bmin[0])/chf.cs);
 	int miny = (int)((bmin[1]-chf.bmin[1])/chf.ch);
 	int minz = (int)((bmin[2]-chf.bmin[2])/chf.cs);
@@ -358,8 +340,6 @@ void rcMarkBoxArea(rcContext* ctx, const float* bmin, const float* bmax, unsigne
 		}
 	}
 
-	ctx->stopTimer(RC_TIMER_MARK_BOX_AREA);
-
 }
 
 
@@ -385,14 +365,10 @@ static int pointInPoly(int nvert, const float* verts, const float* p)
 /// projected onto the xz-plane at @p hmin, then extruded to @p hmax.
 /// 
 /// @see rcCompactHeightfield, rcMedianFilterWalkableArea
-void rcMarkConvexPolyArea(rcContext* ctx, const float* verts, const int nverts,
+void rcMarkConvexPolyArea(const float* verts, const int nverts,
 						  const float hmin, const float hmax, unsigned char areaId,
 						  rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_MARK_CONVEXPOLY_AREA);
-
 	float bmin[3], bmax[3];
 	rcVcopy(bmin, verts);
 	rcVcopy(bmax, verts);
@@ -448,8 +424,6 @@ void rcMarkConvexPolyArea(rcContext* ctx, const float* verts, const int nverts,
 			}
 		}
 	}
-
-	ctx->stopTimer(RC_TIMER_MARK_CONVEXPOLY_AREA);
 }
 
 int rcOffsetPoly(const float* verts, const int nverts, const float offset,
@@ -535,14 +509,10 @@ int rcOffsetPoly(const float* verts, const int nverts, const float offset,
 /// The value of spacial parameters are in world units.
 /// 
 /// @see rcCompactHeightfield, rcMedianFilterWalkableArea
-void rcMarkCylinderArea(rcContext* ctx, const float* pos,
+void rcMarkCylinderArea(const float* pos,
 						const float r, const float h, unsigned char areaId,
 						rcCompactHeightfield& chf)
 {
-	rcAssert(ctx);
-	
-	ctx->startTimer(RC_TIMER_MARK_CYLINDER_AREA);
-	
 	float bmin[3], bmax[3];
 	bmin[0] = pos[0] - r;
 	bmin[1] = pos[1];
@@ -597,6 +567,4 @@ void rcMarkCylinderArea(rcContext* ctx, const float* pos,
 			}
 		}
 	}
-	
-	ctx->stopTimer(RC_TIMER_MARK_CYLINDER_AREA);
 }

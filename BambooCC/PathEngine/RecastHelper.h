@@ -280,7 +280,7 @@ static int rasterizeTileLayers(InputGeom* geom,
 	{
 		return 0;
 	}
-	if (!rcCreateHeightfield(0, *rc.solid, tcfg.width, tcfg.height, tcfg.bmin, tcfg.bmax, tcfg.cs, tcfg.ch))
+	if (!rcCreateHeightfield(*rc.solid, tcfg.width, tcfg.height, tcfg.bmin, tcfg.bmax, tcfg.cs, tcfg.ch))
 	{
 		return 0;
 	}
@@ -313,30 +313,30 @@ static int rasterizeTileLayers(InputGeom* geom,
 		const int ntris = node.n;
 
 		memset(rc.triareas, 0, ntris*sizeof(unsigned char));
-		rcMarkWalkableTriangles(0, tcfg.walkableSlopeAngle,
+		rcMarkWalkableTriangles(tcfg.walkableSlopeAngle,
 			verts, nverts, tris, ntris, rc.triareas);
 
-		rcRasterizeTriangles(0, verts, nverts, tris, rc.triareas, ntris, *rc.solid, tcfg.walkableClimb);
+		rcRasterizeTriangles(verts, nverts, tris, rc.triareas, ntris, *rc.solid, tcfg.walkableClimb);
 	}
 
 	// Once all geometry is rasterized, we do initial pass of filtering to
 	// remove unwanted overhangs caused by the conservative rasterization
 	// as well as filter spans where the character cannot possibly stand.
-	rcFilterLowHangingWalkableObstacles(0, tcfg.walkableClimb, *rc.solid);
-	rcFilterLedgeSpans(0, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid);
-	rcFilterWalkableLowHeightSpans(0, tcfg.walkableHeight, *rc.solid);
+	rcFilterLowHangingWalkableObstacles(tcfg.walkableClimb, *rc.solid);
+	rcFilterLedgeSpans(tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid);
+	rcFilterWalkableLowHeightSpans(tcfg.walkableHeight, *rc.solid);
 	rc.chf = rcAllocCompactHeightfield();
 	if (!rc.chf)
 	{
 		return 0;
 	}
-	if (!rcBuildCompactHeightfield(0, tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid, *rc.chf))
+	if (!rcBuildCompactHeightfield(tcfg.walkableHeight, tcfg.walkableClimb, *rc.solid, *rc.chf))
 	{
 		return 0;
 	}
 
 	// Erode the walkable area by agent radius.
-	if (!rcErodeWalkableArea(0, tcfg.walkableRadius, *rc.chf))
+	if (!rcErodeWalkableArea(tcfg.walkableRadius, *rc.chf))
 	{
 		return 0;
 	}
@@ -345,7 +345,7 @@ static int rasterizeTileLayers(InputGeom* geom,
 	const ConvexVolume* vols = geom->getConvexVolumes();
 	for (int i  = 0; i < geom->getConvexVolumeCount(); ++i)
 	{
-		rcMarkConvexPolyArea(0, vols[i].verts, vols[i].nverts,
+		rcMarkConvexPolyArea(vols[i].verts, vols[i].nverts,
 			vols[i].hmin, vols[i].hmax,
 			(unsigned char)vols[i].area, *rc.chf);
 	}
@@ -355,7 +355,7 @@ static int rasterizeTileLayers(InputGeom* geom,
 	{
 		return 0;
 	}
-	if (!rcBuildHeightfieldLayers(0, *rc.chf, tcfg.borderSize, tcfg.walkableHeight, *rc.lset))
+	if (!rcBuildHeightfieldLayers(*rc.chf, tcfg.borderSize, tcfg.walkableHeight, *rc.lset))
 	{
 		return 0;
 	}
