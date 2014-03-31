@@ -8,6 +8,23 @@ void TestPathEngine()
 	NavMesh* mesh = new NavMesh();
 	mesh->LoadMesh("nav_test.obj");
 	mesh->BuildMesh();
+	mesh->InitCrowd();
+	float* p = new float[3];
+	p[0] = 100.0f;
+	p[1] = 0.0f;
+	p[2] = 100.0f;
+	int id = mesh->AddAgent(p);
+	Agent* agent = new Agent(mesh,id);
+	float* dest = new float[3];
+	dest[0] = 10.0f;
+	dest[1] = 0.0f;
+	dest[2] = 10.0f;
+	agent->Move(dest);
+	for(int i=0;i<100;i++)
+	{
+		mesh->UpdateCrowd(0.03);
+		agent->SyncPosition();
+	}
 }
 CCScene* HelloWorld::scene()
 {

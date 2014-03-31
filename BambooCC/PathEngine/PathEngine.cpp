@@ -27,9 +27,9 @@ namespace PathEngine
 	void Agent::SetID(int id)
 	{
 		m_AgentID = id;
+		m_CrowdAgent = m_NavMesh->Crowd()->getAgent(m_AgentID);
 		SyncPosition();
 		SyncVelocity();
-		m_CrowdAgent = m_NavMesh->Crowd()->getAgent(m_AgentID);
 	}
 	void Agent::SyncVelocity()
 	{
@@ -81,7 +81,7 @@ namespace PathEngine
 	NavMesh::NavMesh()
 	{
 		InitMesh();
-		InitCrowd();
+		//InitCrowd();
 	}
 	NavMesh::~NavMesh()
 	{
@@ -297,8 +297,6 @@ namespace PathEngine
 		m_tileCache->update(dt, m_navMesh);
 	}
 
-
-
 	// ===================================================================================
 
 
@@ -364,8 +362,7 @@ namespace PathEngine
 		ap.obstacleAvoidanceType = 3.0f;
 		ap.separationWeight = 2.0f;
 
-		int idx = m_crowd->addAgent(p, &ap);
-		return idx;
+		return m_crowd->addAgent(p, &ap);;
 	}
 	int NavMesh::HitTestAgent(const float* s, const float* p)
 	{

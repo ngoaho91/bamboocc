@@ -164,7 +164,7 @@ struct MeshProcess : public dtTileCacheMeshProcess
 		// Update poly flags from areas.
 		for (int i = 0; i < params->polyCount; ++i)
 		{
-			if (polyAreas[i] == DT_TILECACHE_WALKABLE_AREA)
+			/*if (polyAreas[i] == DT_TILECACHE_WALKABLE_AREA)
 				polyAreas[i] = SAMPLE_POLYAREA_GROUND;
 
 			if (polyAreas[i] == SAMPLE_POLYAREA_GROUND ||
@@ -180,7 +180,8 @@ struct MeshProcess : public dtTileCacheMeshProcess
 			else if (polyAreas[i] == SAMPLE_POLYAREA_DOOR)
 			{
 				polyFlags[i] = SAMPLE_POLYFLAGS_WALK | SAMPLE_POLYFLAGS_DOOR;
-			}
+			}*/
+			polyFlags[i] = SAMPLE_POLYFLAGS_WALK;
 		}
 
 		// Pass in off-mesh connections.
