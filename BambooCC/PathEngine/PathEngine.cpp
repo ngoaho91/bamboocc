@@ -6,6 +6,31 @@
 
 namespace PathEngine
 {
+	// TODO: setup orthographic projection, to simulate 2D jx world using 3D model
+	//--------------------------------
+	// Raycast
+	// input: model, mvp matrix, screen pos
+	// output: screen pos hit model or not, if hit, return 3D position
+	//--------------------------------
+	bool RayCast(InputGeom* geom, GLdouble matrix_m, GLdouble matrix_v, GLdouble matrix_p, 
+		float* screen_pos, float* hit_pos)
+	{
+		float rays[3], raye[3];
+		GLdouble x, y, z;
+		gluUnProject(screen_pos[0], screen_pos[1], 0.0f, matrix_m, matrix_p, matrix_v, &x, &y, &z);
+		rays[0] = (float)x; rays[1] = (float)y; rays[2] = (float)z;
+		gluUnProject(screen_pos[0], screen_pos[1], 1.0f, matrix_m, matrix_p, matrix_v, &x, &y, &z);
+		raye[0] = (float)x; raye[1] = (float)y; raye[2] = (float)z;
+		float hitt;
+		bool hit = geom->raycastMesh(rays, raye, hitt);
+		if (hit)
+		{
+			hit_pos[0] = rays[0] + (raye[0] - rays[0])*hitt;
+			hit_pos[1] = rays[1] + (raye[1] - rays[1])*hitt;
+			hit_pos[2] = rays[2] + (raye[2] - rays[2])*hitt;
+		}
+		return hit;
+	}
 	Agent::Agent(NavMesh* mesh)
 	{
 		m_AgentID = -1;
