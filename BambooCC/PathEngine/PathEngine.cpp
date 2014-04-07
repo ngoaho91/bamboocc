@@ -6,15 +6,38 @@
 
 namespace PathEngine
 {
-	// TODO: setup orthographic projection, to simulate 2D jx world using 3D model
+	//----------------------------------
+	// Camera controller
+	// didn't test yet, because i'm too lazy
+	//----------------------------------
+	void SetupCamera()
+	{
+		glEnable(GL_DEPTH_TEST);
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		gluOrtho2D(-1.0,1.0,-1.0,1.0);
+		//gluPerspective(50.0f, (float)width/(float)height, 1.0f, 5000.0f);
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		GLfloat ry = 45;
+		glRotatef(ry,0,1,0);
+		GLfloat camx, camy, camz;
+		camx = camy = camz = 0;
+		glTranslatef(-camx, -camy, -camz);
+	}
 	//--------------------------------
 	// Raycast
 	// input: model, mvp matrix, screen pos
 	// output: screen pos hit model or not, if hit, return 3D position
 	//--------------------------------
-	bool RayCast(InputGeom* geom, GLdouble matrix_m, GLdouble matrix_v, GLdouble matrix_p, 
-		float* screen_pos, float* hit_pos)
+	bool RayCast(InputGeom* geom, float* screen_pos, float* hit_pos)
 	{
+		GLdouble matrix_p[16];
+		GLdouble matrix_m[16];
+		GLint matrix_v[4];
+		glGetDoublev(GL_PROJECTION_MATRIX, matrix_p);
+		glGetDoublev(GL_MODELVIEW_MATRIX, matrix_m);
+		glGetIntegerv(GL_VIEWPORT, matrix_v);
 		float rays[3], raye[3];
 		GLdouble x, y, z;
 		gluUnProject(screen_pos[0], screen_pos[1], 0.0f, matrix_m, matrix_p, matrix_v, &x, &y, &z);
