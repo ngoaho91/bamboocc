@@ -10,20 +10,34 @@ namespace PathEngine
 	// Camera controller
 	// didn't test yet, because i'm too lazy
 	//----------------------------------
+	void TranslateCamera(GLfloat x, GLfloat y, GLfloat z)
+	{
+		glTranslatef(-x, -y, -z);
+	}
+	void RotateX(GLfloat angle)
+	{
+		glRotatef(angle,1,0,0);
+	}
+	void RotateY(GLfloat angle)
+	{
+		glRotatef(angle,0,1,0);
+	}
+	void RotateZ(GLfloat angle)
+	{
+		glRotatef(angle,0,0,1);
+	}
 	void SetupCamera()
 	{
 		glEnable(GL_DEPTH_TEST);
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		gluOrtho2D(-1.0,1.0,-1.0,1.0);
-		//gluPerspective(50.0f, (float)width/(float)height, 1.0f, 5000.0f);
+		gluOrtho2D(-1.0,1.0,-1.0,1.0);// i'm not sure about these 1.0 values
+		glViewport(0,0,800,600);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-		GLfloat ry = 45;
-		glRotatef(ry,0,1,0);
-		GLfloat camx, camy, camz;
-		camx = camy = camz = 0;
-		glTranslatef(-camx, -camy, -camz);
+		RotateY(45.0f);
+		TranslateCamera(0,0,0);
+		
 	}
 	//--------------------------------
 	// Raycast
